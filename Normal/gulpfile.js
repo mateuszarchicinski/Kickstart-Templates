@@ -31,6 +31,7 @@ gulp.task('css', function () {
 
     return gulp.src(work_Dir + '/sass/main.scss')
         .pipe($.plumber())
+        .pipe($.sourcemaps.init())
         .pipe($.sassLint({
             options: {
                 'formatter': 'stylish',
@@ -54,13 +55,14 @@ gulp.task('css', function () {
         }))
         .pipe($.sassLint.format())
         .pipe($.sass.sync({
-            outputStyle: 'expanded' // compressed
+            outputStyle: 'nested' // compact - compressed - expanded - nested
         }))
         .pipe($.autoprefixer({
             browsers: ['last 5 version'],
             cascade: false,
             stats: ['> 1%']
         }))
+        .pipe($.sourcemaps.write('./maps'))
         .pipe(gulp.dest(work_Dir + '/css/'))
         .pipe(browserSync.stream());
 
@@ -72,6 +74,7 @@ gulp.task('js', function () {
     $.util.log($.util.colors.cyan('JS TASK RUNNING...'));
 
     return gulp.src(work_Dir + '/js/**/*.js')
+        .pipe($.plumber())
         .pipe($.jshint())
         .pipe($.jshint.reporter(jshintStylish));
 
@@ -83,6 +86,7 @@ gulp.task('html', function () {
     $.util.log($.util.colors.green('HTML TASK RUNNING...'));
 
     return gulp.src(work_Dir + '/*.html')
+        .pipe($.plumber())
         .pipe($.useref())
         .pipe($.if('*.css', $.cleanCss()))
         .pipe($.if('*.js', $.uglify()))
@@ -96,6 +100,7 @@ gulp.task('html:hint', function () {
     $.util.log($.util.colors.cyan('HTML HINT TASK RUNNING...'));
 
     return gulp.src(work_Dir + '/*.html')
+        .pipe($.plumber())
         .pipe($.htmlhint({
             'tagname-lowercase': true,
             'attr-lowercase': true,
@@ -118,6 +123,7 @@ gulp.task('html:minify', function () {
     $.util.log($.util.colors.green('HTML MINIFY TASK RUNNING...'));
 
     return gulp.src(dist_Dir + '/*.html')
+        .pipe($.plumber())
         .pipe($.htmlmin())
         .pipe(gulp.dest(dist_Dir + '/'));
 
@@ -162,6 +168,7 @@ gulp.task('copy', function () {
     return gulp.src([work_Dir + '/files/*', work_Dir + '/fonts/*', work_Dir + '/img/*', work_Dir + '/*.png', work_Dir + '/*.xml', work_Dir + '/*.ico'], {
             base: work_Dir
         })
+        .pipe($.plumber())
         .pipe(gulp.dest(dist_Dir + '/'));
 
 });
@@ -174,6 +181,7 @@ gulp.task('images', function () {
     return gulp.src(dist_Dir + '/img/**/*', {
             base: dist_Dir
         })
+        .pipe($.plumber())
         .pipe($.imagemin([
             imageminGifsicle(),
             imageminJpegtran(),
@@ -196,6 +204,7 @@ gulp.task('upload', function () {
     });
 
     return gulp.src(dist_Dir + '/**/*')
+        .pipe($.plumber())
         .pipe($.if(argv.upload, conn.dest('/public_html/')));
 
 });
