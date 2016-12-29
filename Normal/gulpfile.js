@@ -81,6 +81,21 @@ gulp.task('js', function () {
 });
 
 
+gulp.task('jade', function () {
+
+    $.util.log($.util.colors.green('JADE TASK RUNNING...'));
+
+    return gulp.src(work_Dir + '/template/*.jade')
+        .pipe($.plumber())
+        .pipe($.jade({
+            pretty: true,
+            compileDebug: true
+        }))
+        .pipe(gulp.dest(work_Dir + '/'));
+
+});
+
+
 gulp.task('html', function () {
 
     $.util.log($.util.colors.green('HTML TASK RUNNING...'));
@@ -147,6 +162,7 @@ gulp.task('watch', function () {
 
     gulp.watch(work_Dir + '/sass/**/*.s+(a|c)ss', ['css']);
     gulp.watch(work_Dir + '/js/**/*.js', ['js', browserSync.reload]);
+    gulp.watch(work_Dir + '/template/*.jade', ['jade']);
     gulp.watch(work_Dir + '/*.html', ['html:hint', browserSync.reload]);
 
 });
@@ -214,7 +230,7 @@ gulp.task('build', function (cb) {
 
     $.util.log($.util.colors.red('BUILD TASK RUNNING...'));
 
-    runSequence('clean', 'css', 'js', 'html', 'html:hint', 'copy', 'images', 'upload', cb);
+    runSequence('clean', 'css', 'js', 'jade', 'html:hint', 'html', 'copy', 'images', 'upload', cb);
 
 });
 
@@ -234,6 +250,6 @@ gulp.task('default', function (cb) {
 
     $.util.log($.util.colors.red('DEFAULT TASK RUNNING...'));
 
-    runSequence('css', 'js', 'html:hint', 'server', 'watch', cb);
+    runSequence('css', 'js', 'jade', 'html:hint', 'server', 'watch', cb);
 
 });

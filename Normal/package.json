@@ -20,6 +20,7 @@
     "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.1.1",
+    "gulp-jade": "^1.1.0",
     "gulp-jshint": "^2.0.4",
     "gulp-load-plugins": "^1.4.0",
     "gulp-plumber": "^1.1.0",
