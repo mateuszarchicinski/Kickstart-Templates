@@ -162,7 +162,7 @@ gulp.task('watch', function () {
 
     gulp.watch(work_Dir + '/sass/**/*.s+(a|c)ss', ['css']);
     gulp.watch(work_Dir + '/js/**/*.js', ['js', browserSync.reload]);
-    gulp.watch(work_Dir + '/template/*.jade', ['jade']);
+    gulp.watch(work_Dir + '/template/**/*.jade', ['jade']);
     gulp.watch(work_Dir + '/*.html', ['html:hint', browserSync.reload]);
 
 });
