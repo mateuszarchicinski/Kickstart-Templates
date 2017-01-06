@@ -1,3 +1,3 @@
 window.addEventListener('load', function () {
-	console.log("running...");
+	console.log(" JS running...");
 });
