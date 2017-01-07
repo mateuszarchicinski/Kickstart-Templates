@@ -244,7 +244,7 @@ gulp.task('build', function (cb) {
 
     $.util.log($.util.colors.red('BUILD TASK RUNNING...'));
 
-    runSequence('clean', 'css', 'jade', 'html:hint', 'html', 'css:inline', 'html:minify', 'copy', 'images', 'clean:css', 'upload', cb);
+    runSequence('clean', 'css', 'jade', 'html:hint', 'html', 'css:inline', 'clean:css', 'html:minify', 'copy', 'images', 'upload', cb);
 
 });
 
