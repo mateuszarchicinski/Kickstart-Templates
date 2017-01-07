@@ -1,0 +1,11 @@
+{
+  "name": "mail",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Mateusz Archiciński"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true
+}
