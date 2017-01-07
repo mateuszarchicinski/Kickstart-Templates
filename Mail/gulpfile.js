@@ -72,15 +72,16 @@ gulp.task('css:inline', function () {
 
     $.util.log($.util.colors.green('CSS INLINE TASK RUNNING...'));
 
-    return gulp.src(work_Dir + '/*.html')
+    return gulp.src(dist_Dir + '/*.html')
         .pipe($.plumber())
         .pipe($.inlineSource({
-            rootpath: 'src'
+            rootpath: dist_Dir
         }))
         .pipe($.inlineCss({
-            preserveMediaQueries: true
+            preserveMediaQueries: true,
+            applyTableAttributes: true
         }))
-        .pipe(gulp.dest(work_Dir + '/'));
+        .pipe(gulp.dest(dist_Dir + '/'));
 
 });
 
@@ -103,9 +104,11 @@ gulp.task('jade', function () {
 gulp.task('html', function () {
 
     $.util.log($.util.colors.green('HTML TASK RUNNING...'));
-
+    
     return gulp.src(work_Dir + '/*.html')
         .pipe($.plumber())
+        .pipe($.useref())
+        .pipe($.if('*.css', $.cleanCss()))
         .pipe(gulp.dest(dist_Dir + '/'));
 
 });
@@ -179,6 +182,15 @@ gulp.task('clean', function () {
 });
 
 
+gulp.task('clean:css', function () {
+
+    $.util.log($.util.colors.gray('CLEAN CSS TASK RUNNING...'));
+
+    return del(dist_Dir + '/css/');
+
+});
+
+
 gulp.task('copy', function () {
 
     $.util.log($.util.colors.grey('COPY TASK RUNNING...'));
@@ -232,7 +244,7 @@ gulp.task('build', function (cb) {
 
     $.util.log($.util.colors.red('BUILD TASK RUNNING...'));
 
-    runSequence('clean', 'css', 'jade', 'css:inline', 'html:hint', 'html', 'html:minify', 'copy', 'images', 'upload', cb);
+    runSequence('clean', 'css', 'jade', 'html:hint', 'html', 'css:inline', 'html:minify', 'copy', 'images', 'clean:css', 'upload', cb);
 
 });
 

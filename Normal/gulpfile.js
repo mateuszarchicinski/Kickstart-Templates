@@ -139,7 +139,9 @@ gulp.task('html:minify', function () {
 
     return gulp.src(dist_Dir + '/*.html')
         .pipe($.plumber())
-        .pipe($.htmlmin())
+        .pipe($.htmlmin({
+            minifyCSS: true
+        }))
         .pipe(gulp.dest(dist_Dir + '/'));
 
 });
