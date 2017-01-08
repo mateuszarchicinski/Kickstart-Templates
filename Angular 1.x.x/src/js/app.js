@@ -1,3 +1,1 @@
-'use strict';
-
-angular.module('myApp', ['ui.router', 'ngMaterial']);
+var myApp = angular.module('myApp', ['ui.router', 'ngMaterial']);

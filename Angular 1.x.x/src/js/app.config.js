@@ -1,15 +1,19 @@
-'use strict';
+(function () {
 
-angular.module('myApp').config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    'use strict';
 
-    $stateProvider.state('default', {
-        url: '/',
-        templateUrl: '/views/default.html',
-        controller: 'defaultController'
-    });
+    myApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-    $urlRouterProvider.otherwise('/');
+        $stateProvider.state('default', {
+            url: '/',
+            templateUrl: 'views/default.html',
+            controller: 'defaultController'
+        });
 
-    $locationProvider.html5Mode(true);
+        $urlRouterProvider.otherwise('/');
 
-});
+        $locationProvider.html5Mode(true);
+
+    }]);
+
+})();

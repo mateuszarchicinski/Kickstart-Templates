@@ -1,7 +1,11 @@
-'use strict';
+(function () {
 
-angular.module('myApp').controller('defaultController', function ($log) {
+    'use strict';
 
-    $log.info('JS running....');
+    myApp.controller('defaultController', ['$log', function ($log) {
 
-});
+        $log.info('JS running....');
+
+    }]);
+
+})();
