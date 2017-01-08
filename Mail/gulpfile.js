@@ -195,7 +195,7 @@ gulp.task('copy', function () {
 
     $.util.log($.util.colors.grey('COPY TASK RUNNING...'));
 
-    return gulp.src([work_Dir + '/files/*', work_Dir + '/img/*', work_Dir + '/*.png', work_Dir + '/*.ico'], {
+    return gulp.src([work_Dir + '/files/**/*', work_Dir + '/img/**/*', work_Dir + '/*.png', work_Dir + '/*.ico'], {
             base: work_Dir
         })
         .pipe($.plumber())

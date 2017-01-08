@@ -69,9 +69,9 @@ gulp.task('css', function () {
 });
 
 
-gulp.task('js', function () {
+gulp.task('js:hint', function () {
 
-    $.util.log($.util.colors.cyan('JS TASK RUNNING...'));
+    $.util.log($.util.colors.cyan('JS HINT TASK RUNNING...'));
 
     return gulp.src(work_Dir + '/js/**/*.js')
         .pipe($.plumber())
@@ -163,7 +163,7 @@ gulp.task('watch', function () {
     $.util.log($.util.colors.blue('WATCH TASK RUNNING...'));
 
     gulp.watch(work_Dir + '/sass/**/*.s+(a|c)ss', ['css']);
-    gulp.watch(work_Dir + '/js/**/*.js', ['js', browserSync.reload]);
+    gulp.watch(work_Dir + '/js/**/*.js', ['js:hint', browserSync.reload]);
     gulp.watch(work_Dir + '/template/**/*.jade', ['jade']);
     gulp.watch(work_Dir + '/*.html', ['html:hint', browserSync.reload]);
 
@@ -183,7 +183,7 @@ gulp.task('copy', function () {
 
     $.util.log($.util.colors.grey('COPY TASK RUNNING...'));
 
-    return gulp.src([work_Dir + '/files/*', work_Dir + '/fonts/*', work_Dir + '/img/*', work_Dir + '/*.png', work_Dir + '/*.xml', work_Dir + '/*.ico'], {
+    return gulp.src([work_Dir + '/files/**/*', work_Dir + '/fonts/**/*', work_Dir + '/img/**/*', work_Dir + '/*.png', work_Dir + '/*.xml', work_Dir + '/*.ico'], {
             base: work_Dir
         })
         .pipe($.plumber())
@@ -232,7 +232,7 @@ gulp.task('build', function (cb) {
 
     $.util.log($.util.colors.red('BUILD TASK RUNNING...'));
 
-    runSequence('clean', 'css', 'js', 'jade', 'html:hint', 'html', 'copy', 'images', 'upload', cb);
+    runSequence('clean', 'css', 'js:hint', 'jade', 'html:hint', 'html', 'html:minify', 'copy', 'images', 'upload', cb);
 
 });
 
@@ -252,6 +252,6 @@ gulp.task('default', function (cb) {
 
     $.util.log($.util.colors.red('DEFAULT TASK RUNNING...'));
 
-    runSequence('css', 'js', 'jade', 'html:hint', 'server', 'watch', cb);
+    runSequence('css', 'js:hint', 'jade', 'html:hint', 'server', 'watch', cb);
 
 });
