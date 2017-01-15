@@ -1,11 +1,6 @@
 'use strict';
 
 
-// DIRECTORY CONFIG
-var work_Dir = 'src',
-    dist_Dir = 'dist';
-
-
 // NODE MODULES
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')({
@@ -20,7 +15,17 @@ var gulp = require('gulp'),
     imageminSvgo = require('imagemin-svgo'),
     ftp = require('vinyl-ftp'),
     argv = require('yargs').argv,
-    runSequence = require("run-sequence");
+    runSequence = require('run-sequence'),
+    fs = require('fs');
+
+
+// PROJECT CONFIG
+var config = JSON.parse(fs.readFileSync('./project.config.json', 'utf8'));
+
+
+// DIRECTORY CONFIG
+var work_Dir = config.directory.work_Dir,
+    dist_Dir = config.directory.dist_Dir;
 
 
 // GULP TASKS
@@ -249,7 +254,7 @@ gulp.task('build', function (cb) {
 });
 
 
-gulp.task("build:server", ["build"], function () {
+gulp.task('build:server', ['build'], function () {
 
     $.util.log($.util.colors.red('BUILD SERVER TASK RUNNING...'));
 
