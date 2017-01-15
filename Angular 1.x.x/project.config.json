@@ -1,0 +1,7 @@
+{
+    "directory": {
+        "work_Dir": "src",
+        "dist_Dir": "dist",
+        "test_Dir": "test"
+    }
+}
