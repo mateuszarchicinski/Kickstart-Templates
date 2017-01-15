@@ -1,11 +1,6 @@
 'use strict';
 
 
-// DIRECTORY CONFIG
-var work_Dir = 'src',
-    dist_Dir = 'dist';
-
-
 // NODE MODULES
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')({
@@ -21,7 +16,19 @@ var gulp = require('gulp'),
     imageminSvgo = require('imagemin-svgo'),
     ftp = require('vinyl-ftp'),
     argv = require('yargs').argv,
-    runSequence = require("run-sequence");
+    runSequence = require('run-sequence'),
+    fs = require('fs'),
+    karma = require('karma').Server;
+
+
+// PROJECT CONFIG
+var config = JSON.parse(fs.readFileSync('./project.config.json', 'utf8'));
+
+
+// DIRECTORY CONFIG
+var work_Dir = config.directory.work_Dir,
+    dist_Dir = config.directory.dist_Dir,
+    test_Dir = config.directory.test_Dir;
 
 
 // GULP TASKS
@@ -71,12 +78,23 @@ gulp.task('css', function () {
 
 gulp.task('js:hint', function () {
 
-    $.util.log($.util.colors.cyan('JS TASK RUNNING...'));
+    $.util.log($.util.colors.cyan('JS HINT TASK RUNNING...'));
 
     return gulp.src(work_Dir + '/js/**/*.js')
         .pipe($.plumber())
         .pipe($.jshint())
         .pipe($.jshint.reporter(jshintStylish));
+
+});
+
+
+gulp.task('js:test', function () {
+
+    $.util.log($.util.colors.cyan('JS TEST TASK RUNNING...'));
+
+    return new karma({
+        configFile: __dirname + '/' + test_Dir + '/karma.conf.js'
+        }).start();
 
 });
 
@@ -241,7 +259,7 @@ gulp.task('build', function (cb) {
 });
 
 
-gulp.task("build:server", ["build"], function () {
+gulp.task('build:server', ['build'], function () {
 
     $.util.log($.util.colors.red('BUILD SERVER TASK RUNNING...'));
 
