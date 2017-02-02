@@ -20,12 +20,16 @@ var gulp = require('gulp'),
 
 
 // PROJECT CONFIG
-var config = JSON.parse(fs.readFileSync('./project.config.json', 'utf8'));
+var config = require('./project.config');
+
+
+// PROJECT DATA
+var data = JSON.parse(fs.readFileSync('./project.data.json', 'utf8'));
 
 
 // DIRECTORY CONFIG
-var work_Dir = config.directory.work_Dir,
-    dist_Dir = config.directory.dist_Dir;
+var work_Dir = config.DIRECTORY.WORK_DIR,
+    dist_Dir = config.DIRECTORY.DIST_DIR;
 
 
 // GULP TASKS
@@ -91,13 +95,44 @@ gulp.task('css:inline', function () {
 });
 
 
-gulp.task('jade', function () {
+gulp.task('jade:pug', function() {
+    
+    $.util.log($.util.colors.green('JADE TO PUG TASK RUNNING...'));
+    
+    gulp.src(work_Dir + '/template/**/*.jade', {
+            base: work_Dir
+        })
+        .pipe($.rename({
+            extname: '.pug'
+        }))
+        .pipe(gulp.dest(work_Dir + '/'))
+        .on('end', function(){
+            del(work_Dir + '/template/**/*.jade')
+        });
+    
+});
 
-    $.util.log($.util.colors.green('JADE TASK RUNNING...'));
 
-    return gulp.src(work_Dir + '/template/*.jade')
+// To get a parameter after comand option
+function getOption(option){
+    var elem = process.argv.indexOf(option);
+    
+    return elem !== -1 ? process.argv[elem + 1] : false;
+};
+
+
+gulp.task('pug', function () {
+
+    $.util.log($.util.colors.green('PUG TASK RUNNING...'));
+
+    return gulp.src(work_Dir + '/template/*.pug')
         .pipe($.plumber())
-        .pipe($.jade({
+        .pipe($.data(function(){
+            var lang = !getOption('--lang') ? 'pl' : getOption('--lang');
+            
+            return data.lang[lang];
+        }))
+        .pipe($.pug({
             pretty: true,
             compileDebug: true
         }))
@@ -172,7 +207,7 @@ gulp.task('watch', function () {
     $.util.log($.util.colors.blue('WATCH TASK RUNNING...'));
 
     gulp.watch(work_Dir + '/sass/**/*.s+(a|c)ss', ['css']);
-    gulp.watch(work_Dir + '/template/**/*.jade', ['jade']);
+    gulp.watch(work_Dir + '/template/**/*.pug', ['pug']);
     gulp.watch(work_Dir + '/*.html', ['html:hint', browserSync.reload]);
 
 });
@@ -219,15 +254,38 @@ gulp.task('images', function () {
 });
 
 
+gulp.task('images:optimized', function () {
+
+    $.util.log($.util.colors.magenta('IMAGES OPTIMIZED TASK RUNNING...'));
+    
+    if(!config.API_KEYS.TINIFY){
+        return $.util.log($.util.colors.magenta('Task can not be complited. Rememeber to set up your TINIFY API KEY in project.config.js file.'));
+    }
+
+    return gulp.src(dist_Dir + '/img/**/*', {
+            base: dist_Dir
+        })
+        .pipe($.tinify(config.API_KEYS.TINIFY))
+        .pipe(gulp.dest(dist_Dir + '/'));
+
+});
+
+
 gulp.task('upload', function () {
 
     $.util.log($.util.colors.yellow('UPLOAD TASK RUNNING...'));
+    
+    var ftpConfig = {
+        host: config.FTP_CONFIG.HOST,
+        user: config.FTP_CONFIG.USER,
+        password: config.FTP_CONFIG.PASSWORD
+    };
+    
+    if(!ftpConfig.host || !ftpConfig.user || !ftpConfig.password){
+        return $.util.log($.util.colors.yellow('Task can not be complited. Rememeber to set up your FTP CONFIG in project.config.js file.'));
+    }
 
-    var conn = ftp.create({
-        host: '',
-        user: '',
-        password: ''
-    });
+    var conn = ftp.create(ftpConfig);
 
     return gulp.src(dist_Dir + '/**/*')
         .pipe($.plumber())
@@ -240,7 +298,7 @@ gulp.task('build', function (cb) {
 
     $.util.log($.util.colors.red('BUILD TASK RUNNING...'));
 
-    runSequence('clean', 'css', 'jade', 'html:hint', 'html', 'css:inline', 'html:minify', 'copy', 'images', 'upload', cb);
+    runSequence('clean', 'css', 'pug', 'html:hint', 'html', 'css:inline', 'html:minify', 'copy', 'upload', cb);
 
 });
 
@@ -260,6 +318,6 @@ gulp.task('default', function (cb) {
 
     $.util.log($.util.colors.red('DEFAULT TASK RUNNING...'));
 
-    runSequence('css', 'jade', 'html:hint', 'server', 'watch', cb);
+    runSequence('css', 'pug', 'html:hint', 'server', 'watch', cb);
 
 });

@@ -1,0 +1,14 @@
+{
+    "docType": "HTML5",
+    "lang": {
+        "pl": {
+            "lang": "pl",
+            "title": "PL-Mail"
+            
+        },
+        "en": {
+            "lang": "en",
+            "title": "EN-Mail"
+        }
+    }
+}
