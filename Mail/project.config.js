@@ -10,6 +10,6 @@ module.exports = {
         PASSWORD: ''
     },
     API_KEYS: {
-        TINIFY: '' // N-pP_JK5OB4sTgWNURkXpl-f5ZspywHQ
+        TINIFY: ''
     }
 };

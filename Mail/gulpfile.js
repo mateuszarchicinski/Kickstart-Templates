@@ -27,17 +27,12 @@ var config = require('./project.config');
 var data = JSON.parse(fs.readFileSync('./project.data.json', 'utf8'));
 
 
-// DIRECTORY CONFIG
-var work_Dir = config.DIRECTORY.WORK_DIR,
-    dist_Dir = config.DIRECTORY.DIST_DIR;
-
-
 // GULP TASKS
 gulp.task('css', function () {
 
     $.util.log($.util.colors.green('CSS TASK RUNNING...'));
 
-    return gulp.src(work_Dir + '/sass/main.scss')
+    return gulp.src(config.DIRECTORY.WORK_DIR + '/sass/main.scss')
         .pipe($.plumber())
         .pipe($.sourcemaps.init())
         .pipe($.sassLint({
@@ -71,7 +66,7 @@ gulp.task('css', function () {
             stats: ['> 1%']
         }))
         .pipe($.sourcemaps.write('./maps'))
-        .pipe(gulp.dest(work_Dir + '/css/'))
+        .pipe(gulp.dest(config.DIRECTORY.WORK_DIR + '/css/'))
         .pipe(browserSync.stream());
 
 });
@@ -81,16 +76,16 @@ gulp.task('css:inline', function () {
 
     $.util.log($.util.colors.green('CSS INLINE TASK RUNNING...'));
 
-    return gulp.src(work_Dir + '/*.html')
+    return gulp.src(config.DIRECTORY.WORK_DIR + '/*.html')
         .pipe($.plumber())
         .pipe($.inlineSource({
-            rootpath: work_Dir
+            rootpath: config.DIRECTORY.WORK_DIR
         }))
         .pipe($.inlineCss({
             preserveMediaQueries: true,
             applyTableAttributes: true
         }))
-        .pipe(gulp.dest(dist_Dir + '/'));
+        .pipe(gulp.dest(config.DIRECTORY.DIST_DIR + '/'));
 
 });
 
@@ -99,15 +94,15 @@ gulp.task('jade:pug', function() {
     
     $.util.log($.util.colors.green('JADE TO PUG TASK RUNNING...'));
     
-    gulp.src(work_Dir + '/template/**/*.jade', {
-            base: work_Dir
+    gulp.src(config.DIRECTORY.WORK_DIR + '/template/**/*.jade', {
+            base: config.DIRECTORY.WORK_DIR
         })
         .pipe($.rename({
             extname: '.pug'
         }))
-        .pipe(gulp.dest(work_Dir + '/'))
+        .pipe(gulp.dest(config.DIRECTORY.WORK_DIR + '/'))
         .on('end', function(){
-            del(work_Dir + '/template/**/*.jade')
+            del(config.DIRECTORY.WORK_DIR + '/template/**/*.jade')
         });
     
 });
@@ -125,10 +120,14 @@ gulp.task('pug', function () {
 
     $.util.log($.util.colors.green('PUG TASK RUNNING...'));
 
-    return gulp.src(work_Dir + '/template/*.pug')
+    return gulp.src(config.DIRECTORY.WORK_DIR + '/template/*.pug')
         .pipe($.plumber())
         .pipe($.data(function(){
             var lang = !getOption('--lang') ? 'pl' : getOption('--lang');
+        
+            if(!getOption('--lang')){
+                $.util.log($.util.colors.green('Default data object configuration [PL] passed to puge. To change that, add command arguments to gulp task ---> gulp [TASK NAME = puge / default / build / build:server] --lang [LANGUAGE = pl/en]. Before that, do not forget a specify translation in project.data.json file.'));
+            }
             
             return data.lang[lang];
         }))
@@ -136,7 +135,7 @@ gulp.task('pug', function () {
             pretty: true,
             compileDebug: true
         }))
-        .pipe(gulp.dest(work_Dir + '/'));
+        .pipe(gulp.dest(config.DIRECTORY.WORK_DIR + '/'));
 
 });
 
@@ -145,11 +144,11 @@ gulp.task('html', function () {
 
     $.util.log($.util.colors.green('HTML TASK RUNNING...'));
     
-    return gulp.src(work_Dir + '/*.html')
+    return gulp.src(config.DIRECTORY.WORK_DIR + '/*.html')
         .pipe($.plumber())
         .pipe($.useref())
         .pipe($.if('*.css', $.cleanCss()))
-        .pipe(gulp.dest(work_Dir + '/'));
+        .pipe(gulp.dest(config.DIRECTORY.WORK_DIR + '/'));
 
 });
 
@@ -158,7 +157,7 @@ gulp.task('html:hint', function () {
 
     $.util.log($.util.colors.cyan('HTML HINT TASK RUNNING...'));
 
-    return gulp.src(work_Dir + '/*.html')
+    return gulp.src(config.DIRECTORY.WORK_DIR + '/*.html')
         .pipe($.plumber())
         .pipe($.htmlhint({
             'tagname-lowercase': true,
@@ -181,12 +180,12 @@ gulp.task('html:minify', function () {
 
     $.util.log($.util.colors.green('HTML MINIFY TASK RUNNING...'));
 
-    return gulp.src(dist_Dir + '/*.html')
+    return gulp.src(config.DIRECTORY.DIST_DIR + '/*.html')
         .pipe($.plumber())
         .pipe($.htmlmin({
             minifyCSS: true
         }))
-        .pipe(gulp.dest(dist_Dir + '/'));
+        .pipe(gulp.dest(config.DIRECTORY.DIST_DIR + '/'));
 
 });
 
@@ -196,7 +195,7 @@ gulp.task('server', function () {
     $.util.log($.util.colors.red('SERVER TASK RUNNING...'));
 
     return browserSync.init({
-        server: work_Dir + '/'
+        server: config.DIRECTORY.WORK_DIR + '/'
     });
 
 });
@@ -206,9 +205,9 @@ gulp.task('watch', function () {
 
     $.util.log($.util.colors.blue('WATCH TASK RUNNING...'));
 
-    gulp.watch(work_Dir + '/sass/**/*.s+(a|c)ss', ['css']);
-    gulp.watch(work_Dir + '/template/**/*.pug', ['pug']);
-    gulp.watch(work_Dir + '/*.html', ['html:hint', browserSync.reload]);
+    gulp.watch(config.DIRECTORY.WORK_DIR + '/sass/**/*.s+(a|c)ss', ['css']);
+    gulp.watch(config.DIRECTORY.WORK_DIR + '/template/**/*.pug', ['pug']);
+    gulp.watch(config.DIRECTORY.WORK_DIR + '/*.html', ['html:hint', browserSync.reload]);
 
 });
 
@@ -217,7 +216,7 @@ gulp.task('clean', function () {
 
     $.util.log($.util.colors.gray('CLEAN TASK RUNNING...'));
 
-    return del(dist_Dir + '/');
+    return del(config.DIRECTORY.DIST_DIR + '/');
 
 });
 
@@ -226,11 +225,11 @@ gulp.task('copy', function () {
 
     $.util.log($.util.colors.grey('COPY TASK RUNNING...'));
 
-    return gulp.src([work_Dir + '/files/**/*', work_Dir + '/img/**/*', work_Dir + '/*.png', work_Dir + '/*.ico'], {
-            base: work_Dir
+    return gulp.src([config.DIRECTORY.WORK_DIR + '/files/**/*', config.DIRECTORY.WORK_DIR + '/img/**/*', config.DIRECTORY.WORK_DIR + '/*.png', config.DIRECTORY.WORK_DIR + '/*.ico'], {
+            base: config.DIRECTORY.WORK_DIR
         })
         .pipe($.plumber())
-        .pipe(gulp.dest(dist_Dir + '/'));
+        .pipe(gulp.dest(config.DIRECTORY.DIST_DIR + '/'));
 
 });
 
@@ -239,8 +238,8 @@ gulp.task('images', function () {
 
     $.util.log($.util.colors.magenta('IMAGES TASK RUNNING...'));
 
-    return gulp.src(dist_Dir + '/img/**/*', {
-            base: dist_Dir
+    return gulp.src(config.DIRECTORY.DIST_DIR + '/img/**/*', {
+            base: config.DIRECTORY.DIST_DIR
         })
         .pipe($.plumber())
         .pipe($.imagemin([
@@ -249,7 +248,7 @@ gulp.task('images', function () {
             imageminOptipng(),
             imageminSvgo()
         ]))
-        .pipe(gulp.dest(dist_Dir + '/'));
+        .pipe(gulp.dest(config.DIRECTORY.DIST_DIR + '/'));
 
 });
 
@@ -262,11 +261,11 @@ gulp.task('images:optimized', function () {
         return $.util.log($.util.colors.magenta('Task can not be complited. Rememeber to set up your TINIFY API KEY in project.config.js file.'));
     }
 
-    return gulp.src(dist_Dir + '/img/**/*', {
-            base: dist_Dir
+    return gulp.src(config.DIRECTORY.DIST_DIR + '/img/**/*', {
+            base: config.DIRECTORY.DIST_DIR
         })
         .pipe($.tinify(config.API_KEYS.TINIFY))
-        .pipe(gulp.dest(dist_Dir + '/'));
+        .pipe(gulp.dest(config.DIRECTORY.DIST_DIR + '/'));
 
 });
 
@@ -281,13 +280,13 @@ gulp.task('upload', function () {
         password: config.FTP_CONFIG.PASSWORD
     };
     
-    if(!ftpConfig.host || !ftpConfig.user || !ftpConfig.password){
-        return $.util.log($.util.colors.yellow('Task can not be complited. Rememeber to set up your FTP CONFIG in project.config.js file.'));
+    if(!ftpConfig.host || !ftpConfig.user || !ftpConfig.password || !argv.upload){
+        return $.util.log($.util.colors.yellow('Task can not be complited. Rememeber to set up your FTP CONFIG in project.config.js file. Then add command argument to gulp task ---> gulp [TASK NAME = upload / build / build:server] --upload.'));
     }
 
     var conn = ftp.create(ftpConfig);
 
-    return gulp.src(dist_Dir + '/**/*')
+    return gulp.src(config.DIRECTORY.DIST_DIR + '/**/*')
         .pipe($.plumber())
         .pipe($.if(argv.upload, conn.dest('/public_html/')));
 
@@ -308,7 +307,7 @@ gulp.task('build:server', ['build'], function () {
     $.util.log($.util.colors.red('BUILD SERVER TASK RUNNING...'));
 
     browserSync.init({
-        server: dist_Dir + '/'
+        server: config.DIRECTORY.DIST_DIR + '/'
     });
 
 });
