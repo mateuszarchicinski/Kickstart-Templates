@@ -2,18 +2,8 @@
 // Generated on Sun Jan 15 2017
 
 
-// NODE MODULES
-var fs = require('fs');
-
-
 // PROJECT CONFIG
-var config = JSON.parse(fs.readFileSync('./project.config.json', 'utf8'));
-
-
-// DIRECTORY CONFIG
-var work_Dir = config.directory.work_Dir,
-    dist_Dir = config.directory.dist_Dir,
-    test_Dir = config.directory.test_Dir;
+var PROJECT_CONFIG = require('../project.config');
 
 
 module.exports = function (config) {
@@ -32,13 +22,13 @@ module.exports = function (config) {
         files: [
 
             // bower components
-            work_Dir + '/bower_components/jquery/dist/jquery.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/bower_components/jquery/dist/jquery.js',
 
             // application initialize / configuration
-            work_Dir + '/js/**/*.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/**/*.js',
 
             // application tests
-            test_Dir + '/spec/**/*.js'
+            PROJECT_CONFIG.DIRECTORY.TEST_DIR + '/spec/**/*.js'
 
         ],
 

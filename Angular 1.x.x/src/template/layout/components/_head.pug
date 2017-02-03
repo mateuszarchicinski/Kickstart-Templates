@@ -1,6 +1,9 @@
 //Define Unicode
 meta(charset="utf-8")
 
+//Define Base URL Address
+base(href="/")
+
 //Define a Compatibility with IE
 meta(http-equiv="x-ua-compatible" content="ie=edge")
 
@@ -11,12 +14,12 @@ meta(name="viewport" content="width=device-width, height=device-height, initial-
 meta(name="format-detection" content="telephone=no")
 
 //Search Engine Optimization Sources
-title Normal
-meta(name="description" content="")
-meta(name="keywords" content="")
-meta(name="author" content="Mateusz Archiciński")
-meta(property="og:title" content="")
-meta(property="og:description" content="")
+title= title
+meta(name="description" content=description)
+meta(name="keywords" content=keywords)
+meta(name="author" content=author)
+meta(property="og:title" content=ogTitle)
+meta(property="og:description" content=ogDescription)
 meta(property="og:image" content="tile-1200x630px.png")
 meta(name="robots" content="index, follow, noodp")
 
@@ -24,7 +27,7 @@ meta(name="robots" content="index, follow, noodp")
 link(rel="apple-touch-icon" href="apple-touch-icon.png")
 
 //Fonts Sources
-link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900&subset=latin,latin-ext")
+link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic")
 
 //Google Chrome - Theme Color
 meta(name="theme-color" content="#F44336")

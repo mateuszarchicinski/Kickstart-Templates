@@ -4,7 +4,8 @@ module.exports = {
     DATA_FILE: 'project.data.json',
     DIRECTORY: {
         WORK_DIR: 'src',
-        DIST_DIR: 'dist'
+        DIST_DIR: 'dist',
+        TEST_DIR: 'test'
     },
     FTP_CONFIG: {
         HOST: '',

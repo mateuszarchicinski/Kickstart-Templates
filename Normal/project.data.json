@@ -1,0 +1,24 @@
+{
+    "docType": "HTML5",
+    "lang": {
+        "pl": {
+            "lang": "pl",
+            "title": "PL-Normal",
+            "description": "PL-Description",
+            "keywords": "PL-Keywords",
+            "author": "Mateusz Archiciński",
+            "ogTitle": "PL-ogTitle",
+            "ogDescription": "PL-ogDescription"
+            
+        },
+        "en": {
+            "lang": "en",
+            "title": "EN-Normal",
+            "description": "EN-Description",
+            "keywords": "EN-Keywords",
+            "author": "Mateusz Archiciński",
+            "ogTitle": "EN-ogTitle",
+            "ogDescription": "EN-ogDescription"
+        }
+    }
+}

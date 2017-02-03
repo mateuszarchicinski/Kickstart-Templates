@@ -2,18 +2,8 @@
 // Generated on Sun Jan 15 2017
 
 
-// NODE MODULES
-var fs = require('fs');
-
-
 // PROJECT CONFIG
-var config = JSON.parse(fs.readFileSync('./project.config.json', 'utf8'));
-
-
-// DIRECTORY CONFIG
-var work_Dir = config.directory.work_Dir,
-    dist_Dir = config.directory.dist_Dir,
-    test_Dir = config.directory.test_Dir;
+var PROJECT_CONFIG = require('../project.config');
 
 
 module.exports = function (config) {
@@ -32,21 +22,21 @@ module.exports = function (config) {
         files: [
 
             // bower components
-            work_Dir + '/bower_components/jquery/dist/jquery.js',
-            work_Dir + '/bower_components/angular/angular.js',
-            work_Dir + '/bower_components/angular-ui-router/release/angular-ui-router.js',
-            work_Dir + '/bower_components/angular-animate/angular-animate.js',
-            work_Dir + '/bower_components/angular-aria/angular-aria.js',
-            work_Dir + '/bower_components/angular-messages/angular-messages.js',
-            work_Dir + '/bower_components/angular-material/angular-material.js',
-            work_Dir + '/bower_components/angular-mocks/angular-mocks.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/bower_components/jquery/dist/jquery.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/bower_components/angular/angular.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/bower_components/angular-ui-router/release/angular-ui-router.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/bower_components/angular-animate/angular-animate.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/bower_components/angular-aria/angular-aria.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/bower_components/angular-messages/angular-messages.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/bower_components/angular-material/angular-material.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/bower_components/angular-mocks/angular-mocks.js',
 
             // application initialize / configuration
-            work_Dir + '/js/app.js',
-            work_Dir + '/js/app.config.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/app.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/app.config.js',
 
             // application controllers
-            work_Dir + '/js/controllers/defaultController.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/controllers/defaultController.js',
 
             // application directives
 
@@ -55,7 +45,7 @@ module.exports = function (config) {
 
 
             // application tests
-            test_Dir + '/spec/**/*.js'
+            PROJECT_CONFIG.DIRECTORY.TEST_DIR + '/spec/**/*.js'
 
         ],
 
