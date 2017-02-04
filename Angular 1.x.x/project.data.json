@@ -3,22 +3,117 @@
     "lang": {
         "pl": {
             "lang": "pl",
-            "title": "PL-Angular 1.x.x",
-            "description": "PL-Description",
-            "keywords": "PL-Keywords",
+            "title": "Kickstart Projekt - Angular 1.x.x Szablon",
+            "description": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i w pełni skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x.x umożliwiającego szybkie rozpoczęcie projektu.",
+            "keywords": "szablon aplikacja webowa zautomatyzowana skonfigurowana środowisko developer developerskie praca angular ng app rozwiązanie rozwoj aplikacji",
             "author": "Mateusz Archiciński",
-            "ogTitle": "PL-ogTitle",
-            "ogDescription": "PL-ogDescription"
-            
+            "ogTitle": "Kickstart Projekt - Angular 1.x.x Szablon",
+            "ogDescription": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i w pełni skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x.x umożliwiającego szybkie rozpoczęcie projektu.",
+            "header": {
+                "headline": "Kickstart Projekt"
+            },
+            "section": {
+                "headline": "Angular 1.x.x Szablon",
+                "info": ["Szablon umożliwiający szybkie w pełni zautomatyzowane rozpoczęcie projektu", "z", "Wykorzystuje do tego", "i"]
+            },
+            "articles": {
+                "usage":{
+                    "headline": "Użycie",
+                    "paragraph": ["Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis."]
+                },
+                "configuration":{
+                    "headline": "Konfiguracja",
+                    "paragraph": []
+                },
+                "foldersStructure":{
+                    "headline": "Struktura folderów",
+                    "paragraph": []
+                },
+                "NPMModules":{
+                    "headline": "NPM moduły",
+                    "paragraph": []
+                },
+                "bowerComponents":{
+                    "headline": "Bower komponenty",
+                    "paragraph": []
+                },
+                "gulpTasks":{
+                    "headline": "Gulp zadania",
+                    "paragraph": []
+                },
+                "testing":{
+                    "headline": "Testowanie",
+                    "paragraph": ["Testy jednostowe są odpowiednio odpalane poprzez moduł Karma"]
+                },
+                "changelog":{
+                    "headline": "Lista zmian",
+                    "paragraph": ["Ostatnie zmiany można zobaczyć na", ", stronie", "publikacji projektu"]
+                },
+                "license": {
+                    "headline": "Licencja",
+                    "paragraph": ["MIT Licencja"]
+                }
+            },
+            "footer": {
+                "author": "Mateusz Archiciński"
+            }
         },
         "en": {
             "lang": "en",
-            "title": "EN-Angular 1.x.x",
-            "description": "EN-Description",
-            "keywords": "EN-Keywords",
+            "title": "Kickstart Project - Angular 1.x.x Template",
+            "description": "",
+            "keywords": "",
             "author": "Mateusz Archiciński",
-            "ogTitle": "EN-ogTitle",
-            "ogDescription": "EN-ogDescription"
+            "ogTitle": "",
+            "ogDescription": "",
+            "header": {
+                "headline": "Kickstart Projekt"
+            },
+            "section": {
+                "headline": "Angular 1.x.x Template",
+                "info": ["Szablon umożliwiający szybkie w pełni zautomatyzowane rozpoczęcie projektu", "z", "Wykorzystuje do tego", "and"]
+            },
+            "articles": {
+                "usage":{
+                    "headline": "Usage",
+                    "paragraph": ["Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis."]
+                },
+                "configuration":{
+                    "headline": "Configuration",
+                    "paragraph": []
+                },
+                "foldersStructure":{
+                    "headline": "Folders structure",
+                    "paragraph": []
+                },
+                "NPMModules":{
+                    "headline": "NPM modules",
+                    "paragraph": []
+                },
+                "bowerComponents":{
+                    "headline": "Bower components",
+                    "paragraph": []
+                },
+                "gulpTasks":{
+                    "headline": "Gulp tasks",
+                    "paragraph": []
+                },
+                "testing":{
+                    "headline": "Testing",
+                    "paragraph": ["Running gulp js:test will run the unit tests with karma."]
+                },
+                "changelog":{
+                    "headline": "Changelog",
+                    "paragraph": ["Recent changes can be viewed on", "on the", "releases page"]
+                },
+                "license": {
+                    "headline": "License",
+                    "paragraph": ["MIT License"]
+                }
+            },
+            "footer": {
+                "author": "Mateusz Archiciński"
+            }
         }
     }
 }

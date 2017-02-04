@@ -1,11 +1,11 @@
 doctype default
 html(ng-app="app" lang=lang)
     head
-        include components/_head
+        include ../components/_head
     body
         //[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.</p><![endif]
         
-        main(ng-cloak)
+        main
             block content
         
-        include components/_javaScripts
+        include ../components/_javaScripts

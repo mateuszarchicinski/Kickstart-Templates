@@ -1,0 +1,9 @@
+article.article
+    header.article__header
+        h3.article__title.tertiary-heading= articles.changelog.headline
+    .article__body
+        p.article__paragraph #{articles.changelog.paragraph[0]} 
+            a(href="https://github.com/" target="_blank" rel="help") Github
+            | #{articles.changelog.paragraph[1]} 
+            a(href="https://github.com/mateuszarchicinski/Angular1.x.x-Template/releases" target="_blank") #{articles.changelog.paragraph[2]}
+            | .

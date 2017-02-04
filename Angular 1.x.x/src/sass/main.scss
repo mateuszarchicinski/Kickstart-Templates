@@ -4,14 +4,34 @@
 //     FRAMEWORKS
 // ---------------------
 
+
+// *--------- NORMALIZE ---------*
+@import "../bower_components/normalize-scss/sass/normalize/import-now";
+
+
 // *--------- ANGULAR MATERIAL ---------*
 @import "../bower_components/angular-material/angular-material.scss";
 
 
 // ---------------------
-//     GENERAL
+//     LAYOUT
 // ---------------------
 
+
+// *--------- GENERAL ---------*
+@import "layout/general";
+
+
+// *--------- HEADER ---------*
+@import "layout/header";
+
+
+// *--------- SECTION ---------*
+@import "layout/section";
+
+
+// *--------- FOOTER ---------*
+@import "layout/footer";
 
 
 // ---------------------
@@ -19,17 +39,14 @@
 // ---------------------
 
 
+// *--------- ARTICLES ---------*
+@import "components/headings";
 
-// ---------------------
-//     LAYOUT
-// ---------------------
-
-// *--------- GENERAL ---------*
-@import "layout/general";
+// *--------- ARTICLES ---------*
+@import "components/articles";
 
 
 // ---------------------
 //     EXTENDS
 // ---------------------
-
 

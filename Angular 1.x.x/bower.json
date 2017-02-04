@@ -16,6 +16,7 @@
     "angular-messages": "^1.6.1",
     "angular-material": "^1.1.1",
     "angular-ui-router": "ui-router#^0.3.2",
-    "angular-mocks": "^1.6.1"
+    "angular-mocks": "^1.6.1",
+    "normalize-scss": "normalize.scss#^6.0.0"
   }
 }

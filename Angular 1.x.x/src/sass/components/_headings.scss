@@ -1,0 +1,34 @@
+/* Headings & Text Styles */
+.primary-heading{
+    font-size: 2em;
+    font-weight: 300;
+    text-transform: uppercase;
+    &::after{
+        content: "";
+        width: 150px;
+        height: 3px;
+        background: #f44336;
+        display: block;
+        border-radius: 25%;
+        margin: 5px auto 0;
+    }
+}
+
+.secondary-heading{
+    font-size: 1.5em;
+}
+
+.tertiary-heading{
+    font-size: 1.25em;
+}
+
+.secondary-heading,
+.tertiary-heading{
+    font-weight: 400;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #f44336;
+}
+
+.text-center{
+    text-align: center;
+}
