@@ -24165,31 +24165,56 @@ html {
 body {
   font-size: 1em; }
 
-/* Header */
+/* Main Header */
 .main-header {
   padding: 35px 0 25px; }
 
-/* Section */
-.main-wrapper {
+/* Main Wrapper */
+.main-wrapper__container {
+  position: relative; }
+
+.main-wrapper [ui-view].ng-enter, .main-wrapper [ui-view].ng-leave {
+  transition: all 0.25s ease; }
+
+.main-wrapper [ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transform: scale3d(0.95, 0.95, 0.95);
+  transform: scale3d(0.95, 0.95, 0.95); }
+
+.main-wrapper [ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1); }
+
+.main-wrapper [ui-view].ng-leave {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.main-wrapper [ui-view].ng-leave-active {
+  opacity: 0; }
+
+/* Main Footer */
+.main-footer {
+  padding: 25px 0 35px; }
+  .main-footer__copyright {
+    font-size: 0.8em;
+    font-weight: 400; }
+
+/* Readme */
+.readme {
   width: 750px;
   background: #fff;
   padding: 50px 45px 75px;
   border-radius: 2px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 200px 0 rgba(0, 0, 0, 0.1);
   margin: 0 auto; }
-  .main-wrapper__info {
-    padding: 0 0 0.15em 1em;
-    border-left: 0.25em solid #ef5350; }
+  .readme__info {
+    line-height: 1.3;
+    padding: 0 0 2px 16px;
+    border-left: 4px solid #ef5350; }
 
-/* Footer */
-.main-footer {
-  padding: 25px 0 35px; }
-  .main-footer__copyright {
-    font-size: 13px;
-    font-weight: 400; }
-
-/* Headings & Text Styles */
+/* Headings */
 .primary-heading {
   font-size: 2em;
   font-weight: 300;
@@ -24212,13 +24237,27 @@ body {
 .secondary-heading,
 .tertiary-heading {
   font-weight: 400;
-  padding-bottom: 0.3em;
+  padding-bottom: 5px;
   border-bottom: 1px solid #f44336; }
 
 .text-center {
   text-align: center; }
 
+/* Articles */
 .article {
   padding-top: 5px; }
+  .article__paragraph {
+    line-height: 1.3; }
+
+/* Syntax Highlighting */
+.code__line, .code__block {
+  background: #ffebee;
+  border-radius: 3px; }
+
+.code__line {
+  padding: 0 3px 2px; }
+
+.code__block {
+  padding: 16px; }
 
 /*# sourceMappingURL=maps/main.css.map */

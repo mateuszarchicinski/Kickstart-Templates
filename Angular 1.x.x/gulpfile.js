@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     }),
     jshintStylish = require('jshint-stylish'),
     htmlhintStylish = require('htmlhint-stylish'),
+    wiredep = require('wiredep').stream,
     browserSync = require('browser-sync'),
     del = require('del'),
     imageminGifsicle = require('imagemin-gifsicle'),
@@ -143,6 +144,10 @@ gulp.task('pug', function () {
         .pipe($.pug({
             pretty: true,
             compileDebug: true
+        }))
+        .pipe(wiredep({
+            exclude: ['animatewithsass', 'normalize-scss', 'angular-mocks', 'bower_components/angular-material/angular-material.css'],
+            ignorePath: '../'
         }))
         .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/'));
 

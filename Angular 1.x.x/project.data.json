@@ -2,6 +2,7 @@
     "docType": "HTML5",
     "lang": {
         "pl": {
+            "appName": "app",
             "lang": "pl",
             "title": "Kickstart Projekt - Angular 1.x.x Szablon",
             "description": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i w pełni skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x.x umożliwiającego szybkie rozpoczęcie projektu.",
@@ -43,11 +44,11 @@
                 },
                 "testing":{
                     "headline": "Testowanie",
-                    "paragraph": ["Testy jednostowe są odpowiednio odpalane poprzez moduł Karma"]
+                    "paragraph": ["Uruchamia się za pomocą wywołania zadania", "Środowiskiem wywoływania testów jednostkowych jest", "Konfiguracja i testy jednostkowe znajdują się w", "Folder projektu", "W obecnej konfiguracji wykorzystywany", "jest framework", "i reporter", "Konfigurację należy odpowiednio dostosować", "do swoich potrzeb."]
                 },
                 "changelog":{
                     "headline": "Lista zmian",
-                    "paragraph": ["Ostatnie zmiany można zobaczyć na", ", stronie", "publikacji projektu"]
+                    "paragraph": ["Ostatnie zmiany można zobaczyć na", "stronie", "publikacji szablonu"]
                 },
                 "license": {
                     "headline": "Licencja",
@@ -59,6 +60,7 @@
             }
         },
         "en": {
+            "appName": "app",
             "lang": "en",
             "title": "Kickstart Project - Angular 1.x.x Template",
             "description": "",

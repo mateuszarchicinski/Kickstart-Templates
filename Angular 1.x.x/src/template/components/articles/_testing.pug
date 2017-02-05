@@ -1,5 +1,21 @@
+//-
+    Testing
 article.article
     header.article__header
         h3.article__title.tertiary-heading= articles.testing.headline
     .article__body
-        p.article__paragraph= articles.usage.paragraph[0]
+        p.article__paragraph #{articles.testing.paragraph[0]} 
+            code.code__line gulp js:test
+            | . #{articles.testing.paragraph[1]} 
+            a(href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help") Karma
+            | . #{articles.testing.paragraph[2]} 
+            code.code__line #{articles.testing.paragraph[3]} > Test > Karma.conf.js / Spec
+            | . #{articles.testing.paragraph[4]} 
+            br.br-t-1
+            | #{articles.testing.paragraph[5]} 
+            a(href="https://jasmine.github.io/" target="_blank" rel="help") Jasmine
+            |  #{articles.testing.paragraph[6]} 
+            a(href="https://www.npmjs.com/package/karma-spec-reporter" target="_blank" rel="help") Spec
+            | . #{articles.testing.paragraph[7]} 
+            br.br-t-2
+            | #{articles.testing.paragraph[8]}

@@ -22,16 +22,25 @@
 @import "layout/general";
 
 
-// *--------- HEADER ---------*
+// *--------- MAIN HEADER ---------*
 @import "layout/header";
 
 
-// *--------- SECTION ---------*
-@import "layout/section";
+// *--------- MAIN WRAPPER ---------*
+@import "layout/wrapper";
 
 
-// *--------- FOOTER ---------*
+// *--------- MAIN FOOTER ---------*
 @import "layout/footer";
+
+
+// ---------------------
+//     PAGES
+// ---------------------
+
+
+// *--------- README ---------*
+@import "pages/readme";
 
 
 // ---------------------
@@ -39,11 +48,16 @@
 // ---------------------
 
 
-// *--------- ARTICLES ---------*
+// *--------- HEADINGS ---------*
 @import "components/headings";
+
 
 // *--------- ARTICLES ---------*
 @import "components/articles";
+
+
+// *--------- SYNTAX HIGHLIGHTING ---------*
+@import "components/syntax-highlighting";
 
 
 // ---------------------

@@ -1,34 +1,35 @@
 //Default View
-header.main-wrapper__header
-    h2.main-wrapper__title.secondary-heading= section.headline
-    p.main-wrapper__info #{section.info[0]} 
-        br.br-1
-        | #{section.info[1]} 
-        a(href="https://angularjs.org/" target="_blank" rel="help")
-            | Angularem 1.x.x
-        | . #{section.info[2]} 
-        a(href="https://nodejs.org/en/" target="_blank" rel="help")
-            | NodeJS
-        |  ,
-        a(href="https://www.npmjs.com/" target="_blank" rel="help")
-            | NPM
-        |  ,
-        a(href="https://bower.io/" target="_blank" rel="help")
-            | Bower
-        |  ,
-        a(href="http://gulpjs.com/" target="_blank" rel="help")
-            | GulpJS
-        |  #{section.info[3]} 
-        a(href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help")
-            | Karma
-        | .
-.main-wrapper__body
-    include ../components/articles/_usage
-    include ../components/articles/_configuration
-    include ../components/articles/_folders_structure
-    include ../components/articles/_npm_components
-    include ../components/articles/_bower_components
-    include ../components/articles/_gulp_tasks
-    include ../components/articles/_testing
-    include ../components/articles/_changelog
-    include ../components/articles/_license
+section.readme
+    header.readme__header
+        h2.readme__title.secondary-heading= section.headline
+        p.readme__info #{section.info[0]} 
+            br.br-a-1
+            | #{section.info[1]} 
+            a(href="https://angularjs.org/" target="_blank" rel="help")
+                | Angularem 1.x.x
+            | . #{section.info[2]} 
+            a(href="https://nodejs.org/en/" target="_blank" rel="help")
+                | NodeJS
+            | , 
+            a(href="https://www.npmjs.com/" target="_blank" rel="help")
+                | NPM
+            | , 
+            a(href="https://bower.io/" target="_blank" rel="help")
+                | Bower
+            | , 
+            a(href="http://gulpjs.com/" target="_blank" rel="help")
+                | GulpJS
+            |  #{section.info[3]} 
+            a(href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help")
+                | Karma
+            | .
+    .readme__body
+        include ../components/articles/_usage
+        include ../components/articles/_configuration
+        include ../components/articles/_folders_structure
+        include ../components/articles/_npm_modules
+        include ../components/articles/_bower_components
+        include ../components/articles/_gulp_tasks
+        include ../components/articles/_testing
+        include ../components/articles/_changelog
+        include ../components/articles/_license

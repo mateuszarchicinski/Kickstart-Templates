@@ -1,5 +1,6 @@
 // PROJECT CONFIG
 module.exports = {
+    APP_NAME: "app", // Also need to be edited in Data File
     CONFIG_FILE: 'project.config.js',
     DATA_FILE: 'project.data.json',
     DIRECTORY: {

@@ -1,0 +1,27 @@
+/* Main Wrapper */
+
+.main-wrapper {
+    &__container {
+        position: relative;
+    }
+    [ui-view] {
+        &.ng-enter,
+        &.ng-leave {
+            transition: all 0.25s ease;
+        }
+        &.ng-enter {
+            opacity: 0;
+            transform: scale3d(.95, .95, .95);
+        }
+        &.ng-enter-active {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+        &.ng-leave {
+            transform: translate3d(0, 0, 0);
+        }
+        &.ng-leave-active {
+            opacity: 0;
+        }
+    }
+}

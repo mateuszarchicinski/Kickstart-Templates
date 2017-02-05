@@ -1,0 +1,15 @@
+/* Syntax Highlighting */
+
+.code{
+    &__line,
+    &__block{
+        background: #ffebee;
+        border-radius: 3px;
+    }
+    &__line{
+        padding: 0 3px 2px;
+    }
+    &__block{
+        padding: 16px;
+    }
+}
