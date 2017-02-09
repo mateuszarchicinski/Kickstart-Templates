@@ -1,7 +1,15 @@
-/* Articles */
+//~~~~~~~~~~~~~~~~~~~~//
+//~~~~~* ARTICLES *~~~//
+//~~~~~~~~~~~~~~~~~~~~//
+
+
+$article__padding-top: 5px !default;
+// article__list li
+$article__list__li__margin: 1em 0 !default;
+
 
 .article{
-    padding-top: 5px;
+    padding-top: $article__padding-top;
     &__paragraph{
         @extend %paragraphs;
         a{
@@ -14,7 +22,7 @@
     &__list{
         li{
             @extend %paragraphs;
-            margin: 1em 0;
+            margin: $article__list__li__margin;
         }
         strong{
             @extend %font-weight-500;

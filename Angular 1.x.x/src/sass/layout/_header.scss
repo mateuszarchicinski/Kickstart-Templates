@@ -1,5 +1,11 @@
-/* Main Header */
+//~~~~~~~~~~~~~~~~~~~~//
+//~~~* MAIN HEADER *~~//
+//~~~~~~~~~~~~~~~~~~~~//
+
+
+$main-header__padding: 35px 0 25px !default;
+
 
 .main-header{
-    padding: 35px 0 25px;
+    padding: $main-header__padding;
 }

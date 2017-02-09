@@ -1,15 +1,25 @@
-/* General */
+//~~~~~~~~~~~~~~~~~~~~//
+//~~~~~* GENERAL *~~~~//
+//~~~~~~~~~~~~~~~~~~~~//
+
+
+$box-sizing: border-box !default;
+// html
+$html__line-height: 1.2 !default;
+// body
+$body__font-size: 1em !default;
+
 
 *,
 *::before,
 *::after{
-    box-sizing: border-box;
+    box-sizing: $box-sizing;
 }
 
 html{
-    line-height: 1.2;
+    line-height: $html__line-height;
 }
 
 body{
-    font-size: 1em;
+    font-size: $body__font-size;
 }

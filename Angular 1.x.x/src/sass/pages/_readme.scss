@@ -3,33 +3,30 @@
 //~~~~~~~~~~~~~~~~~~~~//
 
 
-// Colors
-
-
-$readme_width: 750px !default;
-$readme_background: #fff !default;
-$readme_padding: 50px 45px 75px !default;
-$readme_border-radius: 2px !default;
-$readme_border: 1px solid rgba(0, 0, 0, 0.1) !default;
-$readme_box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 5px 100px 0 rgba(0, 0, 0, 0.1) !default;
-$readme_margin: 0 auto !default;
-//__info
-$readme__info_padding: 0 0 2px 16px !default;
-$readme__info_border-left: 4px solid #ef5350 !default;
+$readme__width: 750px !default;
+$readme__background: $color__white !default;
+$readme__padding: 50px 45px 75px !default;
+$readme__border-radius: 2px !default;
+$readme__border: 1px solid rgba($color__black, 0.1) !default;
+$readme__box-shadow: 0 4px 8px 0 rgba($color__black, 0.35), 0 5px 100px 0 rgba($color__black, 0.1) !default;
+$readme__margin: 0 auto !default;
+// __info
+$readme__info__padding: 0 0 0.125em 1em !default;
+$readme__info__border-left: 0.25em solid $color__sunset-orange !default;
 
 
 .readme{
-    width: $readme_width;
-    background: $readme_background;
-    padding: $readme_padding;
-    border-radius: $readme_border-radius;
-    border: $readme_border;
-    box-shadow: $readme_box-shadow;
-    margin: $readme_margin;
+    width: $readme__width;
+    background: $readme__background;
+    padding: $readme__padding;
+    border-radius: $readme__border-radius;
+    border: $readme__border;
+    box-shadow: $readme__box-shadow;
+    margin: $readme__margin;
     &__info{
         @extend %paragraphs;
-        padding: $readme__info_padding;
-        border-left: $readme__info_border-left;
+        padding: $readme__info__padding;
+        border-left: $readme__info__border-left;
         a{
             @extend %display-inline-block;
         }
