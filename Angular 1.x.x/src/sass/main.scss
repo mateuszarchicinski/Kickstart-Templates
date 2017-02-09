@@ -1,12 +1,31 @@
+//~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* MAIN *~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~//
+
+
 @charset "utf-8";
+
+
+// ---------------------
+//     GENERAL
+// ---------------------
+
+
+    // *--------- VARIABLES ---------*
+    @import "helpers/variables";
+
+
+    // *--------- MIXINS ---------*
+    @import "helpers/mixins";
+
+
+    // *--------- TYPOGRAPHY ---------*
+    @import "base/typography";
+
 
 // ---------------------
 //     FRAMEWORKS
 // ---------------------
-
-
-// *--------- NORMALIZE ---------*
-@import "../bower_components/normalize-scss/sass/normalize/import-now";
 
 
 // *--------- ANGULAR MATERIAL ---------*
@@ -48,10 +67,6 @@
 // ---------------------
 
 
-// *--------- HEADINGS ---------*
-@import "components/headings";
-
-
 // *--------- ARTICLES ---------*
 @import "components/articles";
 
@@ -63,4 +78,8 @@
 // ---------------------
 //     EXTENDS
 // ---------------------
+
+
+// *--------- EXTENDS ---------*
+@import "base/extends";
 

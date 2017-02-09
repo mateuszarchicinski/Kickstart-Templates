@@ -4,12 +4,18 @@
     &__line,
     &__block{
         background: #ffebee;
+        font-size: 90%;
+        text-align: left;
+        color: #000;
+        white-space: normal;
         border-radius: 3px;
     }
     &__line{
-        padding: 0 3px 2px;
+        padding: 0 1px;
     }
     &__block{
+        display: block;
         padding: 16px;
+        margin: 10px 0;
     }
 }

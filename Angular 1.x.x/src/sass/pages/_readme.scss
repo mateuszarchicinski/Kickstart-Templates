@@ -1,16 +1,40 @@
-/* Readme */
+//~~~~~~~~~~~~~~~~~~~~//
+//~~~~~* README *~~~~~//
+//~~~~~~~~~~~~~~~~~~~~//
+
+
+// Colors
+
+
+$readme_width: 750px !default;
+$readme_background: #fff !default;
+$readme_padding: 50px 45px 75px !default;
+$readme_border-radius: 2px !default;
+$readme_border: 1px solid rgba(0, 0, 0, 0.1) !default;
+$readme_box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 5px 100px 0 rgba(0, 0, 0, 0.1) !default;
+$readme_margin: 0 auto !default;
+//__info
+$readme__info_padding: 0 0 2px 16px !default;
+$readme__info_border-left: 4px solid #ef5350 !default;
+
 
 .readme{
-    width: 750px;
-    background: #fff;
-    padding: 50px 45px 75px;
-    border-radius: 2px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 200px 0 rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
+    width: $readme_width;
+    background: $readme_background;
+    padding: $readme_padding;
+    border-radius: $readme_border-radius;
+    border: $readme_border;
+    box-shadow: $readme_box-shadow;
+    margin: $readme_margin;
     &__info{
-        line-height: 1.3;
-        padding: 0 0 2px 16px;
-        border-left: 4px solid #ef5350;
+        @extend %paragraphs;
+        padding: $readme__info_padding;
+        border-left: $readme__info_border-left;
+        a{
+            @extend %display-inline-block;
+        }
+        strong{
+            @extend %font-weight-500;
+        }
     }
 }

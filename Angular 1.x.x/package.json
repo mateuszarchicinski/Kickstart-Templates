@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp js:test"
   },
   "author": "Mateusz Archiciński",
   "license": "ISC",
@@ -41,8 +41,7 @@
     "jshint-stylish": "^2.2.1",
     "run-sequence": "^1.2.2",
     "vinyl-ftp": "^0.5.0",
-    "wiredep": "^4.0.0",
-    "yargs": "^6.5.0"
+    "wiredep": "^4.0.0"
   },
   "devDependencies": {
     "jasmine": "^2.5.3",

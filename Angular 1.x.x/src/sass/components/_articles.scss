@@ -3,6 +3,21 @@
 .article{
     padding-top: 5px;
     &__paragraph{
-        line-height: 1.3;
+        @extend %paragraphs;
+        a{
+            @extend %display-inline-block;
+        }
+        strong{
+            @extend %font-weight-500;
+        }
+    }
+    &__list{
+        li{
+            @extend %paragraphs;
+            margin: 1em 0;
+        }
+        strong{
+            @extend %font-weight-500;
+        }
     }
 }

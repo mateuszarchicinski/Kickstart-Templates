@@ -16,7 +16,6 @@ var gulp = require('gulp'),
     imageminOptipng = require('imagemin-optipng'),
     imageminSvgo = require('imagemin-svgo'),
     ftp = require('vinyl-ftp'),
-    argv = require('yargs').argv,
     runSequence = require('run-sequence'),
     fs = require('fs'),
     karma = require('karma').Server;
@@ -24,10 +23,6 @@ var gulp = require('gulp'),
 
 // PROJECT CONFIG
 var PROJECT_CONFIG = require('./project.config');
-
-
-// PROJECT DATA
-var DATA = JSON.parse(fs.readFileSync('./' + PROJECT_CONFIG.DATA_FILE, 'utf8'));
 
 
 // GULP TASKS
@@ -118,9 +113,11 @@ gulp.task('jade:pug', function() {
 
 // To get a parameter after comand option
 function getOption(option){
-    var elem = process.argv.indexOf(option);
+    var index = process.argv.indexOf(option);
     
-    return elem !== -1 ? process.argv[elem + 1] : false;
+    return index !== -1 ? {
+       value: process.argv[index + 1] 
+    } : false;
 };
 
 
@@ -128,7 +125,7 @@ gulp.task('pug', function () {
 
     $.util.log($.util.colors.green('PUG TASK RUNNING...'));
 
-    if(!getOption('--lang')){
+    if(!getOption('--lang').value){
         $.util.log($.util.colors.green('Default data object configuration [PL] passed to puge. To change that, add command arguments to gulp task ---> gulp [TASK NAME = puge / default / build / build:server] --lang [LANGUAGE = pl/en]. Before that, do not forget a specify translation in ' + PROJECT_CONFIG.DATA_FILE + ' file.'));
     }
     
@@ -137,16 +134,20 @@ gulp.task('pug', function () {
         })
         .pipe($.plumber())
         .pipe($.data(function(){
-            var lang = !getOption('--lang') ? 'pl' : getOption('--lang');
+            var value = getOption('--lang').value,
+                lang = !value ? 'pl' : value;
             
-            return DATA.lang[lang];
+            return {
+                appName: PROJECT_CONFIG.APP_NAME,
+                data: JSON.parse(fs.readFileSync('./' + PROJECT_CONFIG.DATA_FILE, 'utf8')).lang[lang]
+            };
         }))
         .pipe($.pug({
             pretty: true,
             compileDebug: true
         }))
         .pipe(wiredep({
-            exclude: ['animatewithsass', 'normalize-scss', 'angular-mocks', 'bower_components/angular-material/angular-material.css'],
+            exclude: ['animatewithsass', 'angular-mocks', 'bower_components/angular-material/angular-material.css'],
             ignorePath: '../'
         }))
         .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/'));
@@ -224,7 +225,7 @@ gulp.task('watch', function () {
 
     gulp.watch(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/**/*.s+(a|c)ss', ['css']);
     gulp.watch(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/**/*.js', ['js:hint', browserSync.reload]);
-    gulp.watch(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/**/*.pug', ['pug']);
+    gulp.watch([PROJECT_CONFIG.DATA_FILE, PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/**/*.pug'], ['pug']);
     gulp.watch([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/*.html'], ['html:hint', browserSync.reload]);
 
 });
@@ -298,7 +299,7 @@ gulp.task('upload', function () {
         password: PROJECT_CONFIG.FTP_CONFIG.PASSWORD
     };
     
-    if(!ftpConfig.host || !ftpConfig.user || !ftpConfig.password || !argv.upload){
+    if(!ftpConfig.host || !ftpConfig.user || !ftpConfig.password || !getOption('--upload')){
         return $.util.log($.util.colors.yellow('Task can not be complited. Rememeber to set up your FTP CONFIG in ' + PROJECT_CONFIG.CONFIG_FILE + ' file. Then add command argument to gulp task ---> gulp [TASK NAME = upload / build / build:server] --upload.'));
     }
 

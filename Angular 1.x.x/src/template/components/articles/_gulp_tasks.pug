@@ -2,6 +2,106 @@
     Gulp Tasks
 article.article
     header.article__header
-        h3.article__title.tertiary-heading= articles.gulpTasks.headline
+        h3.article__title.tertiary-heading= data.articles.gulpTasks.headline
     .article__body
-        p.article__paragraph= articles.usage.paragraph[0]
+        p.article__paragraph #{data.articles.gulpTasks.paragraph[0]} 
+            strong gulpfile.js
+            |  #{data.articles.gulpTasks.paragraph[1]}
+        p.article__paragraph= data.articles.gulpTasks.subHeadlines[0]
+        ul.article__list
+            li
+                code.code__line gulp css
+                |  - #{data.articles.gulpTasks.css[0]} 
+                strong main.css
+                |  #{data.articles.gulpTasks.css[1]} 
+                strong main.css.map
+                |  #{data.articles.gulpTasks.css[2]} 
+                strong main.scss
+                | .
+            li
+                code.code__line gulp js:hint
+                |  - #{data.articles.gulpTasks.jsHint[0]}
+            li
+                code.code__line gulp js:test
+                |  - #{data.articles.gulpTasks.jsTest[0]} 
+                br.br-g-1
+                | #{data.articles.gulpTasks.jsTest[1]}
+            li
+                code.code__line gulp jade:pug
+                |  - #{data.articles.gulpTasks.jadePug[0]} 
+                strong .jade
+                |  #{data.articles.gulpTasks.jadePug[1]} 
+                strong .pug
+                | .
+            li
+                code.code__line gulp pug
+                |  - #{data.articles.gulpTasks.pug[0]} 
+                strong .html
+                |  #{data.articles.gulpTasks.pug[1]} 
+                strong .pug
+                |  #{data.articles.gulpTasks.pug[2]} 
+                strong --lang pl / en
+                | #{data.articles.gulpTasks.pug[3]}
+            li
+                code.code__line gulp html
+                |  - #{data.articles.gulpTasks.html[0]} 
+                strong .html
+                |  #{data.articles.gulpTasks.html[1]} 
+                strong .css
+                |  #{data.articles.gulpTasks.html[2]} 
+                strong .js
+                |  #{data.articles.gulpTasks.html[3]} 
+                br.br-g-2
+                | #{data.articles.gulpTasks.html[4]}
+            li
+                code.code__line gulp html:hint
+                |  - #{data.articles.gulpTasks.htmlHint[0]}
+            li
+                code.code__line gulp html:minify
+                |  - #{data.articles.gulpTasks.htmlMinify[0]}
+            li
+                code.code__line gulp server
+                |  - #{data.articles.gulpTasks.server[0]}
+            li
+                code.code__line gulp watch
+                |  - #{data.articles.gulpTasks.watch[0]}
+            li
+                code.code__line gulp clean
+                |  - #{data.articles.gulpTasks.clean[0]}
+            li
+                code.code__line gulp copy
+                |  - #{data.articles.gulpTasks.copy[0]}
+            li
+                code.code__line gulp images
+                |  - #{data.articles.gulpTasks.images[0]}
+            li
+                code.code__line gulp images:optimized
+                |  - #{data.articles.gulpTasks.imagesOptimized[0]} 
+                a(href="https://tinypng.com/developers" target="_blank" rel="help") Tinypng API
+                | .
+            li
+                code.code__line gulp upload
+                |  - #{data.articles.gulpTasks.upload[0]} 
+                strong --upload
+                | #{data.articles.gulpTasks.upload[1]}
+            li
+                code.code__line gulp build:server
+                |  - #{data.articles.gulpTasks.buildServer[2]}
+        p.article__paragraph= data.articles.gulpTasks.subHeadlines[1]
+        ul.article__list
+            li
+                code.code__line gulp build
+                |  - #{data.articles.gulpTasks.build[0]}
+        pre.code__block clean > css > js:hint > pug > html:hint > html > html:minify > copy > upload
+        ul.article__list
+            li
+                code.code__line gulp build:server
+                |  - #{data.articles.gulpTasks.buildServer[0]} 
+                code.code__line gulp build
+                |  #{data.articles.gulpTasks.buildServer[1]}
+        pre.code__block build > build:server
+        ul.article__list
+            li
+                code.code__line gulp / gulp default
+                |  - #{data.articles.gulpTasks.default[0]}
+        pre.code__block css > js:hint > pug > html:hint > server > watch

@@ -1,13 +1,13 @@
 //Default View
 section.readme
     header.readme__header
-        h2.readme__title.secondary-heading= section.headline
-        p.readme__info #{section.info[0]} 
+        h2.readme__title.secondary-heading= data.section.headline
+        p.readme__info #{data.section.info[0]} 
             br.br-a-1
-            | #{section.info[1]} 
+            | #{data.section.info[1]} 
             a(href="https://angularjs.org/" target="_blank" rel="help")
                 | Angularem 1.x.x
-            | . #{section.info[2]} 
+            | . #{data.section.info[2]} 
             a(href="https://nodejs.org/en/" target="_blank" rel="help")
                 | NodeJS
             | , 
@@ -19,7 +19,7 @@ section.readme
             | , 
             a(href="http://gulpjs.com/" target="_blank" rel="help")
                 | GulpJS
-            |  #{section.info[3]} 
+            |  #{data.section.info[3]} 
             a(href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help")
                 | Karma
             | .

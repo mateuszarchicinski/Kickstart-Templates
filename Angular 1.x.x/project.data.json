@@ -2,7 +2,6 @@
     "docType": "HTML5",
     "lang": {
         "pl": {
-            "appName": "app",
             "lang": "pl",
             "title": "Kickstart Projekt - Angular 1.x.x Szablon",
             "description": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i w pełni skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x.x umożliwiającego szybkie rozpoczęcie projektu.",
@@ -32,19 +31,38 @@
                 },
                 "NPMModules":{
                     "headline": "NPM moduły",
-                    "paragraph": []
+                    "paragraph": ["Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności szablonu (", "):", "Wszystkie powyższe moduły instalujemy komendą"]
                 },
                 "bowerComponents":{
                     "headline": "Bower komponenty",
-                    "paragraph": []
+                    "paragraph": ["Następujące komponenty są elementami niezbędnymi do właściwego funkcjonowania szablonu (", "):", "Dodatkowe paczki z których można korzystać opcjonalnie:", "Wszystkie powyższe komponenty instalujemy komendą"]
                 },
                 "gulpTasks":{
                     "headline": "Gulp zadania",
-                    "paragraph": []
+                    "paragraph": ["Lista zdefiniowanych zadań w", "poniżej. Dodatkowo krótki opis do każdego polecenia z podziałem na dwie grupy pojedynczych i złożonych poleceń."],
+                    "subHeadlines": ["Pojedyncze:", "Złożone:"],
+                    "build": ["Wywoła sekwencja  poleceń:"],
+                    "buildServer": ["Uruchamia zadanie", "po czym tworzy serwer nasłuchujący na nowo powstały katalog produkcyjny.", "Uruchamia serwer nasłuchujący na katalog produkcyjny."],
+                    "default": ["Wywoła sekwencja  poleceń:"],
+                    "css": ["Tworzy główny plik", "i", "na podstawie pliku"],
+                    "jsHint": ["Sprawdza kod JavaScript i raportuje o błędach."],
+                    "jsTest": ["Uruchamia testy jednostkowe, nasłuchuje zmian w plikach źródłowych", "i raportuje o błędach."],
+                    "jadePug": ["Konwertuje pliki", "na"],
+                    "pug": ["Tworzy pliki", "na podstawie plików", "(Opcjonalne argumenty:", ")."],
+                    "html": ["Na podstawie wskazanych ścieżek w pliku", "do plików", "i", "łączy", "je w pojedyncze zmniejszone pliki źródłowe."],
+                    "htmlHint": ["Sprawdza kod HTML i raportuje o błędach."],
+                    "htmlMinify": ["Zmniejsza nasz kod HTML."],
+                    "server": ["Uruchamia serwer nasłuchujący na katalog pracy."],
+                    "watch": ["W następstwie zmian w plikach uruchamia wskazane zadania."],
+                    "clean": ["Usuwa katalog produkcyjny."],
+                    "copy": ["Kopiuje wymagane pliki z katalogu pracy do katalogu produkcyjnego."],
+                    "images": ["Standardowa optymalizacja grafik."],
+                    "imagesOptimized": ["Optymalizuje grafiki za pomocą"],
+                    "upload": ["Umożliwia automatyczny upload plików na serwer ftp (Opcjonalny argument: ", ")."]
                 },
                 "testing":{
                     "headline": "Testowanie",
-                    "paragraph": ["Uruchamia się za pomocą wywołania zadania", "Środowiskiem wywoływania testów jednostkowych jest", "Konfiguracja i testy jednostkowe znajdują się w", "Folder projektu", "W obecnej konfiguracji wykorzystywany", "jest framework", "i reporter", "Konfigurację należy odpowiednio dostosować", "do swoich potrzeb."]
+                    "paragraph": ["Uruchamia się za pomocą zadania", "Do obsługi testów jednostkowych, nasłuchu zamian w plikach źródłowych i raportowania bledów zostało przygotowane środowisko", "Obecna konfiguracja wykorzystuje framework", ", symulator", "i reporter", "Pliki konfiguracji i testów znajdują się", "Folder projektu"]
                 },
                 "changelog":{
                     "headline": "Lista zmian",
@@ -60,7 +78,6 @@
             }
         },
         "en": {
-            "appName": "app",
             "lang": "en",
             "title": "Kickstart Project - Angular 1.x.x Template",
             "description": "",
