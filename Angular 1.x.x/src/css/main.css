@@ -23774,6 +23774,98 @@ md-tooltip {
   .hide-print:not(.show-print):not(.show) {
     display: none !important; } }
 
+.article {
+  padding-top: 5px; }
+  .article__list li {
+    margin: 1em 0; }
+
+.code__line, .code__block {
+  background: #ffebee;
+  font-size: 90%;
+  text-align: left;
+  color: #000;
+  white-space: normal;
+  border-radius: 3px; }
+
+.code__line {
+  padding: 0 1px; }
+
+.code__block {
+  display: block;
+  padding: 16px;
+  margin: 10px 0; }
+
+.project-structure li {
+  margin: 0.5em 0; }
+
+.project-structure .directory__root::before, .project-structure .directory__close::before, .project-structure .directory__open::before {
+  content: ""; }
+
+.project-structure .directory__root::before {
+  content: "";
+  background-image: url(../img/projectStructure.png);
+  background-position: -24px -24px;
+  width: 24px;
+  height: 24px; }
+
+.project-structure .directory__close::before {
+  content: "";
+  background-image: url(../img/projectStructure.png);
+  background-position: -24px 0px;
+  width: 24px;
+  height: 24px; }
+
+.project-structure .directory__open::before {
+  content: "";
+  background-image: url(../img/projectStructure.png);
+  background-position: 0px -24px;
+  width: 24px;
+  height: 24px; }
+
+.project-structure .file__json::before, .project-structure .file__js::before, .project-structure .file__xml::before, .project-structure .file__html::before, .project-structure .file__sass::before, .project-structure .file__pug::before, .project-structure .file__css::before {
+  content: "";
+  background-image: url(../img/projectStructure.png);
+  background-position: 0px 0px;
+  width: 24px;
+  height: 24px; }
+
+.project-structure .file__json::before {
+  content: ""; }
+
+.project-structure .file__js::before {
+  content: ""; }
+
+.project-structure .file__img::before {
+  content: "";
+  background-image: url(../img/projectStructure.png);
+  background-position: -48px 0px;
+  width: 24px;
+  height: 24px; }
+
+.project-structure .file__xml::before {
+  content: ""; }
+
+.project-structure .file__html::before {
+  content: ""; }
+
+.project-structure .file__sass::before {
+  content: ""; }
+
+.project-structure .file__pug::before {
+  content: ""; }
+
+.readme {
+  width: 750px;
+  background: #fff;
+  padding: 50px 45px 75px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 5px 100px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 auto; }
+  .readme__info {
+    padding: 0 0 0.125em 1em;
+    border-left: 0.25em solid #ef5350; }
+
 *,
 *::before,
 *::after {
@@ -23817,48 +23909,27 @@ body {
     font-size: 0.8em;
     font-weight: 400; }
 
-.readme {
-  width: 750px;
-  background: #fff;
-  padding: 50px 45px 75px;
-  border-radius: 2px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 5px 100px 0 rgba(0, 0, 0, 0.1);
-  margin: 0 auto; }
-  .readme__info {
-    padding: 0 0 0.125em 1em;
-    border-left: 0.25em solid #ef5350; }
-
-.article {
-  padding-top: 5px; }
-  .article__list li {
-    margin: 1em 0; }
-
-.code__line, .code__block {
-  background: #ffebee;
-  font-size: 90%;
-  text-align: left;
-  color: #000;
-  white-space: normal;
-  border-radius: 3px; }
-
-.code__line {
-  padding: 0 1px; }
-
-.code__block {
-  display: block;
-  padding: 16px;
-  margin: 10px 0; }
-
-.readme__info, .article__paragraph, .article__list li {
+.article__paragraph, .article__list li, .project-structure li, .readme__info {
   line-height: 1.3;
   text-align: justify; }
 
-.readme__info a, .article__paragraph a {
+.article__paragraph a, .readme__info a {
   display: inline-block;
   text-align: left; }
 
-.readme__info strong, .article__paragraph strong, .article__list strong {
+.article__paragraph strong, .article__list strong, .project-structure strong, .readme__info strong {
   font-weight: 500; }
+
+.project-structure, .project-structure ul {
+  list-style: none; }
+
+.project-structure .directory__root::before, .project-structure .directory__close::before, .project-structure .directory__open::before, .project-structure .file__json::before, .project-structure .file__js::before, .project-structure .file__xml::before, .project-structure .file__html::before, .project-structure .file__sass::before, .project-structure .file__pug::before, .project-structure .file__css::before, .project-structure .file__img::before {
+  position: absolute;
+  display: inline-block;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  margin-left: -30px;
+  margin-top: -3px; }
 
 /*# sourceMappingURL=maps/main.css.map */

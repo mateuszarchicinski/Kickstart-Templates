@@ -33,6 +33,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.2",
     "gulp-util": "^3.0.7",
+    "gulp.spritesmith": "^6.3.0",
     "htmlhint-stylish": "^1.0.3",
     "imagemin-gifsicle": "^5.1.0",
     "imagemin-jpegtran": "^5.0.2",

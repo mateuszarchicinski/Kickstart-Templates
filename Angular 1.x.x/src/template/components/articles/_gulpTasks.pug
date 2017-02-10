@@ -80,6 +80,17 @@ article.article
                 a(href="https://tinypng.com/developers" target="_blank" rel="help") Tinypng API
                 | .
             li
+                code.code__line gulp images:sprite
+                |  - #{data.articles.gulpTasks.imagesSprite[0]} 
+                strong Sprite
+                |  #{data.articles.gulpTasks.imagesSprite[1]} 
+                strong .scss
+                |  #{data.articles.gulpTasks.imagesSprite[2]} 
+                strong sprites_sources
+                |  #{data.articles.gulpTasks.imagesSprite[3]} 
+                strong --name #{data.articles.gulpTasks.imagesSprite[4]}
+                | #{data.articles.gulpTasks.imagesSprite[5]}
+            li
                 code.code__line gulp upload
                 |  - #{data.articles.gulpTasks.upload[0]} 
                 strong --upload

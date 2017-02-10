@@ -27,7 +27,7 @@
                 },
                 "projectStructure":{
                     "headline": "Struktura projektu",
-                    "paragraph": []
+                    "paragraph": ["Poniżej rekomendowana strukturę projektu. Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach", "i", "Katalog projektu", "W przypadku błędu dowolnej funkcjonalności najlepiej powrócić do rekomendowanej struktury lub próbować zlokalizować przyczynę bezpośrednio w pliku"]
                 },
                 "npmModules":{
                     "headline": "NPM moduły",
@@ -58,6 +58,7 @@
                     "copy": ["Kopiuje wymagane pliki z katalogu pracy do katalogu produkcyjnego."],
                     "images": ["Standardowa optymalizacja grafik."],
                     "imagesOptimized": ["Optymalizuje grafiki za pomocą"],
+                    "imagesSprite": ["Utworzy tzw.", "i plik", "z grafik znajdujących się w folderze", "(Opcjonalne argumenty:", "_nazwa", ")."],
                     "upload": ["Umożliwia automatyczny upload plików na serwer ftp (Opcjonalny argument: ", ")."]
                 },
                 "testing":{

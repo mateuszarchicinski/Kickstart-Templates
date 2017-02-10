@@ -80,6 +80,43 @@ $font-family: $base__font-family;
 
 
 // ---------------------
+//     COMPONENTS
+// ---------------------
+
+
+// *--------- ARTICLES ---------*
+// article__list li
+$article__list__li__margin: 1em 0;
+
+
+// *--------- SYNTAX HIGHLIGHTING ---------*
+// __line __block
+$code__line-block__background: $color__amour;
+$code__line-block__font-size: 90%;
+$code__line-block__text-align: left;
+$code__line-block__color: $color__black;
+
+
+// *--------- PROJECT STRUCTURE ---------*
+// .project-structure li
+$project-structure__li__margin: 0.5em 0;
+
+
+// ---------------------
+//     PAGES
+// ---------------------
+
+
+// *--------- README ---------*
+$readme__background: $color__white;
+$readme__border: 1px solid rgba($color__black, 0.1);
+$readme__box-shadow: 0 4px 8px 0 rgba($color__black, 0.35), 0 5px 100px 0 rgba($color__black, 0.1);
+// __info
+$readme__info__padding: 0 0 0.125em 1em;
+$readme__info__border-left: 0.25em solid $color__sunset-orange;
+
+
+// ---------------------
 //     LAYOUT
 // ---------------------
 
@@ -117,38 +154,6 @@ $main-footer__copyright__font-weight: $base__font-weight;
 
 
 // ---------------------
-//     PAGES
-// ---------------------
-
-
-// *--------- README ---------*
-$readme__background: $color__white;
-$readme__border: 1px solid rgba($color__black, 0.1);
-$readme__box-shadow: 0 4px 8px 0 rgba($color__black, 0.35), 0 5px 100px 0 rgba($color__black, 0.1);
-// __info
-$readme__info__padding: 0 0 0.125em 1em;
-$readme__info__border-left: 0.25em solid $color__sunset-orange;
-
-
-// ---------------------
-//     COMPONENTS
-// ---------------------
-
-
-// *--------- ARTICLES ---------*
-// article__list li
-$article__list__li__margin: 1em 0;
-
-
-// *--------- SYNTAX HIGHLIGHTING ---------*
-// __line __block
-$code__line-block__background: $color__amour;
-$code__line-block__font-size: 90%;
-$code__line-block__text-align: left;
-$code__line-block__color: $color__black;
-
-
-// ---------------------
 //     BASE
 // ---------------------
 
@@ -161,4 +166,6 @@ $paragraphs__text-align: justify;
 $display-inline-block__text-align: left;
 // %font-weight-500
 $font-weight-500__font-weight: $font-weight__bold;
+// %list-style-none
+$list-style-none__list-style: none;
 

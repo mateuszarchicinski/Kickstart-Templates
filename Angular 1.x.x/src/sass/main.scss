@@ -37,6 +37,36 @@
 
 
 // ---------------------
+//     COMPONENTS
+// ---------------------
+
+
+// *--------- SPRITES ---------*
+@import "components/sprites/projectStructure";
+
+
+// *--------- ARTICLES ---------*
+@import "components/articles";
+
+
+// *--------- SYNTAX HIGHLIGHTING ---------*
+@import "components/syntaxHighlighting";
+
+
+// *--------- PROJECT STRUCTURE ---------*
+@import "components/projectStructure";
+
+
+// ---------------------
+//     PAGES
+// ---------------------
+
+
+// *--------- README ---------*
+@import "pages/readme";
+
+
+// ---------------------
 //     LAYOUT
 // ---------------------
 
@@ -55,32 +85,6 @@
 
 // *--------- MAIN FOOTER ---------*
 @import "layout/footer";
-
-
-// ---------------------
-//     PAGES
-// ---------------------
-
-
-// *--------- README ---------*
-@import "pages/readme";
-
-
-// ---------------------
-//     COMPONENTS
-// ---------------------
-
-
-// *--------- ARTICLES ---------*
-@import "components/articles";
-
-
-// *--------- SYNTAX HIGHLIGHTING ---------*
-@import "components/syntaxHighlighting";
-
-
-// *--------- PROJECT STRUCTURE ---------*
-@import "components/projectStructure";
 
 
 // ---------------------

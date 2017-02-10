@@ -27,28 +27,88 @@
         <h3 class="article__title tertiary-heading">Struktura projektu</h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis.</p>
-        <ul class="article__list">
-          <li>Katalog projektu
+        <p class="article__paragraph">Poniżej rekomendowana strukturę projektu. Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach <strong>project.config.js</strong> i <strong>.bowerrc</strong>.</p>
+        <ul class="project-structure">
+          <li class="directory__root">Katalog projektu
             <ul>
-              <li>dist</li>
-              <li>node_modules</li>
-              <li>src
+              <li class="directory__close">dist</li>
+              <li class="directory__close">node_modules</li>
+              <li class="directory__open">src
                 <ul>
-                  <li>bower_components</li>
-                  <li>css</li>
-                  <li>files</li>
-                  <li>img</li>
-                  <li>js</li>
-                  <li>sass</li>
-                  <li>template</li>
-                  <li>views</li>
+                  <li class="directory__close">bower_components</li>
+                  <li class="directory__open">css
+                    <ul>
+                      <li class="directory__open">maps</li>
+                      <li class="file__css">main.css</li>
+                    </ul>
+                  </li>
+                  <li class="directory__open">files</li>
+                  <li class="directory__open">fonts</li>
+                  <li class="directory__open">img
+                    <ul>
+                      <li class="directory__open">sprites_sources</li>
+                      <li class="file__img">projectStructure.png</li>
+                    </ul>
+                  </li>
+                  <li class="directory__open">js
+                    <ul>
+                      <li class="directory__open">controllers</li>
+                      <li class="directory__open">directives</li>
+                      <li class="directory__open">services</li>
+                      <li class="file__js">app.config.js</li>
+                      <li class="file__js">app.js</li>
+                    </ul>
+                  </li>
+                  <li class="directory__open">sass
+                    <ul>
+                      <li class="directory__open">base</li>
+                      <li class="directory__open">components</li>
+                      <li class="directory__open">helpers</li>
+                      <li class="directory__open">layout</li>
+                      <li class="directory__open">modules</li>
+                      <li class="directory__open">pages</li>
+                      <li class="file__sass">main.scss</li>
+                    </ul>
+                  </li>
+                  <li class="directory__open">template
+                    <ul>
+                      <li class="directory__open">components</li>
+                      <li class="directory__open">layout</li>
+                      <li class="directory__open">views</li>
+                      <li class="file__pug">index.pug</li>
+                    </ul>
+                  </li>
+                  <li class="directory__open">views
+                    <ul>
+                      <li class="file__html">default.html</li>
+                    </ul>
+                  </li>
+                  <li class="file__img">apple-touch-icon.png</li>
+                  <li class="file__xml">browserconfig.xml</li>
+                  <li class="file__xml">crossdomain.xml</li>
+                  <li class="file__img">favicon.ico</li>
+                  <li class="file__html">index.html</li>
+                  <li class="file__img">tile.png</li>
+                  <li class="file__img">tile-1200x630px.png</li>
+                  <li class="file__img">tile-wide.png</li>
                 </ul>
               </li>
-              <li>testt</li>
+              <li class="directory__open">test
+                <ul>
+                  <li class="directory__open">spec</li>
+                  <li class="file__js">karma.conf.js</li>
+                </ul>
+              </li>
+              <li class="file__json">.bowerrc</li>
+              <li class="file__json">bower.json</li>
+              <li class="file__js">gulpfile.js</li>
+              <li class="file__json">package.json</li>
+              <li class="file__js">project.config.js</li>
+              <li class="file__json">project.data.json</li>
             </ul>
           </li>
         </ul>
+        <p class="article__paragraph">W przypadku błędu dowolnej funkcjonalności najlepiej powrócić do rekomendowanej struktury lub próbować zlokalizować przyczynę bezpośrednio w pliku <strong>gulpfile.js</strong>.</p>
       </div>
     </article>
     <article class="article">
@@ -82,6 +142,7 @@
           <li><a href="https://www.npmjs.com/package/gulp-uglify" target="_blank" rel="help">gulp-uglify</a></li>
           <li><a href="https://www.npmjs.com/package/gulp-useref" target="_blank" rel="help">gulp-useref</a></li>
           <li><a href="https://www.npmjs.com/package/gulp-util" target="_blank" rel="help">gulp-util</a></li>
+          <li><a href="https://www.npmjs.com/package/gulp.spritesmith" target="_blank" rel="help">gulp.spritesmith</a></li>
           <li><a href="https://www.npmjs.com/package/htmlhint-stylish" target="_blank" rel="help">htmlhint-stylish</a></li>
           <li><a href="https://www.npmjs.com/package/imagemin-gifsicle" target="_blank" rel="help">imagemin-gifsicle</a></li>
           <li><a href="https://www.npmjs.com/package/imagemin-jpegtran" target="_blank" rel="help">imagemin-jpegtran</a></li>
@@ -146,6 +207,7 @@
           <li><code class="code__line">gulp copy</code> - Kopiuje wymagane pliki z katalogu pracy do katalogu produkcyjnego.</li>
           <li><code class="code__line">gulp images</code> - Standardowa optymalizacja grafik.</li>
           <li><code class="code__line">gulp images:optimized</code> - Optymalizuje grafiki za pomocą <a href="https://tinypng.com/developers" target="_blank" rel="help">Tinypng API</a>.</li>
+          <li><code class="code__line">gulp images:sprite</code> - Utworzy tzw. <strong>Sprite</strong> i plik <strong>.scss</strong> z grafik znajdujących się w folderze <strong>sprites_sources</strong> (Opcjonalne argumenty: <strong>--name _nazwa</strong>).</li>
           <li><code class="code__line">gulp upload</code> - Umożliwia automatyczny upload plików na serwer ftp (Opcjonalny argument:  <strong>--upload</strong>).</li>
           <li><code class="code__line">gulp build:server</code> - Uruchamia serwer nasłuchujący na katalog produkcyjny.</li>
         </ul>

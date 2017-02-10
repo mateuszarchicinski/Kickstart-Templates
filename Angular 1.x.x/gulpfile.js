@@ -175,14 +175,14 @@ gulp.task('html:hint', function () {
 
     $.util.log($.util.colors.cyan('HTML HINT TASK RUNNING...'));
 
-    return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html')
+    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/*.html'])
         .pipe($.plumber())
         .pipe($.htmlhint({
             'tagname-lowercase': true,
             'attr-lowercase': true,
             'attr-value-double-quotes': true,
             'attr-no-duplication': true,
-            'doctype-first': true,
+            'doctype-first': false, // true
             'tag-pair': true,
             'tag-self-close': false,
             'spec-char-escape': false,
@@ -198,7 +198,9 @@ gulp.task('html:minify', function () {
 
     $.util.log($.util.colors.green('HTML MINIFY TASK RUNNING...'));
 
-    return gulp.src(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/*.html')
+    return gulp.src([PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/views/*.html'], {
+            base: PROJECT_CONFIG.DIRECTORY.DIST_DIR
+        })
         .pipe($.plumber())
         .pipe($.htmlmin({
             minifyCSS: true
@@ -285,6 +287,25 @@ gulp.task('images:optimized', function () {
         })
         .pipe($.tinify(PROJECT_CONFIG.API_KEYS.TINIFY))
         .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/'));
+
+});
+
+
+gulp.task('images:sprite', function () {
+
+    $.util.log($.util.colors.magenta('IMAGES SPRITE TASK RUNNING...'));
+    
+    var name = getOption('--name').value,
+        spriteCssName = !name ? '_sprite' : name,
+        spriteImgName = spriteCssName[0] === '_' ? spriteCssName.substring(1) : spriteCssName;
+    
+    return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/img/sprites_sources/**/*.{jpg,png,gif}')
+        .pipe($.spritesmith({
+            imgName: spriteImgName + '.png',
+            cssName: spriteCssName + '.scss',
+            imgPath: '../img/' + spriteImgName + '.png'
+        }))
+        .pipe($.if('*.png', gulp.dest(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/img/'), gulp.dest(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/components/sprites/')));
 
 });
 

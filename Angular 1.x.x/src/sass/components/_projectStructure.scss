@@ -3,3 +3,104 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
+// .project-structure li
+$project-structure__li__margin: 0.5em 0 !default;
+
+
+.project-structure {
+    @extend %list-style-none;
+    ul{
+        @extend %list-style-none;
+    }
+    li {
+        @extend %paragraphs;
+        margin: $project-structure__li__margin;
+    }
+    strong {
+        @extend %font-weight-500;
+    }
+    .directory{
+        &__root,
+        &__close,
+        &__open{
+            @include before{
+                @extend %project-structure__icons;
+            }
+        }
+        
+        &__root{
+            @include before{
+                @include sprite($folder-special-black);
+            }
+        }
+        
+        &__close{
+            @include before{
+                @include sprite($folder-black);
+            }
+        }
+        
+        &__open{
+            @include before{
+                @include sprite($folder-open-black);
+            }
+        }
+    }
+    .file{
+        &__json,
+        &__js,
+        &__xml,
+        &__html,
+        &__sass,
+        &__pug,
+        &__css{
+            @include before{
+                @include sprite($code-black);
+                @extend %project-structure__icons;
+            }
+        }
+        
+        &__json{
+            @include before{
+                // content: "<json>"
+            }
+        }
+        
+        &__js{
+            @include before{
+                // content: "<js>"
+            }
+        }
+        
+        &__img{
+            @include before{
+                @include sprite($image-black);
+                @extend %project-structure__icons;
+            }
+        }
+        
+        &__xml{
+            @include before{
+                // content: "<xml>"
+            }
+        }
+        
+        &__html{
+            @include before{
+                // content: "<html>"
+            }
+        }
+        
+        &__sass{
+            @include before{
+                // content: "<sass>"
+            }
+        }
+        
+        &__pug{
+            @include before{
+                // content: "<pug>"
+            }
+        }
+    }
+}

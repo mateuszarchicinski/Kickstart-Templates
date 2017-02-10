@@ -51,6 +51,7 @@
 // Before
 @mixin before {
     &::before {
+        content: "";
         @content;
     };
 }
@@ -59,6 +60,7 @@
 // After
 @mixin after {
     &::after {
+        content: "";
         @content;
     };
 }
@@ -68,6 +70,7 @@
 @mixin before-after {
     &::before,
     &::after {
+        content: "";
         @content;
     };
 }
