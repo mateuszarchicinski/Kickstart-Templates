@@ -3,93 +3,111 @@
 //~~~~~~~~~~~~~~~~~~~~//
 
 
-// *--------- COMENT ---------*
-
-@mixin comment($text){
+// Comment
+@mixin comment($text) {
 /*------------------------
     #{to-upper-case($text)}
 ------------------------*/
 }
 
 
-// *--------- String Replace ---------*
-
-@function str-replace($string, $search, $replace: "") {
-	$index: str-index($string, $search);
-
-	@if $index {
-		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-	}
-
-	@return $string;
+// Font face
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot svg ttf woff woff2) {
+    $src: null;
+    
+    $extmods: (
+        eot: "?",
+        svg: "#" + str-replace($name, " ", "_")
+    );
+    
+    $formats: (
+        otf: "opentype",
+        ttf: "truetype"
+    );
+    
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+    
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
 }
 
 
-// *--------- Font Face ---------*
-
-@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
-	$src: null;
-
-	$extmods: (
-		eot: "?",
-		svg: "#" + str-replace($name, " ", "_")
-	);
-
-	$formats: (
-		otf: "opentype",
-		ttf: "truetype"
-	);
-
-	@each $ext in $exts {
-		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
-		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
-	}
-
-	@font-face {
-		font-family: quote($name);
-		font-style: $style;
-		font-weight: $weight;
-		src: $src;
-	}
-}
-
-
-
-
-
-
-// *--------- BOX SIZING ---------*
-
-@mixin box-sizing($type){
+// Box sizing
+@mixin box-sizing($type) {
     -webkit-box-sizing: $type;
     -moz-box-sizing: $type;
     box-sizing: $type;
 }
 
 
-// *--------- CLEARFIX ---------*
+// Before
+@mixin before {
+    &::before {
+        @content;
+    };
+}
 
-@mixin clearfix{
-    &:before,
-    &:after{
-        content: " ";
+
+// After
+@mixin after {
+    &::after {
+        @content;
+    };
+}
+
+
+// Before - After
+@mixin before-after {
+    &::before,
+    &::after {
+        @content;
+    };
+}
+
+
+// Placeholder
+@mixin placeholder {
+    &::placeholder {
+        @content;
+    };
+}
+
+
+// Clearfix
+@mixin clearfix {
+    *zoom: 1;
+    &::before,
+    &::after {
+        content: "";
         display: table;
+        line-height: 0;
     }
-
-    &:after{
-        clear :both;
-    }
-
-    &{
-        *zoom: 1;
+    
+    &::after {
+        clear: both;
     }
 }
 
 
-// *--------- OPACITY ---------*
+// No text
+@mixin no-text {
+    line-height: 0;
+    font-size: 0;
+    text-shadow: none;
+    color: transparent;
+}
 
-@mixin opacity($value){
+
+// Opacity
+@mixin opacity($value) {
     $IEValue: $value * 100;
     opacity: $value;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $IEValue + ")";
@@ -97,33 +115,21 @@
 }
 
 
-// *--------- TRANSITION ---------*
-
-@mixin transition($props: all, $speed: 0.2s, $easing: linear){
-    transition: $props $speed $easing;
+// Transform
+@mixin transform($transforms) {
+    transform: $transforms;
+    will-change: transform;
 }
 
 
-// *--------- PLECEHOLDER ---------*
-
-@mixin placeholder{
-    &::placeholder{@content};
+// Scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
 }
 
 
-// *--------- NO TEXT ---------*
-
-@mixin no-text{
-    font-size: 0;
-    line-height: 0;
-    text-shadow: none;
-    color: transparent;
-}
-
-
-// *--------- BOTH CENTER ---------*
-
-@mixin both-center($top: -50%, $left: -50%, $position: relative){
+// Both center
+@mixin both-center($top: -50%, $left: -50%, $position: relative) {
     position: $position;
     top: 50%;
     left: 50%;
@@ -132,27 +138,15 @@
 }
 
 
-// *--------- TRANSFORM ---------*
-
-@mixin transform($transforms){
-    transform: $transforms;
-    will-change: transform;
+// Transition
+@mixin transition($props: all, $speed: 0.25s, $easing: linear){
+    transition: $props $speed $easing;
 }
 
 
-// *--------- SCALE ---------*
-
-@mixin scale($scale){
-    @include transform(scale($scale));
-}
-
-
-// *--------- KEYFRAMES ---------*
-
-@mixin keyframes($name){
-
-    @keyframes #{$name}{
+// Keyframes
+@mixin keyframes($name) {
+    @keyframes #{$name} {
         @content;
     }
-
 }

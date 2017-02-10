@@ -7,8 +7,12 @@
 
 
 // ---------------------
-//     GENERAL
+//     HELPERS
 // ---------------------
+
+
+    // *--------- FUNCTIONS ---------*
+    @import "helpers/functions";
 
 
     // *--------- VARIABLES ---------*
@@ -72,7 +76,11 @@
 
 
 // *--------- SYNTAX HIGHLIGHTING ---------*
-@import "components/syntax-highlighting";
+@import "components/syntaxHighlighting";
+
+
+// *--------- PROJECT STRUCTURE ---------*
+@import "components/projectStructure";
 
 
 // ---------------------

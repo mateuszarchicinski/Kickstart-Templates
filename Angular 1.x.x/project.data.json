@@ -25,11 +25,11 @@
                     "headline": "Konfiguracja",
                     "paragraph": []
                 },
-                "foldersStructure":{
-                    "headline": "Struktura folderów",
+                "projectStructure":{
+                    "headline": "Struktura projektu",
                     "paragraph": []
                 },
-                "NPMModules":{
+                "npmModules":{
                     "headline": "NPM moduły",
                     "paragraph": ["Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności szablonu (", "):", "Wszystkie powyższe moduły instalujemy komendą"]
                 },
