@@ -23829,30 +23829,12 @@ md-tooltip {
   width: 24px;
   height: 24px; }
 
-.project-structure .file__json::before {
-  content: ""; }
-
-.project-structure .file__js::before {
-  content: ""; }
-
 .project-structure .file__img::before {
   content: "";
   background-image: url(../img/projectStructure.png);
   background-position: -48px 0px;
   width: 24px;
   height: 24px; }
-
-.project-structure .file__xml::before {
-  content: ""; }
-
-.project-structure .file__html::before {
-  content: ""; }
-
-.project-structure .file__sass::before {
-  content: ""; }
-
-.project-structure .file__pug::before {
-  content: ""; }
 
 .readme {
   width: 750px;

@@ -60,46 +60,10 @@ $project-structure__li__margin: 0.5em 0 !default;
             }
         }
         
-        &__json{
-            @include before{
-                // content: "<json>"
-            }
-        }
-        
-        &__js{
-            @include before{
-                // content: "<js>"
-            }
-        }
-        
         &__img{
             @include before{
                 @include sprite($image-black);
                 @extend %project-structure__icons;
-            }
-        }
-        
-        &__xml{
-            @include before{
-                // content: "<xml>"
-            }
-        }
-        
-        &__html{
-            @include before{
-                // content: "<html>"
-            }
-        }
-        
-        &__sass{
-            @include before{
-                // content: "<sass>"
-            }
-        }
-        
-        &__pug{
-            @include before{
-                // content: "<pug>"
             }
         }
     }
