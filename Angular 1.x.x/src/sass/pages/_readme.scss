@@ -27,9 +27,9 @@ $readme__info__border-left: 0.25em solid $color__sunset-orange !default;
         @extend %paragraphs;
         padding: $readme__info__padding;
         border-left: $readme__info__border-left;
-        a{
-            @extend %display-inline-block;
-        }
+//        a{
+//            @extend %display-inline-block;
+//        }
         strong{
             @extend %font-weight-500;
         }

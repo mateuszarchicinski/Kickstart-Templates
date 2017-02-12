@@ -6,25 +6,40 @@ article.article
     .article__body
         p.article__paragraph #{data.articles.gulpTasks.paragraph[0]} 
             strong gulpfile.js
-            |  #{data.articles.gulpTasks.paragraph[1]}
+            |  #{data.articles.gulpTasks.paragraph[1]} 
+            br.br-g-1
+            | #{data.articles.gulpTasks.paragraph[2]}
         p.article__paragraph= data.articles.gulpTasks.subHeadlines[0]
         ul.article__list
             li
-                code.code__line gulp css
-                |  - #{data.articles.gulpTasks.css[0]} 
+                code.code__line gulp sass:css
+                |  - #{data.articles.gulpTasks.sassCss[0]} 
                 strong main.css
-                |  #{data.articles.gulpTasks.css[1]} 
+                |  #{data.articles.gulpTasks.sassCss[1]} 
                 strong main.css.map
-                |  #{data.articles.gulpTasks.css[2]} 
+                |  #{data.articles.gulpTasks.sassCss[2]} 
                 strong main.scss
                 | .
             li
+                code.code__line gulp sass:lint
+                |  - #{data.articles.gulpTasks.sassLint[0]} 
+                strong Sass
+                |  #{data.articles.gulpTasks.sassLint[1]} 
+                strong .sass
+                |  /
+                strong .scss
+                | .
+            li
                 code.code__line gulp js:hint
-                |  - #{data.articles.gulpTasks.jsHint[0]}
+                |  - #{data.articles.gulpTasks.jsHint[0]} 
+                strong JavaScript
+                |  #{data.articles.gulpTasks.jsHint[1]} 
+                strong .js
+                | .
             li
                 code.code__line gulp js:test
                 |  - #{data.articles.gulpTasks.jsTest[0]} 
-                br.br-g-1
+                br.br-g-2
                 | #{data.articles.gulpTasks.jsTest[1]}
             li
                 code.code__line gulp jade:pug
@@ -41,7 +56,14 @@ article.article
                 strong .pug
                 |  #{data.articles.gulpTasks.pug[2]} 
                 strong --lang pl / en
-                | #{data.articles.gulpTasks.pug[3]}
+                | ).
+            li
+                code.code__line gulp pug:lint
+                |  - #{data.articles.gulpTasks.pugLint[0]} 
+                strong Pug
+                |  #{data.articles.gulpTasks.pugLint[1]} 
+                strong .pug
+                | .
             li
                 code.code__line gulp html
                 |  - #{data.articles.gulpTasks.html[0]} 
@@ -51,26 +73,42 @@ article.article
                 |  #{data.articles.gulpTasks.html[2]} 
                 strong .js
                 |  #{data.articles.gulpTasks.html[3]} 
-                br.br-g-2
+                br.br-g-3
                 | #{data.articles.gulpTasks.html[4]}
             li
                 code.code__line gulp html:hint
-                |  - #{data.articles.gulpTasks.htmlHint[0]}
+                |  - #{data.articles.gulpTasks.htmlHint[0]} 
+                strong HTML
+                |  #{data.articles.gulpTasks.htmlHint[1]} 
+                strong .html
+                | .
             li
                 code.code__line gulp html:minify
-                |  - #{data.articles.gulpTasks.htmlMinify[0]}
+                |  - #{data.articles.gulpTasks.htmlMinify[0]} 
+                strong HTML
+                |  #{data.articles.gulpTasks.htmlMinify[1]} 
+                strong .html
+                | .
             li
                 code.code__line gulp server
                 |  - #{data.articles.gulpTasks.server[0]}
+                strong src
+                | ).
             li
                 code.code__line gulp watch
                 |  - #{data.articles.gulpTasks.watch[0]}
             li
                 code.code__line gulp clean
                 |  - #{data.articles.gulpTasks.clean[0]}
+                strong dist
+                | ).
             li
                 code.code__line gulp copy
                 |  - #{data.articles.gulpTasks.copy[0]}
+                strong src
+                | #{data.articles.gulpTasks.copy[1]}
+                strong dist
+                | ).
             li
                 code.code__line gulp images
                 |  - #{data.articles.gulpTasks.images[0]}
@@ -86,26 +124,26 @@ article.article
                 |  #{data.articles.gulpTasks.imagesSprite[1]} 
                 strong .scss
                 |  #{data.articles.gulpTasks.imagesSprite[2]} 
-                br.br-g-3
-                | #{data.articles.gulpTasks.imagesSprite[3]} 
                 strong sprites_sources
-                |  #{data.articles.gulpTasks.imagesSprite[4]} 
-                strong --name #{data.articles.gulpTasks.imagesSprite[5]}
-                | #{data.articles.gulpTasks.imagesSprite[6]}
+                |  #{data.articles.gulpTasks.imagesSprite[3]} 
+                strong --name #{data.articles.gulpTasks.imagesSprite[4]}
+                | ).
             li
                 code.code__line gulp upload
                 |  - #{data.articles.gulpTasks.upload[0]} 
                 strong --upload
-                | #{data.articles.gulpTasks.upload[1]}
+                | ).
             li
                 code.code__line gulp build:server
                 |  - #{data.articles.gulpTasks.buildServer[2]}
+                strong dist
+                | ).
         p.article__paragraph= data.articles.gulpTasks.subHeadlines[1]
         ul.article__list
             li
                 code.code__line gulp build
                 |  - #{data.articles.gulpTasks.build[0]}
-        pre.code__block clean > css > js:hint > pug > html:hint > html > html:minify > copy > upload
+        pre.code__block clean > sass:lint > sass:css > js:hint > pug:lint > pug > html:hint > html > html:minify > copy > upload
         ul.article__list
             li
                 code.code__line gulp build:server
@@ -117,4 +155,4 @@ article.article
             li
                 code.code__line gulp / gulp default
                 |  - #{data.articles.gulpTasks.default[0]}
-        pre.code__block css > js:hint > pug > html:hint > server > watch
+        pre.code__block sass:lint > sass:css > js:hint > pug:lint > pug > html:hint > server > watch

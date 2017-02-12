@@ -2,8 +2,8 @@
 <!--Default View-->
 <section class="readme">
   <header class="readme__header">
-    <h2 class="readme__title secondary-heading">Angular 1.x.x Szablon</h2>
-    <p class="readme__info">Szablon umożliwiający szybkie w pełni zautomatyzowane rozpoczęcie projektu <br class="br-a-1"/>z <a href="https://angularjs.org/" target="_blank" rel="help">Angularem 1.x.x</a>. Wykorzystuje do tego <a href="https://nodejs.org/en/" target="_blank" rel="help">NodeJS</a>, <a href="https://www.npmjs.com/" target="_blank" rel="help">NPM</a>, <a href="https://bower.io/" target="_blank" rel="help">Bower</a>, <a href="http://gulpjs.com/" target="_blank" rel="help">GulpJS</a> i <a href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help">Karma</a>.</p>
+    <h2 class="readme__title secondary-heading">Angular v1.x Szablon</h2>
+    <p class="readme__info">Szablon umożliwia szybkie w pełni zautomatyzowane rozpoczęcie projektu aplikacji webowej wykorzystującej jedną z najpopularniejszych technologii <a href="https://angularjs.org/" target="_blank" rel="help">Angular v1.x - MVC Framework</a>. Wykorzystuje do tego <a href="https://nodejs.org/en/" target="_blank" rel="help">NodeJS</a>, <a href="https://www.npmjs.com/" target="_blank" rel="help">NPM</a>, <a href="https://bower.io/" target="_blank" rel="help">Bower</a>, <a href="http://gulpjs.com/" target="_blank" rel="help">GulpJS</a> i <a href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help">Karma</a>.</p>
   </header>
   <div class="readme__body">
     <article class="article">
@@ -117,7 +117,7 @@
       </header>
       <div class="article__body">
         <p class="article__paragraph">Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności szablonu (<strong>package.json</strong>): </p>
-        <ul class="article__list">
+        <ul class="article__list-points">
           <li><a href="https://bower.io/" target="_blank" rel="help">bower</a></li>
           <li><a href="https://browsersync.io/" target="_blank" rel="help">browser-sync</a></li>
           <li><a href="https://www.npmjs.com/package/del" target="_blank" rel="help">del</a></li>
@@ -134,6 +134,7 @@
           <li><a href="https://www.npmjs.com/package/gulp-load-plugins" target="_blank" rel="help">gulp-load-plugins</a></li>
           <li><a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a></li>
           <li><a href="https://www.npmjs.com/package/gulp-pug" target="_blank" rel="help">gulp-pug</a></li>
+          <li><a href="https://www.npmjs.com/package/gulp-pug-lint" target="_blank" rel="help">gulp-pug-lint</a></li>
           <li><a href="https://www.npmjs.com/package/gulp-rename" target="_blank" rel="help">gulp-rename</a></li>
           <li><a href="https://www.npmjs.com/package/gulp-sass" target="_blank" rel="help">gulp-sass</a></li>
           <li><a href="https://www.npmjs.com/package/gulp-sass-lint" target="_blank" rel="help">gulp-sass-lint</a></li>
@@ -166,8 +167,8 @@
         <h3 class="article__title tertiary-heading">Bower komponenty</h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Następujące komponenty są elementami niezbędnymi do właściwego funkcjonowania szablonu (<strong>bower.json</strong>):</p>
-        <ul class="article__list">
+        <p class="article__paragraph">Następujące komponenty są elementami niezbędnymi do właściwego funkcjonowania szablonu wykorzystującego technologie <a href="https://angularjs.org/" target="_blank" rel="help">Angular v1.x - MVC Framework</a> i <a href="https://material.angularjs.org/latest/" target="_blank" rel="help">Angular Material v1.x - UI Component</a> (<strong>bower.json</strong>):</p>
+        <ul class="article__list-points">
           <li><a href="https://code.angularjs.org/1.6.1/angular.js" target="_blank" rel="help">angular</a></li>
           <li><a href="https://ui-router.github.io/ng1/" target="_blank" rel="help">angular-ui-router</a></li>
           <li><a href="https://code.angularjs.org/1.6.1/angular-animate.min.js" target="_blank" rel="help">angular-animate</a></li>
@@ -178,7 +179,7 @@
           <li><a href="https://necolas.github.io/normalize.css/" target="_blank" rel="help">normalize-css</a></li>
         </ul>
         <p class="article__paragraph">Dodatkowe paczki z których można korzystać opcjonalnie:</p>
-        <ul class="article__list">
+        <ul class="article__list-points">
           <li><a href="https://jquery.com/" target="_blank" rel="help">jquery</a></li>
           <li><a href="https://github.com/geoffgraham/animate.scss" target="_blank" rel="help">animatewithsass</a></li>
         </ul>
@@ -190,32 +191,34 @@
         <h3 class="article__title tertiary-heading">Gulp zadania</h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Lista zdefiniowanych zadań w <strong>gulpfile.js</strong> poniżej. Dodatkowo krótki opis do każdego polecenia z podziałem na dwie grupy pojedynczych i złożonych poleceń.</p>
+        <p class="article__paragraph">Lista zdefiniowanych zadań w <strong>gulpfile.js</strong> poniżej. Polecenia wykonujemy z poziomu konsoli przebywając w głównym katalogu projektu. Do każdego zadania dodatkowo krótki opis <br class="br-g-1"/>z podziałem na zadania pojedyncze i złożone.</p>
         <p class="article__paragraph">Pojedyncze:</p>
         <ul class="article__list">
-          <li><code class="code__line">gulp css</code> - Tworzy główny plik <strong>main.css</strong> i <strong>main.css.map</strong> na podstawie pliku <strong>main.scss</strong>.</li>
-          <li><code class="code__line">gulp js:hint</code> - Sprawdza kod JavaScript i raportuje o błędach.</li>
-          <li><code class="code__line">gulp js:test</code> - Uruchamia testy jednostkowe, nasłuchuje zmian w plikach źródłowych <br class="br-g-1"/>i raportuje o błędach.</li>
+          <li><code class="code__line">gulp sass:css</code> - Tworzy główny plik <strong>main.css</strong> i <strong>main.css.map</strong> na podstawie pliku <strong>main.scss</strong>.</li>
+          <li><code class="code__line">gulp sass:lint</code> - Sprawdza kod <strong>Sass</strong> i raportuje o błędach w plikach <strong>.sass</strong> /<strong>.scss</strong>.</li>
+          <li><code class="code__line">gulp js:hint</code> - Sprawdza kod <strong>JavaScript</strong> i raportuje o błędach w plikach <strong>.js</strong>.</li>
+          <li><code class="code__line">gulp js:test</code> - Uruchamia testy jednostkowe, nasłuchuje zmian w plikach źródłowych <br class="br-g-2"/>i raportuje o błędach.</li>
           <li><code class="code__line">gulp jade:pug</code> - Konwertuje pliki <strong>.jade</strong> na <strong>.pug</strong>.</li>
           <li><code class="code__line">gulp pug</code> - Tworzy pliki <strong>.html</strong> na podstawie plików <strong>.pug</strong> (Opcjonalne argumenty: <strong>--lang pl / en</strong>).</li>
-          <li><code class="code__line">gulp html</code> - Na podstawie wskazanych ścieżek w pliku <strong>.html</strong> do plików <strong>.css</strong> i <strong>.js</strong> łączy <br class="br-g-2"/>je w pojedyncze zmniejszone pliki źródłowe.</li>
-          <li><code class="code__line">gulp html:hint</code> - Sprawdza kod HTML i raportuje o błędach.</li>
-          <li><code class="code__line">gulp html:minify</code> - Zmniejsza nasz kod HTML.</li>
-          <li><code class="code__line">gulp server</code> - Uruchamia serwer nasłuchujący na katalog pracy.</li>
+          <li><code class="code__line">gulp pug:lint</code> - Sprawdza kod <strong>Pug</strong> i raportuje o błędach w plikach <strong>.pug</strong>.</li>
+          <li><code class="code__line">gulp html</code> - Na podstawie wskazanych ścieżek w pliku <strong>.html</strong> do plików <strong>.css</strong> i <strong>.js</strong> łączy <br class="br-g-3"/>je w pojedyncze zmniejszone pliki źródłowe.</li>
+          <li><code class="code__line">gulp html:hint</code> - Sprawdza kod <strong>HTML</strong> i raportuje o błędach w plikach <strong>.html</strong>.</li>
+          <li><code class="code__line">gulp html:minify</code> - Po odpowiednim skonfigurowaniu zmniejszy kod <strong>HTML</strong> w plikach <strong>.html</strong>.</li>
+          <li><code class="code__line">gulp server</code> - Uruchamia serwer nasłuchujący na katalog pracy (<strong>src</strong>).</li>
           <li><code class="code__line">gulp watch</code> - W następstwie zmian w plikach uruchamia wskazane zadania.</li>
-          <li><code class="code__line">gulp clean</code> - Usuwa katalog produkcyjny.</li>
-          <li><code class="code__line">gulp copy</code> - Kopiuje wymagane pliki z katalogu pracy do katalogu produkcyjnego.</li>
+          <li><code class="code__line">gulp clean</code> - Usuwa katalog produkcyjny (<strong>dist</strong>).</li>
+          <li><code class="code__line">gulp copy</code> - Kopiuje wymagane pliki z katalogu pracy (<strong>src</strong>) do katalogu produkcyjnego (<strong>dist</strong>).</li>
           <li><code class="code__line">gulp images</code> - Standardowa optymalizacja grafik.</li>
           <li><code class="code__line">gulp images:optimized</code> - Optymalizuje grafiki za pomocą <a href="https://tinypng.com/developers" target="_blank" rel="help">Tinypng API</a>.</li>
-          <li><code class="code__line">gulp images:sprite</code> - Utworzy tzw. <strong>Sprite</strong> i plik <strong>.scss</strong> z grafik znajdujących się <br class="br-g-3"/>w folderze <strong>sprites_sources</strong> (Opcjonalne argumenty: <strong>--name _nazwa</strong>).</li>
+          <li><code class="code__line">gulp images:sprite</code> - Utworzy tak zwanego <strong>Sprite</strong> i plik <strong>.scss</strong> z grafik znajdujących się w folderze <strong>sprites_sources</strong> (Opcjonalne argumenty: <strong>--name _nazwa</strong>).</li>
           <li><code class="code__line">gulp upload</code> - Umożliwia automatyczny upload plików na serwer ftp (Opcjonalny argument:  <strong>--upload</strong>).</li>
-          <li><code class="code__line">gulp build:server</code> - Uruchamia serwer nasłuchujący na katalog produkcyjny.</li>
+          <li><code class="code__line">gulp build:server</code> - Uruchamia serwer nasłuchujący na katalog produkcyjny (<strong>dist</strong>).</li>
         </ul>
         <p class="article__paragraph">Złożone:</p>
         <ul class="article__list">
           <li><code class="code__line">gulp build</code> - Wywoła sekwencja  poleceń:</li>
         </ul>
-        <pre class="code__block">clean > css > js:hint > pug > html:hint > html > html:minify > copy > upload</pre>
+        <pre class="code__block">clean > sass:lint > sass:css > js:hint > pug:lint > pug > html:hint > html > html:minify > copy > upload</pre>
         <ul class="article__list">
           <li><code class="code__line">gulp build:server</code> - Uruchamia zadanie <code class="code__line">gulp build</code> po czym tworzy serwer nasłuchujący na nowo powstały katalog produkcyjny.</li>
         </ul>
@@ -223,7 +226,7 @@
         <ul class="article__list">
           <li><code class="code__line">gulp / gulp default</code> - Wywoła sekwencja  poleceń:</li>
         </ul>
-        <pre class="code__block">css > js:hint > pug > html:hint > server > watch</pre>
+        <pre class="code__block">sass:lint > sass:css > js:hint > pug:lint > pug > html:hint > server > watch</pre>
       </div>
     </article>
     <article class="article">

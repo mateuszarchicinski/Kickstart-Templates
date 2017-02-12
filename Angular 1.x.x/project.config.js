@@ -2,7 +2,7 @@
 module.exports = {
     APP_NAME: "app",
     CONFIG_FILE: 'project.config.js',
-    DATA_FILE: 'project.data.json',
+    DATA_FILE: 'project.data.json', // Data object which are passing to pug (Dynamic templates).
     DIRECTORY: {
         WORK_DIR: 'src',
         DIST_DIR: 'dist',

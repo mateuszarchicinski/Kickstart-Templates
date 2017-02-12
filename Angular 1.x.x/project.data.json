@@ -13,8 +13,8 @@
                 "headline": "Kickstart Projekt"
             },
             "section": {
-                "headline": "Angular 1.x.x Szablon",
-                "info": ["Szablon umożliwiający szybkie w pełni zautomatyzowane rozpoczęcie projektu", "z", "Wykorzystuje do tego", "i"]
+                "headline": "Angular v1.x Szablon",
+                "info": ["Szablon umożliwia szybkie w pełni zautomatyzowane rozpoczęcie projektu aplikacji webowej wykorzystującej jedną z najpopularniejszych technologii", "Wykorzystuje do tego", "i"]
             },
             "articles": {
                 "usage":{
@@ -35,31 +35,33 @@
                 },
                 "bowerComponents":{
                     "headline": "Bower komponenty",
-                    "paragraph": ["Następujące komponenty są elementami niezbędnymi do właściwego funkcjonowania szablonu (", "):", "Dodatkowe paczki z których można korzystać opcjonalnie:", "Wszystkie powyższe komponenty instalujemy komendą"]
+                    "paragraph": ["Następujące komponenty są elementami niezbędnymi do właściwego funkcjonowania szablonu wykorzystującego technologie", "i", "Dodatkowe paczki z których można korzystać opcjonalnie:", "Wszystkie powyższe komponenty instalujemy komendą"]
                 },
                 "gulpTasks":{
                     "headline": "Gulp zadania",
-                    "paragraph": ["Lista zdefiniowanych zadań w", "poniżej. Dodatkowo krótki opis do każdego polecenia z podziałem na dwie grupy pojedynczych i złożonych poleceń."],
+                    "paragraph": ["Lista zdefiniowanych zadań w", "poniżej. Polecenia wykonujemy z poziomu konsoli przebywając w głównym katalogu projektu. Do każdego zadania dodatkowo krótki opis", "z podziałem na zadania pojedyncze i złożone."],
                     "subHeadlines": ["Pojedyncze:", "Złożone:"],
                     "build": ["Wywoła sekwencja  poleceń:"],
-                    "buildServer": ["Uruchamia zadanie", "po czym tworzy serwer nasłuchujący na nowo powstały katalog produkcyjny.", "Uruchamia serwer nasłuchujący na katalog produkcyjny."],
+                    "buildServer": ["Uruchamia zadanie", "po czym tworzy serwer nasłuchujący na nowo powstały katalog produkcyjny.", "Uruchamia serwer nasłuchujący na katalog produkcyjny ("],
                     "default": ["Wywoła sekwencja  poleceń:"],
-                    "css": ["Tworzy główny plik", "i", "na podstawie pliku"],
-                    "jsHint": ["Sprawdza kod JavaScript i raportuje o błędach."],
+                    "sassCss": ["Tworzy główny plik", "i", "na podstawie pliku"],
+                    "sassLint": ["Sprawdza kod", "i raportuje o błędach w plikach"],
+                    "jsHint": ["Sprawdza kod", "i raportuje o błędach w plikach"],
                     "jsTest": ["Uruchamia testy jednostkowe, nasłuchuje zmian w plikach źródłowych", "i raportuje o błędach."],
                     "jadePug": ["Konwertuje pliki", "na"],
-                    "pug": ["Tworzy pliki", "na podstawie plików", "(Opcjonalne argumenty:", ")."],
+                    "pug": ["Tworzy pliki", "na podstawie plików", "(Opcjonalne argumenty:"],
+                    "pugLint": ["Sprawdza kod", "i raportuje o błędach w plikach"],
                     "html": ["Na podstawie wskazanych ścieżek w pliku", "do plików", "i", "łączy", "je w pojedyncze zmniejszone pliki źródłowe."],
-                    "htmlHint": ["Sprawdza kod HTML i raportuje o błędach."],
-                    "htmlMinify": ["Zmniejsza nasz kod HTML."],
-                    "server": ["Uruchamia serwer nasłuchujący na katalog pracy."],
+                    "htmlHint": ["Sprawdza kod", "i raportuje o błędach w plikach"],
+                    "htmlMinify": ["Po odpowiednim skonfigurowaniu zmniejszy kod", "w plikach"],
+                    "server": ["Uruchamia serwer nasłuchujący na katalog pracy ("],
                     "watch": ["W następstwie zmian w plikach uruchamia wskazane zadania."],
-                    "clean": ["Usuwa katalog produkcyjny."],
-                    "copy": ["Kopiuje wymagane pliki z katalogu pracy do katalogu produkcyjnego."],
+                    "clean": ["Usuwa katalog produkcyjny ("],
+                    "copy": ["Kopiuje wymagane pliki z katalogu pracy (", ") do katalogu produkcyjnego ("],
                     "images": ["Standardowa optymalizacja grafik."],
                     "imagesOptimized": ["Optymalizuje grafiki za pomocą"],
-                    "imagesSprite": ["Utworzy tzw.", "i plik", "z grafik znajdujących się", "w folderze", "(Opcjonalne argumenty:", "_nazwa", ")."],
-                    "upload": ["Umożliwia automatyczny upload plików na serwer ftp (Opcjonalny argument: ", ")."]
+                    "imagesSprite": ["Utworzy tak zwanego", "i plik", "z grafik znajdujących się w folderze", "(Opcjonalne argumenty:", "_nazwa"],
+                    "upload": ["Umożliwia automatyczny upload plików na serwer ftp (Opcjonalny argument: "]
                 },
                 "testing":{
                     "headline": "Testowanie",

@@ -6,13 +6,14 @@
 // __line __block
 $code__line-block__background: $color__amour !default;
 $code__line-block__font-size: 90% !default;
-$code__line-block__text-align: left !default;
+$code__line-block__text-align: justify !default;
 $code__line-block__color: $color__black !default;
 $code__line-block__white-space: normal !default;
 $code__line-block__border-radius: 3px !default;
 // __line
 $code__line__padding: 0 1px !default;
 // __block
+$code__block__line-height: 2 !default;
 $code__block__display: block !default;
 $code__block__padding: 16px !default;
 $code__block__margin: 10px 0 !default;
@@ -32,6 +33,7 @@ $code__block__margin: 10px 0 !default;
         padding: $code__line__padding;
     }
     &__block{
+        line-height: $code__block__line-height;
         display: $code__block__display;
         padding: $code__block__padding;
         margin: $code__block__margin;

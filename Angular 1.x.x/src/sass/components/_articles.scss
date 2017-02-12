@@ -6,26 +6,34 @@
 $article__padding-top: 5px !default;
 // .article__list li
 $article__list__li__margin: 1em 0 !default;
+// .article__list-points li
+$article__list-points__li__margin: 0.8em 0 !default;
 
 
-.article{
+.article {
     padding-top: $article__padding-top;
-    &__paragraph{
+    &__paragraph {
         @extend %paragraphs;
-        a{
-            @extend %display-inline-block;
-        }
-        strong{
+//        a {
+//            @extend %display-inline-block;
+//        }
+        strong {
             @extend %font-weight-500;
         }
     }
-    &__list{
-        li{
+    &__list {
+        li {
             @extend %paragraphs;
             margin: $article__list__li__margin;
         }
-        strong{
+        strong {
             @extend %font-weight-500;
+        }
+        &-points {
+            li {
+                @extend %paragraphs;
+                margin: $article__list-points__li__margin;
+            }
         }
     }
 }

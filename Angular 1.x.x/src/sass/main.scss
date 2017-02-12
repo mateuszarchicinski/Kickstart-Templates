@@ -3,7 +3,7 @@
 //~~~~~~~~~~~~~~~~~~~~//
 
 
-@charset "utf-8";
+@charset 'utf-8';
 
 
 // ---------------------
@@ -12,19 +12,19 @@
 
 
     // *--------- FUNCTIONS ---------*
-    @import "helpers/functions";
+    @import 'helpers/functions';
 
 
     // *--------- VARIABLES ---------*
-    @import "helpers/variables";
+    @import 'helpers/variables';
 
 
     // *--------- MIXINS ---------*
-    @import "helpers/mixins";
+    @import 'helpers/mixins';
 
 
     // *--------- TYPOGRAPHY ---------*
-    @import "base/typography";
+    @import 'base/typography';
 
 
 // ---------------------
@@ -33,7 +33,7 @@
 
 
 // *--------- ANGULAR MATERIAL ---------*
-@import "../bower_components/angular-material/angular-material.scss";
+@import '../bower_components/angular-material/angular-material.scss';
 
 
 // ---------------------
@@ -42,19 +42,19 @@
 
 
 // *--------- SPRITES ---------*
-@import "components/sprites/projectStructure";
+@import 'components/sprites/projectStructure';
 
 
 // *--------- ARTICLES ---------*
-@import "components/articles";
+@import 'components/articles';
 
 
 // *--------- SYNTAX HIGHLIGHTING ---------*
-@import "components/syntaxHighlighting";
+@import 'components/syntaxHighlighting';
 
 
 // *--------- PROJECT STRUCTURE ---------*
-@import "components/projectStructure";
+@import 'components/projectStructure';
 
 
 // ---------------------
@@ -63,7 +63,7 @@
 
 
 // *--------- README ---------*
-@import "pages/readme";
+@import 'pages/readme';
 
 
 // ---------------------
@@ -72,19 +72,19 @@
 
 
 // *--------- GENERAL ---------*
-@import "layout/general";
+@import 'layout/general';
 
 
 // *--------- MAIN HEADER ---------*
-@import "layout/header";
+@import 'layout/header';
 
 
 // *--------- MAIN WRAPPER ---------*
-@import "layout/wrapper";
+@import 'layout/wrapper';
 
 
 // *--------- MAIN FOOTER ---------*
-@import "layout/footer";
+@import 'layout/footer';
 
 
 // ---------------------
@@ -93,5 +93,5 @@
 
 
 // *--------- EXTENDS ---------*
-@import "base/extends";
+@import 'base/extends';
 

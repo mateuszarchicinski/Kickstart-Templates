@@ -55,15 +55,15 @@ $project-structure__li__margin: 0.5em 0 !default;
         &__pug,
         &__css{
             @include before{
-                @include sprite($code-black);
                 @extend %project-structure__icons;
+                @include sprite($code-black);
             }
         }
         
         &__img{
             @include before{
-                @include sprite($image-black);
                 @extend %project-structure__icons;
+                @include sprite($image-black);
             }
         }
     }

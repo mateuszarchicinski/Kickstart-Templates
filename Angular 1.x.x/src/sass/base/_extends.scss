@@ -40,8 +40,8 @@ $project-structure__icons__margin-top: -3px !default;
 }
 
 %project-structure__icons{
-    position: $project-structure__icons__position;
     display: $project-structure__icons__display;
+    position: $project-structure__icons__position;
     transform: $project-structure__icons__transform;
     margin-left: $project-structure__icons__margin-left;
     margin-top: $project-structure__icons__margin-top;

@@ -4,10 +4,14 @@ article.article
     header.article__header
         h3.article__title.tertiary-heading= data.articles.bowerComponents.headline
     .article__body
-        p.article__paragraph #{data.articles.bowerComponents.paragraph[0]}
+        p.article__paragraph #{data.articles.bowerComponents.paragraph[0]} 
+            a(href="https://angularjs.org/" target="_blank" rel="help") Angular v1.x - MVC Framework
+            |  #{data.articles.bowerComponents.paragraph[1]} 
+            a(href="https://material.angularjs.org/latest/" target="_blank" rel="help") Angular Material v1.x - UI Component
+            |  (
             strong bower.json
-            | #{data.articles.bowerComponents.paragraph[1]}
-        ul.article__list
+            | ):
+        ul.article__list-points
             li
                 a(href="https://code.angularjs.org/1.6.1/angular.js" target="_blank" rel="help") angular
             li
@@ -25,7 +29,7 @@ article.article
             li
                 a(href="https://necolas.github.io/normalize.css/" target="_blank" rel="help") normalize-css
         p.article__paragraph= data.articles.bowerComponents.paragraph[2]
-        ul.article__list
+        ul.article__list-points
             li
                 a(href="https://jquery.com/" target="_blank" rel="help") jquery
             li

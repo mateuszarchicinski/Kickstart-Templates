@@ -59,7 +59,7 @@ $primary-heading__after__width: #{(150 / 16)}em;
 $primary-heading__after__height: #{(3 / 16)}em;
 $primary-heading__after__background: $color__red-orange;
 $primary-heading__after__font-size: $primary-heading__font-size / 4;
-$primary-heading__after__border-radius: 25%;
+$primary-heading__after__border-radius: 20%;
 $primary-heading__after__margin: #{(5 / 16)}em auto 0;
 // .secondary-heading .tertiary-heading .quaternary-heading
 $secondary-heading__font-size: $primary-heading__font-size - 0.5;
@@ -87,14 +87,18 @@ $font-family: $base__font-family;
 // *--------- ARTICLES ---------*
 // article__list li
 $article__list__li__margin: 1em 0;
+// .article__list-points li
+$article__list-points__li__margin: 0.8em 0;
 
 
 // *--------- SYNTAX HIGHLIGHTING ---------*
 // __line __block
 $code__line-block__background: $color__amour;
 $code__line-block__font-size: 90%;
-$code__line-block__text-align: left;
+$code__line-block__text-align: justify;
 $code__line-block__color: $color__black;
+// __block
+$code__block__line-height: 2;
 
 
 // *--------- PROJECT STRUCTURE ---------*

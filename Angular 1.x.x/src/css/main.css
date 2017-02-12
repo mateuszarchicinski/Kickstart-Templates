@@ -11,7 +11,7 @@
     background: #f44336;
     display: block;
     font-size: 0.5em;
-    border-radius: 25%;
+    border-radius: 20%;
     margin: 0.3125em auto 0; }
 
 .secondary-heading {
@@ -23778,11 +23778,13 @@ md-tooltip {
   padding-top: 5px; }
   .article__list li {
     margin: 1em 0; }
+  .article__list-points li {
+    margin: 0.8em 0; }
 
 .code__line, .code__block {
   background: #ffebee;
   font-size: 90%;
-  text-align: left;
+  text-align: justify;
   color: #000;
   white-space: normal;
   border-radius: 3px; }
@@ -23791,6 +23793,7 @@ md-tooltip {
   padding: 0 1px; }
 
 .code__block {
+  line-height: 2;
   display: block;
   padding: 16px;
   margin: 10px 0; }
@@ -23891,13 +23894,9 @@ body {
     font-size: 0.8em;
     font-weight: 400; }
 
-.article__paragraph, .article__list li, .project-structure li, .readme__info {
+.article__paragraph, .article__list li, .article__list-points li, .project-structure li, .readme__info {
   line-height: 1.3;
   text-align: justify; }
-
-.article__paragraph a, .readme__info a {
-  display: inline-block;
-  text-align: left; }
 
 .article__paragraph strong, .article__list strong, .project-structure strong, .readme__info strong {
   font-weight: 500; }
@@ -23906,8 +23905,8 @@ body {
   list-style: none; }
 
 .project-structure .directory__root::before, .project-structure .directory__close::before, .project-structure .directory__open::before, .project-structure .file__json::before, .project-structure .file__js::before, .project-structure .file__xml::before, .project-structure .file__html::before, .project-structure .file__sass::before, .project-structure .file__pug::before, .project-structure .file__css::before, .project-structure .file__img::before {
-  position: absolute;
   display: inline-block;
+  position: absolute;
   -webkit-transform: scale(0.8);
   -ms-transform: scale(0.8);
   transform: scale(0.8);

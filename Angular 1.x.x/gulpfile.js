@@ -25,36 +25,26 @@ var gulp = require('gulp'),
 var PROJECT_CONFIG = require('./project.config');
 
 
+// FUNCTIONS
+// To get a parameter after comand option
+function getOption(option){
+    var index = process.argv.indexOf(option);
+    
+    return index !== -1 ? {
+       value: process.argv[index + 1] 
+    } : false;
+};
+
+
 // GULP TASKS
-gulp.task('css', function () {
+// 
+gulp.task('sass:css', function () {
 
-    $.util.log($.util.colors.green('CSS TASK RUNNING...'));
+    $.util.log($.util.colors.green('SASS TO CSS TASK RUNNING...'));
 
-    return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/main.scss')
+    return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/main.s+(a|c)ss')
         .pipe($.plumber())
         .pipe($.sourcemaps.init())
-        .pipe($.sassLint({
-            options: {
-                'formatter': 'stylish',
-                'merge-default-rules': false
-            },
-            rules: {
-                'extends-before-mixins': 2,
-                'extends-before-declarations': 2,
-                'placeholder-in-extend': 2,
-                'mixins-before-declarations': 2,
-                'no-color-literals': 2,
-                'no-warn': 1,
-                'no-debug': 1,
-                'no-ids': 2,
-                'no-important': 2,
-                'hex-notation': 2,
-                'indentation': 0,
-                'property-sort-order': 1,
-                'variable-for-property': 2
-            }
-        }))
-        .pipe($.sassLint.format())
         .pipe($.sass.sync({
             outputStyle: 'nested' // compact - compressed - expanded - nested
         }))
@@ -70,6 +60,33 @@ gulp.task('css', function () {
 });
 
 
+// Validate Syntactically Awesome Style Sheets (SASS) Code, atm custom configuration for more info / rules check ---> https://github.com/sasstools/sass-lint#configuring
+gulp.task('sass:lint', function () {
+
+    $.util.log($.util.colors.cyan('SASS LINT TASK RUNNING...'));
+
+    return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/**/*.s+(a|c)ss')
+        .pipe($.plumber())
+        .pipe($.sassLint({
+            options: {
+                'formatter': 'stylish', // checkstyle / stylish
+                'merge-default-rules': false
+            },
+            rules: {
+                'no-color-keywords': 2,
+                'no-color-literals': 2,
+                'no-ids': 2,
+                'no-important': 2,
+                'no-invalid-hex': 2,
+                'hex-notation': 2
+            }
+        }))
+        .pipe($.sassLint.format()); // https://github.com/sasstools/sass-lint/blob/master/docs/options/formatter.md
+
+});
+
+
+// Validate JavaScript Code, atm default configuration for more info check ---> http://jshint.com/docs/
 gulp.task('js:hint', function () {
 
     $.util.log($.util.colors.cyan('JS HINT TASK RUNNING...'));
@@ -77,11 +94,12 @@ gulp.task('js:hint', function () {
     return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/**/*.js')
         .pipe($.plumber())
         .pipe($.jshint())
-        .pipe($.jshint.reporter(jshintStylish));
+        .pipe($.jshint.reporter(jshintStylish)); // https://github.com/spalger/gulp-jshint#reporters
 
 });
 
 
+// 
 gulp.task('js:test', function () {
 
     $.util.log($.util.colors.cyan('JS TEST TASK RUNNING...'));
@@ -93,6 +111,7 @@ gulp.task('js:test', function () {
 });
 
 
+// 
 gulp.task('jade:pug', function() {
     
     $.util.log($.util.colors.green('JADE TO PUG TASK RUNNING...'));
@@ -111,16 +130,7 @@ gulp.task('jade:pug', function() {
 });
 
 
-// To get a parameter after comand option
-function getOption(option){
-    var index = process.argv.indexOf(option);
-    
-    return index !== -1 ? {
-       value: process.argv[index + 1] 
-    } : false;
-};
-
-
+// 
 gulp.task('pug', function () {
 
     $.util.log($.util.colors.green('PUG TASK RUNNING...'));
@@ -155,6 +165,29 @@ gulp.task('pug', function () {
 });
 
 
+// Validate Pug / Jade Code, atm custom configuration for more info ---> https://github.com/pugjs/pug-lint
+gulp.task('pug:lint', function () {
+
+    $.util.log($.util.colors.cyan('PUG LINT TASK RUNNING...'));
+    
+    return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/**/*.pug')
+        .pipe($.plumber())
+        .pipe($.pugLint({
+            disallowDuplicateAttributes: true,
+            disallowMultipleLineBreaks: true,
+            disallowSpacesInsideAttributeBrackets: true,
+            requireLowerCaseAttributes: true,
+            requireLowerCaseTags: true,
+            requireSpaceAfterCodeOperator: true,
+            requireSpecificAttributes: [{img: ['alt']}],
+            validateAttributeQuoteMarks: '\"',
+            validateDivTags: true
+        })); // https://github.com/pugjs/pug-lint/blob/master/docs/rules.md
+
+});
+
+
+// 
 gulp.task('html', function () {
 
     $.util.log($.util.colors.green('HTML TASK RUNNING...'));
@@ -164,13 +197,14 @@ gulp.task('html', function () {
         })
         .pipe($.plumber())
         .pipe($.useref())
-        .pipe($.if('*.css', $.cleanCss()))
+        .pipe($.if('*.css', $.cleanCss())) // https://github.com/jakubpawlowicz/clean-css#how-to-use-clean-css-api
         .pipe($.if('*.js', $.uglify()))
         .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/'));
 
 });
 
 
+// 
 gulp.task('html:hint', function () {
 
     $.util.log($.util.colors.cyan('HTML HINT TASK RUNNING...'));
@@ -194,6 +228,8 @@ gulp.task('html:hint', function () {
 
 });
 
+
+// 
 gulp.task('html:minify', function () {
 
     $.util.log($.util.colors.green('HTML MINIFY TASK RUNNING...'));
@@ -210,6 +246,7 @@ gulp.task('html:minify', function () {
 });
 
 
+// 
 gulp.task('server', function () {
 
     $.util.log($.util.colors.red('SERVER TASK RUNNING...'));
@@ -221,18 +258,20 @@ gulp.task('server', function () {
 });
 
 
+// 
 gulp.task('watch', function () {
 
     $.util.log($.util.colors.blue('WATCH TASK RUNNING...'));
 
-    gulp.watch(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/**/*.s+(a|c)ss', ['css']);
+    gulp.watch(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/**/*.s+(a|c)ss', ['sass:lint', 'sass:css']);
     gulp.watch(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/**/*.js', ['js:hint', browserSync.reload]);
-    gulp.watch([PROJECT_CONFIG.DATA_FILE, PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/**/*.pug'], ['pug']);
+    gulp.watch([PROJECT_CONFIG.DATA_FILE, PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/**/*.pug'], ['pug:lint', 'pug']);
     gulp.watch([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/*.html'], ['html:hint', browserSync.reload]);
 
 });
 
 
+// 
 gulp.task('clean', function () {
 
     $.util.log($.util.colors.gray('CLEAN TASK RUNNING...'));
@@ -242,11 +281,12 @@ gulp.task('clean', function () {
 });
 
 
+// 
 gulp.task('copy', function () {
 
     $.util.log($.util.colors.grey('COPY TASK RUNNING...'));
 
-    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/files/**/*', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/fonts/**/*', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/img/**/*', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.png', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.xml', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.ico'], {
+    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/files/**/*', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/fonts/**/*', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/img/**/*', '!' + PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/img/{sprites_sources,sprites_sources/**/*}', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.png', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.xml', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.ico'], {
             base: PROJECT_CONFIG.DIRECTORY.WORK_DIR
         })
         .pipe($.plumber())
@@ -255,6 +295,7 @@ gulp.task('copy', function () {
 });
 
 
+// 
 gulp.task('images', function () {
 
     $.util.log($.util.colors.magenta('IMAGES TASK RUNNING...'));
@@ -274,6 +315,7 @@ gulp.task('images', function () {
 });
 
 
+// 
 gulp.task('images:optimized', function () {
 
     $.util.log($.util.colors.magenta('IMAGES OPTIMIZED TASK RUNNING...'));
@@ -291,6 +333,7 @@ gulp.task('images:optimized', function () {
 });
 
 
+// 
 gulp.task('images:sprite', function () {
 
     $.util.log($.util.colors.magenta('IMAGES SPRITE TASK RUNNING...'));
@@ -310,6 +353,7 @@ gulp.task('images:sprite', function () {
 });
 
 
+// 
 gulp.task('upload', function () {
 
     $.util.log($.util.colors.yellow('UPLOAD TASK RUNNING...'));
@@ -333,15 +377,17 @@ gulp.task('upload', function () {
 });
 
 
+// 
 gulp.task('build', function (cb) {
 
     $.util.log($.util.colors.red('BUILD TASK RUNNING...'));
 
-    runSequence('clean', 'css', 'js:hint', 'pug', 'html:hint', 'html', 'html:minify', 'copy', 'upload', cb);
+    runSequence('clean', 'sass:lint', 'sass:css', 'js:hint', 'pug:lint', 'pug', 'html:hint', 'html', 'html:minify', 'copy', 'upload', cb);
 
 });
 
 
+// 
 gulp.task('build:server', ['build'], function () {
 
     $.util.log($.util.colors.red('BUILD SERVER TASK RUNNING...'));
@@ -353,10 +399,11 @@ gulp.task('build:server', ['build'], function () {
 });
 
 
+// 
 gulp.task('default', function (cb) {
 
     $.util.log($.util.colors.red('DEFAULT TASK RUNNING...'));
 
-    runSequence('css', 'js:hint', 'pug', 'html:hint', 'server', 'watch', cb);
+    runSequence('sass:lint', 'sass:css', 'js:hint', 'pug:lint', 'pug', 'html:hint', 'server', 'watch', cb);
 
 });
