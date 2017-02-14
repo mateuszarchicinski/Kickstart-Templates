@@ -1,6 +1,6 @@
 //-
     Project Structure
-article.article
+article(id="ProjectStructure" class="article")
     header.article__header
         h3.article__title.tertiary-heading= data.articles.projectStructure.headline
     .article__body
@@ -10,66 +10,168 @@ article.article
             strong .bowerrc
             | .
         ul.project-structure
-            li.directory__root= data.articles.projectStructure.paragraph[2]
-                ul
-                    li.directory__close dist
-                    li.directory__close node_modules
-                    li.directory__open src
-                        ul
-                            li.directory__close bower_components
-                            li.directory__open css
-                                ul
-                                    li.directory__open maps
-                                    li.file__css main.css
-                            li.directory__open files
-                            li.directory__open fonts
-                            li.directory__open img
-                                ul
-                                    li.directory__open sprites_sources
-                                    li.file__img projectStructure.png
-                            li.directory__open js
-                                ul
-                                    li.directory__open controllers
-                                    li.directory__open directives
-                                    li.directory__open services
-                                    li.file__js app.config.js
-                                    li.file__js app.js
-                            li.directory__open sass
-                                ul
-                                    li.directory__open base
-                                    li.directory__open components
-                                    li.directory__open helpers
-                                    li.directory__open layout
-                                    li.directory__open modules
-                                    li.directory__open pages
-                                    li.file__sass main.scss
-                            li.directory__open template
-                                ul
-                                    li.directory__open components
-                                    li.directory__open layout
-                                    li.directory__open views
-                                    li.file__pug index.pug
-                            li.directory__open views
-                                ul
-                                    li.file__html default.html
-                            li.file__img apple-touch-icon.png
-                            li.file__xml browserconfig.xml
-                            li.file__xml crossdomain.xml
-                            li.file__img favicon.ico
-                            li.file__html index.html
-                            li.file__img tile.png
-                            li.file__img tile-1200x630px.png
-                            li.file__img tile-wide.png
-                    li.directory__open test
-                        ul
-                            li.directory__open spec
-                            li.file__js karma.conf.js
-                    li.file__json .bowerrc
-                    li.file__json bower.json
-                    li.file__js gulpfile.js
-                    li.file__json package.json
-                    li.file__js project.config.js
-                    li.file__json project.data.json
+            li
+                i.directory__root
+                | #{data.articles.projectStructure.paragraph[2]}
+                ul.branch
+                    li.branch__leaf-top
+                        i.directory__close
+                        | dist
+                    li.branch__leaf
+                        i.directory__close
+                        | node_modules
+                    li.branch__leaf-bottom
+                        i.directory__open
+                        | src
+                        ul.branch
+                            li.branch__leaf-top
+                                i.directory__close
+                                | bower_components
+                            li.branch__leaf-bottom
+                                i.directory__open
+                                |css
+                                ul.branch
+                                    li.branch__leaf-top
+                                        i.directory__open
+                                        | maps
+                                    li.branch__leaf-bottom
+                                        i.file__css
+                                        | main.css
+                            li
+                                i.directory__open
+                                | files
+                            li.branch__leaf
+                                i.directory__open
+                                | fonts
+                            li.branch__leaf-bottom
+                                i.directory__open
+                                | img
+                                ul.branch
+                                    li.branch__leaf-top
+                                        i.directory__open
+                                        | sprites_sources
+                                    li.branch__leaf-bottom
+                                        i.file__img
+                                        | projectStructure.png
+                            li
+                                i.directory__open
+                                | js
+                                ul.branch
+                                    li.branch__leaf-top
+                                        i.directory__open
+                                        | controllers
+                                    li.branch__leaf
+                                        i.directory__open
+                                        | directives
+                                    li.branch__leaf
+                                        i.directory__open
+                                        | services
+                                    li.branch__leaf
+                                        i.file__js
+                                        | app.config.js
+                                    li.branch__leaf-bottom
+                                        i.file__js
+                                        | app.js
+                            li
+                                i.directory__open
+                                | sass
+                                ul.branch
+                                    li.branch__leaf-top
+                                        i.directory__open
+                                        | base
+                                    li.branch__leaf
+                                        i.directory__open
+                                        | components
+                                    li.branch__leaf
+                                        i.directory__open
+                                        | helpers
+                                    li.branch__leaf
+                                        i.directory__open
+                                        | layout
+                                    li.branch__leaf
+                                        i.directory__open
+                                        | modules
+                                    li.branch__leaf
+                                        i.directory__open
+                                        | pages
+                                    li.branch__leaf-bottom
+                                        i.file__sass
+                                        | main.scss
+                            li
+                                i.directory__open
+                                | template
+                                ul.branch
+                                    li.branch__leaf-top
+                                        i.directory__open
+                                        | components
+                                    li.branch__leaf
+                                        i.directory__open
+                                        | layout
+                                    li.branch__leaf
+                                        i.directory__open
+                                        | views
+                                    li.branch__leaf-bottom
+                                        i.file__pug
+                                        | index.pug
+                            li
+                                i.directory__open
+                                | views
+                                ul.branch
+                                    li.branch__leaf-top
+                                        i.file__html
+                                        | default.html
+                            li
+                                i.file__img
+                                | apple-touch-icon.png
+                            li.branch__leaf
+                                i.file__xml
+                                | browserconfig.xml
+                            li.branch__leaf
+                                i.file__xml
+                                | crossdomain.xml
+                            li.branch__leaf
+                                i.file__img
+                                | favicon.ico
+                            li.branch__leaf
+                                i.file__html
+                                | index.html
+                            li.branch__leaf
+                                i.file__img
+                                | tile.png
+                            li.branch__leaf
+                                i.file__img
+                                | tile-1200x630px.png
+                            li.branch__leaf-bottom
+                                i.file__img
+                                | tile-wide.png
+                    li
+                        i.directory__open
+                        | test
+                        ul.branch
+                            li.branch__leaf-top
+                                i.directory__open
+                                | spec
+                            li.branch__leaf-bottom
+                                i.file__js
+                                | karma.conf.js
+                    li
+                        i.file__json
+                        | .bowerrc
+                    li.branch__leaf
+                        i.file__json
+                        | bower.json
+                    li.branch__leaf
+                        i.file__js
+                        | gulpfile.js
+                    li.branch__leaf
+                        i.file__json
+                        | package.json
+                    li.branch__leaf
+                        i.file__js
+                        | project.config.js
+                    li.branch__leaf-bottom
+                        i.file__json
+                        | project.data.json
         p.article__paragraph #{data.articles.projectStructure.paragraph[3]} 
             strong gulpfile.js
             | .

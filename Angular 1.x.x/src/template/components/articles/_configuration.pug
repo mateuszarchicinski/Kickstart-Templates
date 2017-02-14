@@ -1,7 +1,22 @@
 //-
     Configuration
-article.article
+article(id="Configuration" class="article")
     header.article__header
         h3.article__title.tertiary-heading= data.articles.configuration.headline
     .article__body
-        p.article__paragraph= data.articles.usage.paragraph[0]
+        p.article__paragraph #{data.articles.configuration.paragraph[0][0]} 
+            strong project.config.js
+            | #{data.articles.configuration.paragraph[0][1]} 
+        ul.article__list-points
+            li #{data.articles.configuration.paragraph[0][2]}
+            li #{data.articles.configuration.paragraph[0][3]}
+            li #{data.articles.configuration.paragraph[0][4]} 
+                strong .bowerrc
+                | ),
+            li #{data.articles.configuration.paragraph[0][5]}
+            li #{data.articles.configuration.paragraph[0][6]}
+        p.article__paragraph #{data.articles.configuration.paragraph[1][0]} 
+            strong gulpfile.js
+            |  #{data.articles.configuration.paragraph[1][1]} 
+            strong PROJECT_CONFIG
+            | .

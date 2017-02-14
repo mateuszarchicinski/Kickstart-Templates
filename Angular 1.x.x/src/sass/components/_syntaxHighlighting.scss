@@ -10,10 +10,11 @@ $code__line-block__text-align: justify !default;
 $code__line-block__color: $color__black !default;
 $code__line-block__white-space: normal !default;
 $code__line-block__border-radius: 3px !default;
+// __line __block strong
+$code__line-block-strong__font-weight: 600 !default;
 // __line
 $code__line__padding: 0 1px !default;
 // __block
-$code__block__line-height: 2 !default;
 $code__block__display: block !default;
 $code__block__padding: 16px !default;
 $code__block__margin: 10px 0 !default;
@@ -33,9 +34,26 @@ $code__block__margin: 10px 0 !default;
         padding: $code__line__padding;
     }
     &__block{
-        line-height: $code__block__line-height;
         display: $code__block__display;
         padding: $code__block__padding;
         margin: $code__block__margin;
+        .part{
+            &-visible{
+                display: inline;
+                &.invert{
+                    @media screen and (max-width: 608px){
+                        display: none;
+                    }
+                }
+            }
+            &-hidden{
+                display: none;
+                &.invert{
+                    @media screen and (max-width: 608px){
+                        display: inline;
+                    }
+                }
+            }
+        }
     }
 }

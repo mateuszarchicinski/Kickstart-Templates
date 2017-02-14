@@ -4,13 +4,18 @@
 
 
 // .project-structure li
-$project-structure__li__margin: 0.5em 0 !default;
+$project-structure__li__margin: 8px 0;
 
+.clearfix{
+    @include clearfix;
+}
 
 .project-structure {
     @extend %list-style-none;
+    padding: 0;
     ul{
         @extend %list-style-none;
+        padding-left: 25px;
     }
     li {
         @extend %paragraphs;
@@ -19,52 +24,107 @@ $project-structure__li__margin: 0.5em 0 !default;
     strong {
         @extend %font-weight-500;
     }
-    .directory{
-        &__root,
-        &__close,
-        &__open{
-            @include before{
-                @extend %project-structure__icons;
-            }
+    .branch{
+        position: relative;
+        border-left: 1px dashed $color__black; //#f44336
+        padding-left: 25px;
+        margin-left: 12px;
+        @include before-after{
+            content: "";
+            width: 7px;
+            height: 7px;
+            background: #f44336;
+            position: absolute;
+            display: block;
+            left: -4px;
+            border-radius: 50%;
         }
-        
-        &__root{
-            @include before{
-                @include sprite($folder-special-black);
-            }
+        @include before{
+            top: -9px;
         }
-        
-        &__close{
-            @include before{
-                @include sprite($folder-black);
-            }
+        @include after{
+            bottom: -7px;
         }
-        
-        &__open{
-            @include before{
-                @include sprite($folder-open-black);
+        &__leaf{
+            &,
+            &-top,
+            &-bottom{
+                position: relative;
+                white-space: nowrap;
+            }
+            &-top{
+                @include before-after{
+                    content: "";
+                    position: absolute;
+                    display: block;
+                }
+                @include before{
+                    width: 26px;
+                    height: 0;
+                    top: -6px;
+                    left: -20px;
+                    border-top: 1px dashed $color__black;
+                }
+                @include after{
+                    width: 7px;
+                    height: 7px;
+                    background: #f44336;
+                    left: 8px;
+                    top: -9px;
+                    border-radius: 50%;
+                }
+            }
+            &,
+            &-bottom{
+                @include before{
+                    content: "";
+                    width: 0;
+                    height: 8px;
+                    position: absolute;
+                    display: block;
+                    top: -9px;
+                    left: 12px;
+                    border-left: 1px dashed $color__black;
+                }
             }
         }
     }
-    .file{
-        &__json,
-        &__js,
-        &__xml,
-        &__html,
-        &__sass,
-        &__pug,
-        &__css{
-            @include before{
-                @extend %project-structure__icons;
-                @include sprite($code-black);
-            }
-        }
-        
-        &__img{
-            @include before{
-                @extend %project-structure__icons;
-                @include sprite($image-black);
-            }
-        }
+}
+
+.directory{
+    &__root,
+    &__close,
+    &__open{
+        @extend %project-structure__icons;
+    }
+
+    &__root{
+        @include sprite($folder-special-black);
+    }
+
+    &__close{
+        @include sprite($folder-black);
+    }
+
+    &__open{
+        @include sprite($folder-open-black);
+    }
+}
+
+.file{
+    &__json,
+    &__js,
+    &__xml,
+    &__html,
+    &__sass,
+    &__pug,
+    &__css{
+        @extend %project-structure__icons;
+        @include sprite($code-black);
+    }
+
+    &__img{
+        @extend %project-structure__icons;
+        @include sprite($image-black);
     }
 }

@@ -38,7 +38,7 @@ $color__sunset-orange: #ef5350;
 $color__amour: #ffebee;
 
 // Breaks Points
-$break-point__1: 750px;
+$break-point__1: 749px;
 
 
 // *--------- MIXINS ---------*
@@ -86,9 +86,13 @@ $font-family: $base__font-family;
 
 // *--------- ARTICLES ---------*
 // article__list li
-$article__list__li__margin: 1em 0;
+$article__list__li__margin: 1em 0 1.5em;
+$article__list__li-last-child__margin: 1em 0 1em;
 // .article__list-points li
 $article__list-points__li__margin: 0.8em 0;
+// .article__list.no-list-padding
+$article__list-no-list-padding__li__list-style: none;
+$article__list-no-list-padding__li__counter-reset: listElementsCounter;
 
 
 // *--------- SYNTAX HIGHLIGHTING ---------*
@@ -97,8 +101,6 @@ $code__line-block__background: $color__amour;
 $code__line-block__font-size: 90%;
 $code__line-block__text-align: justify;
 $code__line-block__color: $color__black;
-// __block
-$code__block__line-height: 2;
 
 
 // *--------- PROJECT STRUCTURE ---------*
@@ -114,7 +116,7 @@ $project-structure__li__margin: 0.5em 0;
 // *--------- README ---------*
 $readme__background: $color__white;
 $readme__border: 1px solid rgba($color__black, 0.1);
-$readme__box-shadow: 0 4px 8px 0 rgba($color__black, 0.35), 0 5px 100px 0 rgba($color__black, 0.1);
+$readme__box-shadow: 0 3px 6px rgba($color__black, 0.15), 0 3px 6px rgba($color__black, 0.24);
 // __info
 $readme__info__padding: 0 0 0.125em 1em;
 $readme__info__border-left: 0.25em solid $color__sunset-orange;

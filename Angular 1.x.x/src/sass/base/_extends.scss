@@ -14,11 +14,10 @@ $font-weight-500__font-weight: 500 !default;
 // %list-style-none
 $list-style-none__list-style: none !default;
 // %project-structure__icons
-$project-structure__icons__position: absolute !default;
 $project-structure__icons__display: inline-block !default;
+$project-structure__icons__float: left !default;
 $project-structure__icons__transform: scale(0.8) !default;
-$project-structure__icons__margin-left: -30px !default;
-$project-structure__icons__margin-top: -3px !default;
+$project-structure__icons__margin: -3px 3px 0 0 !default;
 
 
 %paragraphs {
@@ -41,8 +40,7 @@ $project-structure__icons__margin-top: -3px !default;
 
 %project-structure__icons{
     display: $project-structure__icons__display;
-    position: $project-structure__icons__position;
+    float: $project-structure__icons__float;
     transform: $project-structure__icons__transform;
-    margin-left: $project-structure__icons__margin-left;
-    margin-top: $project-structure__icons__margin-top;
+    margin: $project-structure__icons__margin;
 }

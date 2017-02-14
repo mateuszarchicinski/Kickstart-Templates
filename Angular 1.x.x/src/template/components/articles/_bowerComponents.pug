@@ -1,12 +1,12 @@
 //-
     Bower Components
-article.article
+article(id="BowerComponents" class="article")
     header.article__header
         h3.article__title.tertiary-heading= data.articles.bowerComponents.headline
     .article__body
-        p.article__paragraph #{data.articles.bowerComponents.paragraph[0]} 
+        p.article__paragraph #{data.articles.bowerComponents.paragraph[0][0]} 
             a(href="https://angularjs.org/" target="_blank" rel="help") Angular v1.x - MVC Framework
-            |  #{data.articles.bowerComponents.paragraph[1]} 
+            |  #{data.articles.bowerComponents.paragraph[0][1]} 
             a(href="https://material.angularjs.org/latest/" target="_blank" rel="help") Angular Material v1.x - UI Component
             |  (
             strong bower.json
@@ -28,12 +28,21 @@ article.article
                 a(href="https://code.angularjs.org/1.6.1/angular-mocks.js" target="_blank" rel="help") angular-mocks
             li
                 a(href="https://necolas.github.io/normalize.css/" target="_blank" rel="help") normalize-css
-        p.article__paragraph= data.articles.bowerComponents.paragraph[2]
+        p.article__paragraph #{data.articles.bowerComponents.paragraph[1][0]}
         ul.article__list-points
             li
                 a(href="https://jquery.com/" target="_blank" rel="help") jquery
             li
                 a(href="https://github.com/geoffgraham/animate.scss" target="_blank" rel="help") animatewithsass
-        p.article__paragraph #{data.articles.bowerComponents.paragraph[3]} 
+        p.article__paragraph #{data.articles.bowerComponents.paragraph[2][0]} 
             code.code__line bower install
+            | .
+        p.article__paragraph #{data.articles.bowerComponents.paragraph[3][0]} 
+            a(href="https://bower.io/" target="_blank" rel="help") Bower
+            |  #{data.articles.bowerComponents.paragraph[3][1]} 
+            strong index.html
+            | #{data.articles.bowerComponents.paragraph[3][2]} 
+            strong gulpfile.js
+            |  #{data.articles.bowerComponents.paragraph[3][3]} 
+            strong wiredep
             | .

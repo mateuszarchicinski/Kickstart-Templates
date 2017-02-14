@@ -1,0 +1,15 @@
+a {
+    text-decoration: none;
+    color: #0000ee;
+    transition: color 0.25s;
+    &:link,
+    &:visited {
+        color: #0000ee;
+    }
+    &:hover {
+        color: $color__red-orange;
+    }
+    &:active {
+        color: #EF5350;
+    }
+}

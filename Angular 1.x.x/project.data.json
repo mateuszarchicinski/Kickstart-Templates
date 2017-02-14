@@ -14,16 +14,28 @@
             },
             "section": {
                 "headline": "Angular v1.x Szablon",
-                "info": ["Szablon umożliwia szybkie w pełni zautomatyzowane rozpoczęcie projektu aplikacji webowej wykorzystującej jedną z najpopularniejszych technologii", "Wykorzystuje do tego", "i"]
+                "info": ["Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak", "i", ". W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii"],
+                "info1": ["Przygotowany szablon aplikacji webowej", "udostępnia w pełni skonfigurowane i zautomatyzowane środowisko pracy za pomocą takich technologii jak", "i"]
             },
             "articles": {
                 "usage":{
                     "headline": "Użycie",
-                    "paragraph": ["Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis."]
+                    "paragraph": [
+                        ["Projekt", "Angular 1.x Szablon", "jest dostępny wyłącznie na", ". Przykłady instalacji poniżej. Do dwóch pierwszych instalacji wymagany jest system kontroli wersji"],
+                        ["Za pomocą konsoli utwórz nowy katalog i przejdź do niego:", "katalog-projektu"],
+                        ["W nowym katalogu zainicjuj środowisko komendą", "i następnie wywołaj:", "repozytorium"],
+                        ["W konsoli wywołaj polecenie sklonowania całego repozytorium, które tym samym utworzy nowy katalog:"],
+                        ["Manualnie pobierz najnowszą stabilną wersje z strony", "publikacji szablonu"],
+                        ["Po wykonaniu dowolnej instalacji. Przejdź do katalogu projektu i wywołaj polecenia", "i"],
+                        ["W tym momencie można zacząć korzystać z wszystkich zdefiniowanych zadań w", ". Tabela zadań dostępna", "tutaj"]
+                    ]
                 },
                 "configuration":{
                     "headline": "Konfiguracja",
-                    "paragraph": []
+                    "paragraph": [
+                        ["Globalne ustawienia są dostępne w pliku", ", który umożliwia zmianę:", "nazwy aplikacji,", "nazwy plików konfiguracyjnych i danych,", "katalogów pracy i produkcji (wymagana również manualna zmiana w pliku", "dostępów FTP,", "podania kluczy do zewnętrznych API."],
+                        ["Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych z których będziemy korzystać indywidualnie. W pliku", "odwołujemy się do niego poprzez zmienną"]
+                    ]
                 },
                 "projectStructure":{
                     "headline": "Struktura projektu",
@@ -35,7 +47,12 @@
                 },
                 "bowerComponents":{
                     "headline": "Bower komponenty",
-                    "paragraph": ["Następujące komponenty są elementami niezbędnymi do właściwego funkcjonowania szablonu wykorzystującego technologie", "i", "Dodatkowe paczki z których można korzystać opcjonalnie:", "Wszystkie powyższe komponenty instalujemy komendą"]
+                    "paragraph": [
+                        ["Następujące komponenty są elementami niezbędnymi do właściwego funkcjonowania szablonu wykorzystującego technologie", "i"],
+                        ["Dodatkowe paczki z których można korzystać opcjonalnie:"],
+                        ["Wszystkie powyższe komponenty instalujemy komendą"],
+                        ["Instalacja dodatkowych bibliotek css lub js za pośrednictwem", "spowoduje automatyczne dodanie ścieżki do nowego komponentu w głównym pliku", ". Konfiguracja tej funkcjonalności znajdują się w pliku", "w module"]
+                    ]
                 },
                 "gulpTasks":{
                     "headline": "Gulp zadania",

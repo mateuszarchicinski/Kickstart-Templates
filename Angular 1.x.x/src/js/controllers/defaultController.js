@@ -3,7 +3,7 @@
     'use strict';
 
 
-    app.controller('defaultController', ['$log', function ($log) {
+    app.controller('defaultController', ['$log', '$anchorScroll', '$location', '$scope', function ($log) {
 
         this.awesomeThings = [
             'AngularJS',
@@ -13,7 +13,7 @@
         ];
 
         $log.info('JS running....');
-        
+
     }]);
 
 })();

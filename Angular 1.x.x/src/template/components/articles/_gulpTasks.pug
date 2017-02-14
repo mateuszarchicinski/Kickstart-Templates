@@ -1,6 +1,6 @@
 //-
     Gulp Tasks
-article.article
+article(id="GulpTasks" class="article")
     header.article__header
         h3.article__title.tertiary-heading= data.articles.gulpTasks.headline
     .article__body
@@ -9,7 +9,7 @@ article.article
             |  #{data.articles.gulpTasks.paragraph[1]} 
             br.br-g-1
             | #{data.articles.gulpTasks.paragraph[2]}
-        p.article__paragraph= data.articles.gulpTasks.subHeadlines[0]
+        p.article__paragraph #{data.articles.gulpTasks.subHeadlines[0]}
         ul.article__list
             li
                 code.code__line gulp sass:css

@@ -32,7 +32,7 @@ $quaternary-heading__margin: 0 !default;
     font-size: $primary-heading__font-size;
     font-weight: $primary-heading__font-weight;
     text-transform: $primary-heading__text-transform;
-    &::after{
+    @include after{
         content: $primary-heading__after__content;
         width: $primary-heading__after__width;
         height: $primary-heading__after__height;

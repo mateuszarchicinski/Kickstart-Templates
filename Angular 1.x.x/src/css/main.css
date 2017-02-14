@@ -23775,11 +23775,23 @@ md-tooltip {
     display: none !important; } }
 
 .article {
-  padding-top: 5px; }
+  padding-top: 1px; }
   .article__list li {
-    margin: 1em 0; }
+    margin: 1em 0 1.5em; }
+    .article__list li:last-child {
+      margin: 1em 0 1em; }
+  .article__list, .article__list-points {
+    padding-left: 25px; }
   .article__list-points li {
     margin: 0.8em 0; }
+  .article__list.no-list-padding {
+    list-style: none;
+    counter-reset: listElementsCounter;
+    padding: 0; }
+    .article__list.no-list-padding li {
+      counter-increment: listElementsCounter; }
+      .article__list.no-list-padding li::before {
+        content: counter(listElementsCounter) ". "; }
 
 .code__line, .code__block {
   background: #ffebee;
@@ -23793,60 +23805,134 @@ md-tooltip {
   padding: 0 1px; }
 
 .code__block {
-  line-height: 2;
   display: block;
   padding: 16px;
   margin: 10px 0; }
+  .code__block .part-visible {
+    display: inline; }
+    @media screen and (max-width: 608px) {
+      .code__block .part-visible.invert {
+        display: none; } }
+  .code__block .part-hidden {
+    display: none; }
+    @media screen and (max-width: 608px) {
+      .code__block .part-hidden.invert {
+        display: inline; } }
 
-.project-structure li {
-  margin: 0.5em 0; }
-
-.project-structure .directory__root::before, .project-structure .directory__close::before, .project-structure .directory__open::before {
-  content: ""; }
-
-.project-structure .directory__root::before {
+.clearfix::before, .clearfix::after {
   content: "";
+  display: table; }
+
+.clearfix::after {
+  clear: both; }
+
+.project-structure {
+  padding: 0; }
+  .project-structure ul {
+    padding-left: 25px; }
+  .project-structure li {
+    margin: 8px 0; }
+  .project-structure .branch {
+    position: relative;
+    border-left: 1px dashed #000;
+    padding-left: 25px;
+    margin-left: 12px; }
+    .project-structure .branch::before, .project-structure .branch::after {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: #f44336;
+      position: absolute;
+      display: block;
+      left: -4px;
+      border-radius: 50%; }
+    .project-structure .branch::before {
+      top: -9px; }
+    .project-structure .branch::after {
+      bottom: -7px; }
+    .project-structure .branch__leaf, .project-structure .branch__leaf-top, .project-structure .branch__leaf-bottom {
+      position: relative;
+      white-space: nowrap; }
+    .project-structure .branch__leaf-top::before, .project-structure .branch__leaf-top::after {
+      content: "";
+      position: absolute;
+      display: block; }
+    .project-structure .branch__leaf-top::before {
+      width: 26px;
+      height: 0;
+      top: -6px;
+      left: -20px;
+      border-top: 1px dashed #000; }
+    .project-structure .branch__leaf-top::after {
+      width: 7px;
+      height: 7px;
+      background: #f44336;
+      left: 8px;
+      top: -9px;
+      border-radius: 50%; }
+    .project-structure .branch__leaf::before, .project-structure .branch__leaf-bottom::before {
+      content: "";
+      width: 0;
+      height: 8px;
+      position: absolute;
+      display: block;
+      top: -9px;
+      left: 12px;
+      border-left: 1px dashed #000; }
+
+.directory__root {
   background-image: url(../img/projectStructure.png);
   background-position: -24px -24px;
   width: 24px;
   height: 24px; }
 
-.project-structure .directory__close::before {
-  content: "";
+.directory__close {
   background-image: url(../img/projectStructure.png);
   background-position: -24px 0px;
   width: 24px;
   height: 24px; }
 
-.project-structure .directory__open::before {
-  content: "";
+.directory__open {
   background-image: url(../img/projectStructure.png);
   background-position: 0px -24px;
   width: 24px;
   height: 24px; }
 
-.project-structure .file__json::before, .project-structure .file__js::before, .project-structure .file__xml::before, .project-structure .file__html::before, .project-structure .file__sass::before, .project-structure .file__pug::before, .project-structure .file__css::before {
-  content: "";
+.file__json, .file__js, .file__xml, .file__html, .file__sass, .file__pug, .file__css {
   background-image: url(../img/projectStructure.png);
   background-position: 0px 0px;
   width: 24px;
   height: 24px; }
 
-.project-structure .file__img::before {
-  content: "";
+.file__img {
   background-image: url(../img/projectStructure.png);
   background-position: -48px 0px;
   width: 24px;
   height: 24px; }
 
+a {
+  text-decoration: none;
+  color: #0000ee;
+  transition: color 0.25s; }
+  a:link, a:visited {
+    color: #0000ee; }
+  a:hover {
+    color: #f44336; }
+  a:active {
+    color: #EF5350; }
+
 .readme {
   width: 750px;
   background: #fff;
-  padding: 50px 45px 75px;
+  padding: 30px 45px 45px;
   border-radius: 2px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 5px 100px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.24);
   margin: 0 auto; }
+  @media screen and (max-width: 749px) {
+    .readme {
+      width: 100%;
+      padding: 30px 15px 35px; } }
   .readme__info {
     padding: 0 0 0.125em 1em;
     border-left: 0.25em solid #ef5350; }
@@ -23904,13 +23990,12 @@ body {
 .project-structure, .project-structure ul {
   list-style: none; }
 
-.project-structure .directory__root::before, .project-structure .directory__close::before, .project-structure .directory__open::before, .project-structure .file__json::before, .project-structure .file__js::before, .project-structure .file__xml::before, .project-structure .file__html::before, .project-structure .file__sass::before, .project-structure .file__pug::before, .project-structure .file__css::before, .project-structure .file__img::before {
+.directory__root, .directory__close, .directory__open, .file__json, .file__js, .file__xml, .file__html, .file__sass, .file__pug, .file__css, .file__img {
   display: inline-block;
-  position: absolute;
+  float: left;
   -webkit-transform: scale(0.8);
   -ms-transform: scale(0.8);
   transform: scale(0.8);
-  margin-left: -30px;
-  margin-top: -3px; }
+  margin: -3px 3px 0 0; }
 
 /*# sourceMappingURL=maps/main.css.map */
