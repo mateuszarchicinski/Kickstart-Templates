@@ -14,19 +14,21 @@ article(id="Usage" class="article")
         ol.article__list.no-list-padding
             li
                 | #{data.articles.usage.paragraph[1][0]}
-                pre.code__block mkdir #{data.articles.usage.paragraph[1][1]} && cd #{data.articles.usage.paragraph[1][1]}
+                pre.code__block
+                    code.code__line mkdir #{data.articles.usage.paragraph[1][1]} && cd #{data.articles.usage.paragraph[1][1]}
                 | #{data.articles.usage.paragraph[2][0]} 
                 code.code__line git init
                 |  #{data.articles.usage.paragraph[2][1]}
-                pre.code__block git pull 
-                    a(class="part-hidden invert" href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help") #{data.articles.usage.paragraph[2][2]}
-                    span.part-visible.invert https://github.com/mateuszarchicinski/Angular1.x-Template
-                
+                pre.code__block
+                    code.code__line git pull 
+                        a(class="part-hidden invert" href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help") #{data.articles.usage.paragraph[2][2]}
+                        span.part-visible.invert https://github.com/mateuszarchicinski/Angular1.x-Template
             li
                 | #{data.articles.usage.paragraph[3][0]}
-                pre.code__block git clone 
-                    a(class="part-hidden invert" href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help") #{data.articles.usage.paragraph[2][2]}
-                    span.part-visible.invert https://github.com/mateuszarchicinski/Angular1.x-Template
+                pre.code__block
+                    code.code__line git clone 
+                        a(class="part-hidden invert" href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help") #{data.articles.usage.paragraph[2][2]}
+                        span.part-visible.invert https://github.com/mateuszarchicinski/Angular1.x-Template
             li
                 | #{data.articles.usage.paragraph[4][0]} 
                 a(href="https://github.com/mateuszarchicinski/Angular1.x-Template/releases" target="_blank") #{data.articles.usage.paragraph[4][1]}

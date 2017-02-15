@@ -1,6 +1,6 @@
-//~~~~~~~~~~~~~~~~~~~~//
-//~~~~~* MIXINS *~~~~~//
-//~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* MIXINS *~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~//
 
 
 // Comment
@@ -137,7 +137,7 @@
 
 
 // Transition
-@mixin transition($props: all, $speed: 0.25s, $easing: linear){
+@mixin transition($props: all, $speed: 0.25s, $easing: linear) {
     transition: $props $speed $easing;
 }
 

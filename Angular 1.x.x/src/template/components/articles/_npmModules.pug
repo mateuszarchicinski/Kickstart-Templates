@@ -4,90 +4,13 @@ article(id="NPMModules" class="article")
     header.article__header
         h3.article__title.tertiary-heading= data.articles.npmModules.headline
     .article__body
-        p.article__paragraph #{data.articles.npmModules.paragraph[0]}
+        p.article__paragraph #{data.articles.npmModules.paragraph[0][0]}
             strong package.json
-            | #{data.articles.npmModules.paragraph[1]} 
+            | ):
         ul.article__list-points
-            li
-                a(href="https://bower.io/" target="_blank" rel="help") bower
-            li
-                a(href="https://browsersync.io/" target="_blank" rel="help") browser-sync
-            li
-                a(href="https://www.npmjs.com/package/del" target="_blank" rel="help") del
-            li
-                a(href="http://gulpjs.com/" target="_blank" rel="help") gulp
-            li
-                a(href="https://www.npmjs.com/package/gulp-autoprefixer" target="_blank" rel="help") gulp-autoprefixer
-            li
-                a(href="https://www.npmjs.com/package/gulp-clean-css" target="_blank" rel="help") gulp-clean-css
-            li
-                a(href="https://www.npmjs.com/package/gulp-cli" target="_blank" rel="help") gulp-cli
-            li
-                a(href="https://www.npmjs.com/package/gulp-data" target="_blank" rel="help") gulp-data
-            li
-                a(href="https://www.npmjs.com/package/gulp-htmlhint" target="_blank" rel="help") gulp-htmlhint
-            li
-                a(href="https://www.npmjs.com/package/gulp-htmlmin" target="_blank" rel="help") gulp-htmlmin
-            li
-                a(href="https://www.npmjs.com/package/gulp-if" target="_blank" rel="help") gulp-if
-            li
-                a(href="https://www.npmjs.com/package/gulp-imagemin" target="_blank" rel="help") gulp-imagemin
-            li
-                a(href="https://www.npmjs.com/package/gulp-jshint" target="_blank" rel="help") gulp-jshint
-            li
-                a(href="https://www.npmjs.com/package/gulp-load-plugins" target="_blank" rel="help") gulp-load-plugins
-            li
-                a(href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help") gulp-plumber
-            li
-                a(href="https://www.npmjs.com/package/gulp-pug" target="_blank" rel="help") gulp-pug
-            li
-                a(href="https://www.npmjs.com/package/gulp-pug-lint" target="_blank" rel="help") gulp-pug-lint
-            li
-                a(href="https://www.npmjs.com/package/gulp-rename" target="_blank" rel="help") gulp-rename
-            li
-                a(href="https://www.npmjs.com/package/gulp-sass" target="_blank" rel="help") gulp-sass
-            li
-                a(href="https://www.npmjs.com/package/gulp-sass-lint" target="_blank" rel="help") gulp-sass-lint
-            li
-                a(href="https://www.npmjs.com/package/gulp-sourcemaps" target="_blank" rel="help") gulp-sourcemaps
-            li
-                a(href="https://www.npmjs.com/package/gulp-tinify" target="_blank" rel="help") gulp-tinify
-            li
-                a(href="https://www.npmjs.com/package/gulp-uglify" target="_blank" rel="help") gulp-uglify
-            li
-                a(href="https://www.npmjs.com/package/gulp-useref" target="_blank" rel="help") gulp-useref
-            li
-                a(href="https://www.npmjs.com/package/gulp-util" target="_blank" rel="help") gulp-util
-            li
-                a(href="https://www.npmjs.com/package/gulp.spritesmith" target="_blank" rel="help") gulp.spritesmith
-            li
-                a(href="https://www.npmjs.com/package/htmlhint-stylish" target="_blank" rel="help") htmlhint-stylish
-            li
-                a(href="https://www.npmjs.com/package/imagemin-gifsicle" target="_blank" rel="help") imagemin-gifsicle
-            li
-                a(href="https://www.npmjs.com/package/imagemin-jpegtran" target="_blank" rel="help") imagemin-jpegtran
-            li
-                a(href="https://www.npmjs.com/package/imagemin-optipng" target="_blank" rel="help") imagemin-optipng
-            li
-                a(href="https://www.npmjs.com/package/imagemin-svgo" target="_blank" rel="help") imagemin-svgo
-            li
-                a(href="https://www.npmjs.com/package/jshint-stylish" target="_blank" rel="help") jshint-stylish
-            li
-                a(href="https://www.npmjs.com/package/run-sequence" target="_blank" rel="help") run-sequence
-            li
-                a(href="https://www.npmjs.com/package/vinyl-ftp" target="_blank" rel="help") vinyl-ftp
-            li
-                a(href="https://www.npmjs.com/package/wiredep" target="_blank" rel="help") wiredep
-            li
-                a(href="https://jasmine.github.io/" target="_blank" rel="help") jasmine
-            li
-                a(href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help") karma
-            li
-                a(href="https://www.npmjs.com/package/karma-jasmine" target="_blank" rel="help") karma-jasmine
-            li
-                a(href="https://www.npmjs.com/package/karma-phantomjs-launcher" target="_blank" rel="help") karma-phantomjs-launcher
-            li
-                a(href="https://www.npmjs.com/package/karma-spec-reporter" target="_blank" rel="help") karma-spec-reporter
-        p.article__paragraph #{data.articles.npmModules.paragraph[2]} 
+            each module in data.articles.npmModules.list
+                li
+                    a(href=module.link target="_blank" rel="help") #{module.name}
+        p.article__paragraph #{data.articles.npmModules.paragraph[1][0]} 
             code.code__line npm install
             | .

@@ -1,6 +1,6 @@
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~* SYNAX HIGHLIGHTING *~~~//
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* SYNAX HIGHLIGHTING *~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
 // __line __block
@@ -8,48 +8,40 @@ $code__line-block__background: $color__amour !default;
 $code__line-block__font-size: 90% !default;
 $code__line-block__text-align: justify !default;
 $code__line-block__color: $color__black !default;
-$code__line-block__white-space: normal !default;
-$code__line-block__border-radius: 3px !default;
-// __line __block strong
-$code__line-block-strong__font-weight: 600 !default;
-// __line
-$code__line__padding: 0 1px !default;
-// __block
-$code__block__display: block !default;
-$code__block__padding: 16px !default;
-$code__block__margin: 10px 0 !default;
+// __block .part-visible / hidden.invert
+$part-visible-hidden__beark-point: 608px !default;
 
 
-.code{
+.code {
     &__line,
-    &__block{
+    &__block {
         background: $code__line-block__background;
         font-size: $code__line-block__font-size;
         text-align: $code__line-block__text-align;
         color: $code__line-block__color;
-        white-space: $code__line-block__white-space;
-        border-radius: $code__line-block__border-radius;
+        white-space: normal;
+        border-radius: 3px;
     }
-    &__line{
-        padding: $code__line__padding;
+    &__line {
+        padding: 0 1px;
     }
-    &__block{
-        display: $code__block__display;
-        padding: $code__block__padding;
-        margin: $code__block__margin;
-        .part{
-            &-visible{
+    &__block {
+        display: block;
+        padding: 16px;
+        margin: 10px 0;
+        .part {
+            &-visible {
                 display: inline;
-                &.invert{
-                    @media screen and (max-width: 608px){
+                &.invert {
+                    @media screen and (max-width: $part-visible-hidden__beark-point) {
                         display: none;
                     }
                 }
             }
-            &-hidden{
+            &-hidden {
                 display: none;
-                &.invert{
-                    @media screen and (max-width: 608px){
+                &.invert {
+                    @media screen and (max-width: $part-visible-hidden__beark-point) {
                         display: inline;
                     }
                 }

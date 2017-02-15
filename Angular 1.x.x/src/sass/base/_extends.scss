@@ -1,46 +1,24 @@
-//~~~~~~~~~~~~~~~~~~~~//
-//~~~~~* EXTENDS *~~~~//
-//~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* EXTENDS *~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~//
 
 
 // %paragraphs
 $paragraphs__line-height: 1.3 !default;
 $paragraphs__text-align: justify !default;
-// %display-inline-block
-$display-inline-block__display: inline-block !default;
-$display-inline-block__text-align: left !default;
-// %font-weight-500
-$font-weight-500__font-weight: 500 !default;
-// %list-style-none
-$list-style-none__list-style: none !default;
-// %project-structure__icons
-$project-structure__icons__display: inline-block !default;
-$project-structure__icons__float: left !default;
-$project-structure__icons__transform: scale(0.8) !default;
-$project-structure__icons__margin: -3px 3px 0 0 !default;
 
 
+// Components: articles & project structure
 %paragraphs {
     line-height: $paragraphs__line-height;
     text-align: $paragraphs__text-align;
 }
 
-%display-inline-block {
-    display: $display-inline-block__display;
-    text-align: $display-inline-block__text-align;
-}
 
-%font-weight-500 {
-    font-weight: $font-weight-500__font-weight;
-}
-
-%list-style-none {
-    list-style: $list-style-none__list-style;
-}
-
-%project-structure__icons{
-    display: $project-structure__icons__display;
-    float: $project-structure__icons__float;
-    transform: $project-structure__icons__transform;
-    margin: $project-structure__icons__margin;
+// Icons: directories & files
+%project-structure__icons {
+    display: inline-block;
+    float: left;
+    transform: scale(0.8);
+    margin: -3px 3px 0 0;
 }

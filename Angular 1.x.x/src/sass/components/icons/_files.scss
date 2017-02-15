@@ -1,0 +1,21 @@
+//~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* FILES *~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~//
+
+
+.file {
+    &__json,
+    &__js,
+    &__xml,
+    &__html,
+    &__sass,
+    &__pug,
+    &__css {
+        @extend %project-structure__icons;
+        @include sprite($code-black);
+    }
+    &__img {
+        @extend %project-structure__icons;
+        @include sprite($image-black);
+    }
+}

@@ -1,38 +1,32 @@
-//~~~~~~~~~~~~~~~~~~~~//
-//~~~~~* README *~~~~~//
-//~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* README *~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~//
 
 
-$readme__width: 750px !default;
 $readme__background: $color__white !default;
-$readme__padding: 30px 45px 45px !default;
-$readme__border-radius: 2px !default;
 $readme__border: 1px solid rgba($color__black, 0.1) !default;
-$readme__box-shadow: 0 3px 6px rgba($color__black, 0.15), 0 3px 6px rgba($color__black, 0.24) !default;
-$readme__margin: 0 auto !default;
+$readme__box-shadow: 0 3px 6px rgba($color__black, 0.15),
+0 3px 6px rgba($color__black, 0.24) !default;
 // __info
 $readme__info__padding: 0 0 0.125em 1em !default;
 $readme__info__border-left: 0.25em solid $color__sunset-orange !default;
 
 
-.readme{
-    width: $readme__width;
+.readme {
+    width: 750px;
     background: $readme__background;
-    padding: $readme__padding;
-    border-radius: $readme__border-radius;
+    padding: 30px 45px 45px;
+    border-radius: 2px;
     border: $readme__border;
     box-shadow: $readme__box-shadow;
-    margin: $readme__margin;
-    @media screen and (max-width: $break-point__1){
+    margin: 0 auto;
+    @media screen and (max-width: $break-point__1) {
         width: 100%;
         padding: 30px 15px 35px;
     }
-    &__info{
+    &__info {
         @extend %paragraphs;
         padding: $readme__info__padding;
         border-left: $readme__info__border-left;
-        strong{
-            @extend %font-weight-500;
-        }
     }
 }

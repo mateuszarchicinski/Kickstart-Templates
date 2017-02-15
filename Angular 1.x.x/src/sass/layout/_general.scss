@@ -1,6 +1,6 @@
-//~~~~~~~~~~~~~~~~~~~~//
-//~~~~~* GENERAL *~~~~//
-//~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* GENERAL *~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~//
 
 
 $box-sizing: border-box !default;
@@ -12,14 +12,18 @@ $body__font-size: 1em !default;
 
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: $box-sizing;
 }
 
-html{
+html {
     line-height: $html__line-height;
 }
 
-body{
+body {
     font-size: $body__font-size;
+}
+
+.clearfix {
+    @include clearfix;
 }

@@ -12,28 +12,14 @@ article(id="BowerComponents" class="article")
             strong bower.json
             | ):
         ul.article__list-points
-            li
-                a(href="https://code.angularjs.org/1.6.1/angular.js" target="_blank" rel="help") angular
-            li
-                a(href="https://ui-router.github.io/ng1/" target="_blank" rel="help") angular-ui-router
-            li
-                a(href="https://code.angularjs.org/1.6.1/angular-animate.min.js" target="_blank" rel="help") angular-animate
-            li
-                a(href="https://code.angularjs.org/1.6.1/angular-aria.js" target="_blank" rel="help") angular-aria
-            li
-                a(href="https://code.angularjs.org/1.6.1/angular-messages.js" target="_blank" rel="help") angular-messages
-            li
-                a(href="https://material.angularjs.org/latest/" target="_blank" rel="help") angular-material
-            li
-                a(href="https://code.angularjs.org/1.6.1/angular-mocks.js" target="_blank" rel="help") angular-mocks
-            li
-                a(href="https://necolas.github.io/normalize.css/" target="_blank" rel="help") normalize-css
+            - for(var i = 0; i < 8; i++)
+                li
+                    a(href=data.articles.bowerComponents.list[i].link  target="_blank" rel="help") #{data.articles.bowerComponents.list[i].name}
         p.article__paragraph #{data.articles.bowerComponents.paragraph[1][0]}
         ul.article__list-points
-            li
-                a(href="https://jquery.com/" target="_blank" rel="help") jquery
-            li
-                a(href="https://github.com/geoffgraham/animate.scss" target="_blank" rel="help") animatewithsass
+            - for(var i = 8; i < 10; i++)
+                li
+                    a(href=data.articles.bowerComponents.list[i].link  target="_blank" rel="help") #{data.articles.bowerComponents.list[i].name}
         p.article__paragraph #{data.articles.bowerComponents.paragraph[2][0]} 
             code.code__line bower install
             | .

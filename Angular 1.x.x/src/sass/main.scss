@@ -32,8 +32,8 @@
 // ---------------------
 
 
-// *--------- ANGULAR MATERIAL ---------*
-@import '../bower_components/angular-material/angular-material.scss';
+    // *--------- ANGULAR MATERIAL ---------*
+    @import '../bower_components/angular-material/angular-material.scss';
 
 
 // ---------------------
@@ -41,24 +41,29 @@
 // ---------------------
 
 
-// *--------- SPRITES ---------*
-@import 'components/sprites/projectStructure';
+    // *--------- SPRITES ---------*
+    @import 'components/sprites/projectStructure';
 
 
-// *--------- ARTICLES ---------*
-@import 'components/articles';
+    // *--------- ICONS ---------*
+    @import 'components/icons/directories';
+    @import 'components/icons/files';
 
 
-// *--------- SYNTAX HIGHLIGHTING ---------*
-@import 'components/syntaxHighlighting';
+    // *--------- ARTICLES ---------*
+    @import 'components/articles';
 
 
-// *--------- PROJECT STRUCTURE ---------*
-@import 'components/projectStructure';
+    // *--------- SYNTAX HIGHLIGHTING ---------*
+    @import 'components/syntaxHighlighting';
 
 
-// *--------- LINKS ---------*
-@import 'components/links';
+    // *--------- PROJECT STRUCTURE ---------*
+    @import 'components/projectStructure';
+
+
+    // *--------- LINKS ---------*
+    @import 'components/links';
 
 
 // ---------------------
@@ -66,8 +71,8 @@
 // ---------------------
 
 
-// *--------- README ---------*
-@import 'pages/readme';
+    // *--------- README ---------*
+    @import 'pages/readme';
 
 
 // ---------------------
@@ -75,20 +80,20 @@
 // ---------------------
 
 
-// *--------- GENERAL ---------*
-@import 'layout/general';
+    // *--------- GENERAL ---------*
+    @import 'layout/general';
 
 
-// *--------- MAIN HEADER ---------*
-@import 'layout/header';
+    // *--------- MAIN HEADER ---------*
+    @import 'layout/header';
 
 
-// *--------- MAIN WRAPPER ---------*
-@import 'layout/wrapper';
+    // *--------- MAIN WRAPPER ---------*
+    @import 'layout/wrapper';
 
 
-// *--------- MAIN FOOTER ---------*
-@import 'layout/footer';
+    // *--------- MAIN FOOTER ---------*
+    @import 'layout/footer';
 
 
 // ---------------------
@@ -96,6 +101,6 @@
 // ---------------------
 
 
-// *--------- EXTENDS ---------*
-@import 'base/extends';
+    // *--------- EXTENDS ---------*
+    @import 'base/extends';
 

@@ -1,57 +1,44 @@
-//~~~~~~~~~~~~~~~~~~~~//
-//~~~~~* ARTICLES *~~~//
-//~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* ARTICLES *~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
-$article__padding-top: 1px !default;
 // .article__list li
 $article__list__li__margin: 1em 0 1.5em !default;
 $article__list__li-last-child__margin: 1em 0 1em !default;
 // .article__list-points li
 $article__list-points__li__margin: 0.8em 0 !default;
-// .article__list.no-list-padding
-$article__list-no-list-padding__li__list-style: none !default;
-$article__list-no-list-padding__li__padding: 0 !default;
-$article__list-no-list-padding__li__counter-reset: listElementsCounter !default;
 
 
 .article {
-    padding-top: $article__padding-top;
+    padding-top: 1px;
     &__paragraph {
         @extend %paragraphs;
-        strong {
-            @extend %font-weight-500;
-        }
     }
     &__list {
         li {
             @extend %paragraphs;
             margin: $article__list__li__margin;
-            &:last-child{
+            &:last-child {
                 margin: $article__list__li-last-child__margin;
             }
-        }
-        strong {
-            @extend %font-weight-500;
         }
         &,
         &-points {
             padding-left: 25px;
-        }
-        &-points {
             li {
                 @extend %paragraphs;
                 margin: $article__list-points__li__margin;
             }
         }
-        &.no-list-padding{
-            list-style: $article__list-no-list-padding__li__list-style;
-            counter-reset: $article__list-no-list-padding__li__counter-reset;
-            padding: $article__list-no-list-padding__li__padding;
-            li{
-                counter-increment: $article__list-no-list-padding__li__counter-reset;
-                @include before{
-                    content: counter($article__list-no-list-padding__li__counter-reset) ". ";
+        &.no-list-padding {
+            list-style: none;
+            counter-reset: elementsCounter;
+            padding: 0;
+            li {
+                counter-increment: elementsCounter;
+                @include before {
+                    content: counter(elementsCounter) ". ";
                 }
             }
         }

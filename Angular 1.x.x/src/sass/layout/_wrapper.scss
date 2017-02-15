@@ -1,10 +1,8 @@
-//~~~~~~~~~~~~~~~~~~~~//
-//~~~* MAIN WRAPPR *~~//
-//~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* MAIN WRAPPR *~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
-// __container
-$main-wrapper__container__position: relative !default;
 // [ui-view]
 $ui-view__transition: all 0.25s ease !default;
 // .ng-enter
@@ -21,7 +19,7 @@ $ui-view__ng-leave-active__opacity: 0 !default;
 
 .main-wrapper {
     &__container {
-        position: $main-wrapper__container__position;
+        position: relative;
     }
     [ui-view] {
         &.ng-enter,

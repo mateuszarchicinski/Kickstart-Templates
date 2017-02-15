@@ -1,15 +1,31 @@
+//~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* LINKS *~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~//
+
+
+$a__text-decoration: none !default;
+$a__color: $color__steel-blue !default; // $color__steel-blue - $color__blue
+$a__transition: color 0.25s !default;
+// a link - visited
+$a__link-visited__color: $a__color !default;
+// a hover
+$a__hover__color: $color__red-orange !default;
+// a active
+$a__active__color: $color__sunset-orange !default;
+
+
 a {
-    text-decoration: none;
-    color: #0000ee;
-    transition: color 0.25s;
+    text-decoration: $a__text-decoration;
+    color: $a__color;
+    transition: $a__transition;
     &:link,
     &:visited {
-        color: #0000ee;
+        color: $a__link-visited__color;
     }
     &:hover {
-        color: $color__red-orange;
+        color: $a__hover__color;
     }
     &:active {
-        color: #EF5350;
+        color: $a__active__color;
     }
 }

@@ -4,15 +4,15 @@ article(id="ProjectStructure" class="article")
     header.article__header
         h3.article__title.tertiary-heading= data.articles.projectStructure.headline
     .article__body
-        p.article__paragraph #{data.articles.projectStructure.paragraph[0]} 
+        p.article__paragraph #{data.articles.projectStructure.paragraph[0][0]} 
             strong project.config.js
-            |  #{data.articles.projectStructure.paragraph[1]} 
+            |  #{data.articles.projectStructure.paragraph[0][1]} 
             strong .bowerrc
             | .
         ul.project-structure
             li
                 i.directory__root
-                | #{data.articles.projectStructure.paragraph[2]}
+                | #{data.articles.projectStructure.paragraph[1][0]}
                 ul.branch
                     li.branch__leaf-top
                         i.directory__close
@@ -172,6 +172,6 @@ article(id="ProjectStructure" class="article")
                     li.branch__leaf-bottom
                         i.file__json
                         | project.data.json
-        p.article__paragraph #{data.articles.projectStructure.paragraph[3]} 
+        p.article__paragraph #{data.articles.projectStructure.paragraph[2][0]} 
             strong gulpfile.js
             | .

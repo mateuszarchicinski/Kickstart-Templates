@@ -3,60 +3,344 @@
     "lang": {
         "pl": {
             "lang": "pl",
-            "title": "Kickstart Projekt - Angular 1.x.x Szablon",
-            "description": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i w pełni skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x.x umożliwiającego szybkie rozpoczęcie projektu.",
-            "keywords": "szablon aplikacja webowa zautomatyzowana skonfigurowana środowisko developer developerskie praca angular ng app rozwiązanie rozwoj aplikacji",
+            "title": "Kickstart Projekt - Angular 1.x Szablon",
+            "description": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
+            "keywords": "szablon aplikacja webowa zautomatyzowana automatyzacja skonfigurowana konfiguracja środowisko developer developerskie projekt angular ng app google node nodejs npm bower gulp gulpjs karma jasmine material",
             "author": "Mateusz Archiciński",
-            "ogTitle": "Kickstart Projekt - Angular 1.x.x Szablon",
-            "ogDescription": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i w pełni skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x.x umożliwiającego szybkie rozpoczęcie projektu.",
+            "ogTitle": "Kickstart Projekt - Angular 1.x Szablon",
+            "ogDescription": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
             "header": {
                 "headline": "Kickstart Projekt"
             },
             "section": {
                 "headline": "Angular v1.x Szablon",
-                "info": ["Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak", "i", ". W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii"],
-                "info1": ["Przygotowany szablon aplikacji webowej", "udostępnia w pełni skonfigurowane i zautomatyzowane środowisko pracy za pomocą takich technologii jak", "i"]
+                "info": [
+                    [
+                        "Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak",
+                        "i",
+                        ". W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii"
+                    ],
+                    [
+                        "Przygotowany szablon aplikacji webowej",
+                        "udostępnia w pełni skonfigurowane i zautomatyzowane środowisko pracy za pomocą takich technologii jak",
+                        "i"
+                    ]
+                ]
             },
             "articles": {
                 "usage":{
                     "headline": "Użycie",
                     "paragraph": [
-                        ["Projekt", "Angular 1.x Szablon", "jest dostępny wyłącznie na", ". Przykłady instalacji poniżej. Do dwóch pierwszych instalacji wymagany jest system kontroli wersji"],
-                        ["Za pomocą konsoli utwórz nowy katalog i przejdź do niego:", "katalog-projektu"],
-                        ["W nowym katalogu zainicjuj środowisko komendą", "i następnie wywołaj:", "repozytorium"],
-                        ["W konsoli wywołaj polecenie sklonowania całego repozytorium, które tym samym utworzy nowy katalog:"],
-                        ["Manualnie pobierz najnowszą stabilną wersje z strony", "publikacji szablonu"],
-                        ["Po wykonaniu dowolnej instalacji. Przejdź do katalogu projektu i wywołaj polecenia", "i"],
-                        ["W tym momencie można zacząć korzystać z wszystkich zdefiniowanych zadań w", ". Tabela zadań dostępna", "tutaj"]
+                        [
+                            "Projekt",
+                            "Angular 1.x Szablon",
+                            "jest dostępny wyłącznie na",
+                            ". Przykłady instalacji poniżej. Do dwóch pierwszych instalacji wymagany jest system kontroli wersji"
+                        ],
+                        [
+                            "Za pomocą konsoli utwórz nowy katalog i przejdź do niego:",
+                            "katalog-projektu"
+                        ],
+                        [
+                            "W nowym katalogu zainicjuj środowisko komendą",
+                            "i następnie wywołaj:",
+                            "repozytorium"
+                        ],
+                        [
+                            "W konsoli wywołaj polecenie sklonowania całego repozytorium, które tym samym utworzy nowy katalog:"
+                        ],
+                        [
+                            "Manualnie pobierz najnowszą stabilną wersje z strony",
+                            "publikacji szablonu"
+                        ],
+                        [
+                            "Po wykonaniu dowolnej instalacji. Przejdź do katalogu projektu i wywołaj polecenia",
+                            "i"
+                        ],
+                        [
+                            "W tym momencie można zacząć korzystać z wszystkich zdefiniowanych zadań w",
+                            ". Tabela zadań dostępna",
+                            "tutaj"
+                        ]
                     ]
                 },
                 "configuration":{
                     "headline": "Konfiguracja",
                     "paragraph": [
-                        ["Globalne ustawienia są dostępne w pliku", ", który umożliwia zmianę:", "nazwy aplikacji,", "nazwy plików konfiguracyjnych i danych,", "katalogów pracy i produkcji (wymagana również manualna zmiana w pliku", "dostępów FTP,", "podania kluczy do zewnętrznych API."],
-                        ["Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych z których będziemy korzystać indywidualnie. W pliku", "odwołujemy się do niego poprzez zmienną"]
+                        [
+                            "Globalne ustawienia są dostępne w pliku",
+                            ", który umożliwia zmianę:",
+                            "nazwy aplikacji,",
+                            "nazwy plików konfiguracyjnych i danych,",
+                            "katalogów pracy i produkcji (wymagana również manualna zmiana w pliku",
+                            "dostępów FTP,",
+                            "podania kluczy do zewnętrznych API."
+                        ],
+                        [
+                            "Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych z których będziemy korzystać indywidualnie. W pliku",
+                            "odwołujemy się do niego poprzez zmienną"
+                        ]
                     ]
                 },
                 "projectStructure":{
                     "headline": "Struktura projektu",
-                    "paragraph": ["Poniżej rekomendowana strukturę projektu. Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach", "i", "Katalog projektu", "W przypadku błędu dowolnej funkcjonalności najlepiej powrócić do rekomendowanej struktury lub próbować zlokalizować przyczynę bezpośrednio w pliku"]
+                    "paragraph": [
+                        [
+                            "Poniżej rekomendowana strukturę projektu. Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach",
+                            "i"
+                        ],
+                        [
+                            "Katalog projektu"
+                        ],
+                        [
+                            "W przypadku błędu dowolnej funkcjonalności najlepiej powrócić do rekomendowanej struktury lub próbować zlokalizować przyczynę bezpośrednio w pliku"
+                        ]
+                    ]
                 },
                 "npmModules":{
                     "headline": "NPM moduły",
-                    "paragraph": ["Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności szablonu (", "):", "Wszystkie powyższe moduły instalujemy komendą"]
+                    "paragraph": [
+                        [
+                            "Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności szablonu ("
+                        ],
+                        [
+                            "Wszystkie powyższe moduły instalujemy komendą"
+                        ]
+                    ],
+                    "list": [
+                        {
+                            "name": "bower",
+                            "link": "https://bower.io/"
+                        },
+                        {
+                            "name": "browser-sync",
+                            "link": "https://browsersync.io/"
+                        },
+                        {
+                            "name": "del",
+                            "link": "https://www.npmjs.com/package/del"
+                        },
+                        {
+                            "name": "gulp",
+                            "link": "http://gulpjs.com/"
+                        },
+                        {
+                            "name": "gulp-autoprefixer",
+                            "link": "https://www.npmjs.com/package/gulp-autoprefixer"
+                        },
+                        {
+                            "name": "gulp-clean-css",
+                            "link": "https://www.npmjs.com/package/gulp-clean-css"
+                        },
+                        {
+                            "name": "gulp-cli",
+                            "link": "https://www.npmjs.com/package/gulp-cli"
+                        },
+                        {
+                            "name": "gulp-data",
+                            "link": "https://www.npmjs.com/package/gulp-data"
+                        },
+                        {
+                            "name": "gulp-htmlhint",
+                            "link": "https://www.npmjs.com/package/gulp-htmlhint"
+                        },
+                        {
+                            "name": "gulp-htmlmin",
+                            "link": "https://www.npmjs.com/package/gulp-htmlmin"
+                        },
+                        {
+                            "name": "gulp-if",
+                            "link": "https://www.npmjs.com/package/gulp-if"
+                        },
+                        {
+                            "name": "gulp-imagemin",
+                            "link": "https://www.npmjs.com/package/gulp-imagemin"
+                        },
+                        {
+                            "name": "gulp-jshint",
+                            "link": "https://www.npmjs.com/package/gulp-jshint"
+                        },
+                        {
+                            "name": "gulp-load-plugins",
+                            "link": "https://www.npmjs.com/package/gulp-load-plugins"
+                        },
+                        {
+                            "name": "gulp-plumber",
+                            "link": "https://www.npmjs.com/package/gulp-plumber"
+                        },
+                        {
+                            "name": "gulp-pug",
+                            "link": "https://www.npmjs.com/package/gulp-pug"
+                        },
+                        {
+                            "name": "gulp-pug-lint",
+                            "link": "https://www.npmjs.com/package/gulp-pug-lint"
+                        },
+                        {
+                            "name": "gulp-rename",
+                            "link": "https://www.npmjs.com/package/gulp-rename"
+                        },
+                        {
+                            "name": "gulp-sass",
+                            "link": "https://www.npmjs.com/package/gulp-sass"
+                        },
+                        {
+                            "name": "gulp-sass-lint",
+                            "link": "https://www.npmjs.com/package/gulp-sass-lint"
+                        },
+                        {
+                            "name": "gulp-sourcemaps",
+                            "link": "https://www.npmjs.com/package/gulp-sourcemaps"
+                        },
+                        {
+                            "name": "gulp-tinify",
+                            "link": "https://www.npmjs.com/package/gulp-tinify"
+                        },
+                        {
+                            "name": "gulp-uglify",
+                            "link": "https://www.npmjs.com/package/gulp-uglify"
+                        },
+                        {
+                            "name": "gulp-useref",
+                            "link": "https://www.npmjs.com/package/gulp-useref"
+                        },
+                        {
+                            "name": "gulp-util",
+                            "link": "https://www.npmjs.com/package/gulp-util"
+                        },
+                        {
+                            "name": "gulp.spritesmith",
+                            "link": "https://www.npmjs.com/package/gulp.spritesmith"
+                        },
+                        {
+                            "name": "htmlhint-stylish",
+                            "link": "https://www.npmjs.com/package/htmlhint-stylish"
+                        },
+                        {
+                            "name": "imagemin-gifsicle",
+                            "link": "https://www.npmjs.com/package/imagemin-gifsicle"
+                        },
+                        {
+                            "name": "imagemin-jpegtran",
+                            "link": "https://www.npmjs.com/package/imagemin-jpegtran"
+                        },
+                        {
+                            "name": "imagemin-optipng",
+                            "link": "https://www.npmjs.com/package/imagemin-optipng"
+                        },
+                        {
+                            "name": "imagemin-svgo",
+                            "link": "https://www.npmjs.com/package/imagemin-svgo"
+                        },
+                        {
+                            "name": "jshint-stylish",
+                            "link": "https://www.npmjs.com/package/jshint-stylish"
+                        },
+                        {
+                            "name": "run-sequence",
+                            "link": "https://www.npmjs.com/package/run-sequence"
+                        },
+                        {
+                            "name": "vinyl-ftp",
+                            "link": "https://www.npmjs.com/package/vinyl-ftp"
+                        },
+                        {
+                            "name": "wiredep",
+                            "link": "https://www.npmjs.com/package/wiredep"
+                        },
+                        {
+                            "name": "jasmine",
+                            "link": "https://jasmine.github.io/"
+                        },
+                        {
+                            "name": "karma",
+                            "link": "https://karma-runner.github.io/1.0/index.html"
+                        },
+                        {
+                            "name": "karma-jasmine",
+                            "link": "https://www.npmjs.com/package/karma-jasmine"
+                        },
+                        {
+                            "name": "karma-phantomjs-launcher",
+                            "link": "https://www.npmjs.com/package/karma-phantomjs-launcher"
+                        },
+                        {
+                            "name": "karma-spec-reporter",
+                            "link": "https://www.npmjs.com/package/karma-spec-reporter"
+                        }
+                    ]
                 },
                 "bowerComponents":{
                     "headline": "Bower komponenty",
                     "paragraph": [
-                        ["Następujące komponenty są elementami niezbędnymi do właściwego funkcjonowania szablonu wykorzystującego technologie", "i"],
-                        ["Dodatkowe paczki z których można korzystać opcjonalnie:"],
-                        ["Wszystkie powyższe komponenty instalujemy komendą"],
-                        ["Instalacja dodatkowych bibliotek css lub js za pośrednictwem", "spowoduje automatyczne dodanie ścieżki do nowego komponentu w głównym pliku", ". Konfiguracja tej funkcjonalności znajdują się w pliku", "w module"]
+                        [
+                            "Następujące komponenty są elementami niezbędnymi do właściwego funkcjonowania szablonu wykorzystującego technologie",
+                            "i"
+                        ],
+                        [
+                            "Dodatkowe paczki z których można korzystać opcjonalnie:"
+                        ],
+                        [
+                            "Wszystkie powyższe komponenty instalujemy komendą"
+                        ],
+                        [
+                            "Instalacja dodatkowych bibliotek css lub js za pośrednictwem",
+                            "spowoduje automatyczne dodanie ścieżki do nowego komponentu w głównym pliku",
+                            ". Konfiguracja tej funkcjonalności znajdują się w pliku",
+                            "w module"
+                        ]
+                    ],
+                    "list": [
+                        {
+                            "name": "angular",
+                            "link": "https://code.angularjs.org/1.6.1/angular.js"
+                        },
+                        {
+                            "name": "angular-ui-router",
+                            "link": "https://ui-router.github.io/ng1/"
+                        },
+                        {
+                            "name": "angular-animate",
+                            "link": "https://code.angularjs.org/1.6.1/angular-animate.min.js"
+                        },
+                        {
+                            "name": "angular-aria",
+                            "link": "https://code.angularjs.org/1.6.1/angular-aria.js"
+                        },
+                        {
+                            "name": "angular-messages",
+                            "link": "https://code.angularjs.org/1.6.1/angular-messages.js"
+                        },
+                        {
+                            "name": "angular-material",
+                            "link": "https://material.angularjs.org/latest/"
+                        },
+                        {
+                            "name": "angular-mocks",
+                            "link": "https://code.angularjs.org/1.6.1/angular-mocks.js"
+                        },
+                        {
+                            "name": "normalize-css",
+                            "link": "https://necolas.github.io/normalize.css/"
+                        },
+                        {
+                            "name": "jquery",
+                            "link": "https://jquery.com/"
+                        },
+                        {
+                            "name": "animatewithsass",
+                            "link": "https://github.com/geoffgraham/animate.scss"
+                        }
                     ]
                 },
                 "gulpTasks":{
                     "headline": "Gulp zadania",
-                    "paragraph": ["Lista zdefiniowanych zadań w", "poniżej. Polecenia wykonujemy z poziomu konsoli przebywając w głównym katalogu projektu. Do każdego zadania dodatkowo krótki opis", "z podziałem na zadania pojedyncze i złożone."],
+                    "paragraph": [
+                        [
+                            "Lista zdefiniowanych zadań w", "poniżej. Polecenia wykonujemy z poziomu konsoli przebywając w głównym katalogu projektu. Do każdego zadania dodatkowo krótki opis", "z podziałem na zadania pojedyncze i złożone."
+                        ],
+                        []
+                    ],
                     "subHeadlines": ["Pojedyncze:", "Złożone:"],
                     "build": ["Wywoła sekwencja  poleceń:"],
                     "buildServer": ["Uruchamia zadanie", "po czym tworzy serwer nasłuchujący na nowo powstały katalog produkcyjny.", "Uruchamia serwer nasłuchujący na katalog produkcyjny ("],
@@ -82,15 +366,35 @@
                 },
                 "testing":{
                     "headline": "Testowanie",
-                    "paragraph": ["Uruchamia się za pomocą zadania", "Do obsługi testów jednostkowych, nasłuchu zamian w plikach źródłowych i raportowania bledów zostało przygotowane środowisko", "Obecna konfiguracja wykorzystuje framework", ", symulator", "i reporter", "Pliki konfiguracji i testów znajdują się", "Folder projektu"]
+                    "paragraph": [
+                        [
+                            "Uruchamia się za pomocą zadania",
+                            "Do obsługi testów jednostkowych, nasłuchu zamian w plikach źródłowych i raportowania bledów zostało przygotowane środowisko",
+                            "Standardowa konfiguracja wykorzystuje framework",
+                            ", symulator",
+                            "i reporter",
+                            "Pliki konfiguracji i testów znajdują się",
+                            "Folder projektu"
+                        ]
+                    ]
                 },
                 "changelog":{
                     "headline": "Lista zmian",
-                    "paragraph": ["Ostatnie zmiany można zobaczyć na", "stronie", "publikacji szablonu"]
+                    "paragraph": [
+                        [
+                            "Ostatnie zmiany można zobaczyć na",
+                            "stronie",
+                            "publikacji szablonu"
+                        ]
+                    ]
                 },
                 "license": {
                     "headline": "Licencja",
-                    "paragraph": ["MIT Licencja"]
+                    "paragraph": [
+                        [
+                            "MIT Licencja"
+                        ]
+                    ]
                 }
             },
             "footer": {
@@ -98,61 +402,6 @@
             }
         },
         "en": {
-            "lang": "en",
-            "title": "Kickstart Project - Angular 1.x.x Template",
-            "description": "",
-            "keywords": "",
-            "author": "Mateusz Archiciński",
-            "ogTitle": "",
-            "ogDescription": "",
-            "header": {
-                "headline": "Kickstart Projekt"
-            },
-            "section": {
-                "headline": "Angular 1.x.x Template",
-                "info": ["Szablon umożliwiający szybkie w pełni zautomatyzowane rozpoczęcie projektu", "z", "Wykorzystuje do tego", "and"]
-            },
-            "articles": {
-                "usage":{
-                    "headline": "Usage",
-                    "paragraph": ["Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis."]
-                },
-                "configuration":{
-                    "headline": "Configuration",
-                    "paragraph": []
-                },
-                "foldersStructure":{
-                    "headline": "Folders structure",
-                    "paragraph": []
-                },
-                "NPMModules":{
-                    "headline": "NPM modules",
-                    "paragraph": []
-                },
-                "bowerComponents":{
-                    "headline": "Bower components",
-                    "paragraph": []
-                },
-                "gulpTasks":{
-                    "headline": "Gulp tasks",
-                    "paragraph": []
-                },
-                "testing":{
-                    "headline": "Testing",
-                    "paragraph": ["Running gulp js:test will run the unit tests with karma."]
-                },
-                "changelog":{
-                    "headline": "Changelog",
-                    "paragraph": ["Recent changes can be viewed on", "on the", "releases page"]
-                },
-                "license": {
-                    "headline": "License",
-                    "paragraph": ["MIT License"]
-                }
-            },
-            "footer": {
-                "author": "Mateusz Archiciński"
-            }
         }
     }
 }

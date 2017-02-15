@@ -15,11 +15,11 @@
         <p class="article__paragraph">Projekt <strong>Angular 1.x Szablon</strong> jest dostępny wyłącznie na <a href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help">Github</a>. Przykłady instalacji poniżej. Do dwóch pierwszych instalacji wymagany jest system kontroli wersji <a href="https://git-scm.com/" target="_blank" rel="help">Git</a>.</p>
         <ol class="article__list no-list-padding">
           <li>Za pomocą konsoli utwórz nowy katalog i przejdź do niego:
-            <pre class="code__block">mkdir katalog-projektu && cd katalog-projektu</pre>W nowym katalogu zainicjuj środowisko komendą <code class="code__line">git init</code> i następnie wywołaj:
-            <pre class="code__block">git pull <a class="part-hidden invert" href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help">repozytorium</a><span class="part-visible invert">https://github.com/mateuszarchicinski/Angular1.x-Template</span></pre>
+            <pre class="code__block"><code class="code__line">mkdir katalog-projektu && cd katalog-projektu</code></pre>W nowym katalogu zainicjuj środowisko komendą <code class="code__line">git init</code> i następnie wywołaj:
+            <pre class="code__block"><code class="code__line">git pull <a class="part-hidden invert" href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help">repozytorium</a><span class="part-visible invert">https://github.com/mateuszarchicinski/Angular1.x-Template</span></code></pre>
           </li>
           <li>W konsoli wywołaj polecenie sklonowania całego repozytorium, które tym samym utworzy nowy katalog:
-            <pre class="code__block">git clone <a class="part-hidden invert" href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help">repozytorium</a><span class="part-visible invert">https://github.com/mateuszarchicinski/Angular1.x-Template</span></pre>
+            <pre class="code__block"><code class="code__line">git clone <a class="part-hidden invert" href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help">repozytorium</a><span class="part-visible invert">https://github.com/mateuszarchicinski/Angular1.x-Template</span></code></pre>
           </li>
           <li>Manualnie pobierz najnowszą stabilną wersje z strony <a href="https://github.com/mateuszarchicinski/Angular1.x-Template/releases" target="_blank">publikacji szablonu</a>.</li>
         </ol>
@@ -137,7 +137,7 @@
         <h3 class="article__title tertiary-heading">NPM moduły</h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności szablonu (<strong>package.json</strong>): </p>
+        <p class="article__paragraph">Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności szablonu (<strong>package.json</strong>):</p>
         <ul class="article__list-points">
           <li><a href="https://bower.io/" target="_blank" rel="help">bower</a></li>
           <li><a href="https://browsersync.io/" target="_blank" rel="help">browser-sync</a></li>
@@ -213,7 +213,7 @@
         <h3 class="article__title tertiary-heading">Gulp zadania</h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Lista zdefiniowanych zadań w <strong>gulpfile.js</strong> poniżej. Polecenia wykonujemy z poziomu konsoli przebywając w głównym katalogu projektu. Do każdego zadania dodatkowo krótki opis <br class="br-g-1"/>z podziałem na zadania pojedyncze i złożone.</p>
+        <p class="article__paragraph">Lista zdefiniowanych zadań w,poniżej. Polecenia wykonujemy z poziomu konsoli przebywając w głównym katalogu projektu. Do każdego zadania dodatkowo krótki opis,z podziałem na zadania pojedyncze i złożone. <strong>gulpfile.js</strong>  <br class="br-g-1"/></p>
         <p class="article__paragraph">Pojedyncze:</p>
         <ul class="article__list">
           <li><code class="code__line">gulp sass:css</code> - Tworzy główny plik <strong>main.css</strong> i <strong>main.css.map</strong> na podstawie pliku <strong>main.scss</strong>.</li>
@@ -256,7 +256,7 @@
         <h3 class="article__title tertiary-heading">Testowanie</h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Uruchamia się za pomocą zadania <code class="code__line">gulp js:test</code>. Do obsługi testów jednostkowych, nasłuchu zamian w plikach źródłowych i raportowania bledów zostało przygotowane środowisko <a href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help">Karma</a>. Obecna konfiguracja wykorzystuje framework <a href="https://jasmine.github.io/" target="_blank" rel="help">Jasmine</a>, symulator <a href="http://phantomjs.org/" target="_blank" rel="help">PhantomJS</a> i reporter <a href="https://www.npmjs.com/package/karma-spec-reporter" target="_blank" rel="help">Spec</a>. Pliki konfiguracji i testów znajdują się <code class="code__line">Folder projektu > Test > Karma.conf.js / Spec</code>.</p>
+        <p class="article__paragraph">Uruchamia się za pomocą zadania <code class="code__line">gulp js:test</code>. Do obsługi testów jednostkowych, nasłuchu zamian w plikach źródłowych i raportowania bledów zostało przygotowane środowisko <a href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help">Karma</a>. Standardowa konfiguracja wykorzystuje framework <a href="https://jasmine.github.io/" target="_blank" rel="help">Jasmine</a>, symulator <a href="http://phantomjs.org/" target="_blank" rel="help">PhantomJS</a> i reporter <a href="https://www.npmjs.com/package/karma-spec-reporter" target="_blank" rel="help">Spec</a>. Pliki konfiguracji i testów znajdują się <code class="code__line">Folder projektu > Test > Karma.conf.js / Spec</code>.</p>
       </div>
     </article>
     <article class="article" id="Changelog">

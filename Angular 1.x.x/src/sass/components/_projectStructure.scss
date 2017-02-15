@@ -1,82 +1,85 @@
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~* PROJECT STRUCTURE *~~~//
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* PROJECT STRUCTURE *~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
-// .project-structure li
-$project-structure__li__margin: 8px 0;
+// .project-structure .branch
+$project-structure__branch__border-left: 1px dashed $color__black !default;
+// .project-structure .branch ::after ::before
+$project-structure__branch-before-after__background: $color__red-orange !default;
+// .branch .leaf-top ::before
+$branch__leaf-top-before__border-top: $project-structure__branch__border-left !default;
+// .branch .leaf-top ::after
+$branch__leaf-top-after__background: $project-structure__branch-before-after__background !default;
+// .branch .leaf-bottom ::before
+$branch__leaf-bottom-before__border-left: $project-structure__branch__border-left !default;
 
-.clearfix{
-    @include clearfix;
-}
 
 .project-structure {
-    @extend %list-style-none;
     padding: 0;
-    ul{
-        @extend %list-style-none;
+    &,
+    ul {
+        list-style: none;
+    }
+    ul {
         padding-left: 25px;
     }
     li {
         @extend %paragraphs;
-        margin: $project-structure__li__margin;
+        margin: 8px 0;
     }
-    strong {
-        @extend %font-weight-500;
-    }
-    .branch{
+    .branch {
         position: relative;
-        border-left: 1px dashed $color__black; //#f44336
+        border-left: $project-structure__branch__border-left;
         padding-left: 25px;
         margin-left: 12px;
-        @include before-after{
+        @include before-after {
             content: "";
             width: 7px;
             height: 7px;
-            background: #f44336;
+            background: $project-structure__branch-before-after__background;
             position: absolute;
             display: block;
             left: -4px;
             border-radius: 50%;
         }
-        @include before{
+        @include before {
             top: -9px;
         }
-        @include after{
+        @include after {
             bottom: -7px;
         }
-        &__leaf{
+        &__leaf {
             &,
             &-top,
-            &-bottom{
+            &-bottom {
                 position: relative;
-                white-space: nowrap;
             }
-            &-top{
-                @include before-after{
+            &-top {
+                @include before-after {
                     content: "";
                     position: absolute;
                     display: block;
                 }
-                @include before{
+                @include before {
                     width: 26px;
                     height: 0;
                     top: -6px;
                     left: -20px;
-                    border-top: 1px dashed $color__black;
+                    border-top: $branch__leaf-top-before__border-top;
                 }
-                @include after{
+                @include after {
                     width: 7px;
                     height: 7px;
-                    background: #f44336;
+                    background: $branch__leaf-top-after__background;
                     left: 8px;
                     top: -9px;
                     border-radius: 50%;
                 }
             }
             &,
-            &-bottom{
-                @include before{
+            &-bottom {
+                @include before {
                     content: "";
                     width: 0;
                     height: 8px;
@@ -84,47 +87,9 @@ $project-structure__li__margin: 8px 0;
                     display: block;
                     top: -9px;
                     left: 12px;
-                    border-left: 1px dashed $color__black;
+                    border-left: $branch__leaf-bottom-before__border-left;
                 }
             }
         }
-    }
-}
-
-.directory{
-    &__root,
-    &__close,
-    &__open{
-        @extend %project-structure__icons;
-    }
-
-    &__root{
-        @include sprite($folder-special-black);
-    }
-
-    &__close{
-        @include sprite($folder-black);
-    }
-
-    &__open{
-        @include sprite($folder-open-black);
-    }
-}
-
-.file{
-    &__json,
-    &__js,
-    &__xml,
-    &__html,
-    &__sass,
-    &__pug,
-    &__css{
-        @extend %project-structure__icons;
-        @include sprite($code-black);
-    }
-
-    &__img{
-        @extend %project-structure__icons;
-        @include sprite($image-black);
     }
 }
