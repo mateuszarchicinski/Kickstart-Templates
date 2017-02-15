@@ -38,6 +38,7 @@ $color__sunset-orange: #ef5350;
 $color__amour: #ffebee;
 $color__blue: #0000ee;
 $color__steel-blue: #4078c0;
+$color__navy-blue: #0074d9;
 
 // Breaks Points
 $break-point__1: 749px;
@@ -122,8 +123,8 @@ $branch__leaf-bottom-before__border-left: $project-structure__branch__border-lef
 
 // *--------- LINKS ---------*
 $a__text-decoration: none;
-$a__color: $color__steel-blue; // $color__steel-blue - $color__blue
-$a__transition: color 0.25s;
+$a__color: $color__navy-blue; // $color__navy-blue - $color__steel-blue - $color__blue
+$a__transition: 0.25s color ease;
 // a link - visited
 $a__link-visited__color: $a__color;
 // a hover

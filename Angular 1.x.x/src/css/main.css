@@ -23817,8 +23817,8 @@ md-tooltip {
       margin: 1em 0 1em; }
   .article__list, .article__list-points {
     padding-left: 25px; }
-    .article__list li, .article__list-points li {
-      margin: 0.8em 0; }
+  .article__list-points li {
+    margin: 0.8em 0; }
   .article__list.no-list-padding {
     list-style: none;
     counter-reset: elementsCounter;
@@ -23912,10 +23912,10 @@ md-tooltip {
 
 a {
   text-decoration: none;
-  color: #4078c0;
-  transition: color 0.25s; }
+  color: #0074d9;
+  transition: 0.25s color ease; }
   a:link, a:visited {
-    color: #4078c0; }
+    color: #0074d9; }
   a:hover {
     color: #f44336; }
   a:active {

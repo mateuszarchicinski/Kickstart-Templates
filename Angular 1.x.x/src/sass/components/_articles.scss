@@ -26,6 +26,8 @@ $article__list-points__li__margin: 0.8em 0 !default;
         &,
         &-points {
             padding-left: 25px;
+        }
+        &-points {
             li {
                 @extend %paragraphs;
                 margin: $article__list-points__li__margin;

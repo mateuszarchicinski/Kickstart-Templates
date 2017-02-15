@@ -5,7 +5,7 @@
 
 $a__text-decoration: none !default;
 $a__color: $color__steel-blue !default; // $color__steel-blue - $color__blue
-$a__transition: color 0.25s !default;
+$a__transition: 0.25s color linear !default;
 // a link - visited
 $a__link-visited__color: $a__color !default;
 // a hover
