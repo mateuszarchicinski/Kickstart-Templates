@@ -9,7 +9,28 @@ article(id="GulpTasks" class="article")
             |  #{data.articles.gulpTasks.paragraph[1]} 
             br.br-g-1
             | #{data.articles.gulpTasks.paragraph[2]}
-        p.article__paragraph #{data.articles.gulpTasks.subHeadlines[0]}
+        table.table-striped
+            thead.table-striped__thead
+                tr.table-striped__row
+                    th.table-striped__header.two-columns
+                        | #{data.articles.gulpTasks.table.headers[0]}
+                    th.table-striped__header.two-columns
+                        | #{data.articles.gulpTasks.table.headers[1]}
+            tbody.table-striped__body
+                tr.table-striped__row.odd
+                    td.table-striped__data.two-columns
+                        div gulp sass:css
+                        div gulp sass:css
+                    td.table-striped__data.two-columns
+                        | gulp sass:css
+                        br
+                        | gulp sass:css
+                        br
+                        | gulp sass:css
+                        br
+                        | gulp sass:css
+                        br
+                        | gulp sass:css
         ul.article__list
             li
                 code.code__line gulp sass:css

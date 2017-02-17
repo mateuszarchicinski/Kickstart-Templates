@@ -6,9 +6,10 @@ article(id="ProjectStructure" class="article")
     .article__body
         p.article__paragraph #{data.articles.projectStructure.paragraph[0][0]} 
             strong project.config.js
+            br.br-s-1
             |  #{data.articles.projectStructure.paragraph[0][1]} 
             strong .bowerrc
-            | .
+            | #{data.articles.projectStructure.paragraph[0][2]} 
         ul.project-structure
             li
                 i.directory__root

@@ -23910,6 +23910,35 @@ md-tooltip {
       left: 12px;
       border-left: 1px dashed #000; }
 
+.table-striped {
+  width: 100%;
+  border-spacing: 0;
+  border: 1px solid #0000ee; }
+  .table-striped, .table-striped__thead, .table-striped__body, .table-striped__row, .table-striped__header, .table-striped__data {
+    display: block; }
+  .table-striped__row {
+    width: 100%;
+    display: table-row; }
+    .table-striped__row::before, .table-striped__row::after {
+      content: "";
+      display: table; }
+    .table-striped__row::after {
+      clear: both; }
+  .table-striped__header, .table-striped__data {
+    display: table-cell; }
+  .table-striped__data {
+    height: 100%; }
+    .table-striped__data div {
+      width: 100%;
+      height: 50%; }
+  .table-striped .two-columns {
+    width: 50%; }
+
+.div {
+  height: 200px; }
+  .div div {
+    height: 50%; }
+
 a {
   text-decoration: none;
   color: #0074d9;

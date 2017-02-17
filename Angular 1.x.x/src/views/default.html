@@ -12,7 +12,7 @@
         <h3 class="article__title tertiary-heading">Użycie</h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Projekt <strong>Angular 1.x Szablon</strong> jest dostępny wyłącznie na <a href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help">Github</a>. Przykłady instalacji poniżej. Do dwóch pierwszych instalacji wymagany jest system kontroli wersji <a href="https://git-scm.com/" target="_blank" rel="help">Git</a>.</p>
+        <p class="article__paragraph">Projekt <strong>Angular 1.x Szablon</strong> jest dostępny wyłącznie na <a href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help">Github</a>. Przykłady instalacji poniżej, przy dwóch pierwszych wymagany jest system kontroli wersji <a href="https://git-scm.com/" target="_blank" rel="help">Git</a>.</p>
         <ol class="article__list no-list-padding">
           <li>Za pomocą konsoli utwórz nowy katalog i przejdź do niego:
             <pre class="code__block"><code class="code__line">mkdir katalog-projektu && cd katalog-projektu</code></pre>W nowym katalogu zainicjuj środowisko komendą <code class="code__line">git init</code> i następnie wywołaj:
@@ -48,7 +48,7 @@
         <h3 class="article__title tertiary-heading">Struktura projektu</h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Poniżej rekomendowana strukturę projektu. Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach <strong>project.config.js</strong> i <strong>.bowerrc</strong>.</p>
+        <p class="article__paragraph">Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach <strong>project.config.js</strong><br class="br-s-1"/> i <strong>.bowerrc</strong>. Poniżej rekomendowana strukturę projektu. </p>
         <ul class="project-structure">
           <li><i class="directory__root"></i>Katalog projektu
             <ul class="branch">
@@ -137,7 +137,7 @@
         <h3 class="article__title tertiary-heading">NPM moduły</h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności szablonu (<strong>package.json</strong>):</p>
+        <p class="article__paragraph">Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności środowiska na których opiera się szablon (<strong>package.json</strong>):</p>
         <ul class="article__list-points">
           <li><a href="https://bower.io/" target="_blank" rel="help">bower</a></li>
           <li><a href="https://browsersync.io/" target="_blank" rel="help">browser-sync</a></li>
@@ -213,8 +213,24 @@
         <h3 class="article__title tertiary-heading">Gulp zadania</h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Lista zdefiniowanych zadań w,poniżej. Polecenia wykonujemy z poziomu konsoli przebywając w głównym katalogu projektu. Do każdego zadania dodatkowo krótki opis,z podziałem na zadania pojedyncze i złożone. <strong>gulpfile.js</strong>  <br class="br-g-1"/></p>
-        <p class="article__paragraph">Pojedyncze:</p>
+        <p class="article__paragraph">Lista zdefiniowanych zadań w,poniżej. Polecenia wykonujemy z poziomu konsoli przebywając w głównym katalogu projektu. Do każdego zadania dodatkowo krótki opis,z podziałem na zadania pojedyncze i złożone. <strong>gulpfile.js</strong> W planach jest dodanie nowego zadania umożliwiającego automatyczne tworzenie i dodawanie kontrolerów, derektyw, serwisów, fabryk, filtrów i testów jednostkowych w katalogach i do  pliku głównego,. Obecnie trzeba pamiętać aby wszystkie takie operację realizować manualnie. <br class="br-g-1"/></p>
+        <table class="table-striped">
+          <thead class="table-striped__thead">
+            <tr class="table-striped__row">
+              <th class="table-striped__header two-columns">Nazwa</th>
+              <th class="table-striped__header two-columns">Opis</th>
+            </tr>
+          </thead>
+          <tbody class="table-striped__body">
+            <tr class="table-striped__row odd">
+              <td class="table-striped__data two-columns">
+                <div>gulp sass:css</div>
+                <div>gulp sass:css</div>
+              </td>
+              <td class="table-striped__data two-columns">gulp sass:css<br/>gulp sass:css<br/>gulp sass:css<br/>gulp sass:css<br/>gulp sass:css</td>
+            </tr>
+          </tbody>
+        </table>
         <ul class="article__list">
           <li><code class="code__line">gulp sass:css</code> - Tworzy główny plik <strong>main.css</strong> i <strong>main.css.map</strong> na podstawie pliku <strong>main.scss</strong>.</li>
           <li><code class="code__line">gulp sass:lint</code> - Sprawdza kod <strong>Sass</strong> i raportuje o błędach w plikach <strong>.sass</strong> /<strong>.scss</strong>.</li>

@@ -1,0 +1,55 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* TABLE STRIPED *~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+
+.table-striped {
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid $color__blue;
+    &,
+    &__thead,
+    &__body,
+    &__row,
+    &__header,
+    &__data {
+        display: block;
+    }
+    &__thead {
+        
+    }
+    &__body {
+        
+    }
+    &__row {
+        @include clearfix;
+        width: 100%;
+        display: table-row;
+    }
+    &__header,
+    &__data {
+        display: table-cell;
+        //float: left;
+    }
+    &__header {
+        
+    }
+    &__data {        
+        height: 100%;
+        div{
+            width: 100%;
+            height: 50%;
+        }
+        
+    }
+    .two-columns{
+        width: (100% / 2);
+    }
+}
+
+.div{
+    height: 200px;
+    div{
+        height: 50%;
+    }
+}

@@ -35,7 +35,7 @@
                             "Projekt",
                             "Angular 1.x Szablon",
                             "jest dostępny wyłącznie na",
-                            ". Przykłady instalacji poniżej. Do dwóch pierwszych instalacji wymagany jest system kontroli wersji"
+                            ". Przykłady instalacji poniżej, przy dwóch pierwszych wymagany jest system kontroli wersji"
                         ],
                         [
                             "Za pomocą konsoli utwórz nowy katalog i przejdź do niego:",
@@ -86,8 +86,9 @@
                     "headline": "Struktura projektu",
                     "paragraph": [
                         [
-                            "Poniżej rekomendowana strukturę projektu. Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach",
-                            "i"
+                            "Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach",
+                            "i",
+                            ". Poniżej rekomendowana strukturę projektu."
                         ],
                         [
                             "Katalog projektu"
@@ -101,7 +102,7 @@
                     "headline": "NPM moduły",
                     "paragraph": [
                         [
-                            "Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności szablonu ("
+                            "Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności środowiska na których opiera się szablon ("
                         ],
                         [
                             "Wszystkie powyższe moduły instalujemy komendą"
@@ -339,8 +340,20 @@
                         [
                             "Lista zdefiniowanych zadań w", "poniżej. Polecenia wykonujemy z poziomu konsoli przebywając w głównym katalogu projektu. Do każdego zadania dodatkowo krótki opis", "z podziałem na zadania pojedyncze i złożone."
                         ],
-                        []
+                        [
+                            "W planach jest dodanie nowego zadania umożliwiającego automatyczne tworzenie i dodawanie kontrolerów, derektyw, serwisów, fabryk, filtrów i testów jednostkowych w katalogach i do  pliku głównego",
+                            ". Obecnie trzeba pamiętać aby wszystkie takie operację realizować manualnie."
+                        ]
                     ],
+                    "table": {
+                        "headers": [
+                            "Nazwa",
+                            "Opis"
+                        ],
+                        "rows": [
+                            []
+                        ]
+                    },
                     "subHeadlines": ["Pojedyncze:", "Złożone:"],
                     "build": ["Wywoła sekwencja  poleceń:"],
                     "buildServer": ["Uruchamia zadanie", "po czym tworzy serwer nasłuchujący na nowo powstały katalog produkcyjny.", "Uruchamia serwer nasłuchujący na katalog produkcyjny ("],
