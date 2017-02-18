@@ -134,9 +134,12 @@ gulp.task('jade:pug', function() {
 gulp.task('pug', function () {
 
     $.util.log($.util.colors.green('PUG TASK RUNNING...'));
+    
+    var value = getOption('--lang').value,
+        lang = !value ? 'pl' : value;
 
-    if(!getOption('--lang').value){
-        $.util.log($.util.colors.green('Default data object configuration [PL] passed to puge. To change that, add command arguments to gulp task ---> gulp [TASK NAME = puge / default / build / build:server] --lang [LANGUAGE = pl/en]. Before that, do not forget a specify translation in ' + PROJECT_CONFIG.DATA_FILE + ' file.'));
+    if(!value){
+        $.util.log($.util.colors.green('Default data object configuration [PL] passed to puge task. To change that, add command arguments to this task ---> gulp [TASK NAME = puge / default / build / build:server] --lang [pl / en]. Before that, do not forget a specify translation in ' + PROJECT_CONFIG.DATA_FILE + ' file.'));
     }
     
     return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/*.pug', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/views/*.pug'], {
@@ -144,9 +147,6 @@ gulp.task('pug', function () {
         })
         .pipe($.plumber())
         .pipe($.data(function(){
-            var value = getOption('--lang').value,
-                lang = !value ? 'pl' : value;
-            
             return {
                 appName: PROJECT_CONFIG.APP_NAME,
                 data: JSON.parse(fs.readFileSync('./' + PROJECT_CONFIG.DATA_FILE, 'utf8')).lang[lang]
@@ -298,36 +298,24 @@ gulp.task('copy', function () {
 // 
 gulp.task('images', function () {
 
-    $.util.log($.util.colors.magenta('IMAGES TASK RUNNING...'));
-
-    return gulp.src(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/img/**/*', {
-            base: PROJECT_CONFIG.DIRECTORY.DIST_DIR
-        })
-        .pipe($.plumber())
-        .pipe($.imagemin([
-            imageminGifsicle(),
-            imageminJpegtran(),
-            imageminOptipng(),
-            imageminSvgo()
-        ]))
-        .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/'));
-
-});
-
-
-// 
-gulp.task('images:optimized', function () {
-
-    $.util.log($.util.colors.magenta('IMAGES OPTIMIZED TASK RUNNING...'));
+    $.util.log($.util.colors.magenta('IMAGES TASK RUNNING...'));    
     
-    if(!PROJECT_CONFIG.API_KEYS.TINIFY){
+    var condition = getOption('--option').value === 'advanced',
+        optimizationModule = condition ? require('gulp-tinify') : require('gulp-imagemin');
+    
+    if(!condition){
+        $.util.log($.util.colors.magenta('Default options passed to images task. To change that, add command arguments to this task ---> gulp [TASK NAME = images / build / build:server] --option [standard / advanced].'));
+    }
+    
+    if(condition && !PROJECT_CONFIG.API_KEYS.TINIFY){
         return $.util.log($.util.colors.magenta('Task can not be complited. Rememeber to set up your TINIFY API KEY in ' + PROJECT_CONFIG.CONFIG_FILE + ' file.'));
     }
 
     return gulp.src(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/img/**/*', {
             base: PROJECT_CONFIG.DIRECTORY.DIST_DIR
         })
-        .pipe($.tinify(PROJECT_CONFIG.API_KEYS.TINIFY))
+        .pipe($.plumber())
+        .pipe($.if(condition, optimizationModule(PROJECT_CONFIG.API_KEYS.TINIFY), optimizationModule([imageminGifsicle(), imageminJpegtran(), imageminOptipng(), imageminSvgo()])))
         .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/'));
 
 });
@@ -341,6 +329,10 @@ gulp.task('images:sprite', function () {
     var name = getOption('--name').value,
         spriteCssName = !name ? '_sprite' : name,
         spriteImgName = spriteCssName[0] === '_' ? spriteCssName.substring(1) : spriteCssName;
+    
+    if(!name){
+        $.util.log($.util.colors.magenta('Default options passed to images:sprite task. To change that, add command arguments to this task ---> gulp [TASK NAME = images:sprite] --name [_FILE_NAME].'));
+    }
     
     return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/img/sprites_sources/**/*.{jpg,png,gif}')
         .pipe($.spritesmith({
@@ -365,7 +357,7 @@ gulp.task('upload', function () {
     };
     
     if(!ftpConfig.host || !ftpConfig.user || !ftpConfig.password || !getOption('--upload')){
-        return $.util.log($.util.colors.yellow('Task can not be complited. Rememeber to set up your FTP CONFIG in ' + PROJECT_CONFIG.CONFIG_FILE + ' file. Then add command argument to gulp task ---> gulp [TASK NAME = upload / build / build:server] --upload.'));
+        return $.util.log($.util.colors.yellow('Task can not be complited. Rememeber to set up your FTP CONFIG in ' + PROJECT_CONFIG.CONFIG_FILE + ' file. Then add command argument to this task ---> gulp [TASK NAME = upload / build / build:server] --upload.'));
     }
 
     var conn = ftp.create(ftpConfig);
@@ -382,7 +374,7 @@ gulp.task('build', function (cb) {
 
     $.util.log($.util.colors.red('BUILD TASK RUNNING...'));
 
-    runSequence('clean', 'sass:lint', 'sass:css', 'js:hint', 'pug:lint', 'pug', 'html:hint', 'html', 'html:minify', 'copy', 'upload', cb);
+    runSequence('clean', 'sass:lint', 'sass:css', 'js:hint', 'pug:lint', 'pug', 'html:hint', 'html', 'html:minify', 'copy', 'images', 'upload', cb);
 
 });
 

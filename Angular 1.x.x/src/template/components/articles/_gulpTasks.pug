@@ -19,161 +19,112 @@ article(id="GulpTasks" class="article")
             tbody.table-striped__body
                 tr.table-striped__row.odd
                     td.table-striped__data.two-columns
-                        div gulp sass:css
-                        div gulp sass:css
+                        code.param__name sass:css
                     td.table-striped__data.two-columns
-                        | gulp sass:css
-                        br
-                        | gulp sass:css
-                        br
-                        | gulp sass:css
-                        br
-                        | gulp sass:css
-                        br
-                        | gulp sass:css
-        ul.article__list
-            li
-                code.code__line gulp sass:css
-                |  - #{data.articles.gulpTasks.sassCss[0]} 
-                strong main.css
-                |  #{data.articles.gulpTasks.sassCss[1]} 
-                strong main.css.map
-                |  #{data.articles.gulpTasks.sassCss[2]} 
-                strong main.scss
-                | .
-            li
-                code.code__line gulp sass:lint
-                |  - #{data.articles.gulpTasks.sassLint[0]} 
-                strong Sass
-                |  #{data.articles.gulpTasks.sassLint[1]} 
-                strong .sass
-                |  /
-                strong .scss
-                | .
-            li
-                code.code__line gulp js:hint
-                |  - #{data.articles.gulpTasks.jsHint[0]} 
-                strong JavaScript
-                |  #{data.articles.gulpTasks.jsHint[1]} 
-                strong .js
-                | .
-            li
-                code.code__line gulp js:test
-                |  - #{data.articles.gulpTasks.jsTest[0]} 
-                br.br-g-2
-                | #{data.articles.gulpTasks.jsTest[1]}
-            li
-                code.code__line gulp jade:pug
-                |  - #{data.articles.gulpTasks.jadePug[0]} 
-                strong .jade
-                |  #{data.articles.gulpTasks.jadePug[1]} 
-                strong .pug
-                | .
-            li
-                code.code__line gulp pug
-                |  - #{data.articles.gulpTasks.pug[0]} 
-                strong .html
-                |  #{data.articles.gulpTasks.pug[1]} 
-                strong .pug
-                |  #{data.articles.gulpTasks.pug[2]} 
-                strong --lang pl / en
-                | ).
-            li
-                code.code__line gulp pug:lint
-                |  - #{data.articles.gulpTasks.pugLint[0]} 
-                strong Pug
-                |  #{data.articles.gulpTasks.pugLint[1]} 
-                strong .pug
-                | .
-            li
-                code.code__line gulp html
-                |  - #{data.articles.gulpTasks.html[0]} 
-                strong .html
-                |  #{data.articles.gulpTasks.html[1]} 
-                strong .css
-                |  #{data.articles.gulpTasks.html[2]} 
-                strong .js
-                |  #{data.articles.gulpTasks.html[3]} 
-                br.br-g-3
-                | #{data.articles.gulpTasks.html[4]}
-            li
-                code.code__line gulp html:hint
-                |  - #{data.articles.gulpTasks.htmlHint[0]} 
-                strong HTML
-                |  #{data.articles.gulpTasks.htmlHint[1]} 
-                strong .html
-                | .
-            li
-                code.code__line gulp html:minify
-                |  - #{data.articles.gulpTasks.htmlMinify[0]} 
-                strong HTML
-                |  #{data.articles.gulpTasks.htmlMinify[1]} 
-                strong .html
-                | .
-            li
-                code.code__line gulp server
-                |  - #{data.articles.gulpTasks.server[0]}
-                strong src
-                | ).
-            li
-                code.code__line gulp watch
-                |  - #{data.articles.gulpTasks.watch[0]}
-            li
-                code.code__line gulp clean
-                |  - #{data.articles.gulpTasks.clean[0]}
-                strong dist
-                | ).
-            li
-                code.code__line gulp copy
-                |  - #{data.articles.gulpTasks.copy[0]}
-                strong src
-                | #{data.articles.gulpTasks.copy[1]}
-                strong dist
-                | ).
-            li
-                code.code__line gulp images
-                |  - #{data.articles.gulpTasks.images[0]}
-            li
-                code.code__line gulp images:optimized
-                |  - #{data.articles.gulpTasks.imagesOptimized[0]} 
-                a(href="https://tinypng.com/developers" target="_blank" rel="help") Tinypng API
-                | .
-            li
-                code.code__line gulp images:sprite
-                |  - #{data.articles.gulpTasks.imagesSprite[0]} 
-                strong Sprite
-                |  #{data.articles.gulpTasks.imagesSprite[1]} 
-                strong .scss
-                |  #{data.articles.gulpTasks.imagesSprite[2]} 
-                strong sprites_sources
-                |  #{data.articles.gulpTasks.imagesSprite[3]} 
-                strong --name #{data.articles.gulpTasks.imagesSprite[4]}
-                | ).
-            li
-                code.code__line gulp upload
-                |  - #{data.articles.gulpTasks.upload[0]} 
-                strong --upload
-                | ).
-            li
-                code.code__line gulp build:server
-                |  - #{data.articles.gulpTasks.buildServer[2]}
-                strong dist
-                | ).
-        p.article__paragraph= data.articles.gulpTasks.subHeadlines[1]
-        ul.article__list
-            li
-                code.code__line gulp build
-                |  - #{data.articles.gulpTasks.build[0]}
-        pre.code__block clean > sass:lint > sass:css > js:hint > pug:lint > pug > html:hint > html > html:minify > copy > upload
-        ul.article__list
-            li
-                code.code__line gulp build:server
-                |  - #{data.articles.gulpTasks.buildServer[0]} 
-                code.code__line gulp build
-                |  #{data.articles.gulpTasks.buildServer[1]}
-        pre.code__block build > build:server
-        ul.article__list
-            li
-                code.code__line gulp / gulp default
-                |  - #{data.articles.gulpTasks.default[0]}
-        pre.code__block sass:lint > sass:css > js:hint > pug:lint > pug > html:hint > server > watch
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.even
+                    td.table-striped__data.two-columns
+                        code.param__name sass:lint
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.odd
+                    td.table-striped__data.two-columns
+                        code.param__name js:hint
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.even
+                    td.table-striped__data.two-columns
+                        code.param__name js:test
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.odd
+                    td.table-striped__data.two-columns
+                        code.param__name jade:pug
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.even
+                    td.table-striped__data.two-columns
+                        code.param__name pug
+                        br.br-g-1
+                        code.param__arg --lang pl / en
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.odd
+                    td.table-striped__data.two-columns
+                        code.param__name pug:lint
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.even
+                    td.table-striped__data.two-columns
+                        code.param__name html
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.odd
+                    td.table-striped__data.two-columns
+                        code.param__name html:hint
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.even
+                    td.table-striped__data.two-columns
+                        code.param__name html:minify
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.odd
+                    td.table-striped__data.two-columns
+                        code.param__name server
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.even
+                    td.table-striped__data.two-columns
+                        code.param__name watch
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.odd
+                    td.table-striped__data.two-columns
+                        code.param__name clean
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.even
+                    td.table-striped__data.two-columns
+                        code.param__name copy
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.odd
+                    td.table-striped__data.two-columns
+                        code.param__name images
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.even
+                    td.table-striped__data.two-columns
+                        code.param__name images:optimized
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.odd
+                    td.table-striped__data.two-columns
+                        code.param__name images:sprite
+                        br.br-g-2
+                        code.param__arg --name _sprite
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.even
+                    td.table-striped__data.two-columns
+                        code.param__name upload
+                        br.br-g-3
+                        code.param__arg --upload
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.odd
+                    td.table-striped__data.two-columns
+                        code.param__name build
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.even
+                    td.table-striped__data.two-columns
+                        code.param__name build:server
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.odd
+                    td.table-striped__data.two-columns
+                        code.param__name gulp / default
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
