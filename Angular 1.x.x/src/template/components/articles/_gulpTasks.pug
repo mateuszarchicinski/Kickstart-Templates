@@ -4,127 +4,179 @@ article(id="GulpTasks" class="article")
     header.article__header
         h3.article__title.tertiary-heading= data.articles.gulpTasks.headline
     .article__body
-        p.article__paragraph #{data.articles.gulpTasks.paragraph[0]} 
-            strong gulpfile.js
-            |  #{data.articles.gulpTasks.paragraph[1]} 
-            br.br-g-1
-            | #{data.articles.gulpTasks.paragraph[2]}
+        p.article__paragraph #{data.articles.gulpTasks.paragraph[0][0]} 
+            strong gulp
+            |  #{data.articles.gulpTasks.paragraph[0][1]} 
+            strong #{data.articles.gulpTasks.paragraph[0][2]}
+            |  #{data.articles.gulpTasks.paragraph[0][3]} 
+            strong #{data.articles.gulpTasks.paragraph[0][4]}
+            |  #{data.articles.gulpTasks.paragraph[0][5]} 
+        p.article__paragraph.text-medium.text-center
+            code.param__keyword gulp
+            |  
+            code.param__name #{data.articles.gulpTasks.paragraph[1][0]}
+            |  
+            code.param__opt-arg #{data.articles.gulpTasks.paragraph[1][1]} 
+        p.article__paragraph #{data.articles.gulpTasks.paragraph[2][0]} 
+            code.code__line gulp pug --lang pl
+            |  #{data.articles.gulpTasks.paragraph[2][1]} 
+            a(ng-href="#pug" rel="help") 6
+            | ).
+        p.article__paragraph #{data.articles.gulpTasks.paragraph[3][0]}
         table.table-striped
             thead.table-striped__thead
                 tr.table-striped__row
                     th.table-striped__header.two-columns
-                        | #{data.articles.gulpTasks.table.headers[0]}
+                        p.rotate-content
+                            | #{data.articles.gulpTasks.table.headers[0]}
                     th.table-striped__header.two-columns
                         | #{data.articles.gulpTasks.table.headers[1]}
             tbody.table-striped__body
                 tr.table-striped__row.odd
-                    td.table-striped__data.two-columns
-                        code.param__name sass:css
-                    td.table-striped__data.two-columns
-                        | #{data.articles.gulpTasks.paragraph[0]}
-                tr.table-striped__row.even
-                    td.table-striped__data.two-columns
-                        code.param__name sass:lint
-                    td.table-striped__data.two-columns
-                        | #{data.articles.gulpTasks.paragraph[0]}
-                tr.table-striped__row.odd
-                    td.table-striped__data.two-columns
-                        code.param__name js:hint
+                    td#sassCss.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name sass:css
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.even
-                    td.table-striped__data.two-columns
-                        code.param__name js:test
+                    td#sassLint.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name sass:lint
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.odd
-                    td.table-striped__data.two-columns
-                        code.param__name jade:pug
+                    td#jsHint.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name js:hint
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.even
-                    td.table-striped__data.two-columns
-                        code.param__name pug
-                        br.br-g-1
-                        code.param__arg --lang pl / en
+                    td#jsTest.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name js:test
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.odd
-                    td.table-striped__data.two-columns
-                        code.param__name pug:lint
+                    td#jadePug.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name jade:pug
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.even
-                    td.table-striped__data.two-columns
-                        code.param__name html
+                    td#pug.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name pug
+                            br.br-g-1
+                            code.param__opt-arg --lang pl / en
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.odd
-                    td.table-striped__data.two-columns
-                        code.param__name html:hint
+                    td#pugLint.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name pug:lint
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.even
-                    td.table-striped__data.two-columns
-                        code.param__name html:minify
+                    td#html.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name html
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.odd
-                    td.table-striped__data.two-columns
-                        code.param__name server
+                    td#htmlHint.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name html:hint
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.even
-                    td.table-striped__data.two-columns
-                        code.param__name watch
+                    td#htmlMinify.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name html:minify
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.odd
-                    td.table-striped__data.two-columns
-                        code.param__name clean
+                    td#server.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name server
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.even
-                    td.table-striped__data.two-columns
-                        code.param__name copy
+                    td#watch.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name watch
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.odd
-                    td.table-striped__data.two-columns
-                        code.param__name images
+                    td#clean.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name clean
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.even
-                    td.table-striped__data.two-columns
-                        code.param__name images:optimized
+                    td#copy.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name copy
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.odd
-                    td.table-striped__data.two-columns
-                        code.param__name images:sprite
-                        br.br-g-2
-                        code.param__arg --name _sprite
+                    td#images.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name images
+                            br.br-g-2
+                            code.param__opt-arg --option advanced
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.even
-                    td.table-striped__data.two-columns
-                        code.param__name upload
-                        br.br-g-3
-                        code.param__arg --upload
+                    td#imagesSprite.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name images:sprite
+                            br.br-g-3
+                            code.param__opt-arg --name _sprite
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.odd
-                    td.table-striped__data.two-columns
-                        code.param__name build
+                    td#upload.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name upload
+                            br.br-g-4
+                            code.param__opt-arg --upload
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.even
-                    td.table-striped__data.two-columns
-                        code.param__name build:server
+                    td#build.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name build
+                            br.br-g-5
+                            code.param__opt-arg nr: 
+                                a(ng-href="#pug" rel="help") 6
+                                | , 
+                                a(ng-href="#images" rel="help") 15
+                                | , 
+                                a(ng-href="#upload" rel="help") 17
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
                 tr.table-striped__row.odd
-                    td.table-striped__data.two-columns
-                        code.param__name gulp / default
+                    td#buildServer.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name build:server
+                            br.br-g-6
+                            code.param__opt-arg nr: 
+                                a(ng-href="#pug" rel="help") 6
+                                | , 
+                                a(ng-href="#images" rel="help") 15
+                                | , 
+                                a(ng-href="#upload" rel="help") 17
                     td.table-striped__data.two-columns
                         | #{data.articles.gulpTasks.paragraph[0]}
+                tr.table-striped__row.even
+                    td#default.table-striped__data.two-columns
+                        p.rotate-content
+                            code.param__name gulp / default
+                            br.br-g-7
+                            code.param__opt-arg nr: 
+                                a(ng-href="#pug" rel="help") 6
+                    td.table-striped__data.two-columns
+                        | #{data.articles.gulpTasks.paragraph[0]}
+        p.article__paragraph #{data.articles.gulpTasks.paragraph[4][0]} 
+            strong gulpfile.js
+            | .

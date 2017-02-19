@@ -338,11 +338,26 @@
                     "headline": "Gulp zadania",
                     "paragraph": [
                         [
-                            "Lista zdefiniowanych zadań w", "poniżej. Polecenia wykonujemy z poziomu konsoli przebywając w głównym katalogu projektu. Do każdego zadania dodatkowo krótki opis", "z podziałem na zadania pojedyncze i złożone."
+                            "Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe",
+                            "w połączeniu z",
+                            "nazwą",
+                            "i",
+                            "opcjonalnymi argumentami",
+                            "zadania do wykonania."
                         ],
                         [
-                            "W planach jest dodanie nowego zadania umożliwiającego automatyczne tworzenie i dodawanie kontrolerów, derektyw, serwisów, fabryk, filtrów i testów jednostkowych w katalogach i do  pliku głównego",
-                            ". Obecnie trzeba pamiętać aby wszystkie takie operację realizować manualnie."
+                            "nazwa",
+                            "opcjonalne argumenty"
+                        ],
+                        [
+                            "Przykładowe polecenie będzie wyglądać następująco",
+                            "(nr:"
+                        ],
+                        [
+                            "Poniższa tabela zawiera informację dotyczące nazwy, opcjonalnych argumentów i opisu do każdego zdefiniowanego zadania."
+                        ],
+                        [
+                            "Więcej informacji i kod źródłowy do sprawdzenia w pliku"
                         ]
                     ],
                     "table": {

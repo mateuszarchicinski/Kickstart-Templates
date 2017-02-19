@@ -67,9 +67,36 @@ $strong__font-weight: 500 !default;
 
 
 /* Text */
-.text-center {
-    text-align: center;
+//__small
+$text__small__font-size: 0.75em !default;
+//__normal
+$text__normal__font-size: 1em !default;
+//__medium
+$text__medium__font-size: 1.25em !default;
+//__large
+$text__large__font-size: 1.5em !default;
+
+
+.text{
+    &-small{
+        font-size: $text__small__font-size;
+    }
+    &-normal{
+        font-size: $text__normal__font-size;
+    }
+    &-medium{
+        font-size: $text__medium__font-size;
+    }
+    &-large{
+        font-size: $text__large__font-size;
+    }
 }
+
+// sass-lint:disable no-important
+.text-center {
+    text-align: center !important;
+}
+// sass-lint:enable no-important
 
 strong {
     font-weight: $strong__font-weight;

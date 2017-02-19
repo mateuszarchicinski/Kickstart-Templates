@@ -36,9 +36,11 @@ $color__white: #fff;
 $color__red-orange: #f44336;
 $color__sunset-orange: #ef5350;
 $color__amour: #ffebee;
+$color__we-peep: #ffcdd2;
 $color__blue: #0000ee;
 $color__steel-blue: #4078c0;
 $color__navy-blue: #0074d9;
+$color__nero: #212121;
 
 // Breaks Points
 $break-point__1: 749px;
@@ -72,6 +74,14 @@ $headings__padding-bottom: #{(4 / 16)}em;
 $headings__border-bottom: 1px solid $color__red-orange;
 $quaternary-heading__font-size: $tertiary-heading__font-size - 0.1;
 /* Text */
+//__normal
+$text__normal__font-size: $base__font-size;
+//__small
+$text__small__font-size: $text__normal__font-size - 0.25;
+//__medium
+$text__medium__font-size: $text__normal__font-size + 0.25;
+//__large
+$text__large__font-size: $text__medium__font-size + 0.25;
 // strong
 $strong__font-weight: $font-weight__bold;
 
@@ -119,6 +129,33 @@ $branch__leaf-top-before__border-top: $project-structure__branch__border-left;
 $branch__leaf-top-after__background: $project-structure__branch-before-after__background;
 // .branch .leaf-bottom ::before
 $branch__leaf-bottom-before__border-left: $project-structure__branch__border-left;
+
+
+// *--------- TABLE STRIPED ---------*
+$table-striped__border: 1px solid $color__sunset-orange;
+// __header & __data
+$table-striped__header-data__line-height: $line-height__1-3;
+// __header & __data - :nth-child(even)
+$table-striped__header-data__border-left: $table-striped__border;
+// __header
+$table-striped__header__background: $color__amour;
+$table-striped__header__font-weight: $font-weight__bold;
+// __header - :nth-child(odd)
+$table-striped__header__border-top: $table-striped__border;
+$table-striped__header__border-bottom: $table-striped__border;
+// __data - :nth-child(even)
+$table-striped__data__background: $table-striped__header__background;
+$table-striped__data__border-top: $table-striped__border;
+$table-striped__data__border-bottom: $table-striped__border;
+// __data - :first-child
+$table-striped__data__text-align: center;
+// __data - :first-child - ::before
+$table-striped__data__before__background: $color__white;
+$table-striped__data__before__font-size: 11.5px;
+$table-striped__data__before__text-align: $table-striped__data__text-align;
+$table-striped__data__before__color: $color__black;
+$table-striped__data__before__border-right: $table-striped__border;
+$table-striped__data__before__border-bottom: $table-striped__border;
 
 
 // *--------- LINKS ---------*

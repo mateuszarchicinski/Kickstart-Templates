@@ -23,7 +23,7 @@ $part-visible-hidden__beark-point: 608px !default;
         border-radius: 3px;
     }
     &__line {
-        padding: 0 1px;
+        padding: 1px 1px;
     }
     &__block {
         display: block;
@@ -51,15 +51,45 @@ $part-visible-hidden__beark-point: 608px !default;
 }
 
 
+// __keyword & __name & __opt-arg
+$param__keyword-name-opt-arg__color: $color__black !default;
+
+//writing-mode: vertical-rl;
+ // text-orientation: sideways-right;
+
+
 .param {
+    &__keyword,
     &__name,
-    &__opt-arg{
+    &__opt-arg {
+        color: $param__keyword-name-opt-arg__color;
+        white-space: nowrap;
+    }
+    &__name,
+    &__opt-arg {
+        @include before-after{
+            content: "[";
+            font-size: 1.75em;
+        }
+        
+        @include before{
+        }
+        
+        @include after{
+            content: "]";
+        }
+    }
+    &__keyword {
         
     }
-    &__name{
-        
+    &__name {
+        @include before-after{
+            color: $color__sunset-orange;
+        }
     }
-    &__opt-arg{
-        
+    &__opt-arg {
+        @include before-after{
+            color: $color__navy-blue;
+        }
     }
 }

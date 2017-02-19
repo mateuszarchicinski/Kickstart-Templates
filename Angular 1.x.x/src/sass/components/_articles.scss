@@ -35,12 +35,12 @@ $article__list-points__li__margin: 0.8em 0 !default;
         }
         &.no-list-padding {
             list-style: none;
-            counter-reset: elementsCounter;
+            counter-reset: elementsCounter-1;
             padding: 0;
             li {
-                counter-increment: elementsCounter;
+                counter-increment: elementsCounter-1;
                 @include before {
-                    content: counter(elementsCounter) ". ";
+                    content: counter(elementsCounter-1) ". ";
                 }
             }
         }

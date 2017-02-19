@@ -3,38 +3,112 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
+$table-striped__border: 1px solid $color__sunset-orange !default;
+// __header & __data
+$table-striped__header-data__line-height: 1.3 !default;
+// __header & __data - :nth-child(even)
+$table-striped__header-data__border-left: $table-striped__border !default;
+// __header
+$table-striped__header__background: $color__amour !default;
+$table-striped__header__font-weight: 500 !default;
+// __header - :nth-child(odd)
+$table-striped__header__border-top: $table-striped__border !default;
+$table-striped__header__border-bottom: $table-striped__border !default;
+// __data - :nth-child(even)
+$table-striped__data__background: $table-striped__header__background !default;
+$table-striped__data__border-top: $table-striped__border !default;
+$table-striped__data__border-bottom: $table-striped__border !default;
+// __data - :first-child
+$table-striped__data__text-align: center !default;
+// __data - :first-child - ::before
+$table-striped__data__before__background: $color__white !default;
+$table-striped__data__before__font-size: 11.5px !default;
+$table-striped__data__before__text-align: $table-striped__data__text-align !default;
+$table-striped__data__before__color: $color__black !default;
+$table-striped__data__before__border-right: $table-striped__border !default;
+$table-striped__data__before__border-bottom: $table-striped__border !default;
+
+
 .table-striped {
     width: 100%;
     border-spacing: 0;
-    border: 1px solid $color__blue;
+    border: $table-striped__border;
     &,
     &__thead,
     &__body,
     &__row,
     &__header,
-    &__data {
-        
-    }
-    &__thead {
-        
-    }
+    &__data {}
+    &__thead {}
     &__body {
-        
+        counter-reset: elementsCounter-2;
     }
     &__row {
-        
+        &:nth-child(odd) {
+            .table-striped__header {
+                border-top: $table-striped__header__border-top;
+                border-bottom: $table-striped__header__border-bottom;
+            }
+        }
+        &:first-child {
+            .table-striped__header {
+                border-top: 0;
+            }
+        }
+        &:nth-child(even) {
+            .table-striped__data {
+                background: $table-striped__data__background;
+                border-top: $table-striped__data__border-top;
+                border-bottom: $table-striped__data__border-bottom;
+            }
+        }
+        &:last-child {
+            .table-striped__data {
+                border-bottom: 0;
+            }
+        }
     }
     &__header,
     &__data {
-        padding: 5px;
+        line-height: $table-striped__header-data__line-height;
+        padding: 25px 10px;
+        &:nth-child(even) {
+            border-left: $table-striped__header-data__border-left;
+        }
+        &:first-child {
+            padding: 25px 0;
+        }
     }
     &__header {
-        
+        background: $table-striped__header__background;
+        font-weight: $table-striped__header__font-weight;
     }
     &__data {
-        
+        &:first-child {
+            position: relative;
+            counter-increment: elementsCounter-2;
+            text-align: $table-striped__data__text-align;
+            @include before {
+                content: counter(elementsCounter-2) ".";
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                background: $table-striped__data__before__background;
+                position: absolute;
+                display: block;
+                left: 0;
+                top: 0;
+                font-size: $table-striped__data__before__font-size;
+                text-align: $table-striped__data__before__text-align;
+                color: $table-striped__data__before__color;
+                border-right: $table-striped__data__before__border-right;
+                border-bottom: $table-striped__data__before__border-bottom;
+            }
+        }
     }
-    .two-columns{
-        width: (100% / 2);
-    }
+    .two-columns {}
+}
+
+.rotate-content{
+    margin: 0;
 }
