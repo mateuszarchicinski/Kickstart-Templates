@@ -37,7 +37,7 @@ function getOption(option){
 
 
 // GULP TASKS
-// 
+// Compiling SASS to CSS, adding right prefixes to CSS methods - depending on configuration, creating source map, finally injecting CSS styles into browser
 gulp.task('sass:css', function () {
 
     $.util.log($.util.colors.green('SASS TO CSS TASK RUNNING...'));
@@ -45,17 +45,17 @@ gulp.task('sass:css', function () {
     return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/main.s+(a|c)ss')
         .pipe($.plumber())
         .pipe($.sourcemaps.init())
-        .pipe($.sass.sync({
+        .pipe($.sass.sync({ // https://github.com/sass/node-sass#options
             outputStyle: 'nested' // compact - compressed - expanded - nested
         }))
-        .pipe($.autoprefixer({
+        .pipe($.autoprefixer({ // https://github.com/postcss/autoprefixer#options
             browsers: ['last 5 version'],
             cascade: false,
             stats: ['> 1%']
         }))
         .pipe($.sourcemaps.write('./maps'))
         .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/css/'))
-        .pipe(browserSync.stream());
+        .pipe(browserSync.stream({match: '**/*.css'})); // https://www.browsersync.io/docs/gulp
 
 });
 
