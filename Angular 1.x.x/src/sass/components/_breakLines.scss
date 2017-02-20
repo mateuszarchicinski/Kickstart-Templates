@@ -1,0 +1,24 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* BREAK LINES *~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+
+@media screen and (max-width: $break-point__1) {
+    .br__1 {
+        display: none;
+    }
+}
+
+
+// Components: table striped
+@media screen and (max-width: $table-striped__data__rotate-content__breake-point) {
+    .br-g-1,
+    .br-g-2,
+    .br-g-3,
+    .br-g-4,
+    .br-g-5,
+    .br-g-6,
+    .br-g-7 {
+        display: none;
+    }
+}

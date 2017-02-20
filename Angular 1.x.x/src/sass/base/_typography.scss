@@ -22,9 +22,6 @@ $headings__font-weight: 400 !default;
 $headings__padding-bottom: 4px !default;
 $headings__border-bottom: 1px solid $color__red-orange !default;
 $quaternary-heading__font-size: 1.15em !default;
-/* Text */
-// strong
-$strong__font-weight: 500 !default;
 
 
 .primary-heading {
@@ -68,27 +65,41 @@ $strong__font-weight: 500 !default;
 
 /* Text */
 //__small
-$text__small__font-size: 0.75em !default;
+$text-small__font-size: 0.75em !default;
 //__normal
-$text__normal__font-size: 1em !default;
+$text-normal__font-size: 1em !default;
 //__medium
-$text__medium__font-size: 1.25em !default;
+$text-medium__font-size: 1.25em !default;
 //__large
-$text__large__font-size: 1.5em !default;
+$text-large__font-size: 1.5em !default;
+// strong
+$strong__font-weight: 500 !default;
 
 
-.text{
-    &-small{
-        font-size: $text__small__font-size;
+.text {
+    &-small {
+        font-size: $text-small__font-size;
+        @media screen and (max-width: $break-point__1) {
+            font-size: $text-small__font-size - 0.1;
+        }
     }
-    &-normal{
-        font-size: $text__normal__font-size;
+    &-normal {
+        font-size: $text-normal__font-size;
+        @media screen and (max-width: $break-point__1) {
+            font-size: $text-normal__font-size - 0.1;
+        }
     }
-    &-medium{
-        font-size: $text__medium__font-size;
+    &-medium {
+        font-size: $text-medium__font-size;
+        @media screen and (max-width: $break-point__1) {
+            font-size: $text-medium__font-size - 0.1;
+        }
     }
-    &-large{
-        font-size: $text__large__font-size;
+    &-large {
+        font-size: $text-large__font-size;
+        @media screen and (max-width: $break-point__1) {
+            font-size: $text-large__font-size - 0.1;
+        }
     }
 }
 

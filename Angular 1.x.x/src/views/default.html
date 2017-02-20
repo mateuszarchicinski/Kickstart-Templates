@@ -12,7 +12,7 @@
         <h3 class="article__title tertiary-heading">Użycie</h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Projekt <strong>Angular 1.x Szablon</strong> jest dostępny wyłącznie na <a href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help">Github</a>. Przykłady instalacji poniżej, przy dwóch pierwszych wymagany jest system kontroli wersji <a href="https://git-scm.com/" target="_blank" rel="help">Git</a>.</p>
+        <p class="article__paragraph">Projekt <strong>Angular 1.x Szablon</strong> jest dostępny wyłącznie na <a href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help">Github</a>. Przykłady instalacji poniżej. Przy dwóch pierwszych wymagany jest system kontroli wersji <a href="https://git-scm.com/" target="_blank" rel="help">Git</a>.</p>
         <ol class="article__list no-list-padding">
           <li>Za pomocą konsoli utwórz nowy katalog i przejdź do niego:
             <pre class="code__block"><code class="code__line">mkdir katalog-projektu && cd katalog-projektu</code></pre>W nowym katalogu zainicjuj środowisko komendą <code class="code__line">git init</code> i następnie wywołaj:
@@ -48,7 +48,7 @@
         <h3 class="article__title tertiary-heading">Struktura projektu</h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach <strong>project.config.js</strong><br class="br-s-1"/> i <strong>.bowerrc</strong>. Poniżej rekomendowana strukturę projektu. </p>
+        <p class="article__paragraph">Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach <strong>project.config.js</strong><br class="br__1"/> i <strong>.bowerrc</strong>. Poniżej rekomendowana strukturę projektu. </p>
         <ul class="project-structure">
           <li><i class="directory__root"></i>Katalog projektu
             <ul class="branch">
@@ -220,132 +220,130 @@
         <table class="table-striped">
           <thead class="table-striped__thead">
             <tr class="table-striped__row">
-              <th class="table-striped__header two-columns">
-                <p class="rotate-content">Nazwa</p>
-              </th>
-              <th class="table-striped__header two-columns">Opis</th>
+              <th class="table-striped__header">Nazwa</th>
+              <th class="table-striped__header">Opis</th>
             </tr>
           </thead>
           <tbody class="table-striped__body">
-            <tr class="table-striped__row odd">
-              <td class="table-striped__data two-columns" id="sassCss">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="sassCss">
                 <p class="rotate-content"><code class="param__name">sass:css</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_sassCss.pug</td>
             </tr>
-            <tr class="table-striped__row even">
-              <td class="table-striped__data two-columns" id="sassLint">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="sassLint">
                 <p class="rotate-content"><code class="param__name">sass:lint</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_sassLint.pug</td>
             </tr>
-            <tr class="table-striped__row odd">
-              <td class="table-striped__data two-columns" id="jsHint">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="jsHint">
                 <p class="rotate-content"><code class="param__name">js:hint</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_jsHint.pug</td>
             </tr>
-            <tr class="table-striped__row even">
-              <td class="table-striped__data two-columns" id="jsTest">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="jsTest">
                 <p class="rotate-content"><code class="param__name">js:test</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_jsTest.pug</td>
             </tr>
-            <tr class="table-striped__row odd">
-              <td class="table-striped__data two-columns" id="jadePug">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="jadePug">
                 <p class="rotate-content"><code class="param__name">jade:pug</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_jadePug.pug</td>
             </tr>
-            <tr class="table-striped__row even">
-              <td class="table-striped__data two-columns" id="pug">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="pug">
                 <p class="rotate-content"><code class="param__name">pug</code><br class="br-g-1"/><code class="param__opt-arg">--lang pl / en</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_pug.pug</td>
             </tr>
-            <tr class="table-striped__row odd">
-              <td class="table-striped__data two-columns" id="pugLint">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="pugLint">
                 <p class="rotate-content"><code class="param__name">pug:lint</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_pugLint.pug</td>
             </tr>
-            <tr class="table-striped__row even">
-              <td class="table-striped__data two-columns" id="html">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="html">
                 <p class="rotate-content"><code class="param__name">html</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_html.pug</td>
             </tr>
-            <tr class="table-striped__row odd">
-              <td class="table-striped__data two-columns" id="htmlHint">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="htmlHint">
                 <p class="rotate-content"><code class="param__name">html:hint</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_htmlHint.pug</td>
             </tr>
-            <tr class="table-striped__row even">
-              <td class="table-striped__data two-columns" id="htmlMinify">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="htmlMinify">
                 <p class="rotate-content"><code class="param__name">html:minify</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_htmlMinify.pug</td>
             </tr>
-            <tr class="table-striped__row odd">
-              <td class="table-striped__data two-columns" id="server">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="server">
                 <p class="rotate-content"><code class="param__name">server</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_server.pug</td>
             </tr>
-            <tr class="table-striped__row even">
-              <td class="table-striped__data two-columns" id="watch">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="watch">
                 <p class="rotate-content"><code class="param__name">watch</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_watch.pug</td>
             </tr>
-            <tr class="table-striped__row odd">
-              <td class="table-striped__data two-columns" id="clean">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="clean">
                 <p class="rotate-content"><code class="param__name">clean</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_clean.pug</td>
             </tr>
-            <tr class="table-striped__row even">
-              <td class="table-striped__data two-columns" id="copy">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="copy">
                 <p class="rotate-content"><code class="param__name">copy</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_copy.pug</td>
             </tr>
-            <tr class="table-striped__row odd">
-              <td class="table-striped__data two-columns" id="images">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="images">
                 <p class="rotate-content"><code class="param__name">images</code><br class="br-g-2"/><code class="param__opt-arg">--option advanced</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_images.pug</td>
             </tr>
-            <tr class="table-striped__row even">
-              <td class="table-striped__data two-columns" id="imagesSprite">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="imagesSprite">
                 <p class="rotate-content"><code class="param__name">images:sprite</code><br class="br-g-3"/><code class="param__opt-arg">--name _sprite</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_imagesSprite.pug</td>
             </tr>
-            <tr class="table-striped__row odd">
-              <td class="table-striped__data two-columns" id="upload">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="upload">
                 <p class="rotate-content"><code class="param__name">upload</code><br class="br-g-4"/><code class="param__opt-arg">--upload</code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_upload.pug</td>
             </tr>
-            <tr class="table-striped__row even">
-              <td class="table-striped__data two-columns" id="build">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="build">
                 <p class="rotate-content"><code class="param__name">build</code><br class="br-g-5"/><code class="param__opt-arg">nr: <a ng-href="#pug" rel="help">6</a>, <a ng-href="#images" rel="help">15</a>, <a ng-href="#upload" rel="help">17</a></code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_build.pug</td>
             </tr>
-            <tr class="table-striped__row odd">
-              <td class="table-striped__data two-columns" id="buildServer">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="buildServer">
                 <p class="rotate-content"><code class="param__name">build:server</code><br class="br-g-6"/><code class="param__opt-arg">nr: <a ng-href="#pug" rel="help">6</a>, <a ng-href="#images" rel="help">15</a>, <a ng-href="#upload" rel="help">17</a></code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_buildServer.pug</td>
             </tr>
-            <tr class="table-striped__row even">
-              <td class="table-striped__data two-columns" id="default">
+            <tr class="table-striped__row">
+              <td class="table-striped__data" id="default">
                 <p class="rotate-content"><code class="param__name">gulp / default</code><br class="br-g-7"/><code class="param__opt-arg">nr: <a ng-href="#pug" rel="help">6</a></code></p>
               </td>
-              <td class="table-striped__data two-columns">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe,w połączeniu z,nazwą,i,opcjonalnymi argumentami,zadania do wykonania.</td>
+              <td class="table-striped__data">_default.pug</td>
             </tr>
           </tbody>
         </table>

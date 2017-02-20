@@ -8,7 +8,7 @@ $code__line-block__background: $color__amour !default;
 $code__line-block__font-size: 90% !default;
 $code__line-block__text-align: justify !default;
 $code__line-block__color: $color__black !default;
-// __block .part-visible / hidden.invert
+// __block .part- visible/hidden .invert
 $part-visible-hidden__beark-point: 608px !default;
 
 
@@ -53,9 +53,12 @@ $part-visible-hidden__beark-point: 608px !default;
 
 // __keyword & __name & __opt-arg
 $param__keyword-name-opt-arg__color: $color__black !default;
-
-//writing-mode: vertical-rl;
- // text-orientation: sideways-right;
+// __name & __opt-arg - before & after
+$param__name-opt-arg__font-size: 1.75em !default;
+// __name - before & after
+$param__name__color: $color__sunset-orange !default;
+// __opt-arg - before & after
+$param__opt-arg__color: $color__navy-blue !default;
 
 
 .param {
@@ -67,29 +70,24 @@ $param__keyword-name-opt-arg__color: $color__black !default;
     }
     &__name,
     &__opt-arg {
-        @include before-after{
+        @include before-after {
             content: "[";
-            font-size: 1.75em;
+            font-size: $param__name-opt-arg__font-size;
         }
-        
-        @include before{
-        }
-        
-        @include after{
+        @include before {}
+        @include after {
             content: "]";
         }
     }
-    &__keyword {
-        
-    }
+    &__keyword {}
     &__name {
-        @include before-after{
-            color: $color__sunset-orange;
+        @include before-after {
+            color: $param__name__color;
         }
     }
     &__opt-arg {
-        @include before-after{
-            color: $color__navy-blue;
+        @include before-after {
+            color: $param__opt-arg__color;
         }
     }
 }

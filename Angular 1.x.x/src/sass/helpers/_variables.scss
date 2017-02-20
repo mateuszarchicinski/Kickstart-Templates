@@ -75,13 +75,13 @@ $headings__border-bottom: 1px solid $color__red-orange;
 $quaternary-heading__font-size: $tertiary-heading__font-size - 0.1;
 /* Text */
 //__normal
-$text__normal__font-size: $base__font-size;
+$text-normal__font-size: $base__font-size;
 //__small
-$text__small__font-size: $text__normal__font-size - 0.25;
+$text-small__font-size: $text-normal__font-size - 0.25;
 //__medium
-$text__medium__font-size: $text__normal__font-size + 0.25;
+$text-medium__font-size: $text-normal__font-size + 0.25;
 //__large
-$text__large__font-size: $text__medium__font-size + 0.25;
+$text-large__font-size: $text-medium__font-size + 0.25;
 // strong
 $strong__font-weight: $font-weight__bold;
 
@@ -114,8 +114,16 @@ $code__line-block__background: $color__amour;
 $code__line-block__font-size: 90%;
 $code__line-block__text-align: justify;
 $code__line-block__color: $color__black;
-// __block .part-visible / hidden.invert
+// __block .part- visible/hidden .invert
 $part-visible-hidden__beark-point: 608px;
+// __keyword & __name & __opt-arg
+$param__keyword-name-opt-arg__color: $color__black;
+// __name & __opt-arg - before & after
+$param__name-opt-arg__font-size: $base__font-size + 0.75;
+// __name - before & after
+$param__name__color: $color__sunset-orange;
+// __opt-arg - before & after
+$param__opt-arg__color: $color__navy-blue;
 
 
 // *--------- PROJECT STRUCTURE ---------*
@@ -133,8 +141,6 @@ $branch__leaf-bottom-before__border-left: $project-structure__branch__border-lef
 
 // *--------- TABLE STRIPED ---------*
 $table-striped__border: 1px solid $color__sunset-orange;
-// __header & __data
-$table-striped__header-data__line-height: $line-height__1-3;
 // __header & __data - :nth-child(even)
 $table-striped__header-data__border-left: $table-striped__border;
 // __header
@@ -156,6 +162,8 @@ $table-striped__data__before__text-align: $table-striped__data__text-align;
 $table-striped__data__before__color: $color__black;
 $table-striped__data__before__border-right: $table-striped__border;
 $table-striped__data__before__border-bottom: $table-striped__border;
+// __data - .rotate-content
+$table-striped__data__rotate-content__breake-point: 608px;
 
 
 // *--------- LINKS ---------*

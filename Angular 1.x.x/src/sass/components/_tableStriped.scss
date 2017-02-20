@@ -4,8 +4,6 @@
 
 
 $table-striped__border: 1px solid $color__sunset-orange !default;
-// __header & __data
-$table-striped__header-data__line-height: 1.3 !default;
 // __header & __data - :nth-child(even)
 $table-striped__header-data__border-left: $table-striped__border !default;
 // __header
@@ -27,6 +25,8 @@ $table-striped__data__before__text-align: $table-striped__data__text-align !defa
 $table-striped__data__before__color: $color__black !default;
 $table-striped__data__before__border-right: $table-striped__border !default;
 $table-striped__data__before__border-bottom: $table-striped__border !default;
+// __data - .rotate-content
+$table-striped__data__rotate-content__breake-point: 608px !default;
 
 
 .table-striped {
@@ -70,13 +70,9 @@ $table-striped__data__before__border-bottom: $table-striped__border !default;
     }
     &__header,
     &__data {
-        line-height: $table-striped__header-data__line-height;
         padding: 25px 10px;
         &:nth-child(even) {
             border-left: $table-striped__header-data__border-left;
-        }
-        &:first-child {
-            padding: 25px 0;
         }
     }
     &__header {
@@ -84,6 +80,7 @@ $table-striped__data__before__border-bottom: $table-striped__border !default;
         font-weight: $table-striped__header__font-weight;
     }
     &__data {
+        @extend %paragraphs;
         &:first-child {
             position: relative;
             counter-increment: elementsCounter-2;
@@ -105,10 +102,13 @@ $table-striped__data__before__border-bottom: $table-striped__border !default;
                 border-bottom: $table-striped__data__before__border-bottom;
             }
         }
+        .rotate-content {
+            @media screen and (max-width: $table-striped__data__rotate-content__breake-point) {
+                transform: rotate(180deg);
+                writing-mode: vertical-rl;
+                text-orientation: sideways-right;
+                margin: 0 auto;
+            }
+        }
     }
-    .two-columns {}
-}
-
-.rotate-content{
-    margin: 0;
 }

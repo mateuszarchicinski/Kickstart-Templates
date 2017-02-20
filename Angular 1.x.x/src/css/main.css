@@ -1,7 +1,6 @@
 /* Headings */
 /* Text */
 /* Headings */
-/* Text */
 .primary-heading {
   font-size: 2em;
   font-weight: 300;
@@ -37,15 +36,27 @@
 /* Text */
 .text-small {
   font-size: 0.75em; }
+  @media screen and (max-width: 749px) {
+    .text-small {
+      font-size: 0.65em; } }
 
 .text-normal {
   font-size: 1em; }
+  @media screen and (max-width: 749px) {
+    .text-normal {
+      font-size: 0.9em; } }
 
 .text-medium {
   font-size: 1.25em; }
+  @media screen and (max-width: 749px) {
+    .text-medium {
+      font-size: 1.15em; } }
 
 .text-large {
   font-size: 1.5em; }
+  @media screen and (max-width: 749px) {
+    .text-large {
+      font-size: 1.4em; } }
 
 .text-center {
   text-align: center !important; }
@@ -23957,12 +23968,9 @@ md-tooltip {
   .table-striped__row:last-child .table-striped__data {
     border-bottom: 0; }
   .table-striped__header, .table-striped__data {
-    line-height: 1.3;
     padding: 25px 10px; }
     .table-striped__header:nth-child(even), .table-striped__data:nth-child(even) {
       border-left: 1px solid #ef5350; }
-    .table-striped__header:first-child, .table-striped__data:first-child {
-      padding: 25px 0; }
   .table-striped__header {
     background: #ffebee;
     font-weight: 500; }
@@ -23985,9 +23993,16 @@ md-tooltip {
       color: #000;
       border-right: 1px solid #ef5350;
       border-bottom: 1px solid #ef5350; }
-
-.rotate-content {
-  margin: 0; }
+  @media screen and (max-width: 608px) {
+    .table-striped__data .rotate-content {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+      -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+      text-orientation: sideways-right;
+      margin: 0 auto; } }
 
 a {
   text-decoration: none;
@@ -23999,6 +24014,20 @@ a {
     color: #f44336; }
   a:active {
     color: #ef5350; }
+
+@media screen and (max-width: 749px) {
+  .br__1 {
+    display: none; } }
+
+@media screen and (max-width: 608px) {
+  .br-g-1,
+  .br-g-2,
+  .br-g-3,
+  .br-g-4,
+  .br-g-5,
+  .br-g-6,
+  .br-g-7 {
+    display: none; } }
 
 .readme {
   width: 750px;
@@ -24066,7 +24095,7 @@ body {
     font-size: 0.8em;
     font-weight: 400; }
 
-.article__paragraph, .article__list li, .article__list-points li, .project-structure li, .readme__info {
+.article__paragraph, .article__list li, .article__list-points li, .project-structure li, .table-striped__data, .readme__info {
   line-height: 1.3;
   text-align: justify; }
 
