@@ -40,11 +40,11 @@ function getOption(option){
 // Compiling SASS to CSS, adding right prefixes to CSS methods - depending on configuration, creating source map, finally injecting CSS styles into browser
 gulp.task('sass:css', function () {
 
-    $.util.log($.util.colors.green('SASS TO CSS TASK RUNNING...'));
+    $.util.log($.util.colors.green('SASS TO CSS TASK RUNNING...')); // https://www.npmjs.com/package/gulp-util
 
     return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/main.s+(a|c)ss')
-        .pipe($.plumber())
-        .pipe($.sourcemaps.init())
+        .pipe($.plumber()) // https://www.npmjs.com/package/gulp-plumber
+        .pipe($.sourcemaps.init()) // https://www.npmjs.com/package/gulp-sourcemaps
         .pipe($.sass.sync({ // https://github.com/sass/node-sass#options
             outputStyle: 'nested' // compact - compressed - expanded - nested
         }))
@@ -99,19 +99,19 @@ gulp.task('js:hint', function () {
 });
 
 
-// 
+// Runs unit tests in Karma environment which is configurable via karma.conf.js
 gulp.task('js:test', function () {
 
     $.util.log($.util.colors.cyan('JS TEST TASK RUNNING...'));
 
     return new karma({
-        configFile: __dirname + '/' + PROJECT_CONFIG.DIRECTORY.TEST_DIR + '/karma.conf.js'
+        configFile: __dirname + '/' + PROJECT_CONFIG.DIRECTORY.TEST_DIR + '/karma.conf.js' // https://karma-runner.github.io/1.0/config/configuration-file.html
         }).start();
 
 });
 
 
-// 
+// Changing extensions of files from .jade to .pug, finally removes all .jade files
 gulp.task('jade:pug', function() {
     
     $.util.log($.util.colors.green('JADE TO PUG TASK RUNNING...'));
@@ -119,18 +119,19 @@ gulp.task('jade:pug', function() {
     gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/**/*.jade', {
             base: PROJECT_CONFIG.DIRECTORY.WORK_DIR
         })
-        .pipe($.rename({
+        .pipe($.plumber())
+        .pipe($.rename({ // https://www.npmjs.com/package/gulp-rename
             extname: '.pug'
         }))
         .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/'))
         .on('end', function(){
-            del(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/**/*.jade')
+            del(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/**/*.jade') // https://www.npmjs.com/package/del
         });
     
 });
 
 
-// 
+// Compiling .pug files to HTML code which are completed by information from data object, finally injects into HTML code paths to libraries CSS and JS installed via Bower
 gulp.task('pug', function () {
 
     $.util.log($.util.colors.green('PUG TASK RUNNING...'));
@@ -146,17 +147,17 @@ gulp.task('pug', function () {
             base: './' + PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template'
         })
         .pipe($.plumber())
-        .pipe($.data(function(){
+        .pipe($.data(function(){ // https://www.npmjs.com/package/gulp-data
             return {
                 appName: PROJECT_CONFIG.APP_NAME,
                 data: JSON.parse(fs.readFileSync('./' + PROJECT_CONFIG.DATA_FILE, 'utf8')).lang[lang]
             };
         }))
-        .pipe($.pug({
+        .pipe($.pug({ // https://pugjs.org/api/getting-started.html
             pretty: true,
             compileDebug: true
         }))
-        .pipe(wiredep({
+        .pipe(wiredep({ // https://pugjs.org/api/getting-started.html
             exclude: ['animatewithsass', 'angular-mocks', 'bower_components/angular-material/angular-material.css'],
             ignorePath: '../'
         }))
@@ -196,9 +197,9 @@ gulp.task('html', function () {
             base: PROJECT_CONFIG.DIRECTORY.WORK_DIR
         })
         .pipe($.plumber())
-        .pipe($.useref())
-        .pipe($.if('*.css', $.cleanCss())) // https://github.com/jakubpawlowicz/clean-css#how-to-use-clean-css-api
-        .pipe($.if('*.js', $.uglify()))
+        .pipe($.useref()) // https://www.npmjs.com/package/gulp-useref#api
+        .pipe($.if('*.css', $.cleanCss())) // https://github.com/jakubpawlowicz/clean-css#--------
+        .pipe($.if('*.js', $.uglify())) // {preserveComments: 'license'} ~ https://www.npmjs.com/package/gulp-uglify#options
         .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/'));
 
 });
@@ -301,21 +302,23 @@ gulp.task('images', function () {
     $.util.log($.util.colors.magenta('IMAGES TASK RUNNING...'));    
     
     var condition = getOption('--option').value === 'advanced',
-        optimizationModule = condition ? require('gulp-tinify') : require('gulp-imagemin');
+        optimizationModule = condition ? require('gulp-tinify') : require('gulp-imagemin'),
+        args = PROJECT_CONFIG.API_KEYS.TINIFY;
     
     if(!condition){
+        args = [imageminGifsicle(), imageminJpegtran(), imageminOptipng(), imageminSvgo()];
         $.util.log($.util.colors.magenta('Default options passed to images task. To change that, add command arguments to this task ---> gulp [TASK NAME = images / build / build:server] --option [standard / advanced].'));
     }
     
     if(condition && !PROJECT_CONFIG.API_KEYS.TINIFY){
         return $.util.log($.util.colors.magenta('Task can not be complited. Rememeber to set up your TINIFY API KEY in ' + PROJECT_CONFIG.CONFIG_FILE + ' file.'));
     }
-
+    
     return gulp.src(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/img/**/*', {
             base: PROJECT_CONFIG.DIRECTORY.DIST_DIR
         })
         .pipe($.plumber())
-        .pipe($.if(condition, optimizationModule(PROJECT_CONFIG.API_KEYS.TINIFY), optimizationModule([imageminGifsicle(), imageminJpegtran(), imageminOptipng(), imageminSvgo()])))
+        .pipe(optimizationModule(args))
         .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/'));
 
 });
@@ -335,6 +338,7 @@ gulp.task('images:sprite', function () {
     }
     
     return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/img/sprites_sources/**/*.{jpg,png,gif}')
+        .pipe($.plumber())
         .pipe($.spritesmith({
             imgName: spriteImgName + '.png',
             cssName: spriteCssName + '.scss',

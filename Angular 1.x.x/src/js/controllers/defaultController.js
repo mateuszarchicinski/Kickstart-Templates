@@ -3,7 +3,7 @@
     'use strict';
 
 
-    app.controller('defaultController', ['$log', '$anchorScroll', '$location', '$scope', function ($log) {
+    app.controller('defaultController', ['$log', function ($log) {
 
         this.awesomeThings = [
             'AngularJS',
