@@ -188,7 +188,7 @@ gulp.task('pug:lint', function () {
 });
 
 
-// 
+// Combines CSS or JS files into one and MINIFY - Minification via modules Clean Css & Uglify
 gulp.task('html', function () {
 
     $.util.log($.util.colors.green('HTML TASK RUNNING...'));

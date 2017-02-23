@@ -1,1 +1,25 @@
-| _sassCss.pug
+ul.article__list.no-list-padding
+    li #{data.articles.gulpTasks.table.rows.sassCss[0][0]} 
+        strong main.scss
+        |  lub 
+        strong main.sass
+        | .
+    include modules/_gulpPlumber
+    li #{data.articles.gulpTasks.table.rows.sassCss[2][0]}
+        a(href="https://www.npmjs.com/package/gulp-sourcemaps" target="_blank" rel="help") gulp-sourcemaps
+        | ).
+    li #{data.articles.gulpTasks.table.rows.sassCss[3][0]}
+        a(href="https://github.com/sass/node-sass#options" target="_blank" rel="help") gulp-sass
+        | ).
+    li #{data.articles.gulpTasks.table.rows.sassCss[4][0]}
+        a(href="https://github.com/postcss/autoprefixer#options" target="_blank" rel="help") gulp-autoprefixer
+        | ).
+    li #{data.articles.gulpTasks.table.rows.sassCss[5][0]} 
+        strong main.css.map
+        | .
+    li #{data.articles.gulpTasks.table.rows.sassCss[6][0]} 
+        strong main.css
+        | .
+    li #{data.articles.gulpTasks.table.rows.sassCss[7][0]}
+        a(href="https://www.browsersync.io/docs/gulp" target="_blank" rel="help") browser-sync
+        | ).

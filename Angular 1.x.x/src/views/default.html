@@ -229,7 +229,18 @@
               <td class="table-striped__data" id="sassCss">
                 <p class="rotate-content"><code class="param__name">sass:css</code></p>
               </td>
-              <td class="table-striped__data">_sassCss.pug</td>
+              <td class="table-striped__data">
+                <ul class="article__list no-list-padding">
+                  <li>Wykorzystuje plik <strong>main.scss</strong> lub <strong>main.sass</strong>.</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Inicjuje utworzenie Source Map na podstawie głównego pliku Sass (<a href="https://www.npmjs.com/package/gulp-sourcemaps" target="_blank" rel="help">gulp-sourcemaps</a>).</li>
+                  <li>Kompiluje synchronicznie kod Sass na kod Css (<a href="https://github.com/sass/node-sass#options" target="_blank" rel="help">gulp-sass</a>).</li>
+                  <li>Dodaje właściwe przedrostki przy metodach kodu Css uwzględniając wsparcie dla wskazanych przeglądarek (<a href="https://github.com/postcss/autoprefixer#options" target="_blank" rel="help">gulp-autoprefixer</a>).</li>
+                  <li>Zapisuje Source Map do pliku <strong>main.css.map</strong>.</li>
+                  <li>Zapisuje uzyskany kod Css do pliku <strong>main.css</strong>.</li>
+                  <li>Wstrzykuje nowy kod Css do strony podglądowej (<a href="https://www.browsersync.io/docs/gulp" target="_blank" rel="help">browser-sync</a>).</li>
+                </ul>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="sassLint">

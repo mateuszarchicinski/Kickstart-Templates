@@ -27,6 +27,7 @@ $table-striped__data__before__border-right: $table-striped__border !default;
 $table-striped__data__before__border-bottom: $table-striped__border !default;
 // __data - .rotate-content
 $table-striped__data__rotate-content__breake-point: 608px !default;
+$table-striped__data__rotate-content__margin: #{(5 / 16)}em !default;
 
 
 .table-striped {
@@ -41,7 +42,7 @@ $table-striped__data__rotate-content__breake-point: 608px !default;
     &__data {}
     &__thead {}
     &__body {
-        counter-reset: elementsCounter-2;
+        counter-reset: elementsCounter-1;
     }
     &__row {
         &:nth-child(odd) {
@@ -83,10 +84,10 @@ $table-striped__data__rotate-content__breake-point: 608px !default;
         @extend %paragraphs;
         &:first-child {
             position: relative;
-            counter-increment: elementsCounter-2;
+            counter-increment: elementsCounter-1;
             text-align: $table-striped__data__text-align;
             @include before {
-                content: counter(elementsCounter-2) ".";
+                content: counter(elementsCounter-1) ".";
                 width: 20px;
                 height: 20px;
                 line-height: 20px;
@@ -107,7 +108,7 @@ $table-striped__data__rotate-content__breake-point: 608px !default;
                 transform: rotate(180deg);
                 writing-mode: vertical-rl;
                 text-orientation: sideways-right;
-                margin: 0 auto;
+                margin: $table-striped__data__rotate-content__margin;
             }
         }
     }

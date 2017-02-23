@@ -365,9 +365,92 @@
                             "Nazwa",
                             "Opis"
                         ],
-                        "rows": [
-                            []
-                        ]
+                        "rows": {
+                            "sassCss": [
+                                [
+                                    "Wykorzystuje plik",
+                                    "lub"
+                                ],
+                                [
+                                    "Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów ("
+                                ],
+                                [
+                                    "Inicjuje utworzenie Source Map na podstawie głównego pliku Sass ("
+                                ],
+                                [
+                                    "Kompiluje synchronicznie kod Sass na kod Css ("
+                                ],
+                                [
+                                    "Dodaje właściwe przedrostki przy metodach kodu Css uwzględniając wsparcie dla wskazanych przeglądarek ("
+                                ],
+                                [
+                                    "Zapisuje Source Map do pliku"
+                                ],
+                                [
+                                    "Zapisuje uzyskany kod Css do pliku"
+                                ],
+                                [
+                                    "Wstrzykuje nowy kod Css do strony podglądowej ("
+                                ]
+                            ],
+                            "sassLint": [
+                                
+                            ],
+                            "jsHint": [
+                                
+                            ],
+                            "js:test": [
+                                
+                            ],
+                            "jadePug": [
+                                
+                            ],
+                            "pug": [
+                                
+                            ],
+                            "pugLint": [
+                                
+                            ],
+                            "html": [
+                                
+                            ],
+                            "htmlHint": [
+                                
+                            ],
+                            "htmlMinify": [
+                                
+                            ],
+                            "server": [
+                                
+                            ],
+                            "watch": [
+                                
+                            ],
+                            "clean": [
+                                
+                            ],
+                            "copy": [
+                                
+                            ],
+                            "images": [
+                                
+                            ],
+                            "imagesSprite": [
+                                
+                            ],
+                            "upload": [
+                                
+                            ],
+                            "build": [
+                                
+                            ],
+                            "buildServer": [
+                                
+                            ],
+                            "default": [
+                                
+                            ]
+                        }
                     },
                     "subHeadlines": ["Pojedyncze:", "Złożone:"],
                     "build": ["Wywoła sekwencja  poleceń:"],
