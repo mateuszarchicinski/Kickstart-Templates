@@ -378,10 +378,10 @@
                                     "Inicjuje utworzenie Source Map na podstawie głównego pliku Sass ("
                                 ],
                                 [
-                                    "Kompiluje synchronicznie kod Sass na kod Css ("
+                                    "Kompiluje synchronicznie kod Sass na kod Css o stylu wyjściowym"
                                 ],
                                 [
-                                    "Dodaje właściwe przedrostki przy metodach kodu Css uwzględniając wsparcie dla wskazanych przeglądarek ("
+                                    "Dodaje właściwe przedrostki z metodami do kodu Css. Uwzględniając przy tym wsparcia dla wskazanych przeglądarek w obiekcie konfiguracyjnym ("
                                 ],
                                 [
                                     "Zapisuje Source Map do pliku"
@@ -394,28 +394,116 @@
                                 ]
                             ],
                             "sassLint": [
-                                
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem",
+                                    "i"
+                                ],
+                                [
+                                    "Sprawdza kod Sass pod kątem wybranych reguł",
+                                    "w obiekcie konfiguracyjnym ("
+                                ],
+                                [
+                                    "Wyświetla odpowiednio sformatowane komunikaty",
+                                    "o wykrytych niezgodnościach w kodzie Sass ("
+                                ]
                             ],
                             "jsHint": [
-                                
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Sprawdza kod Js pod kątem błędów i optymalizacji ("
+                                ],
+                                [
+                                    "Wyświetla odpowiednio sformatowane komunikaty",
+                                    "o wykrytych błędach i możliwej optymalizacji w kodzie Js ("
+                                ]
                             ],
-                            "js:test": [
-                                
+                            "jsTest": [
+                                [
+                                    "Uruchomi testy jednostkowe w środowisku",
+                                    ", które konfigurujemy za pomocą pliku",
+                                    ". Wymieniony plik umożliwia wybór frameworków testujących i wielu innych rzeczy o których można poczytać",
+                                    "tutaj"
+                                ]
                             ],
                             "jadePug": [
-                                
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Zamienia rozszerzenie plików",
+                                    "na"
+                                ],
+                                [
+                                    "Zapisuje pliki z nowym rozszerzeniem",
+                                    "w analogicznych lokalizacjach do plików"
+                                ],
+                                [
+                                    "Usuwa nie potrzebne pliki z rozszerzeniem"
+                                ]
                             ],
                             "pug": [
-                                
+                                [
+                                    "Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej",
+                                    "na",
+                                    "i nadpisuje ją w przypadku podania innej."
+                                ],
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Przygotowuje obiekt danych przekazując go wewnątrz strumienia do gulp-pug ("
+                                ],
+                                [
+                                    "Kompiluje pliki",
+                                    "zwracając uzupełniony kod Html",
+                                    "o przekazane informacje w obiekcie danych ("
+                                ],
+                                [
+                                    "Wstrzykuje tagi",
+                                    "i",
+                                    "z ścieżkami źródłowymi do zainstalowanych bibliotek Css i Js. Pomiędzy poniższe komentarze w kodzie Html ("
+                                ],
+                                [
+                                    "Zapisuje uzyskane kody Html do",
+                                    "i plików widoku."
+                                ]
                             ],
                             "pugLint": [
-                                
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Sprawdza kod Pug pod kątem wybranych reguł w obiekcie konfiguracyjnym ("
+                                ],
+                                [
+                                    "Wyświetla odpowiednio sformatowane komunikaty o wykrytych niezgodnościach w kodzie Pug."
+                                ]
                             ],
                             "html": [
-                                
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Filtruje kod Html pod kątem wstawionych komentarzy:",
+                                    "Wychwytując znajdujące się pomiędzy nimi tagi",
+                                    "lub",
+                                    "z ścieżkami źródłowymi. Tworząc z wielu plików bibliotek Css lub Js pojedyncze pliki źródłowe ("
+                                ],
+                                [
+                                    "Sprawdza rozszerzenia przetwarzanych plików",
+                                    "w strumieniu. Wywołując odpowiednie metody minifikujące dla plików z rozszerzeniem",
+                                    "i"
+                                ],
+                                [
+                                    "Zapisuje uzyskane kody Css i Js do plików w katalogu produkcyjnym."
+                                ]
                             ],
                             "htmlHint": [
-                                
+                                [
+                                    
+                                ]
                             ],
                             "htmlMinify": [
                                 

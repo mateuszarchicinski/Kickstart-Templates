@@ -101,13 +101,15 @@ $strong__font-weight: 500 !default;
             font-size: $text-large__font-size - 0.1;
         }
     }
-}
-
 // sass-lint:disable no-important
-.text-center {
-    text-align: center !important;
-}
+    &-center {
+        text-align: center !important;
+    }
 // sass-lint:enable no-important
+    &-hidden {
+        @include no-text;
+    }
+}
 
 strong {
     font-weight: $strong__font-weight;

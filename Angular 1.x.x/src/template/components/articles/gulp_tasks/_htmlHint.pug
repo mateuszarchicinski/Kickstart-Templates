@@ -1,1 +1,22 @@
-| _htmlHint.pug
+ul.article__list.no-list-padding
+    li #{data.articles.gulpTasks.table.rows.html[0][0]} 
+        strong .html
+        | .
+    include modules/_gulpPlumber
+    li #{data.articles.gulpTasks.table.rows.html[1][0]}
+        pre.code__block
+            code.code__line &lt;!--build:css-->
+            br
+            code.code__line // &lt;link href="">
+            br
+            code.code__line &lt;!--endbuild-->
+            br
+            br
+            code.code__line &lt;!--build:js-->
+            br
+            code.code__line // &lt;script src="">
+            br
+            code.code__line &lt;!--endbuild-->
+    li #{data.articles.gulpTasks.table.rows.html[2][0]} 
+        a(href="https://www.npmjs.com/package/gulp-uglify#options" target="_blank" rel="help") gulp-uglify
+        | ).

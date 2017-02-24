@@ -37,7 +37,7 @@ function getOption(option){
 
 
 // GULP TASKS
-// Compiling SASS to CSS, adding right prefixes to CSS methods - depending on configuration, creating source map, finally injecting CSS styles into browser
+// Compiling SASS to CSS, adding right prefixes to CSS methods - depending on configuration, creating source map, finally injects CSS styles into browser
 gulp.task('sass:css', function () {
 
     $.util.log($.util.colors.green('SASS TO CSS TASK RUNNING...')); // https://www.npmjs.com/package/gulp-util
@@ -131,7 +131,7 @@ gulp.task('jade:pug', function() {
 });
 
 
-// Compiling .pug files to HTML code which are completed by information from data object, finally injects into HTML code paths to libraries CSS and JS installed via Bower
+// Compiling .pug files to HTML code which is completed by information from data object, finally injects into HTML code tags LINK & SCRIPT with paths to libraries CSS and JS installed via Bower
 gulp.task('pug', function () {
 
     $.util.log($.util.colors.green('PUG TASK RUNNING...'));

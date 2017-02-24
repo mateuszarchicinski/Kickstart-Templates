@@ -61,6 +61,12 @@
 .text-center {
   text-align: center !important; }
 
+.text-hidden {
+  line-height: 0;
+  font-size: 0;
+  text-shadow: none;
+  color: transparent; }
+
 strong {
   font-weight: 500; }
 
@@ -24096,8 +24102,7 @@ body {
     font-weight: 400; }
 
 .article__paragraph, .article__list li, .article__list-points li, .project-structure li, .table-striped__data, .readme__info {
-  line-height: 1.3;
-  text-align: justify; }
+  line-height: 1.3; }
 
 .directory__root, .directory__close, .directory__open, .file__json, .file__js, .file__xml, .file__html, .file__sass, .file__pug, .file__css, .file__img {
   display: inline-block;

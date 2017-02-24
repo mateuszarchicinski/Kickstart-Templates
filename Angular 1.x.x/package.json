@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "gulp js:test"
+    "build": "gulp build --option advanced --upload"
   },
   "author": "Mateusz Archiciński",
   "license": "ISC",

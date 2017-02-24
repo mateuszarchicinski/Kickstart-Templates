@@ -234,8 +234,8 @@
                   <li>Wykorzystuje plik <strong>main.scss</strong> lub <strong>main.sass</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
                   <li>Inicjuje utworzenie Source Map na podstawie głównego pliku Sass (<a href="https://www.npmjs.com/package/gulp-sourcemaps" target="_blank" rel="help">gulp-sourcemaps</a>).</li>
-                  <li>Kompiluje synchronicznie kod Sass na kod Css (<a href="https://github.com/sass/node-sass#options" target="_blank" rel="help">gulp-sass</a>).</li>
-                  <li>Dodaje właściwe przedrostki przy metodach kodu Css uwzględniając wsparcie dla wskazanych przeglądarek (<a href="https://github.com/postcss/autoprefixer#options" target="_blank" rel="help">gulp-autoprefixer</a>).</li>
+                  <li>Kompiluje synchronicznie kod Sass na kod Css o stylu wyjściowym <strong>nested</strong> (<a href="https://github.com/sass/node-sass#options" target="_blank" rel="help">gulp-sass</a>).</li>
+                  <li>Dodaje właściwe przedrostki z metodami do kodu Css. Uwzględniając przy tym wsparcia dla wskazanych przeglądarek w obiekcie konfiguracyjnym (<a href="https://github.com/postcss/autoprefixer#options" target="_blank" rel="help">gulp-autoprefixer</a>).</li>
                   <li>Zapisuje Source Map do pliku <strong>main.css.map</strong>.</li>
                   <li>Zapisuje uzyskany kod Css do pliku <strong>main.css</strong>.</li>
                   <li>Wstrzykuje nowy kod Css do strony podglądowej (<a href="https://www.browsersync.io/docs/gulp" target="_blank" rel="help">browser-sync</a>).</li>
@@ -246,49 +246,113 @@
               <td class="table-striped__data" id="sassLint">
                 <p class="rotate-content"><code class="param__name">sass:lint</code></p>
               </td>
-              <td class="table-striped__data">_sassLint.pug</td>
+              <td class="table-striped__data">
+                <ul class="article__list no-list-padding">
+                  <li>Wykorzystuje pliki z rozszerzeniem <strong>.scss</strong> lub <strong>.sass</strong>.</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Sprawdza kod Sass pod kątem wybranych reguł <br class="br__1"/>w obiekcie konfiguracyjnym (<a href="https://github.com/sasstools/sass-lint#configuring" target="_blank" rel="help">gulp-sass-lint</a>).</li>
+                  <li>Wyświetla odpowiednio sformatowane komunikaty <br class="br__1"/>o wykrytych niezgodnościach w kodzie Sass (<a href="https://github.com/sasstools/sass-lint/blob/master/docs/options/formatter.md" target="_blank" rel="help">Formatter</a>).</li>
+                </ul>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="jsHint">
                 <p class="rotate-content"><code class="param__name">js:hint</code></p>
               </td>
-              <td class="table-striped__data">_jsHint.pug</td>
+              <td class="table-striped__data">
+                <ul class="article__list no-list-padding">
+                  <li>Wykorzystuje pliki z rozszerzeniem <strong>.js</strong>.</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Sprawdza kod Js pod kątem błędów i optymalizacji (<a href="http://jshint.com/docs/" target="_blank" rel="help">gulp-jshint</a>).</li>
+                  <li>Wyświetla odpowiednio sformatowane komunikaty <br class="br__1"/>o wykrytych błędach i możliwej optymalizacji w kodzie Js (<a href="https://github.com/spalger/gulp-jshint#reporters" target="_blank" rel="help">Reporter</a>).</li>
+                </ul>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="jsTest">
                 <p class="rotate-content"><code class="param__name">js:test</code></p>
               </td>
-              <td class="table-striped__data">_jsTest.pug</td>
+              <td class="table-striped__data">
+                <ul class="article__list no-list-padding">
+                  <li>Uruchomi testy jednostkowe w środowisku <a href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help">Karma</a>, które konfigurujemy za pomocą pliku <strong>karma.conf.js</strong>. Wymieniony plik umożliwia wybór frameworków testujących i wielu innych rzeczy o których można poczytać <a href="https://karma-runner.github.io/1.0/config/configuration-file.html" target="_blank" rel="help">tutaj</a>.</li>
+                </ul>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="jadePug">
                 <p class="rotate-content"><code class="param__name">jade:pug</code></p>
               </td>
-              <td class="table-striped__data">_jadePug.pug</td>
+              <td class="table-striped__data">
+                <ul class="article__list no-list-padding">
+                  <li>Wykorzystuje pliki z rozszerzeniem <strong>.jade</strong>.</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Zamienia rozszerzenie plików <strong>.jade</strong> na <strong>.pug</strong> (<a href="https://www.npmjs.com/package/gulp-rename" target="_blank" rel="help">gulp-rename</a>).</li>
+                  <li>Zapisuje pliki z nowym rozszerzeniem <strong>.pug</strong> <br class="br__1"/>w analogicznych lokalizacjach do plików <strong>.jade</strong>.</li>
+                  <li>Usuwa nie potrzebne pliki z rozszerzeniem <strong>.jade</strong> (<a href="https://www.npmjs.com/package/del" target="_blank" rel="help">del</a>).</li>
+                </ul>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="pug">
                 <p class="rotate-content"><code class="param__name">pug</code><br class="br-g-1"/><code class="param__opt-arg">--lang pl / en</code></p>
               </td>
-              <td class="table-striped__data">_pug.pug</td>
+              <td class="table-striped__data" style="background:#fff;">
+                <ul class="article__list no-list-padding">
+                  <li>Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej <strong>lang</strong> na <strong>"pl"</strong> i nadpisuje ją w przypadku podania innej.</li>
+                  <li>Wykorzystuje pliki z rozszerzeniem<strong>.pug</strong>.</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Przygotowuje obiekt danych przekazując go wewnątrz strumienia do gulp-pug (<a href="https://www.npmjs.com/package/gulp-data" target="_blank" rel="help">gulp-data</a>).</li>
+                  <li>Kompiluje pliki <strong>.pug</strong> zwracając uzupełniony kod Html <br class="br__1"/>o przekazane informacje w obiekcie danych (<a href="https://pugjs.org/api/getting-started.html" target="_blank" rel="help">gulp-pug</a>).</li>
+                  <li>Wstrzykuje tagi <strong>Link</strong> i <strong>Script</strong> z ścieżkami źródłowymi do zainstalowanych bibliotek Css i Js. Pomiędzy poniższe komentarze w kodzie Html (<a href="https://www.npmjs.com/package/wiredep" target="_blank" rel="help">wiredep</a>):
+                    <pre class="code__block"><code class="code__line">&lt;!--bower:css--></code><br/><code class="code__line">// &lt;link href=""></code><br/><code class="code__line">&lt;!--endbower--></code><br/><br/><code class="code__line">&lt;!--bower:js--></code><br/><code class="code__line">// &lt;script src=""></code><br/><code class="code__line">&lt;!--endbower--></code></pre>
+                  </li>
+                  <li>Zapisuje uzyskane kody Html do <strong>index.html</strong> i plików widoku.</li>
+                </ul>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="pugLint">
                 <p class="rotate-content"><code class="param__name">pug:lint</code></p>
               </td>
-              <td class="table-striped__data">_pugLint.pug</td>
+              <td class="table-striped__data">
+                <ul class="article__list no-list-padding">
+                  <li>Wykorzystuje pliki z rozszerzeniem <strong>.pug</strong>.</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Sprawdza kod Pug pod kątem wybranych reguł w obiekcie konfiguracyjnym (<a href="https://github.com/pugjs/pug-lint#rules" target="_blank" rel="help">gulp-pug-lint</a>).</li>
+                  <li>Wyświetla odpowiednio sformatowane komunikaty o wykrytych niezgodnościach w kodzie Pug.</li>
+                </ul>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="html">
                 <p class="rotate-content"><code class="param__name">html</code></p>
               </td>
-              <td class="table-striped__data">_html.pug</td>
+              <td class="table-striped__data" style="background:#fff;">
+                <ul class="article__list no-list-padding">
+                  <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Filtruje kod Html pod kątem wstawionych komentarzy:
+                    <pre class="code__block"><code class="code__line">&lt;!--build:css--></code><br/><code class="code__line">// &lt;link href=""></code><br/><code class="code__line">&lt;!--endbuild--></code><br/><br/><code class="code__line">&lt;!--build:js--></code><br/><code class="code__line">// &lt;script src=""></code><br/><code class="code__line">&lt;!--endbuild--></code></pre>Wychwytując znajdujące się pomiędzy nimi tagi <strong>Link</strong> lub <strong>Script</strong> z ścieżkami źródłowymi. Tworząc z wielu plików bibliotek Css lub Js pojedyncze pliki źródłowe (<a href="https://www.npmjs.com/package/gulp-useref#api" target="_blank" rel="help">gulp-useref</a>).
+                  </li>
+                  <li>Sprawdza rozszerzenia przetwarzanych plików <br class="br__1"/>w strumieniu. Wywołując odpowiednie metody minifikujące dla plików z rozszerzeniem <strong>.css</strong> i <strong>.js</strong> (<a href="https://github.com/jakubpawlowicz/clean-css#--------" target="_blank" rel="help">gulp-clean-css</a> / <a href="https://www.npmjs.com/package/gulp-uglify#options" target="_blank" rel="help">gulp-uglify</a>).</li>
+                  <li>Zapisuje uzyskane kody Css i Js do plików w katalogu produkcyjnym.</li>
+                </ul>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="htmlHint">
                 <p class="rotate-content"><code class="param__name">html:hint</code></p>
               </td>
-              <td class="table-striped__data">_htmlHint.pug</td>
+              <td class="table-striped__data">
+                <ul class="article__list no-list-padding">
+                  <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Filtruje kod Html pod kątem wstawionych komentarzy:
+                    <pre class="code__block"><code class="code__line">&lt;!--build:css--></code><br/><code class="code__line">// &lt;link href=""></code><br/><code class="code__line">&lt;!--endbuild--></code><br/><br/><code class="code__line">&lt;!--build:js--></code><br/><code class="code__line">// &lt;script src=""></code><br/><code class="code__line">&lt;!--endbuild--></code></pre>
+                  </li>
+                  <li>Sprawdza rozszerzenia przetwarzanych plików <a href="https://www.npmjs.com/package/gulp-uglify#options" target="_blank" rel="help">gulp-uglify</a>).</li>
+                </ul>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="htmlMinify">
