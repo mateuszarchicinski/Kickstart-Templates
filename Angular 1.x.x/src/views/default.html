@@ -303,7 +303,7 @@
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
                   <li>Przygotowuje obiekt danych przekazując go wewnątrz strumienia do gulp-pug (<a href="https://www.npmjs.com/package/gulp-data" target="_blank" rel="help">gulp-data</a>).</li>
                   <li>Kompiluje pliki <strong>.pug</strong> zwracając uzupełniony kod Html <br class="br__1"/>o przekazane informacje w obiekcie danych (<a href="https://pugjs.org/api/getting-started.html" target="_blank" rel="help">gulp-pug</a>).</li>
-                  <li>Wstrzykuje tagi <strong>Link</strong> i <strong>Script</strong> z ścieżkami źródłowymi do zainstalowanych bibliotek Css i Js. Pomiędzy poniższe komentarze w kodzie Html (<a href="https://www.npmjs.com/package/wiredep" target="_blank" rel="help">wiredep</a>):
+                  <li>Wstrzykuje tagi <strong>Link</strong> i <strong>Script</strong> z ścieżkami źródłowymi do zainstalowanych bibliotek Css lub Js. Pomiędzy poniższe komentarze w kodzie Html (<a href="https://www.npmjs.com/package/wiredep" target="_blank" rel="help">wiredep</a>):
                     <pre class="code__block"><code class="code__line">&lt;!--bower:css--></code><br/><code class="code__line">// &lt;link href=""></code><br/><code class="code__line">&lt;!--endbower--></code><br/><br/><code class="code__line">&lt;!--bower:js--></code><br/><code class="code__line">// &lt;script src=""></code><br/><code class="code__line">&lt;!--endbower--></code></pre>
                   </li>
                   <li>Zapisuje uzyskane kody Html do <strong>index.html</strong> i plików widoku.</li>
@@ -332,9 +332,9 @@
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
                   <li>Filtruje kod Html pod kątem wstawionych komentarzy:
-                    <pre class="code__block"><code class="code__line">&lt;!--build:css--></code><br/><code class="code__line">// &lt;link href=""></code><br/><code class="code__line">&lt;!--endbuild--></code><br/><br/><code class="code__line">&lt;!--build:js--></code><br/><code class="code__line">// &lt;script src=""></code><br/><code class="code__line">&lt;!--endbuild--></code></pre>Wychwytując znajdujące się pomiędzy nimi tagi <strong>Link</strong> lub <strong>Script</strong> z ścieżkami źródłowymi. Tworząc z wielu plików bibliotek Css lub Js pojedyncze pliki źródłowe (<a href="https://www.npmjs.com/package/gulp-useref#api" target="_blank" rel="help">gulp-useref</a>).
+                    <pre class="code__block"><code class="code__line">&lt;!--build:css main.min.css--></code><br/><code class="code__line">// &lt;link href=""></code><br/><code class="code__line">&lt;!--endbuild--></code><br/><br/><code class="code__line">&lt;!--build:js main.min.js--></code><br/><code class="code__line">// &lt;script src=""></code><br/><code class="code__line">&lt;!--endbuild--></code></pre>Zastępując je pojedynczymi tagami <strong>Link</strong> i <strong>Script</strong> z ścieżkami źródłowymi do plików <strong>main.min.css</strong> i <strong>main.min.js</strong> powstałymi w skutek połączenia wszystkich załączonych bibliotek Css lub Js znajdujących się pomiędzy tymi komentarzami (<a href="https://www.npmjs.com/package/gulp-useref#api" target="_blank" rel="help">gulp-useref</a>).
                   </li>
-                  <li>Sprawdza rozszerzenia przetwarzanych plików <br class="br__1"/>w strumieniu. Wywołując odpowiednie metody minifikujące dla plików z rozszerzeniem <strong>.css</strong> i <strong>.js</strong> (<a href="https://github.com/jakubpawlowicz/clean-css#--------" target="_blank" rel="help">gulp-clean-css</a> / <a href="https://www.npmjs.com/package/gulp-uglify#options" target="_blank" rel="help">gulp-uglify</a>).</li>
+                  <li>Sprawdza typ przetwarzanych plików w strumieniu. Wywołując odpowiednie metody minifikujące dla plików <br class="br__1"/>z rozszerzeniem <strong>.css</strong> i <strong>.js</strong> (<a href="https://github.com/jakubpawlowicz/clean-css#--------" target="_blank" rel="help">gulp-clean-css</a> / <a href="https://www.npmjs.com/package/gulp-uglify#options" target="_blank" rel="help">gulp-uglify</a>).</li>
                   <li>Zapisuje uzyskane kody Css i Js do plików w katalogu produkcyjnym.</li>
                 </ul>
               </td>
@@ -350,7 +350,7 @@
                   <li>Filtruje kod Html pod kątem wstawionych komentarzy:
                     <pre class="code__block"><code class="code__line">&lt;!--build:css--></code><br/><code class="code__line">// &lt;link href=""></code><br/><code class="code__line">&lt;!--endbuild--></code><br/><br/><code class="code__line">&lt;!--build:js--></code><br/><code class="code__line">// &lt;script src=""></code><br/><code class="code__line">&lt;!--endbuild--></code></pre>
                   </li>
-                  <li>Sprawdza rozszerzenia przetwarzanych plików <a href="https://www.npmjs.com/package/gulp-uglify#options" target="_blank" rel="help">gulp-uglify</a>).</li>
+                  <li>Sprawdza typ przetwarzanych plików w strumieniu. Wywołując odpowiednie metody minifikujące dla plików <a href="https://www.npmjs.com/package/gulp-uglify#options" target="_blank" rel="help">gulp-uglify</a>).</li>
                 </ul>
               </td>
             </tr>

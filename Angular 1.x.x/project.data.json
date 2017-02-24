@@ -463,7 +463,7 @@
                                 [
                                     "Wstrzykuje tagi",
                                     "i",
-                                    "z ścieżkami źródłowymi do zainstalowanych bibliotek Css i Js. Pomiędzy poniższe komentarze w kodzie Html ("
+                                    "z ścieżkami źródłowymi do zainstalowanych bibliotek Css lub Js. Pomiędzy poniższe komentarze w kodzie Html ("
                                 ],
                                 [
                                     "Zapisuje uzyskane kody Html do",
@@ -487,13 +487,15 @@
                                 ],
                                 [
                                     "Filtruje kod Html pod kątem wstawionych komentarzy:",
-                                    "Wychwytując znajdujące się pomiędzy nimi tagi",
-                                    "lub",
-                                    "z ścieżkami źródłowymi. Tworząc z wielu plików bibliotek Css lub Js pojedyncze pliki źródłowe ("
+                                    "Zastępując je pojedynczymi tagami",
+                                    "i",
+                                    "z ścieżkami źródłowymi do plików",
+                                    "i",
+                                    "powstałymi w skutek połączenia wszystkich załączonych bibliotek Css lub Js znajdujących się pomiędzy tymi komentarzami ("
                                 ],
                                 [
-                                    "Sprawdza rozszerzenia przetwarzanych plików",
-                                    "w strumieniu. Wywołując odpowiednie metody minifikujące dla plików z rozszerzeniem",
+                                    "Sprawdza typ przetwarzanych plików w strumieniu. Wywołując odpowiednie metody minifikujące dla plików",
+                                    "z rozszerzeniem",
                                     "i"
                                 ],
                                 [

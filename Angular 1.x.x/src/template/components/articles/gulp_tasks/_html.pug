@@ -5,14 +5,14 @@ ul.article__list.no-list-padding
     include modules/_gulpPlumber
     li #{data.articles.gulpTasks.table.rows.html[1][0]}
         pre.code__block
-            code.code__line &lt;!--build:css-->
+            code.code__line &lt;!--build:css main.min.css-->
             br
             code.code__line // &lt;link href="">
             br
             code.code__line &lt;!--endbuild-->
             br
             br
-            code.code__line &lt;!--build:js-->
+            code.code__line &lt;!--build:js main.min.js-->
             br
             code.code__line // &lt;script src="">
             br
@@ -21,7 +21,11 @@ ul.article__list.no-list-padding
         strong Link
         |  #{data.articles.gulpTasks.table.rows.html[1][2]} 
         strong Script
-        |  #{data.articles.gulpTasks.table.rows.html[1][3]}
+        |  #{data.articles.gulpTasks.table.rows.html[1][3]} 
+        strong main.min.css
+        |  #{data.articles.gulpTasks.table.rows.html[1][4]} 
+        strong main.min.js
+        |  #{data.articles.gulpTasks.table.rows.html[1][5]}
         a(href="https://www.npmjs.com/package/gulp-useref#api" target="_blank" rel="help") gulp-useref
         | ).
     li #{data.articles.gulpTasks.table.rows.html[2][0]} 
