@@ -211,7 +211,7 @@ $body__font-size: $base__font-size;
 
 // *--------- MAIN WRAPPER ---------*
 // [ui-view]
-$ui-view__transition: all 0.25s ease;
+$ui-view__transition: 0.25s all ease;
 // .ng-enter
 $ui-view__ng-enter__opacity: 0;
 $ui-view__ng-enter__transform: scale3d(.95, .95, .95);

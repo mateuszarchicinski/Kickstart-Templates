@@ -1,4 +1,4 @@
-ul.article__list.no-list-padding
+ol.article__list
     li #{data.articles.gulpTasks.table.rows.pug[0][0]} 
         strong lang
         |  #{data.articles.gulpTasks.table.rows.pug[0][1]} 
@@ -9,7 +9,7 @@ ul.article__list.no-list-padding
         | .
     include modules/_gulpPlumber
     li #{data.articles.gulpTasks.table.rows.pug[2][0]}
-        a(href="https://www.npmjs.com/package/gulp-data" target="_blank" rel="help") gulp-data
+        a(href="https://github.com/colynb/gulp-data#gulp-data" target="_blank" rel="help") gulp-data
         | ).
     
     li #{data.articles.gulpTasks.table.rows.pug[3][0]} 
@@ -24,7 +24,7 @@ ul.article__list.no-list-padding
         |  #{data.articles.gulpTasks.table.rows.pug[4][1]} 
         strong Script
         |  #{data.articles.gulpTasks.table.rows.pug[4][2]}
-        a(href="https://www.npmjs.com/package/wiredep" target="_blank" rel="help") wiredep
+        a(href="https://github.com/taptapship/wiredep#wiredep--" target="_blank" rel="help") wiredep
         | ):
         pre.code__block
             code.code__line &lt;!--bower:css-->

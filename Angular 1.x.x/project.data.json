@@ -285,7 +285,7 @@
                             "Wszystkie powyższe komponenty instalujemy komendą"
                         ],
                         [
-                            "Instalacja dodatkowych bibliotek css lub js za pośrednictwem",
+                            "Instalacja dodatkowych bibliotek Css lub Js za pośrednictwem",
                             "spowoduje automatyczne dodanie ścieżki do nowego komponentu w głównym pliku",
                             ". Konfiguracja tej funkcjonalności znajdują się w pliku",
                             "w module"
@@ -478,7 +478,8 @@
                                     "Sprawdza kod Pug pod kątem wybranych reguł w obiekcie konfiguracyjnym ("
                                 ],
                                 [
-                                    "Wyświetla odpowiednio sformatowane komunikaty o wykrytych niezgodnościach w kodzie Pug."
+                                    "Wyświetla odpowiednio sformatowane komunikaty",
+                                    "o wykrytych niezgodnościach w kodzie Pug."
                                 ]
                             ],
                             "html": [
@@ -489,7 +490,7 @@
                                     "Filtruje kod Html pod kątem wstawionych komentarzy:",
                                     "Zastępując je pojedynczymi tagami",
                                     "i",
-                                    "z ścieżkami źródłowymi do plików",
+                                    "odnoszącymi się do plików źródłowych",
                                     "i",
                                     "powstałymi w skutek połączenia wszystkich załączonych bibliotek Css lub Js znajdujących się pomiędzy tymi komentarzami ("
                                 ],
@@ -504,14 +505,31 @@
                             ],
                             "htmlHint": [
                                 [
-                                    
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Sprawdza poprawność wygenerowanego kodu Html według reguł wskazanych w obiekcie konfiguracyjnym ("
+                                ],
+                                [
+                                    "Wyświetla odpowiednio sformatowane komunikaty",
+                                    "o wykrytych niezgodnościach w kodzie Html ("
                                 ]
                             ],
                             "htmlMinify": [
-                                
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Minifikuje kod Html zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym ("
+                                ],
+                                [
+                                    "asasasasasasasssssssZapisuje uzyskane kody Html do tych samych plików źródłowych na których rozpoczęto wykonywanie zadana."
+                                ]
                             ],
                             "server": [
-                                
+                                [
+                                    ""
+                                ]
                             ],
                             "watch": [
                                 
@@ -541,29 +559,7 @@
                                 
                             ]
                         }
-                    },
-                    "subHeadlines": ["Pojedyncze:", "Złożone:"],
-                    "build": ["Wywoła sekwencja  poleceń:"],
-                    "buildServer": ["Uruchamia zadanie", "po czym tworzy serwer nasłuchujący na nowo powstały katalog produkcyjny.", "Uruchamia serwer nasłuchujący na katalog produkcyjny ("],
-                    "default": ["Wywoła sekwencja  poleceń:"],
-                    "sassCss": ["Tworzy główny plik", "i", "na podstawie pliku"],
-                    "sassLint": ["Sprawdza kod", "i raportuje o błędach w plikach"],
-                    "jsHint": ["Sprawdza kod", "i raportuje o błędach w plikach"],
-                    "jsTest": ["Uruchamia testy jednostkowe, nasłuchuje zmian w plikach źródłowych", "i raportuje o błędach."],
-                    "jadePug": ["Konwertuje pliki", "na"],
-                    "pug": ["Tworzy pliki", "na podstawie plików", "(Opcjonalne argumenty:"],
-                    "pugLint": ["Sprawdza kod", "i raportuje o błędach w plikach"],
-                    "html": ["Na podstawie wskazanych ścieżek w pliku", "do plików", "i", "łączy", "je w pojedyncze zmniejszone pliki źródłowe."],
-                    "htmlHint": ["Sprawdza kod", "i raportuje o błędach w plikach"],
-                    "htmlMinify": ["Po odpowiednim skonfigurowaniu zmniejszy kod", "w plikach"],
-                    "server": ["Uruchamia serwer nasłuchujący na katalog pracy ("],
-                    "watch": ["W następstwie zmian w plikach uruchamia wskazane zadania."],
-                    "clean": ["Usuwa katalog produkcyjny ("],
-                    "copy": ["Kopiuje wymagane pliki z katalogu pracy (", ") do katalogu produkcyjnego ("],
-                    "images": ["Standardowa optymalizacja grafik."],
-                    "imagesOptimized": ["Optymalizuje grafiki za pomocą"],
-                    "imagesSprite": ["Utworzy tak zwanego", "i plik", "z grafik znajdujących się w folderze", "(Opcjonalne argumenty:", "_nazwa"],
-                    "upload": ["Umożliwia automatyczny upload plików na serwer ftp (Opcjonalny argument: "]
+                    }
                 },
                 "testing":{
                     "headline": "Testowanie",
@@ -602,7 +598,6 @@
                 "author": "Mateusz Archiciński"
             }
         },
-        "en": {
-        }
+        "en": {}
     }
 }

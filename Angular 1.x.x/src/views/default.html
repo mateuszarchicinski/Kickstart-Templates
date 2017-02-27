@@ -13,7 +13,7 @@
       </header>
       <div class="article__body">
         <p class="article__paragraph">Projekt <strong>Angular 1.x Szablon</strong> jest dostępny wyłącznie na <a href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help">Github</a>. Przykłady instalacji poniżej. Przy dwóch pierwszych wymagany jest system kontroli wersji <a href="https://git-scm.com/" target="_blank" rel="help">Git</a>.</p>
-        <ol class="article__list no-list-padding">
+        <ol class="article__list">
           <li>Za pomocą konsoli utwórz nowy katalog i przejdź do niego:
             <pre class="code__block"><code class="code__line">mkdir katalog-projektu && cd katalog-projektu</code></pre>W nowym katalogu zainicjuj środowisko komendą <code class="code__line">git init</code> i następnie wywołaj:
             <pre class="code__block"><code class="code__line">git pull <a class="part-hidden invert" href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help">repozytorium</a><span class="part-visible invert">https://github.com/mateuszarchicinski/Angular1.x-Template</span></code></pre>
@@ -205,7 +205,7 @@
           <li><a href="https://github.com/geoffgraham/animate.scss" target="_blank" rel="help">animatewithsass</a></li>
         </ul>
         <p class="article__paragraph">Wszystkie powyższe komponenty instalujemy komendą <code class="code__line">bower install</code>.</p>
-        <p class="article__paragraph">Instalacja dodatkowych bibliotek css lub js za pośrednictwem <a href="https://bower.io/" target="_blank" rel="help">Bower</a> spowoduje automatyczne dodanie ścieżki do nowego komponentu w głównym pliku <strong>index.html</strong>. Konfiguracja tej funkcjonalności znajdują się w pliku <strong>gulpfile.js</strong> w module <strong>wiredep</strong>.</p>
+        <p class="article__paragraph">Instalacja dodatkowych bibliotek Css lub Js za pośrednictwem <a href="https://bower.io/" target="_blank" rel="help">Bower</a> spowoduje automatyczne dodanie ścieżki do nowego komponentu w głównym pliku <strong>index.html</strong>. Konfiguracja tej funkcjonalności znajdują się w pliku <strong>gulpfile.js</strong> w module <strong>wiredep</strong>.</p>
       </div>
     </article>
     <article class="article" id="GulpTasks">
@@ -230,16 +230,16 @@
                 <p class="rotate-content"><code class="param__name">sass:css</code></p>
               </td>
               <td class="table-striped__data">
-                <ul class="article__list no-list-padding">
+                <ol class="article__list">
                   <li>Wykorzystuje plik <strong>main.scss</strong> lub <strong>main.sass</strong>.</li>
-                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
-                  <li>Inicjuje utworzenie Source Map na podstawie głównego pliku Sass (<a href="https://www.npmjs.com/package/gulp-sourcemaps" target="_blank" rel="help">gulp-sourcemaps</a>).</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Inicjuje utworzenie Source Map na podstawie głównego pliku Sass (<a href="https://github.com/floridoo/gulp-sourcemaps#init-options" target="_blank" rel="help">gulp-sourcemaps</a>).</li>
                   <li>Kompiluje synchronicznie kod Sass na kod Css o stylu wyjściowym <strong>nested</strong> (<a href="https://github.com/sass/node-sass#options" target="_blank" rel="help">gulp-sass</a>).</li>
                   <li>Dodaje właściwe przedrostki z metodami do kodu Css. Uwzględniając przy tym wsparcia dla wskazanych przeglądarek w obiekcie konfiguracyjnym (<a href="https://github.com/postcss/autoprefixer#options" target="_blank" rel="help">gulp-autoprefixer</a>).</li>
                   <li>Zapisuje Source Map do pliku <strong>main.css.map</strong>.</li>
                   <li>Zapisuje uzyskany kod Css do pliku <strong>main.css</strong>.</li>
                   <li>Wstrzykuje nowy kod Css do strony podglądowej (<a href="https://www.browsersync.io/docs/gulp" target="_blank" rel="help">browser-sync</a>).</li>
-                </ul>
+                </ol>
               </td>
             </tr>
             <tr class="table-striped__row">
@@ -247,12 +247,12 @@
                 <p class="rotate-content"><code class="param__name">sass:lint</code></p>
               </td>
               <td class="table-striped__data">
-                <ul class="article__list no-list-padding">
+                <ol class="article__list">
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.scss</strong> lub <strong>.sass</strong>.</li>
-                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
                   <li>Sprawdza kod Sass pod kątem wybranych reguł <br class="br__1"/>w obiekcie konfiguracyjnym (<a href="https://github.com/sasstools/sass-lint#configuring" target="_blank" rel="help">gulp-sass-lint</a>).</li>
                   <li>Wyświetla odpowiednio sformatowane komunikaty <br class="br__1"/>o wykrytych niezgodnościach w kodzie Sass (<a href="https://github.com/sasstools/sass-lint/blob/master/docs/options/formatter.md" target="_blank" rel="help">Formatter</a>).</li>
-                </ul>
+                </ol>
               </td>
             </tr>
             <tr class="table-striped__row">
@@ -260,12 +260,12 @@
                 <p class="rotate-content"><code class="param__name">js:hint</code></p>
               </td>
               <td class="table-striped__data">
-                <ul class="article__list no-list-padding">
+                <ol class="article__list">
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.js</strong>.</li>
-                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
                   <li>Sprawdza kod Js pod kątem błędów i optymalizacji (<a href="http://jshint.com/docs/" target="_blank" rel="help">gulp-jshint</a>).</li>
                   <li>Wyświetla odpowiednio sformatowane komunikaty <br class="br__1"/>o wykrytych błędach i możliwej optymalizacji w kodzie Js (<a href="https://github.com/spalger/gulp-jshint#reporters" target="_blank" rel="help">Reporter</a>).</li>
-                </ul>
+                </ol>
               </td>
             </tr>
             <tr class="table-striped__row">
@@ -273,9 +273,9 @@
                 <p class="rotate-content"><code class="param__name">js:test</code></p>
               </td>
               <td class="table-striped__data">
-                <ul class="article__list no-list-padding">
+                <ol class="article__list">
                   <li>Uruchomi testy jednostkowe w środowisku <a href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help">Karma</a>, które konfigurujemy za pomocą pliku <strong>karma.conf.js</strong>. Wymieniony plik umożliwia wybór frameworków testujących i wielu innych rzeczy o których można poczytać <a href="https://karma-runner.github.io/1.0/config/configuration-file.html" target="_blank" rel="help">tutaj</a>.</li>
-                </ul>
+                </ol>
               </td>
             </tr>
             <tr class="table-striped__row">
@@ -283,13 +283,13 @@
                 <p class="rotate-content"><code class="param__name">jade:pug</code></p>
               </td>
               <td class="table-striped__data">
-                <ul class="article__list no-list-padding">
+                <ol class="article__list">
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.jade</strong>.</li>
-                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
-                  <li>Zamienia rozszerzenie plików <strong>.jade</strong> na <strong>.pug</strong> (<a href="https://www.npmjs.com/package/gulp-rename" target="_blank" rel="help">gulp-rename</a>).</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Zamienia rozszerzenie plików <strong>.jade</strong> na <strong>.pug</strong> (<a href="https://github.com/hparra/gulp-rename#usage" target="_blank" rel="help">gulp-rename</a>).</li>
                   <li>Zapisuje pliki z nowym rozszerzeniem <strong>.pug</strong> <br class="br__1"/>w analogicznych lokalizacjach do plików <strong>.jade</strong>.</li>
-                  <li>Usuwa nie potrzebne pliki z rozszerzeniem <strong>.jade</strong> (<a href="https://www.npmjs.com/package/del" target="_blank" rel="help">del</a>).</li>
-                </ul>
+                  <li>Usuwa nie potrzebne pliki z rozszerzeniem <strong>.jade</strong> (<a href="https://github.com/sindresorhus/del#usage" target="_blank" rel="help">del</a>).</li>
+                </ol>
               </td>
             </tr>
             <tr class="table-striped__row">
@@ -297,17 +297,17 @@
                 <p class="rotate-content"><code class="param__name">pug</code><br class="br-g-1"/><code class="param__opt-arg">--lang pl / en</code></p>
               </td>
               <td class="table-striped__data" style="background:#fff;">
-                <ul class="article__list no-list-padding">
+                <ol class="article__list">
                   <li>Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej <strong>lang</strong> na <strong>"pl"</strong> i nadpisuje ją w przypadku podania innej.</li>
                   <li>Wykorzystuje pliki z rozszerzeniem<strong>.pug</strong>.</li>
-                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
-                  <li>Przygotowuje obiekt danych przekazując go wewnątrz strumienia do gulp-pug (<a href="https://www.npmjs.com/package/gulp-data" target="_blank" rel="help">gulp-data</a>).</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Przygotowuje obiekt danych przekazując go wewnątrz strumienia do gulp-pug (<a href="https://github.com/colynb/gulp-data#gulp-data" target="_blank" rel="help">gulp-data</a>).</li>
                   <li>Kompiluje pliki <strong>.pug</strong> zwracając uzupełniony kod Html <br class="br__1"/>o przekazane informacje w obiekcie danych (<a href="https://pugjs.org/api/getting-started.html" target="_blank" rel="help">gulp-pug</a>).</li>
-                  <li>Wstrzykuje tagi <strong>Link</strong> i <strong>Script</strong> z ścieżkami źródłowymi do zainstalowanych bibliotek Css lub Js. Pomiędzy poniższe komentarze w kodzie Html (<a href="https://www.npmjs.com/package/wiredep" target="_blank" rel="help">wiredep</a>):
+                  <li>Wstrzykuje tagi <strong>Link</strong> i <strong>Script</strong> z ścieżkami źródłowymi do zainstalowanych bibliotek Css lub Js. Pomiędzy poniższe komentarze w kodzie Html (<a href="https://github.com/taptapship/wiredep#wiredep--" target="_blank" rel="help">wiredep</a>):
                     <pre class="code__block"><code class="code__line">&lt;!--bower:css--></code><br/><code class="code__line">// &lt;link href=""></code><br/><code class="code__line">&lt;!--endbower--></code><br/><br/><code class="code__line">&lt;!--bower:js--></code><br/><code class="code__line">// &lt;script src=""></code><br/><code class="code__line">&lt;!--endbower--></code></pre>
                   </li>
                   <li>Zapisuje uzyskane kody Html do <strong>index.html</strong> i plików widoku.</li>
-                </ul>
+                </ol>
               </td>
             </tr>
             <tr class="table-striped__row">
@@ -315,12 +315,12 @@
                 <p class="rotate-content"><code class="param__name">pug:lint</code></p>
               </td>
               <td class="table-striped__data">
-                <ul class="article__list no-list-padding">
+                <ol class="article__list">
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.pug</strong>.</li>
-                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
                   <li>Sprawdza kod Pug pod kątem wybranych reguł w obiekcie konfiguracyjnym (<a href="https://github.com/pugjs/pug-lint#rules" target="_blank" rel="help">gulp-pug-lint</a>).</li>
-                  <li>Wyświetla odpowiednio sformatowane komunikaty o wykrytych niezgodnościach w kodzie Pug.</li>
-                </ul>
+                  <li>Wyświetla odpowiednio sformatowane komunikaty <br class="br__1"/>o wykrytych niezgodnościach w kodzie Pug.</li>
+                </ol>
               </td>
             </tr>
             <tr class="table-striped__row">
@@ -328,15 +328,15 @@
                 <p class="rotate-content"><code class="param__name">html</code></p>
               </td>
               <td class="table-striped__data" style="background:#fff;">
-                <ul class="article__list no-list-padding">
+                <ol class="article__list">
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
-                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
                   <li>Filtruje kod Html pod kątem wstawionych komentarzy:
-                    <pre class="code__block"><code class="code__line">&lt;!--build:css main.min.css--></code><br/><code class="code__line">// &lt;link href=""></code><br/><code class="code__line">&lt;!--endbuild--></code><br/><br/><code class="code__line">&lt;!--build:js main.min.js--></code><br/><code class="code__line">// &lt;script src=""></code><br/><code class="code__line">&lt;!--endbuild--></code></pre>Zastępując je pojedynczymi tagami <strong>Link</strong> i <strong>Script</strong> z ścieżkami źródłowymi do plików <strong>main.min.css</strong> i <strong>main.min.js</strong> powstałymi w skutek połączenia wszystkich załączonych bibliotek Css lub Js znajdujących się pomiędzy tymi komentarzami (<a href="https://www.npmjs.com/package/gulp-useref#api" target="_blank" rel="help">gulp-useref</a>).
+                    <pre class="code__block"><code class="code__line">&lt;!--build:css main.min.css--></code><br/><code class="code__line">// &lt;link href=""></code><br/><code class="code__line">&lt;!--endbuild--></code><br/><br/><code class="code__line">&lt;!--build:js main.min.js--></code><br/><code class="code__line">// &lt;script src=""></code><br/><code class="code__line">&lt;!--endbuild--></code></pre>Zastępując je pojedynczymi tagami <strong>Link</strong> i <strong>Script</strong> odnoszącymi się do plików źródłowych <strong>main.min.css</strong> <br class="br__1"/> i <strong>main.min.js</strong> powstałymi w skutek połączenia wszystkich załączonych bibliotek Css lub Js znajdujących się pomiędzy tymi komentarzami (<a href="https://github.com/jonkemp/gulp-useref#usage" target="_blank" rel="help">gulp-useref</a>).
                   </li>
-                  <li>Sprawdza typ przetwarzanych plików w strumieniu. Wywołując odpowiednie metody minifikujące dla plików <br class="br__1"/>z rozszerzeniem <strong>.css</strong> i <strong>.js</strong> (<a href="https://github.com/jakubpawlowicz/clean-css#--------" target="_blank" rel="help">gulp-clean-css</a> / <a href="https://www.npmjs.com/package/gulp-uglify#options" target="_blank" rel="help">gulp-uglify</a>).</li>
+                  <li>Sprawdza typ przetwarzanych plików w strumieniu. Wywołując odpowiednie metody minifikujące dla plików <br class="br__1"/>z rozszerzeniem <strong>.css</strong> i <strong>.js</strong> (<a href="https://github.com/jakubpawlowicz/clean-css#--------" target="_blank" rel="help">gulp-clean-css</a> / <a href="https://github.com/terinjokes/gulp-uglify#options" target="_blank" rel="help">gulp-uglify</a>).</li>
                   <li>Zapisuje uzyskane kody Css i Js do plików w katalogu produkcyjnym.</li>
-                </ul>
+                </ol>
               </td>
             </tr>
             <tr class="table-striped__row">
@@ -344,27 +344,39 @@
                 <p class="rotate-content"><code class="param__name">html:hint</code></p>
               </td>
               <td class="table-striped__data">
-                <ul class="article__list no-list-padding">
+                <ol class="article__list">
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
-                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://www.npmjs.com/package/gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
-                  <li>Filtruje kod Html pod kątem wstawionych komentarzy:
-                    <pre class="code__block"><code class="code__line">&lt;!--build:css--></code><br/><code class="code__line">// &lt;link href=""></code><br/><code class="code__line">&lt;!--endbuild--></code><br/><br/><code class="code__line">&lt;!--build:js--></code><br/><code class="code__line">// &lt;script src=""></code><br/><code class="code__line">&lt;!--endbuild--></code></pre>
-                  </li>
-                  <li>Sprawdza typ przetwarzanych plików w strumieniu. Wywołując odpowiednie metody minifikujące dla plików <a href="https://www.npmjs.com/package/gulp-uglify#options" target="_blank" rel="help">gulp-uglify</a>).</li>
-                </ul>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Sprawdza poprawność wygenerowanego kodu Html według reguł wskazanych w obiekcie konfiguracyjnym (<a href="https://github.com/bezoerb/gulp-htmlhint#api" target="_blank" rel="help">gulp-htmlhint</a>).</li>
+                  <li>Wyświetla odpowiednio sformatowane komunikaty <br class="br__1"/>o wykrytych niezgodnościach w kodzie Html (<a href="https://github.com/bezoerb/gulp-htmlhint#reporters" target="_blank" rel="help">Reporter</a>).</li>
+                </ol>
               </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="htmlMinify">
                 <p class="rotate-content"><code class="param__name">html:minify</code></p>
               </td>
-              <td class="table-striped__data">_htmlMinify.pug</td>
+              <td class="table-striped__data">
+                <ol class="article__list">
+                  <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Minifikuje kod Html zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym (<a href="https://github.com/jonschlinkert/gulp-htmlmin#gulp-htmlmin---" target="_blank" rel="help">gulp-htmlmin</a>).</li>
+                  <li>asasasasasasasssssssZapisuje uzyskane kody Html do tych samych plików źródłowych na których rozpoczęto wykonywanie zadana.</li>
+                </ol>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="server">
                 <p class="rotate-content"><code class="param__name">server</code></p>
               </td>
-              <td class="table-striped__data">_server.pug</td>
+              <td class="table-striped__data">
+                <ol class="article__list">
+                  <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Minifikuje kod Html zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym (<a href="https://github.com/jonschlinkert/gulp-htmlmin#gulp-htmlmin---" target="_blank" rel="help">gulp-htmlmin</a>).</li>
+                  <li>asasasasasasasssssssZapisuje uzyskane kody Html do tych samych plików źródłowych na których rozpoczęto wykonywanie zadana.</li>
+                </ol>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="watch">

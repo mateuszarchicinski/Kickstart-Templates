@@ -16,6 +16,10 @@ $article__list-points__li__margin: 0.8em 0 !default;
         @extend %paragraphs;
     }
     &__list {
+        padding-left: 17px;
+        .code__block {
+            margin-left: -17px;
+        }
         li {
             @extend %paragraphs;
             margin: $article__list__li__margin;
@@ -23,11 +27,8 @@ $article__list-points__li__margin: 0.8em 0 !default;
                 margin: $article__list__li-last-child__margin;
             }
         }
-        &,
         &-points {
-            padding-left: 25px;
-        }
-        &-points {
+            padding-left: 20px;
             li {
                 @extend %paragraphs;
                 margin: $article__list-points__li__margin;

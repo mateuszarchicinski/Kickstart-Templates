@@ -1,4 +1,4 @@
-ul.article__list.no-list-padding
+ol.article__list
     li #{data.articles.gulpTasks.table.rows.pugLint[0][0]} 
         strong .pug
         | .
@@ -6,4 +6,6 @@ ul.article__list.no-list-padding
     li #{data.articles.gulpTasks.table.rows.pugLint[1][0]}
         a(href="https://github.com/pugjs/pug-lint#rules" target="_blank" rel="help") gulp-pug-lint
         | ).
-    li #{data.articles.gulpTasks.table.rows.pugLint[2][0]}
+    li #{data.articles.gulpTasks.table.rows.pugLint[2][0]} 
+        br.br__1
+        | #{data.articles.gulpTasks.table.rows.pugLint[2][1]}
