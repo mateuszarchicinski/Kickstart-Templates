@@ -136,23 +136,46 @@ gulp.task('pug', function () {
     $.util.log($.util.colors.green('PUG TASK RUNNING...'));
     
     var value = getOption('--lang').value,
-        lang = !value ? 'pl' : value;
+        lang = !value ? PROJECT_CONFIG.LANGUAGES[0] : value,
+        languages = PROJECT_CONFIG.LANGUAGES;
 
-    if(!value){
+    if (!value) {
         $.util.log($.util.colors.green('Default data object configuration [PL] passed to puge task. To change that, add command arguments to this task ---> gulp [TASK NAME = puge / default / build / build:server] --lang [pl / en]. Before that, do not forget a specify translation in ' + PROJECT_CONFIG.DATA_FILE + ' file.'));
     }
     
-    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/*.pug', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/views/*.pug'], {
+    if(getOption('build')){
+        for (var i in languages) {
+            if (languages[i] !== lang) {
+                gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/views/' + languages[i] + '/**/*.pug'], {
+                    base: './' + PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template'
+                })
+                .pipe($.plumber())
+                .pipe($.data(function(){ // https://github.com/colynb/gulp-data#gulp-data
+                    return {
+                        appName: PROJECT_CONFIG.APP_NAME,
+                        data: JSON.parse(fs.readFileSync('./' + PROJECT_CONFIG.DATA_FILE, 'utf8')).lang[languages[i]]
+                    };
+                }))
+                .pipe($.pug({ // https://pugjs.org/api/getting-started.html
+                    pretty: true,
+                    compileDebug: true
+                }))
+                .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/'));
+            }
+        }
+    }
+    
+    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/*.pug', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/views/' + lang + '/**/*.pug'], {
             base: './' + PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template'
         })
         .pipe($.plumber())
-        .pipe($.data(function(){ // https://github.com/colynb/gulp-data#gulp-data
+        .pipe($.data(function(){
             return {
                 appName: PROJECT_CONFIG.APP_NAME,
                 data: JSON.parse(fs.readFileSync('./' + PROJECT_CONFIG.DATA_FILE, 'utf8')).lang[lang]
             };
         }))
-        .pipe($.pug({ // https://pugjs.org/api/getting-started.html
+        .pipe($.pug({
             pretty: true,
             compileDebug: true
         }))
@@ -192,7 +215,7 @@ gulp.task('html', function () {
 
     $.util.log($.util.colors.green('HTML TASK RUNNING...'));
 
-    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/*.html'], {
+    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/**/*.html'], {
             base: PROJECT_CONFIG.DIRECTORY.WORK_DIR
         })
         .pipe($.plumber())
@@ -269,7 +292,7 @@ gulp.task('watch', function () {
     gulp.watch(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/**/*.s+(a|c)ss', ['sass:lint', 'sass:css']);
     gulp.watch(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/**/*.js', ['js:watch']);
     gulp.watch([PROJECT_CONFIG.DATA_FILE, PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/**/*.pug', 'bower.json'], ['pug:lint', 'pug']);
-    gulp.watch([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/*.html'], ['html:watch']);
+    gulp.watch([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/**/*.html'], ['html:watch']);
 
 });
 
@@ -367,7 +390,8 @@ gulp.task('upload', function () {
     var ftpConfig = {
         host: PROJECT_CONFIG.FTP_CONFIG.HOST,
         user: PROJECT_CONFIG.FTP_CONFIG.USER,
-        password: PROJECT_CONFIG.FTP_CONFIG.PASSWORD
+        password: PROJECT_CONFIG.FTP_CONFIG.PASSWORD,
+        secure: true
     };
     
     if(!ftpConfig.host || !ftpConfig.user || !ftpConfig.password || !getOption('--upload')){

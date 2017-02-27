@@ -24014,8 +24014,7 @@ md-tooltip {
       -webkit-writing-mode: vertical-rl;
           -ms-writing-mode: tb-rl;
               writing-mode: vertical-rl;
-      text-orientation: sideways-right;
-      margin: 0.3125em; } }
+      text-orientation: sideways-right; } }
 
 a {
   text-decoration: none;

@@ -523,7 +523,7 @@
                                     "Minifikuje kod Html zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym ("
                                 ],
                                 [
-                                    "asasasasasasasssssssZapisuje uzyskane kody Html do tych samych plików źródłowych na których rozpoczęto wykonywanie zadana."
+                                    "asasasasasasasssssssZapisuje uzyskane kody Html do tych samych plików źródłowych na których rozpoczęto wykonywanie zadania."
                                 ]
                             ],
                             "server": [
@@ -598,6 +598,602 @@
                 "author": "Mateusz Archiciński"
             }
         },
-        "en": {}
+        "en": {
+            "lang": "en",
+            "title": "Kickstart Projekt - Angular 1.x Szablon",
+            "description": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
+            "keywords": "szablon aplikacja webowa zautomatyzowana automatyzacja skonfigurowana konfiguracja środowisko developer developerskie projekt angular ng app google node nodejs npm bower gulp gulpjs karma jasmine material",
+            "author": "Mateusz Archiciński",
+            "ogTitle": "Kickstart Projekt - Angular 1.x Szablon",
+            "ogDescription": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
+            "header": {
+                "headline": "Kickstart Projekt"
+            },
+            "section": {
+                "headline": "Angular v1.x Szablon",
+                "info": [
+                    [
+                        "Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak",
+                        "i",
+                        ". W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii"
+                    ],
+                    [
+                        "Przygotowany szablon aplikacji webowej",
+                        "udostępnia w pełni skonfigurowane i zautomatyzowane środowisko pracy za pomocą takich technologii jak",
+                        "i"
+                    ]
+                ]
+            },
+            "articles": {
+                "usage":{
+                    "headline": "EN - Użycie",
+                    "paragraph": [
+                        [
+                            "Projekt",
+                            "Angular 1.x Szablon",
+                            "jest dostępny wyłącznie na",
+                            ". Przykłady instalacji poniżej. Przy dwóch pierwszych wymagany jest system kontroli wersji"
+                        ],
+                        [
+                            "Za pomocą konsoli utwórz nowy katalog i przejdź do niego:",
+                            "katalog-projektu"
+                        ],
+                        [
+                            "W nowym katalogu zainicjuj środowisko komendą",
+                            "i następnie wywołaj:",
+                            "repozytorium"
+                        ],
+                        [
+                            "W konsoli wywołaj polecenie sklonowania całego repozytorium, które tym samym utworzy nowy katalog:"
+                        ],
+                        [
+                            "Manualnie pobierz najnowszą stabilną wersje z strony",
+                            "publikacji szablonu"
+                        ],
+                        [
+                            "Po wykonaniu dowolnej instalacji. Przejdź do katalogu projektu i wywołaj polecenia",
+                            "i"
+                        ],
+                        [
+                            "W tym momencie można zacząć korzystać z wszystkich zdefiniowanych zadań w",
+                            ". Tabela zadań dostępna",
+                            "tutaj"
+                        ]
+                    ]
+                },
+                "configuration":{
+                    "headline": "Konfiguracja",
+                    "paragraph": [
+                        [
+                            "Globalne ustawienia są dostępne w pliku",
+                            ", który umożliwia zmianę:",
+                            "nazwy aplikacji,",
+                            "nazwy plików konfiguracyjnych i danych,",
+                            "katalogów pracy i produkcji (wymagana również manualna zmiana w pliku",
+                            "dostępów FTP,",
+                            "podania kluczy do zewnętrznych API."
+                        ],
+                        [
+                            "Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych z których będziemy korzystać indywidualnie. W pliku",
+                            "odwołujemy się do niego poprzez zmienną"
+                        ]
+                    ]
+                },
+                "projectStructure":{
+                    "headline": "Struktura projektu",
+                    "paragraph": [
+                        [
+                            "Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach",
+                            "i",
+                            ". Poniżej rekomendowana strukturę projektu."
+                        ],
+                        [
+                            "Katalog projektu"
+                        ],
+                        [
+                            "W przypadku błędu dowolnej funkcjonalności najlepiej powrócić do rekomendowanej struktury lub próbować zlokalizować przyczynę bezpośrednio w pliku"
+                        ]
+                    ]
+                },
+                "npmModules":{
+                    "headline": "NPM moduły",
+                    "paragraph": [
+                        [
+                            "Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności środowiska na których opiera się szablon ("
+                        ],
+                        [
+                            "Wszystkie powyższe moduły instalujemy komendą"
+                        ]
+                    ],
+                    "list": [
+                        {
+                            "name": "bower",
+                            "link": "https://bower.io/"
+                        },
+                        {
+                            "name": "browser-sync",
+                            "link": "https://browsersync.io/"
+                        },
+                        {
+                            "name": "del",
+                            "link": "https://www.npmjs.com/package/del"
+                        },
+                        {
+                            "name": "gulp",
+                            "link": "http://gulpjs.com/"
+                        },
+                        {
+                            "name": "gulp-autoprefixer",
+                            "link": "https://www.npmjs.com/package/gulp-autoprefixer"
+                        },
+                        {
+                            "name": "gulp-clean-css",
+                            "link": "https://www.npmjs.com/package/gulp-clean-css"
+                        },
+                        {
+                            "name": "gulp-cli",
+                            "link": "https://www.npmjs.com/package/gulp-cli"
+                        },
+                        {
+                            "name": "gulp-data",
+                            "link": "https://www.npmjs.com/package/gulp-data"
+                        },
+                        {
+                            "name": "gulp-htmlhint",
+                            "link": "https://www.npmjs.com/package/gulp-htmlhint"
+                        },
+                        {
+                            "name": "gulp-htmlmin",
+                            "link": "https://www.npmjs.com/package/gulp-htmlmin"
+                        },
+                        {
+                            "name": "gulp-if",
+                            "link": "https://www.npmjs.com/package/gulp-if"
+                        },
+                        {
+                            "name": "gulp-imagemin",
+                            "link": "https://www.npmjs.com/package/gulp-imagemin"
+                        },
+                        {
+                            "name": "gulp-jshint",
+                            "link": "https://www.npmjs.com/package/gulp-jshint"
+                        },
+                        {
+                            "name": "gulp-load-plugins",
+                            "link": "https://www.npmjs.com/package/gulp-load-plugins"
+                        },
+                        {
+                            "name": "gulp-plumber",
+                            "link": "https://www.npmjs.com/package/gulp-plumber"
+                        },
+                        {
+                            "name": "gulp-pug",
+                            "link": "https://www.npmjs.com/package/gulp-pug"
+                        },
+                        {
+                            "name": "gulp-pug-lint",
+                            "link": "https://www.npmjs.com/package/gulp-pug-lint"
+                        },
+                        {
+                            "name": "gulp-rename",
+                            "link": "https://www.npmjs.com/package/gulp-rename"
+                        },
+                        {
+                            "name": "gulp-sass",
+                            "link": "https://www.npmjs.com/package/gulp-sass"
+                        },
+                        {
+                            "name": "gulp-sass-lint",
+                            "link": "https://www.npmjs.com/package/gulp-sass-lint"
+                        },
+                        {
+                            "name": "gulp-sourcemaps",
+                            "link": "https://www.npmjs.com/package/gulp-sourcemaps"
+                        },
+                        {
+                            "name": "gulp-tinify",
+                            "link": "https://www.npmjs.com/package/gulp-tinify"
+                        },
+                        {
+                            "name": "gulp-uglify",
+                            "link": "https://www.npmjs.com/package/gulp-uglify"
+                        },
+                        {
+                            "name": "gulp-useref",
+                            "link": "https://www.npmjs.com/package/gulp-useref"
+                        },
+                        {
+                            "name": "gulp-util",
+                            "link": "https://www.npmjs.com/package/gulp-util"
+                        },
+                        {
+                            "name": "gulp.spritesmith",
+                            "link": "https://www.npmjs.com/package/gulp.spritesmith"
+                        },
+                        {
+                            "name": "htmlhint-stylish",
+                            "link": "https://www.npmjs.com/package/htmlhint-stylish"
+                        },
+                        {
+                            "name": "imagemin-gifsicle",
+                            "link": "https://www.npmjs.com/package/imagemin-gifsicle"
+                        },
+                        {
+                            "name": "imagemin-jpegtran",
+                            "link": "https://www.npmjs.com/package/imagemin-jpegtran"
+                        },
+                        {
+                            "name": "imagemin-optipng",
+                            "link": "https://www.npmjs.com/package/imagemin-optipng"
+                        },
+                        {
+                            "name": "imagemin-svgo",
+                            "link": "https://www.npmjs.com/package/imagemin-svgo"
+                        },
+                        {
+                            "name": "jshint-stylish",
+                            "link": "https://www.npmjs.com/package/jshint-stylish"
+                        },
+                        {
+                            "name": "run-sequence",
+                            "link": "https://www.npmjs.com/package/run-sequence"
+                        },
+                        {
+                            "name": "vinyl-ftp",
+                            "link": "https://www.npmjs.com/package/vinyl-ftp"
+                        },
+                        {
+                            "name": "wiredep",
+                            "link": "https://www.npmjs.com/package/wiredep"
+                        },
+                        {
+                            "name": "jasmine",
+                            "link": "https://jasmine.github.io/"
+                        },
+                        {
+                            "name": "karma",
+                            "link": "https://karma-runner.github.io/1.0/index.html"
+                        },
+                        {
+                            "name": "karma-jasmine",
+                            "link": "https://www.npmjs.com/package/karma-jasmine"
+                        },
+                        {
+                            "name": "karma-phantomjs-launcher",
+                            "link": "https://www.npmjs.com/package/karma-phantomjs-launcher"
+                        },
+                        {
+                            "name": "karma-spec-reporter",
+                            "link": "https://www.npmjs.com/package/karma-spec-reporter"
+                        }
+                    ]
+                },
+                "bowerComponents":{
+                    "headline": "Bower komponenty",
+                    "paragraph": [
+                        [
+                            "Następujące komponenty są elementami niezbędnymi do właściwego funkcjonowania szablonu wykorzystującego technologie",
+                            "i"
+                        ],
+                        [
+                            "Dodatkowe paczki z których można korzystać opcjonalnie:"
+                        ],
+                        [
+                            "Wszystkie powyższe komponenty instalujemy komendą"
+                        ],
+                        [
+                            "Instalacja dodatkowych bibliotek Css lub Js za pośrednictwem",
+                            "spowoduje automatyczne dodanie ścieżki do nowego komponentu w głównym pliku",
+                            ". Konfiguracja tej funkcjonalności znajdują się w pliku",
+                            "w module"
+                        ]
+                    ],
+                    "list": [
+                        {
+                            "name": "angular",
+                            "link": "https://code.angularjs.org/1.6.1/angular.js"
+                        },
+                        {
+                            "name": "angular-ui-router",
+                            "link": "https://ui-router.github.io/ng1/"
+                        },
+                        {
+                            "name": "angular-animate",
+                            "link": "https://code.angularjs.org/1.6.1/angular-animate.min.js"
+                        },
+                        {
+                            "name": "angular-aria",
+                            "link": "https://code.angularjs.org/1.6.1/angular-aria.js"
+                        },
+                        {
+                            "name": "angular-messages",
+                            "link": "https://code.angularjs.org/1.6.1/angular-messages.js"
+                        },
+                        {
+                            "name": "angular-material",
+                            "link": "https://material.angularjs.org/latest/"
+                        },
+                        {
+                            "name": "angular-mocks",
+                            "link": "https://code.angularjs.org/1.6.1/angular-mocks.js"
+                        },
+                        {
+                            "name": "normalize-css",
+                            "link": "https://necolas.github.io/normalize.css/"
+                        },
+                        {
+                            "name": "jquery",
+                            "link": "https://jquery.com/"
+                        },
+                        {
+                            "name": "animatewithsass",
+                            "link": "https://github.com/geoffgraham/animate.scss"
+                        }
+                    ]
+                },
+                "gulpTasks":{
+                    "headline": "Gulp zadania",
+                    "paragraph": [
+                        [
+                            "Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe",
+                            "w połączeniu z",
+                            "nazwą",
+                            "i",
+                            "opcjonalnymi argumentami",
+                            "zadania do wykonania."
+                        ],
+                        [
+                            "nazwa",
+                            "opcjonalne argumenty"
+                        ],
+                        [
+                            "Przykładowe polecenie będzie wyglądać następująco",
+                            "(nr:"
+                        ],
+                        [
+                            "Poniższa tabela zawiera informację dotyczące nazwy, opcjonalnych argumentów i opisu do każdego zdefiniowanego zadania."
+                        ],
+                        [
+                            "Więcej informacji i kod źródłowy do sprawdzenia w pliku"
+                        ]
+                    ],
+                    "table": {
+                        "headers": [
+                            "Nazwa",
+                            "Opis"
+                        ],
+                        "rows": {
+                            "sassCss": [
+                                [
+                                    "Wykorzystuje plik",
+                                    "lub"
+                                ],
+                                [
+                                    "Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów ("
+                                ],
+                                [
+                                    "Inicjuje utworzenie Source Map na podstawie głównego pliku Sass ("
+                                ],
+                                [
+                                    "Kompiluje synchronicznie kod Sass na kod Css o stylu wyjściowym"
+                                ],
+                                [
+                                    "Dodaje właściwe przedrostki z metodami do kodu Css. Uwzględniając przy tym wsparcia dla wskazanych przeglądarek w obiekcie konfiguracyjnym ("
+                                ],
+                                [
+                                    "Zapisuje Source Map do pliku"
+                                ],
+                                [
+                                    "Zapisuje uzyskany kod Css do pliku"
+                                ],
+                                [
+                                    "Wstrzykuje nowy kod Css do strony podglądowej ("
+                                ]
+                            ],
+                            "sassLint": [
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem",
+                                    "i"
+                                ],
+                                [
+                                    "Sprawdza kod Sass pod kątem wybranych reguł",
+                                    "w obiekcie konfiguracyjnym ("
+                                ],
+                                [
+                                    "Wyświetla odpowiednio sformatowane komunikaty",
+                                    "o wykrytych niezgodnościach w kodzie Sass ("
+                                ]
+                            ],
+                            "jsHint": [
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Sprawdza kod Js pod kątem błędów i optymalizacji ("
+                                ],
+                                [
+                                    "Wyświetla odpowiednio sformatowane komunikaty",
+                                    "o wykrytych błędach i możliwej optymalizacji w kodzie Js ("
+                                ]
+                            ],
+                            "jsTest": [
+                                [
+                                    "Uruchomi testy jednostkowe w środowisku",
+                                    ", które konfigurujemy za pomocą pliku",
+                                    ". Wymieniony plik umożliwia wybór frameworków testujących i wielu innych rzeczy o których można poczytać",
+                                    "tutaj"
+                                ]
+                            ],
+                            "jadePug": [
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Zamienia rozszerzenie plików",
+                                    "na"
+                                ],
+                                [
+                                    "Zapisuje pliki z nowym rozszerzeniem",
+                                    "w analogicznych lokalizacjach do plików"
+                                ],
+                                [
+                                    "Usuwa nie potrzebne pliki z rozszerzeniem"
+                                ]
+                            ],
+                            "pug": [
+                                [
+                                    "Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej",
+                                    "na",
+                                    "i nadpisuje ją w przypadku podania innej."
+                                ],
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Przygotowuje obiekt danych przekazując go wewnątrz strumienia do gulp-pug ("
+                                ],
+                                [
+                                    "Kompiluje pliki",
+                                    "zwracając uzupełniony kod Html",
+                                    "o przekazane informacje w obiekcie danych ("
+                                ],
+                                [
+                                    "Wstrzykuje tagi",
+                                    "i",
+                                    "z ścieżkami źródłowymi do zainstalowanych bibliotek Css lub Js. Pomiędzy poniższe komentarze w kodzie Html ("
+                                ],
+                                [
+                                    "Zapisuje uzyskane kody Html do",
+                                    "i plików widoku."
+                                ]
+                            ],
+                            "pugLint": [
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Sprawdza kod Pug pod kątem wybranych reguł w obiekcie konfiguracyjnym ("
+                                ],
+                                [
+                                    "Wyświetla odpowiednio sformatowane komunikaty",
+                                    "o wykrytych niezgodnościach w kodzie Pug."
+                                ]
+                            ],
+                            "html": [
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Filtruje kod Html pod kątem wstawionych komentarzy:",
+                                    "Zastępując je pojedynczymi tagami",
+                                    "i",
+                                    "odnoszącymi się do plików źródłowych",
+                                    "i",
+                                    "powstałymi w skutek połączenia wszystkich załączonych bibliotek Css lub Js znajdujących się pomiędzy tymi komentarzami ("
+                                ],
+                                [
+                                    "Sprawdza typ przetwarzanych plików w strumieniu. Wywołując odpowiednie metody minifikujące dla plików",
+                                    "z rozszerzeniem",
+                                    "i"
+                                ],
+                                [
+                                    "Zapisuje uzyskane kody Css i Js do plików w katalogu produkcyjnym."
+                                ]
+                            ],
+                            "htmlHint": [
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Sprawdza poprawność wygenerowanego kodu Html według reguł wskazanych w obiekcie konfiguracyjnym ("
+                                ],
+                                [
+                                    "Wyświetla odpowiednio sformatowane komunikaty",
+                                    "o wykrytych niezgodnościach w kodzie Html ("
+                                ]
+                            ],
+                            "htmlMinify": [
+                                [
+                                    "Wykorzystuje pliki z rozszerzeniem"
+                                ],
+                                [
+                                    "Minifikuje kod Html zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym ("
+                                ],
+                                [
+                                    "Zapisuje uzyskane kody Html do tych samych plików źródłowych na których rozpoczęto wykonywanie zadania."
+                                ]
+                            ],
+                            "server": [
+                                [
+                                    ""
+                                ]
+                            ],
+                            "watch": [
+                                
+                            ],
+                            "clean": [
+                                
+                            ],
+                            "copy": [
+                                
+                            ],
+                            "images": [
+                                
+                            ],
+                            "imagesSprite": [
+                                
+                            ],
+                            "upload": [
+                                
+                            ],
+                            "build": [
+                                
+                            ],
+                            "buildServer": [
+                                
+                            ],
+                            "default": [
+                                
+                            ]
+                        }
+                    }
+                },
+                "testing":{
+                    "headline": "Testowanie",
+                    "paragraph": [
+                        [
+                            "Uruchamia się za pomocą zadania",
+                            "Do obsługi testów jednostkowych, nasłuchu zamian w plikach źródłowych i raportowania bledów zostało przygotowane środowisko",
+                            "Standardowa konfiguracja wykorzystuje framework",
+                            ", symulator",
+                            "i reporter",
+                            "Pliki konfiguracji i testów znajdują się",
+                            "Folder projektu"
+                        ]
+                    ]
+                },
+                "changelog":{
+                    "headline": "Lista zmian",
+                    "paragraph": [
+                        [
+                            "Ostatnie zmiany można zobaczyć na",
+                            "stronie",
+                            "publikacji szablonu"
+                        ]
+                    ]
+                },
+                "license": {
+                    "headline": "Licencja",
+                    "paragraph": [
+                        [
+                            "MIT Licencja"
+                        ]
+                    ]
+                }
+            },
+            "footer": {
+                "author": "Mateusz Archiciński"
+            }
+        }
     }
 }

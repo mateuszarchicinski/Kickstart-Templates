@@ -1,6 +1,10 @@
 // PROJECT CONFIG
 module.exports = {
     APP_NAME: "app",
+    LANGUAGES: [ // Required to building templates with multiple languages
+        'pl', // First element is default
+        'en'
+    ],
     CONFIG_FILE: 'project.config.js',
     DATA_FILE: 'project.data.json', // Data object which are passing to pug (Dynamic templates).
     DIRECTORY: {
