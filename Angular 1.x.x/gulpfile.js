@@ -27,7 +27,7 @@ var PROJECT_CONFIG = require('./project.config');
 
 // FUNCTIONS
 // To get a parameter after comand option
-function getOption(option){
+function getOption(option) {
     var index = process.argv.indexOf(option);
     
     return index !== -1 ? {
@@ -143,14 +143,14 @@ gulp.task('pug', function () {
         $.util.log($.util.colors.green('Default data object configuration [PL] passed to puge task. To change that, add command arguments to this task ---> gulp [TASK NAME = puge / default / build / build:server] --lang [pl / en]. Before that, do not forget a specify translation in ' + PROJECT_CONFIG.DATA_FILE + ' file.'));
     }
     
-    if(getOption('build')){
+    if (getOption('build')) {
         for (var i in languages) {
             if (languages[i] !== lang) {
                 gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/views/' + languages[i] + '/**/*.pug'], {
                     base: './' + PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template'
                 })
                 .pipe($.plumber())
-                .pipe($.data(function(){ // https://github.com/colynb/gulp-data#gulp-data
+                .pipe($.data(function() { // https://github.com/colynb/gulp-data#gulp-data
                     return {
                         appName: PROJECT_CONFIG.APP_NAME,
                         data: JSON.parse(fs.readFileSync('./' + PROJECT_CONFIG.DATA_FILE, 'utf8')).lang[languages[i]]
@@ -169,7 +169,7 @@ gulp.task('pug', function () {
             base: './' + PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template'
         })
         .pipe($.plumber())
-        .pipe($.data(function(){
+        .pipe($.data(function() {
             return {
                 appName: PROJECT_CONFIG.APP_NAME,
                 data: JSON.parse(fs.readFileSync('./' + PROJECT_CONFIG.DATA_FILE, 'utf8')).lang[lang]
@@ -329,7 +329,7 @@ gulp.task('copy', function () {
 });
 
 
-// Optimizes images by using standard modules avaible via NPM or by TinyPNG API ---> https://tinypng.com/developers/reference/nodejs
+// Optimizes images by using standard modules avaible via NPM or by TinyPNG API, for more info check ---> https://tinypng.com/developers/reference/nodejs
 gulp.task('images', function () {
 
     $.util.log($.util.colors.magenta('IMAGES TASK RUNNING...'));    
@@ -338,12 +338,12 @@ gulp.task('images', function () {
         optimizationModule = condition ? require('gulp-tinify') : require('gulp-imagemin'), // https://github.com/sindresorhus/gulp-imagemin#api
         args = PROJECT_CONFIG.API_KEYS.TINIFY;
     
-    if(!condition){
+    if (!condition) {
         args = [imageminGifsicle(), imageminJpegtran(), imageminOptipng(), imageminSvgo()];
         $.util.log($.util.colors.magenta('Default options passed to images task. To change that, add command arguments to this task ---> gulp [TASK NAME = images / build / build:server] --option [standard / advanced].'));
     }
     
-    if(condition && !PROJECT_CONFIG.API_KEYS.TINIFY){
+    if (condition && !PROJECT_CONFIG.API_KEYS.TINIFY) {
         return $.util.log($.util.colors.magenta('Task can not be complited. Rememeber to set up your TINIFY API KEY in ' + PROJECT_CONFIG.CONFIG_FILE + ' file.'));
     }
     
@@ -357,7 +357,7 @@ gulp.task('images', function () {
 });
 
 
-// Creates so-called spritesheet which consists files .png thet merged multiple images and .scss that styles  ---> https://github.com/Ensighten/spritesmith#spritesmith--
+// Creates so-called spritesheet that consists a files .png and .scss, more info about module SPRITESMITH ---> https://github.com/Ensighten/spritesmith#spritesmith--
 gulp.task('images:sprite', function () {
 
     $.util.log($.util.colors.magenta('IMAGES SPRITE TASK RUNNING...'));
@@ -366,7 +366,7 @@ gulp.task('images:sprite', function () {
         spriteCssName = !name ? '_sprite' : name,
         spriteImgName = spriteCssName[0] === '_' ? spriteCssName.substring(1) : spriteCssName;
     
-    if(!name){
+    if (!name) {
         $.util.log($.util.colors.magenta('Default options passed to images:sprite task. To change that, add command arguments to this task ---> gulp [TASK NAME = images:sprite] --name [_FILE_NAME].'));
     }
     
@@ -382,32 +382,31 @@ gulp.task('images:sprite', function () {
 });
 
 
-// 
+// Uploads a files from the production directory to the FTP server, more info about module VINYL FTP ---> https://github.com/morris/vinyl-ftp#vinyl-ftp
 gulp.task('upload', function () {
 
     $.util.log($.util.colors.yellow('UPLOAD TASK RUNNING...'));
     
-    var ftpConfig = {
+    var ftpConfig = { // https://github.com/morris/vinyl-ftp#api
         host: PROJECT_CONFIG.FTP_CONFIG.HOST,
         user: PROJECT_CONFIG.FTP_CONFIG.USER,
-        password: PROJECT_CONFIG.FTP_CONFIG.PASSWORD,
-        secure: true
+        password: PROJECT_CONFIG.FTP_CONFIG.PASSWORD
     };
     
-    if(!ftpConfig.host || !ftpConfig.user || !ftpConfig.password || !getOption('--upload')){
+    if (!ftpConfig.host || !ftpConfig.user || !ftpConfig.password || !PROJECT_CONFIG.FTP_CONFIG.DESTINATION || !getOption('--upload')) {
         return $.util.log($.util.colors.yellow('Task can not be complited. Rememeber to set up your FTP CONFIG in ' + PROJECT_CONFIG.CONFIG_FILE + ' file. Then add command argument to this task ---> gulp [TASK NAME = upload / build / build:server] --upload.'));
     }
-
+    
     var conn = ftp.create(ftpConfig);
-
+    
     return gulp.src(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/**/*')
         .pipe($.plumber())
-        .pipe(conn.dest('/public_html/'));
+        .pipe(conn.dest(PROJECT_CONFIG.FTP_CONFIG.DESTINATION));
 
 });
 
 
-// 
+// Runs a sequence of gulp tasks in the specified order ---> https://github.com/OverZealous/run-sequence#run-sequence
 gulp.task('build', function (cb) {
 
     $.util.log($.util.colors.red('BUILD TASK RUNNING...'));
@@ -417,7 +416,7 @@ gulp.task('build', function (cb) {
 });
 
 
-// 
+// Runs locally server which listening on the production directory after finish building the web application
 gulp.task('build:server', ['build'], function () {
 
     $.util.log($.util.colors.red('BUILD SERVER TASK RUNNING...'));
@@ -429,7 +428,7 @@ gulp.task('build:server', ['build'], function () {
 });
 
 
-// 
+// Runs a sequence of gulp tasks in the specified order ---> https://github.com/OverZealous/run-sequence#run-sequence
 gulp.task('default', function (cb) {
 
     $.util.log($.util.colors.red('DEFAULT TASK RUNNING...'));

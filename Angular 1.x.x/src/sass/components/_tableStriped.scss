@@ -97,7 +97,7 @@ $table-striped__data__rotate-content__margin: #{(5 / 16)}em !default;
                 line-height: 20px;
                 background: $table-striped__data__before__background;
                 position: absolute;
-                display: block;
+                display: inline-table;
                 left: 0;
                 top: 0;
                 font-size: $table-striped__data__before__font-size;
@@ -112,7 +112,7 @@ $table-striped__data__rotate-content__margin: #{(5 / 16)}em !default;
                 transform: rotate(180deg);
                 writing-mode: vertical-rl;
                 text-orientation: sideways-right;
-                // margin: $table-striped__data__rotate-content__margin;
+                margin: $table-striped__data__rotate-content__margin;
             }
         }
     }

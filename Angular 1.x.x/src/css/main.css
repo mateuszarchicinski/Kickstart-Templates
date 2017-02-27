@@ -23998,7 +23998,7 @@ md-tooltip {
       line-height: 20px;
       background: #fff;
       position: absolute;
-      display: block;
+      display: inline-table;
       left: 0;
       top: 0;
       font-size: 11.5px;
@@ -24014,7 +24014,8 @@ md-tooltip {
       -webkit-writing-mode: vertical-rl;
           -ms-writing-mode: tb-rl;
               writing-mode: vertical-rl;
-      text-orientation: sideways-right; } }
+      text-orientation: sideways-right;
+      margin: 0.3125em; } }
 
 a {
   text-decoration: none;

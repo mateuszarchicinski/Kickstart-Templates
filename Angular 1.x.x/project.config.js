@@ -1,8 +1,8 @@
 // PROJECT CONFIG
 module.exports = {
     APP_NAME: "app",
-    LANGUAGES: [ // Required to building templates with multiple languages
-        'pl', // First element is default
+    LANGUAGES: [ // Required to create templates in different languages. First element is default.
+        'pl',
         'en'
     ],
     CONFIG_FILE: 'project.config.js',
@@ -15,7 +15,8 @@ module.exports = {
     FTP_CONFIG: {
         HOST: '',
         USER: '',
-        PASSWORD: ''
+        PASSWORD: '',
+        DESTINATION: '/public_html/'
     },
     API_KEYS: {
         TINIFY: ''
