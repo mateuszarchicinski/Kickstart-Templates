@@ -136,46 +136,32 @@ gulp.task('pug', function () {
     $.util.log($.util.colors.green('PUG TASK RUNNING...'));
     
     var value = getOption('--lang').value,
-        lang = !value ? PROJECT_CONFIG.LANGUAGES[0] : value,
-        languages = PROJECT_CONFIG.LANGUAGES;
+        langValue = !value ? PROJECT_CONFIG.LANGUAGES[0] : value,
+        langPath = getOption('build') || getOption('build:server') ? '' : langValue;
 
     if (!value) {
         $.util.log($.util.colors.green('Default data object configuration [PL] passed to puge task. To change that, add command arguments to this task ---> gulp [TASK NAME = puge / default / build / build:server] --lang [pl / en]. Before that, do not forget a specify translation in ' + PROJECT_CONFIG.DATA_FILE + ' file.'));
     }
     
-    if (getOption('build')) {
-        for (var i in languages) {
-            if (languages[i] !== lang) {
-                gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/views/' + languages[i] + '/**/*.pug'], {
-                    base: './' + PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template'
-                })
-                .pipe($.plumber())
-                .pipe($.data(function() { // https://github.com/colynb/gulp-data#gulp-data
-                    return {
-                        appName: PROJECT_CONFIG.APP_NAME,
-                        data: JSON.parse(fs.readFileSync('./' + PROJECT_CONFIG.DATA_FILE, 'utf8')).lang[languages[i]]
-                    };
-                }))
-                .pipe($.pug({ // https://pugjs.org/api/getting-started.html
-                    pretty: true,
-                    compileDebug: true
-                }))
-                .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/'));
-            }
-        }
+    if (value && PROJECT_CONFIG.LANGUAGES.indexOf(value) === -1) {
+        return $.util.log($.util.colors.green('Task can not be complited. Remember to set up your LANGUAGES in ' + PROJECT_CONFIG.CONFIG_FILE + ' file.'));
     }
     
-    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/*.pug', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/views/' + lang + '/**/*.pug'], {
+    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/*.pug', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template/views/' + langPath + '**/*.pug'], {
             base: './' + PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/template'
         })
         .pipe($.plumber())
-        .pipe($.data(function() {
+        .pipe($.data(function(file) { // https://github.com/colynb/gulp-data#gulp-data
+            var filePathArray = file.path.split('\\'),
+                index = filePathArray.indexOf('views') + 1,
+                lang = !index ? langValue : filePathArray[index];
+        
             return {
                 appName: PROJECT_CONFIG.APP_NAME,
                 data: JSON.parse(fs.readFileSync('./' + PROJECT_CONFIG.DATA_FILE, 'utf8')).lang[lang]
             };
         }))
-        .pipe($.pug({
+        .pipe($.pug({ // https://pugjs.org/api/getting-started.html
             pretty: true,
             compileDebug: true
         }))
@@ -232,7 +218,7 @@ gulp.task('html:hint', function () {
 
     $.util.log($.util.colors.cyan('HTML HINT TASK RUNNING...'));
 
-    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/*.html'])
+    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/**/*.html'])
         .pipe($.plumber())
         .pipe($.htmlhint({ // https://github.com/yaniswang/HTMLHint/wiki/Rules
             'tagname-lowercase': true,
@@ -257,7 +243,7 @@ gulp.task('html:minify', function () {
 
     $.util.log($.util.colors.green('HTML MINIFY TASK RUNNING...'));
 
-    return gulp.src([PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/views/*.html'], {
+    return gulp.src([PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/views/**/*.html'], {
             base: PROJECT_CONFIG.DIRECTORY.DIST_DIR
         })
         .pipe($.plumber())
@@ -344,7 +330,7 @@ gulp.task('images', function () {
     }
     
     if (condition && !PROJECT_CONFIG.API_KEYS.TINIFY) {
-        return $.util.log($.util.colors.magenta('Task can not be complited. Rememeber to set up your TINIFY API KEY in ' + PROJECT_CONFIG.CONFIG_FILE + ' file.'));
+        return $.util.log($.util.colors.magenta('Task can not be complited. Remember to set up your TINIFY API KEY in ' + PROJECT_CONFIG.CONFIG_FILE + ' file.'));
     }
     
     return gulp.src(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/img/**/*', {
