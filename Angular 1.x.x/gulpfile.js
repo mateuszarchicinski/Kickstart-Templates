@@ -270,7 +270,7 @@ gulp.task('server', function () {
 });
 
 
-// Watching file changes then runs appropriate tasks
+// Watching a file changes then runs the appropriate tasks
 gulp.task('watch', function () {
 
     $.util.log($.util.colors.blue('WATCH TASK RUNNING...'));
@@ -321,19 +321,21 @@ gulp.task('images', function () {
     $.util.log($.util.colors.magenta('IMAGES TASK RUNNING...'));    
     
     var condition = getOption('--option').value === 'advanced', // https://github.com/joshbroton/gulp-tinify#gulp-tinify
+        imgExtname = '{jpg,png}',
         optimizationModule = condition ? require('gulp-tinify') : require('gulp-imagemin'), // https://github.com/sindresorhus/gulp-imagemin#api
         args = PROJECT_CONFIG.API_KEYS.TINIFY;
     
     if (!condition) {
+        imgExtname = '{jpg,png,svg,gif}';
         args = [imageminGifsicle(), imageminJpegtran(), imageminOptipng(), imageminSvgo()];
-        $.util.log($.util.colors.magenta('Default options passed to images task. To change that, add command arguments to this task ---> gulp [TASK NAME = images / build / build:server] --option [standard / advanced].'));
+        $.util.log($.util.colors.magenta('Default options passed to images task. To change that, add command arguments to this task ---> gulp [TASK NAME = images / build / build:server] --option [advanced].'));
     }
     
     if (condition && !PROJECT_CONFIG.API_KEYS.TINIFY) {
         return $.util.log($.util.colors.magenta('Task can not be complited. Remember to set up your TINIFY API KEY in ' + PROJECT_CONFIG.CONFIG_FILE + ' file.'));
     }
     
-    return gulp.src(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/img/**/*', {
+    return gulp.src(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/img/**/*.' + imgExtname, {
             base: PROJECT_CONFIG.DIRECTORY.DIST_DIR
         })
         .pipe($.plumber())

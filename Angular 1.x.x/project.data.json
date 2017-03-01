@@ -524,7 +524,7 @@
                                     "Minifikuje kod Html zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym ("
                                 ],
                                 [
-                                    "asasasasasasasssssssZapisuje uzyskane kody Html do tych samych plików źródłowych na których rozpoczęto wykonywanie zadania."
+                                    "Zapisuje uzyskane kody Html w tych samych lokalizacjach plików źródłowych na których rozpoczęto wykonywanie zadania (nadpisywanie)."
                                 ]
                             ],
                             "server": [

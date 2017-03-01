@@ -12,7 +12,7 @@ module.exports = {
         DIST_DIR: 'dist',
         TEST_DIR: 'test'
     },
-    FTP_CONFIG: {
+    FTP_CONFIG: { // All variables required to upload files to FTP Server
         HOST: '',
         USER: '',
         PASSWORD: '',

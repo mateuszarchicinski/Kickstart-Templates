@@ -299,7 +299,7 @@
               </td>
               <td class="table-striped__data" style="background:#fff;">
                 <ol class="article__list">
-                  <li>Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej <strong>lang</strong> na <strong>"pl"</strong> i nadpisuje ją w przypadku podania innej.</li>
+                  <li>Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej <strong>langValue</strong> na <strong>"pl"</strong> i nadpisuje ją w przypadku podania innej.</li>
                   <li>Wykorzystuje pliki z rozszerzeniem<strong>.pug</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
                   <li>Przygotowuje obiekt danych przekazując go wewnątrz strumienia do gulp-pug (<a href="https://github.com/colynb/gulp-data#gulp-data" target="_blank" rel="help">gulp-data</a>).</li>
@@ -362,7 +362,7 @@
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
                   <li>Minifikuje kod Html zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym (<a href="https://github.com/jonschlinkert/gulp-htmlmin#gulp-htmlmin---" target="_blank" rel="help">gulp-htmlmin</a>).</li>
-                  <li>asasasasasasasssssssZapisuje uzyskane kody Html do tych samych plików źródłowych na których rozpoczęto wykonywanie zadania.</li>
+                  <li>Zapisuje uzyskane kody Html w tych samych lokalizacjach plików źródłowych na których rozpoczęto wykonywanie zadania (nadpisywanie).</li>
                 </ol>
               </td>
             </tr>
@@ -375,7 +375,7 @@
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
                   <li>Minifikuje kod Html zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym (<a href="https://github.com/jonschlinkert/gulp-htmlmin#gulp-htmlmin---" target="_blank" rel="help">gulp-htmlmin</a>).</li>
-                  <li>asasasasasasasssssssZapisuje uzyskane kody Html do tych samych plików źródłowych na których rozpoczęto wykonywanie zadania.</li>
+                  <li>Zapisuje uzyskane kody Html w tych samych lokalizacjach plików źródłowych na których rozpoczęto wykonywanie zadania (nadpisywanie).</li>
                 </ol>
               </td>
             </tr>
