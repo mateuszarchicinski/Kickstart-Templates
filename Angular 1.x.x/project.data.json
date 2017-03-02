@@ -529,35 +529,121 @@
                             ],
                             "server": [
                                 [
-                                    ""
+                                    [
+                                        "Uruchamia lokalnie serwer nasłuchujący na katalog pracy pod adresem",
+                                        "(widoczny w konsoli)."
+                                    ],
+                                    [
+                                        "Udostępniając tym samym metody pomocnicze, które umożliwiają odświeżenie przeglądarki np. w momencie wprowadzenia zmiany w dowolnym pliku lub dynamiczne wstrzyknięcie styli Css bez przeładowania strony podglądowej."
+                                    ],
+                                    [
+                                        "Zapewnia również podgląd aplikacji z każdego urządzenia podłączonego do sieci lokalnej pod adresem zewnętrznym (",
+                                        "- widoczny w konsoli)."
+                                    ],
+                                    [
+                                        "Więcej informacji na temat konfiguracji i możliwości moduł Browser Sync"
+                                    ]
                                 ]
                             ],
                             "watch": [
-                                
+                                [
+                                    "W następstwie wprowadzanych zmian w plikach wywołuję odpowiednie zadania:",
+                                    "Pliki",
+                                    "Zadania",
+                                    "lub",
+                                    "i"
+                                ]
                             ],
                             "clean": [
-                                
+                                [
+                                    "Usuwa katalog produkcyjny wraz z całą zawartością. Uruchamiane zawsze na początku tworzenia nowego builda aplikacji ("
+                                ]
                             ],
                             "copy": [
-                                
+                                [
+                                    "Kopiuje niżej wskazane tzw. pliki statyczne z katalogu pracy do katalogu produkcyjnego:"
+                                ]
                             ],
                             "images": [
-                                
+                                [
+                                    "Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia tym samym rozszerzenia plików do optymalizacji, moduł optymalizujący i argumenty dla wybranego modułu."
+                                ],
+                                [
+                                    "Zarówno przy opcji standardowej (bez dodatkowych argumentów) i zaawansowanej (z dodatkowymi argumentami) wykorzystane zostaną grafiki",
+                                    "z rozszerzeniem",
+                                    "i",
+                                    ". W standardowej opcji dochodzą jeszcze dwa typy",
+                                    "i"
+                                ],
+                                [
+                                    "Standardowa optymalizacja grafik odbywa się za pomocą modułu"
+                                ],
+                                [
+                                    "Zaawansowana optymalizacja grafik odbywa sie za pomocą modułu",
+                                    "wykorzystującego"
+                                ],
+                                [
+                                    "Zapisuje zoptymalizowane grafiki w tych samych lokalizacjach grafik źródłowych na których rozpoczęto wykonywanie zadania (nadpisywanie)."
+                                ]
                             ],
                             "imagesSprite": [
-                                
+                                [
+                                    "Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej",
+                                    "na",
+                                    "i nadpisuje ją w przypadku podania innej."
+                                ],
+                                [
+                                    "Wykorzystuje grafiki z rozszerzeniem",
+                                    "i"
+                                ],
+                                [
+                                    "Łączy wszystkie grafiki z katalogu",
+                                    "w jedną grafikę złożoną z wielu. Zwracając tym samym automatycznie wygenerowany plik",
+                                    "zawierający gotowe mixiny do użycia, umożliwiające wyświetlenie dowolnej grafiki wcześniej złączonej ("
+                                ],
+                                [
+                                    "Sprawdza rozszerzenia przetwarzanych plików",
+                                    "w strumieniu (",
+                                    "). Zapisując odpowiednio pliki",
+                                    "z rozszerzeniem",
+                                    "w katalogu",
+                                    "i",
+                                    "w katalogu"
+                                ]
                             ],
                             "upload": [
-                                
+                                [
+                                    "Sprawdza czy wszystkie wartości zmiennych dotyczących połączenia FTP zostały zdefiniowane w pliku",
+                                    "i czy przekazano dodatkowy argument do procesu zadania."
+                                ],
+                                [
+                                    "Wykorzystuje wszystkie pliki z katalogu produkcyjnego."
+                                ],
+                                [
+                                    "Przesyła pliki na serwer FTP przekazując lokalizację zapisu poprzez zmienną"
+                                ]
                             ],
                             "build": [
-                                
+                                [
+                                    [
+                                        "Uruchamia sekwencję wywołujących się kolejno zadań ("
+                                    ],
+                                    [
+                                        "W rezultacie zakończenia tak złożonego procesu zadania zostanie stworzony nowy build aplikacji gotowy do dalszych testów lub przeniesienia na środowisko produkcyjne."
+                                    ]
+                                ]
                             ],
                             "buildServer": [
-                                
+                                [
+                                    "Wywołuje zadanie",
+                                    "po którym tworzy lokalnie serwer nasłuchujący na dopiero co powstały katalog produkcyjny."
+                                ]
                             ],
                             "default": [
-                                
+                                [
+                                    "W następstwie zakończenia powyższej sekwencji zostanie utworzone  tzw. środowisko pracy udostępniające wiele przydatnych funkcjonalności, które usprawnią",
+                                    "i przyśpieszą proces tworzenia nowej aplikacji."
+                                ]
                             ]
                         }
                     }
@@ -601,17 +687,17 @@
         },
         "en": {
             "lang": "en",
-            "title": "Kickstart Projekt - Angular 1.x Szablon",
+            "title": "En - Kickstart Projekt - Angular 1.x Szablon",
             "description": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
             "keywords": "szablon aplikacja webowa zautomatyzowana automatyzacja skonfigurowana konfiguracja środowisko developer developerskie projekt angular ng app google node nodejs npm bower gulp gulpjs karma jasmine material",
             "author": "Mateusz Archiciński",
             "ogTitle": "Kickstart Projekt - Angular 1.x Szablon",
             "ogDescription": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
             "header": {
-                "headline": "Kickstart Projekt"
+                "headline": "EN - Kickstart Projekt"
             },
             "section": {
-                "headline": "Angular v1.x Szablon",
+                "headline": "En - Angular v1.x Szablon",
                 "info": [
                     [
                         "Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak",
@@ -669,6 +755,7 @@
                             "Globalne ustawienia są dostępne w pliku",
                             ", który umożliwia zmianę:",
                             "nazwy aplikacji,",
+                            "języków,",
                             "nazwy plików konfiguracyjnych i danych,",
                             "katalogów pracy i produkcji (wymagana również manualna zmiana w pliku",
                             "dostępów FTP,",
@@ -1121,40 +1208,126 @@
                                     "Minifikuje kod Html zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym ("
                                 ],
                                 [
-                                    "Zapisuje uzyskane kody Html do tych samych plików źródłowych na których rozpoczęto wykonywanie zadania."
+                                    "Zapisuje uzyskane kody Html w tych samych lokalizacjach plików źródłowych na których rozpoczęto wykonywanie zadania (nadpisywanie)."
                                 ]
                             ],
                             "server": [
                                 [
-                                    ""
+                                    [
+                                        "Uruchamia lokalnie serwer nasłuchujący na katalog pracy pod adresem",
+                                        "(widoczny w konsoli)."
+                                    ],
+                                    [
+                                        "Udostępniając tym samym metody pomocnicze, które umożliwiają odświeżenie przeglądarki np. w momencie wprowadzenia zmiany w dowolnym pliku lub dynamiczne wstrzyknięcie styli Css bez przeładowania strony podglądowej."
+                                    ],
+                                    [
+                                        "Zapewnia również podgląd aplikacji z każdego urządzenia podłączonego do sieci lokalnej pod adresem zewnętrznym (",
+                                        "- widoczny w konsoli)."
+                                    ],
+                                    [
+                                        "Więcej informacji na temat konfiguracji i możliwości moduł Browser Sync"
+                                    ]
                                 ]
                             ],
                             "watch": [
-                                
+                                [
+                                    "W następstwie wprowadzanych zmian w plikach wywołuję odpowiednie zadania:",
+                                    "Pliki",
+                                    "Zadania",
+                                    "lub",
+                                    "i"
+                                ]
                             ],
                             "clean": [
-                                
+                                [
+                                    "Usuwa katalog produkcyjny wraz z całą zawartością. Uruchamiane zawsze na początku tworzenia nowego builda aplikacji ("
+                                ]
                             ],
                             "copy": [
-                                
+                                [
+                                    "Kopiuje niżej wskazane tzw. pliki statyczne z katalogu pracy do katalogu produkcyjnego:"
+                                ]
                             ],
                             "images": [
-                                
+                                [
+                                    "Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia tym samym rozszerzenia plików do optymalizacji, moduł optymalizujący i argumenty dla wybranego modułu."
+                                ],
+                                [
+                                    "Zarówno przy opcji standardowej (bez dodatkowych argumentów) i zaawansowanej (z dodatkowymi argumentami) wykorzystane zostaną grafiki",
+                                    "z rozszerzeniem",
+                                    "i",
+                                    ". W standardowej opcji dochodzą jeszcze dwa typy",
+                                    "i"
+                                ],
+                                [
+                                    "Standardowa optymalizacja grafik odbywa się za pomocą modułu"
+                                ],
+                                [
+                                    "Zaawansowana optymalizacja grafik odbywa sie za pomocą modułu",
+                                    "wykorzystującego"
+                                ],
+                                [
+                                    "Zapisuje zoptymalizowane grafiki w tych samych lokalizacjach grafik źródłowych na których rozpoczęto wykonywanie zadania (nadpisywanie)."
+                                ]
                             ],
                             "imagesSprite": [
-                                
+                                [
+                                    "Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej",
+                                    "na",
+                                    "i nadpisuje ją w przypadku podania innej."
+                                ],
+                                [
+                                    "Wykorzystuje grafiki z rozszerzeniem",
+                                    "i"
+                                ],
+                                [
+                                    "Łączy wszystkie grafiki z katalogu",
+                                    "w jedną grafikę złożoną z wielu. Zwracając tym samym automatycznie wygenerowany plik",
+                                    "zawierający gotowe mixiny do użycia, umożliwiające wyświetlenie dowolnej grafiki wcześniej złączonej ("
+                                ],
+                                [
+                                    "Sprawdza rozszerzenia przetwarzanych plików",
+                                    "w strumieniu (",
+                                    "). Zapisując odpowiednio pliki",
+                                    "z rozszerzeniem",
+                                    "w katalogu",
+                                    "i",
+                                    "w katalogu"
+                                ]
                             ],
                             "upload": [
-                                
+                                [
+                                    "Sprawdza czy wszystkie wartości zmiennych dotyczących połączenia FTP zostały zdefiniowane w pliku",
+                                    "i czy przekazano dodatkowy argument do procesu zadania."
+                                ],
+                                [
+                                    "Wykorzystuje wszystkie pliki z katalogu produkcyjnego."
+                                ],
+                                [
+                                    "Przesyła pliki na serwer FTP przekazując lokalizację zapisu poprzez zmienną"
+                                ]
                             ],
                             "build": [
-                                
+                                [
+                                    [
+                                        "Uruchamia sekwencję wywołujących się kolejno zadań ("
+                                    ],
+                                    [
+                                        "W rezultacie zakończenia tak złożonego procesu zadania zostanie stworzony nowy build aplikacji gotowy do dalszych testów lub przeniesienia na środowisko produkcyjne."
+                                    ]
+                                ]
                             ],
                             "buildServer": [
-                                
+                                [
+                                    "Wywołuje zadanie",
+                                    "po którym tworzy lokalnie serwer nasłuchujący na dopiero co powstały katalog produkcyjny."
+                                ]
                             ],
                             "default": [
-                                
+                                [
+                                    "W następstwie zakończenia powyższej sekwencji zostanie utworzone  tzw. środowisko pracy udostępniające wiele przydatnych funkcjonalności, które usprawnią",
+                                    "i przyśpieszą proces tworzenia nowej aplikacji."
+                                ]
                             ]
                         }
                     }

@@ -65,13 +65,13 @@ $quaternary-heading__font-size: 1.15em !default;
 
 /* Text */
 //__small
-$text-small__font-size: 0.75em !default;
+$text-small__font-size: 0.85em !default;
 //__normal
 $text-normal__font-size: 1em !default;
 //__medium
-$text-medium__font-size: 1.25em !default;
+$text-medium__font-size: 1.15em !default;
 //__large
-$text-large__font-size: 1.5em !default;
+$text-large__font-size: 1.3em !default;
 // strong
 $strong__font-weight: 500 !default;
 
@@ -79,27 +79,15 @@ $strong__font-weight: 500 !default;
 .text {
     &-small {
         font-size: $text-small__font-size;
-        @media screen and (max-width: $break-point__1) {
-            font-size: $text-small__font-size - 0.1;
-        }
     }
     &-normal {
         font-size: $text-normal__font-size;
-        @media screen and (max-width: $break-point__1) {
-            font-size: $text-normal__font-size - 0.1;
-        }
     }
     &-medium {
         font-size: $text-medium__font-size;
-        @media screen and (max-width: $break-point__1) {
-            font-size: $text-medium__font-size - 0.1;
-        }
     }
     &-large {
         font-size: $text-large__font-size;
-        @media screen and (max-width: $break-point__1) {
-            font-size: $text-large__font-size - 0.1;
-        }
     }
 // sass-lint:disable no-important
     &-center {

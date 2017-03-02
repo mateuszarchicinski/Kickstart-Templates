@@ -16,6 +16,15 @@ $article__list-points__li__margin: 0.8em 0 !default;
         @extend %paragraphs;
     }
     &__list {
+        &-decimal {
+            list-style: decimal;
+        }
+        &-disc {
+            list-style: disc;
+        }
+        &-circle {
+            list-style: circle;
+        }
         padding-left: 17px;
         .code__block {
             margin-left: -17px;

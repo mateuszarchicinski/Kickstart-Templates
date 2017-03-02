@@ -1,2 +1,50 @@
 //-
     Watch
+
+ol.article__list
+    li
+        p.article__paragraph #{data.articles.gulpTasks.table.rows.watch[0][0]}
+        p.article__paragraph.text-small
+            strong #{data.articles.gulpTasks.table.rows.watch[0][1]}
+            span.arrow-right
+            code.param__name.param__name-inline-24 #{data.articles.gulpTasks.table.rows.watch[0][2]}
+            br
+            strong .sass
+            |  #{data.articles.gulpTasks.table.rows.watch[0][3]} 
+            strong .scss
+            span.arrow-right
+            code.param__name.param__name-inline-24 sass:lint
+                a(href="#sassLint" rel="help")
+                    sup 2
+                |  #{data.articles.gulpTasks.table.rows.watch[0][4]} sass:css
+                a(href="#sassCss" rel="help")
+                    sup 1
+            br
+            strong .js
+            span.arrow-right
+            code.param__name.param__name-inline-24 js:hint
+                a(href="#jsHint" rel="help")
+                    sup 3
+                |  #{data.articles.gulpTasks.table.rows.watch[0][4]} browserSync.reload
+                a(href="#server" rel="help")
+                    sup 11
+            br
+            strong project.data.json
+            |  #{data.articles.gulpTasks.table.rows.watch[0][4]} 
+            strong .pug
+            span.arrow-right
+            code.param__name.param__name-inline-24 pug:lint
+                a(href="#pugLint" rel="help")
+                    sup 7
+                |  #{data.articles.gulpTasks.table.rows.watch[0][4]} pug
+                a(href="#pug" rel="help")
+                    sup 6
+            br
+            strong .html
+            span.arrow-right
+            code.param__name.param__name-inline-24 html:hint
+                a(href="#htmlHint" rel="help")
+                    sup 9
+                |  #{data.articles.gulpTasks.table.rows.watch[0][4]} browserSync.reload
+                a(href="#server" rel="help")
+                    sup 11

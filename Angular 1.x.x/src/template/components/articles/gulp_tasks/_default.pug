@@ -1,2 +1,44 @@
 //-
     Default
+
+ol.article__list
+    li 
+        p.article__paragraph #{data.articles.gulpTasks.table.rows.build[0][0]}
+            a(href="https://github.com/OverZealous/run-sequence#run-sequence" target="_blank" rel="help") run-sequence
+            | ):
+        p.article__paragraph.text-small
+            code.param__name.param__name-inline-24
+                | sass:lint
+                a(ng-href="#sassLint"  href="#sassLint" rel="help")
+                    sup 2
+                span.arrow-right
+                | sass:css
+                a(ng-href="#sassCss"  href="#sassCss" rel="help")
+                    sup 1
+                span.arrow-right
+                | js:hint
+                a(ng-href="#jsHint"  href="#jsHint" rel="help")
+                    sup 3
+                span.arrow-right
+                | pug:lint
+                a(ng-href="#pugLint"  href="#pugLint" rel="help")
+                    sup 7
+                span.arrow-right
+                | pug
+                a(ng-href="#pug"  href="#pug" rel="help")
+                    sup 6
+                span.arrow-right
+                | html:hint
+                a(ng-href="#htmlHint"  href="#htmlHint" rel="help")
+                    sup 9
+                span.arrow-right
+                | server
+                a(ng-href="#server"  href="#server" rel="help")
+                    sup 11
+                span.arrow-right
+                | watch
+                a(ng-href="#watch"  href="#watch" rel="help")
+                    sup 12
+        p.article__paragraph #{data.articles.gulpTasks.table.rows.default[0][0]} 
+            br.br__1
+            | #{data.articles.gulpTasks.table.rows.default[0][1]}

@@ -78,6 +78,9 @@ $param__opt-arg__color: $color__navy-blue !default;
         @include after {
             content: "]";
         }
+        &-inline-24 {
+            line-height: 24px;
+        }
     }
     &__keyword {}
     &__name {

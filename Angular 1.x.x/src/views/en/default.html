@@ -2,7 +2,7 @@
 <!--Default View-->
 <section class="readme" id="Readme">
   <header class="readme__header">
-    <h2 class="readme__title secondary-heading">Angular v1.x Szablon</h2>
+    <h2 class="readme__title secondary-heading">En - Angular v1.x Szablon</h2>
     <p class="readme__info">Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak <a href="https://nodejs.org/en/" target="_blank" rel="help">NodeJS</a>, <a href="https://www.npmjs.com/" target="_blank" rel="help">NPM</a>, <a href="https://bower.io/" target="_blank" rel="help">Bower</a>, <a href="http://gulpjs.com/" target="_blank" rel="help">GulpJS</a> i <a href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help">Karma</a>. W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii <a href="https://angularjs.org/" target="_blank" rel="help">Angular v1.x - MVC Framework</a>.</p>
     <p class="readme__info">Przygotowany szablon aplikacji webowej <a href="https://angularjs.org/" target="_blank" rel="help">Angular v1.x</a> udostępnia w pełni skonfigurowane i zautomatyzowane środowisko pracy za pomocą takich technologii jak <a href="https://nodejs.org/en/" target="_blank" rel="help">NodeJS</a>, <a href="https://www.npmjs.com/" target="_blank" rel="help">NPM</a>, <a href="https://bower.io/" target="_blank" rel="help">Bower</a>, <a href="http://gulpjs.com/" target="_blank" rel="help">GulpJS</a> i <a href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help">Karma</a>.</p>
   </header>
@@ -35,11 +35,11 @@
         <p class="article__paragraph">Globalne ustawienia są dostępne w pliku <strong>project.config.js</strong>, który umożliwia zmianę: </p>
         <ul class="article__list-points">
           <li>nazwy aplikacji,</li>
+          <li>języków,</li>
           <li>nazwy plików konfiguracyjnych i danych,</li>
-          <li>katalogów pracy i produkcji (wymagana również manualna zmiana w pliku</li>
-          <li>dostępów FTP, <strong>.bowerrc</strong>),</li>
+          <li>katalogów pracy i produkcji (wymagana również manualna zmiana w pliku <strong>.bowerrc</strong>),</li>
+          <li>dostępów FTP,</li>
           <li>podania kluczy do zewnętrznych API.</li>
-          <li></li>
         </ul>
         <p class="article__paragraph">Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych z których będziemy korzystać indywidualnie. W pliku <strong>gulpfile.js</strong> odwołujemy się do niego poprzez zmienną <strong>PROJECT_CONFIG</strong>.</p>
       </div>
@@ -299,7 +299,7 @@
               </td>
               <td class="table-striped__data" style="background:#fff;">
                 <ol class="article__list">
-                  <li>Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej <strong>lang</strong> na <strong>"pl"</strong> i nadpisuje ją w przypadku podania innej.</li>
+                  <li>Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej <strong>langValue</strong> na <strong>"pl"</strong> i nadpisuje ją w przypadku podania innej.</li>
                   <li>Wykorzystuje pliki z rozszerzeniem<strong>.pug</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
                   <li>Przygotowuje obiekt danych przekazując go wewnątrz strumienia do gulp-pug (<a href="https://github.com/colynb/gulp-data#gulp-data" target="_blank" rel="help">gulp-data</a>).</li>
@@ -362,7 +362,7 @@
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
                   <li>Minifikuje kod Html zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym (<a href="https://github.com/jonschlinkert/gulp-htmlmin#gulp-htmlmin---" target="_blank" rel="help">gulp-htmlmin</a>).</li>
-                  <li>Zapisuje uzyskane kody Html do tych samych plików źródłowych na których rozpoczęto wykonywanie zadania.</li>
+                  <li>Zapisuje uzyskane kody Html w tych samych lokalizacjach plików źródłowych na których rozpoczęto wykonywanie zadania (nadpisywanie).</li>
                 </ol>
               </td>
             </tr>
@@ -372,10 +372,12 @@
               </td>
               <td class="table-striped__data">
                 <ol class="article__list">
-                  <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
-                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
-                  <li>Minifikuje kod Html zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym (<a href="https://github.com/jonschlinkert/gulp-htmlmin#gulp-htmlmin---" target="_blank" rel="help">gulp-htmlmin</a>).</li>
-                  <li>Zapisuje uzyskane kody Html do tych samych plików źródłowych na których rozpoczęto wykonywanie zadania.</li>
+                  <li>
+                    <p class="article__paragraph">Uruchamia lokalnie serwer nasłuchujący na katalog pracy pod adresem <a href="http://localhost:3000/" target="_blank" rel="help">http://localhost:3000/</a> (widoczny w konsoli).</p>
+                    <p class="article__paragraph">Udostępniając tym samym metody pomocnicze, które umożliwiają odświeżenie przeglądarki np. w momencie wprowadzenia zmiany w dowolnym pliku lub dynamiczne wstrzyknięcie styli Css bez przeładowania strony podglądowej.</p>
+                    <p class="article__paragraph">Zapewnia również podgląd aplikacji z każdego urządzenia podłączonego do sieci lokalnej pod adresem zewnętrznym (<strong>External</strong> - widoczny w konsoli).</p>
+                    <p class="article__paragraph">Więcej informacji na temat konfiguracji i możliwości moduł Browser Sync <a href="https://www.browsersync.io/docs/options" target="_blank" rel="help">tutaj</a>.</p>
+                  </li>
                 </ol>
               </td>
             </tr>
@@ -383,55 +385,123 @@
               <td class="table-striped__data" id="watch">
                 <p class="rotate-content"><code class="param__name">watch</code></p>
               </td>
-              <td class="table-striped__data"></td>
+              <td class="table-striped__data">
+                <ol class="article__list">
+                  <li>
+                    <p class="article__paragraph">W następstwie wprowadzanych zmian w plikach wywołuję odpowiednie zadania:</p>
+                    <p class="article__paragraph text-small"><strong>Pliki</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">Zadania</code><br/><strong>.sass</strong> lub <strong>.scss</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">sass:lint<a href="#sassLint" rel="help"><sup>2</sup></a> i sass:css<a href="#sassCss" rel="help"><sup>1</sup></a></code><br/><strong>.js</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">js:hint<a href="#jsHint" rel="help"><sup>3</sup></a> i browserSync.reload<a href="#server" rel="help"><sup>11</sup></a></code><br/><strong>project.data.json</strong> i <strong>.pug</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">pug:lint<a href="#pugLint" rel="help"><sup>7</sup></a> i pug<a href="#pug" rel="help"><sup>6</sup></a></code><br/><strong>.html</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">html:hint<a href="#htmlHint" rel="help"><sup>9</sup></a> i browserSync.reload<a href="#server" rel="help"><sup>11</sup></a></code></p>
+                  </li>
+                </ol>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="clean">
                 <p class="rotate-content"><code class="param__name">clean</code></p>
               </td>
-              <td class="table-striped__data"></td>
+              <td class="table-striped__data">
+                <ol class="article__list">
+                  <li>Usuwa katalog produkcyjny wraz z całą zawartością. Uruchamiane zawsze na początku tworzenia nowego builda aplikacji (<a href="https://github.com/sindresorhus/del#del--" target="_blank" rel="help">del</a>).</li>
+                </ol>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="copy">
                 <p class="rotate-content"><code class="param__name">copy</code></p>
               </td>
-              <td class="table-striped__data"></td>
+              <td class="table-striped__data">
+                <ol class="article__list">
+                  <li>Kopiuje niżej wskazane tzw. pliki statyczne z katalogu pracy do katalogu produkcyjnego:
+                    <ul class="article__list article__list-disc">
+                      <li><strong>/files/*</strong></li>
+                      <li><strong>/fonts/*</strong></li>
+                      <li><strong>/img/*</strong></li>
+                      <li><strong>/*.png</strong></li>
+                      <li><strong>/*.xml</strong></li>
+                      <li><strong>/*.ico</strong></li>
+                    </ul>
+                  </li>
+                </ol>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="images">
                 <p class="rotate-content"><code class="param__name">images</code><br class="br-g-2"/><code class="param__opt-arg">--option advanced</code></p>
               </td>
-              <td class="table-striped__data"></td>
+              <td class="table-striped__data">
+                <ol class="article__list">
+                  <li>Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia tym samym rozszerzenia plików do optymalizacji, moduł optymalizujący i argumenty dla wybranego modułu.</li>
+                  <li>Zarówno przy opcji standardowej (bez dodatkowych argumentów) i zaawansowanej (z dodatkowymi argumentami) wykorzystane zostaną grafiki <br class="br__1"/>z rozszerzeniem <strong>.jpg</strong> i <strong>.png</strong>. W standardowej opcji dochodzą jeszcze dwa typy <strong>.svg</strong> i <strong>.gif</strong>.</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Standardowa optymalizacja grafik odbywa się za pomocą modułu <a href="https://github.com/sindresorhus/gulp-imagemin#api" target="_blank" rel="help">gulp-imagemin</a>.</li>
+                  <li>Zaawansowana optymalizacja grafik odbywa sie za pomocą modułu <a href="https://github.com/joshbroton/gulp-tinify#gulp-tinify" target="_blank" rel="help">gulp-tinify</a> wykorzystującego <a href="https://tinypng.com/developers/reference/nodejs" target="_blank" rel="help">TinyPNG API</a>.</li>
+                  <li>Zapisuje zoptymalizowane grafiki w tych samych lokalizacjach grafik źródłowych na których rozpoczęto wykonywanie zadania (nadpisywanie).</li>
+                </ol>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="imagesSprite">
                 <p class="rotate-content"><code class="param__name">images:sprite</code><br class="br-g-3"/><code class="param__opt-arg">--name _sprite</code></p>
               </td>
-              <td class="table-striped__data"></td>
+              <td class="table-striped__data" style="background:#fff;">
+                <ol class="article__list">
+                  <li>Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej <strong>spriteCssName</strong> na <strong>"_sprite"</strong> i nadpisuje ją w przypadku podania innej.</li>
+                  <li>Wykorzystuje grafiki z rozszerzeniem <strong>.jpg</strong>, <strong>.png</strong> i <strong>.gif</strong>.</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Łączy wszystkie grafiki z katalogu <code class="code__line">img > sprites_sources</code> w jedną grafikę złożoną z wielu. Zwracając tym samym automatycznie wygenerowany plik <strong>.scss</strong> zawierający gotowe mixiny do użycia, umożliwiające wyświetlenie dowolnej grafiki wcześniej złączonej (<a href="https://github.com/Ensighten/spritesmith#spritesmith--" target="_blank" rel="help">gulp-spritesmith</a>).</li>
+                  <li>Sprawdza rozszerzenia przetwarzanych plików <br class="br__1"/>w strumieniu (<a href="https://github.com/robrich/gulp-if#gulp-if-api" target="_blank" rel="help">gulp-if</a>). Zapisując odpowiednio pliki <br class="br__1"/>z rozszerzeniem <strong>.png</strong> w katalogu <code class="code__line">img</code> i <strong>.scss</strong> w katalogu <code class="code__line">sass > components > sprites</code>.</li>
+                </ol>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="upload">
                 <p class="rotate-content"><code class="param__name">upload</code><br class="br-g-4"/><code class="param__opt-arg">--upload</code></p>
               </td>
-              <td class="table-striped__data"></td>
+              <td class="table-striped__data">
+                <ol class="article__list">
+                  <li>Sprawdza czy wszystkie wartości zmiennych dotyczących połączenia FTP zostały zdefiniowane w pliku <strong>project.config.js</strong> i czy przekazano dodatkowy argument do procesu zadania.</li>
+                  <li>Wykorzystuje wszystkie pliki z katalogu produkcyjnego.</li>
+                  <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
+                  <li>Przesyła pliki na serwer FTP przekazując lokalizację zapisu poprzez zmienną <strong>DESTINATION</strong> (<a href="https://github.com/morris/vinyl-ftp#api" target="_blank" rel="help">vinyl-ftp</a>).</li>
+                </ol>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="build">
                 <p class="rotate-content"><code class="param__name">build</code><br class="br-g-5"/><code class="param__opt-arg">nr: <a ng-href="#pug" rel="help">6</a>, <a ng-href="#images" rel="help">15</a>, <a ng-href="#upload" rel="help">17</a></code></p>
               </td>
-              <td class="table-striped__data"></td>
+              <td class="table-striped__data">
+                <ol class="article__list">
+                  <li> 
+                    <p class="article__paragraph">Uruchamia sekwencję wywołujących się kolejno zadań (<a href="https://github.com/OverZealous/run-sequence#run-sequence" target="_blank" rel="help">run-sequence</a>):</p>
+                    <p class="article__paragraph text-small"><code class="param__name param__name-inline-24">clean<a ng-href="#clean" href="#clean" rel="help"><sup>13</sup></a><span class="arrow-right"></span>sass:lint<a ng-href="#sassLint" href="#sassLint" rel="help"><sup>2</sup></a><span class="arrow-right"></span>sass:css<a ng-href="#sassCss" href="#sassCss" rel="help"><sup>1</sup></a><span class="arrow-right"></span>js:hint<a ng-href="#jsHint" href="#jsHint" rel="help"><sup>3</sup></a><span class="arrow-right"></span>pug:lint<a ng-href="#pugLint" href="#pugLint" rel="help"><sup>7</sup></a><span class="arrow-right"></span>pug<a ng-href="#pug" href="#pug" rel="help"><sup>6</sup></a><span class="arrow-right"></span>html:hint<a ng-href="#htmlHint" href="#htmlHint" rel="help"><sup>9</sup></a><span class="arrow-right"></span>html<a ng-href="#html" href="#html" rel="help"><sup>8</sup></a><span class="arrow-right"></span>html:minify<a ng-href="#htmlMinify" href="#htmlMinify" rel="help"><sup>10</sup></a><span class="arrow-right"></span>copy<a ng-href="#copy" href="#copy" rel="help"><sup>14</sup></a><span class="arrow-right"></span>images<a ng-href="#images" href="#images" rel="help"><sup>15</sup></a><span class="arrow-right"></span>upload<a ng-href="#upload" href="#upload" rel="help"><sup>17</sup></a></code></p>
+                    <p class="article__paragraph">W rezultacie zakończenia tak złożonego procesu zadania zostanie stworzony nowy build aplikacji gotowy do dalszych testów lub przeniesienia na środowisko produkcyjne.</p>
+                  </li>
+                </ol>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="buildServer">
                 <p class="rotate-content"><code class="param__name">build:server</code><br class="br-g-6"/><code class="param__opt-arg">nr: <a ng-href="#pug" rel="help">6</a>, <a ng-href="#images" rel="help">15</a>, <a ng-href="#upload" rel="help">17</a></code></p>
               </td>
-              <td class="table-striped__data"></td>
+              <td class="table-striped__data">
+                <ol class="article__list">
+                  <li>Wywołuje zadanie <code class="param__name param__name-inline-24">build</code><a ng-href="#build" href="#build" rel="help"><sup>18</sup></a> po którym tworzy lokalnie serwer nasłuchujący na dopiero co powstały katalog produkcyjny.</li>
+                </ol>
+              </td>
             </tr>
             <tr class="table-striped__row">
               <td class="table-striped__data" id="default">
                 <p class="rotate-content"><code class="param__name">gulp / default</code><br class="br-g-7"/><code class="param__opt-arg">nr: <a ng-href="#pug" rel="help">6</a></code></p>
               </td>
-              <td class="table-striped__data"></td>
+              <td class="table-striped__data">
+                <ol class="article__list">
+                  <li> 
+                    <p class="article__paragraph">Uruchamia sekwencję wywołujących się kolejno zadań (<a href="https://github.com/OverZealous/run-sequence#run-sequence" target="_blank" rel="help">run-sequence</a>):</p>
+                    <p class="article__paragraph text-small"><code class="param__name param__name-inline-24">sass:lint<a ng-href="#sassLint" href="#sassLint" rel="help"><sup>2</sup></a><span class="arrow-right"></span>sass:css<a ng-href="#sassCss" href="#sassCss" rel="help"><sup>1</sup></a><span class="arrow-right"></span>js:hint<a ng-href="#jsHint" href="#jsHint" rel="help"><sup>3</sup></a><span class="arrow-right"></span>pug:lint<a ng-href="#pugLint" href="#pugLint" rel="help"><sup>7</sup></a><span class="arrow-right"></span>pug<a ng-href="#pug" href="#pug" rel="help"><sup>6</sup></a><span class="arrow-right"></span>html:hint<a ng-href="#htmlHint" href="#htmlHint" rel="help"><sup>9</sup></a><span class="arrow-right"></span>server<a ng-href="#server" href="#server" rel="help"><sup>11</sup></a><span class="arrow-right"></span>watch<a ng-href="#watch" href="#watch" rel="help"><sup>12</sup></a></code></p>
+                    <p class="article__paragraph">W następstwie zakończenia powyższej sekwencji zostanie utworzone  tzw. środowisko pracy udostępniające wiele przydatnych funkcjonalności, które usprawnią <br class="br__1"/>i przyśpieszą proces tworzenia nowej aplikacji.</p>
+                  </li>
+                </ol>
+              </td>
             </tr>
           </tbody>
         </table>

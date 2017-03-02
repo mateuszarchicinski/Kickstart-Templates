@@ -75,6 +75,12 @@ $table-striped__data__rotate-content__margin: #{(5 / 16)}em !default;
         &:nth-child(even) {
             border-left: $table-striped__header-data__border-left;
         }
+        &:nth-child(n+2) {
+            .param__name,
+            .param__opt-arg{
+                white-space: normal;
+            }
+        }
         .code__block {
             margin-left: -12px;
             margin-right: 5px;

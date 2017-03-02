@@ -77,11 +77,11 @@ $quaternary-heading__font-size: $tertiary-heading__font-size - 0.1;
 //__normal
 $text-normal__font-size: $base__font-size;
 //__small
-$text-small__font-size: $text-normal__font-size - 0.25;
+$text-small__font-size: $text-normal__font-size - 0.15;
 //__medium
-$text-medium__font-size: $text-normal__font-size + 0.25;
+$text-medium__font-size: $text-normal__font-size + 0.15;
 //__large
-$text-large__font-size: $text-medium__font-size + 0.25;
+$text-large__font-size: $text-medium__font-size + 0.15;
 // strong
 $strong__font-weight: $font-weight__bold;
 
@@ -98,6 +98,12 @@ $font-family: $base__font-family;
 // ---------------------
 //     COMPONENTS
 // ---------------------
+
+
+// *--------- HTML SYMBOLS / ENTITIES ---------*
+// .arrow-right
+$ar-before__font-size: 1.05em;
+$ar-before__color: $color__navy-blue;
 
 
 // *--------- ARTICLES ---------*
