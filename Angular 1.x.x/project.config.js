@@ -20,5 +20,8 @@ module.exports = {
     },
     API_KEYS: {
         TINIFY: ''
+    },
+    GOOGLE_ANALYTICS: {
+        TRACKING_ID: '' // Adds tracking script only when a variable is not empty
     }
 };

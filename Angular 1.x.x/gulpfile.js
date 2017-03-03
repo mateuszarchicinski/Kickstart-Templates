@@ -158,6 +158,9 @@ gulp.task('pug', function () {
         
             return {
                 appName: PROJECT_CONFIG.APP_NAME,
+                googleAnalytics: {
+                    trackingId: PROJECT_CONFIG.GOOGLE_ANALYTICS.TRACKING_ID
+                },
                 data: JSON.parse(fs.readFileSync('./' + PROJECT_CONFIG.DATA_FILE, 'utf8')).lang[lang]
             };
         }))
