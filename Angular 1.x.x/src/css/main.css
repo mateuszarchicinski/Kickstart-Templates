@@ -23796,33 +23796,40 @@ md-tooltip {
   .hide-print:not(.show-print):not(.show) {
     display: none !important; } }
 
+.anchor {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 24px;
+  height: 24px;
+  display: inline-block; }
+
 .directory__root {
-  background-image: url(../img/projectStructure.png);
-  background-position: -24px -24px;
+  background-image: url(../img/sprite.png);
+  background-position: -48px 0px;
   width: 24px;
   height: 24px; }
 
 .directory__close {
-  background-image: url(../img/projectStructure.png);
-  background-position: -24px 0px;
-  width: 24px;
-  height: 24px; }
-
-.directory__open {
-  background-image: url(../img/projectStructure.png);
+  background-image: url(../img/sprite.png);
   background-position: 0px -24px;
   width: 24px;
   height: 24px; }
 
+.directory__open {
+  background-image: url(../img/sprite.png);
+  background-position: -24px -24px;
+  width: 24px;
+  height: 24px; }
+
 .file__json, .file__js, .file__xml, .file__html, .file__sass, .file__pug, .file__css {
-  background-image: url(../img/projectStructure.png);
-  background-position: 0px 0px;
+  background-image: url(../img/sprite.png);
+  background-position: -24px 0px;
   width: 24px;
   height: 24px; }
 
 .file__img {
-  background-image: url(../img/projectStructure.png);
-  background-position: -48px 0px;
+  background-image: url(../img/sprite.png);
+  background-position: -48px -24px;
   width: 24px;
   height: 24px; }
 
@@ -23832,6 +23839,10 @@ md-tooltip {
 
 .article {
   padding-top: 1px; }
+  .article__title:hover .article__anchor {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80); }
   .article__list {
     padding-left: 17px; }
     .article__list-decimal {
@@ -24059,6 +24070,10 @@ a {
     .readme {
       width: 100%;
       padding: 30px 20px 40px; } }
+  .readme__title:hover .readme__anchor {
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80); }
   .readme__info {
     padding: 0 0 0.125em 1em;
     border-left: 0.25em solid #ef5350; }
@@ -24123,5 +24138,13 @@ body {
       -ms-transform: scale(0.8);
           transform: scale(0.8);
   margin: -3px 3px 0 0; }
+
+.article__anchor, .readme__anchor {
+  vertical-align: sub;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  transition: opacity 0.1s ease;
+  margin-left: 0.1875em; }
 
 /*# sourceMappingURL=maps/main.css.map */

@@ -3,7 +3,8 @@
 
 article(id="BowerComponents" class="article")
     header.article__header
-        h3.article__title.tertiary-heading= data.articles.bowerComponents.headline
+        h3.article__title.tertiary-heading #{data.articles.bowerComponents.headline}
+            a(href="#BowerComponents" rel="help" class="article__anchor anchor")
     .article__body
         p.article__paragraph #{data.articles.bowerComponents.paragraph[0][0]} 
             a(href="https://angularjs.org/" target="_blank" rel="help") Angular v1.x - MVC Framework

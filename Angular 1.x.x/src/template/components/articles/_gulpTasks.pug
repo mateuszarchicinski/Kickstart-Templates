@@ -3,7 +3,8 @@
 
 article(id="GulpTasks" class="article")
     header.article__header
-        h3.article__title.tertiary-heading= data.articles.gulpTasks.headline
+        h3.article__title.tertiary-heading #{data.articles.gulpTasks.headline}
+            a(href="#GulpTasks" rel="help" class="article__anchor anchor")
     .article__body
         p.article__paragraph #{data.articles.gulpTasks.paragraph[0][0]} 
             strong gulp
@@ -21,7 +22,7 @@ article(id="GulpTasks" class="article")
         p.article__paragraph #{data.articles.gulpTasks.paragraph[2][0]} 
             code.code__line gulp pug --lang pl
             |  #{data.articles.gulpTasks.paragraph[2][1]} 
-            a(ng-href="#pug" rel="help") 6
+            a(href="#pug" rel="help") 6
             | ).
         p.article__paragraph #{data.articles.gulpTasks.paragraph[3][0]}
         table.table-striped
@@ -148,11 +149,11 @@ article(id="GulpTasks" class="article")
                             code.param__name build
                             br.br-g-5
                             code.param__opt-arg nr: 
-                                a(ng-href="#pug" rel="help") 6
+                                a(href="#pug" rel="help") 6
                                 | , 
-                                a(ng-href="#images" rel="help") 15
+                                a(href="#images" rel="help") 15
                                 | , 
-                                a(ng-href="#upload" rel="help") 17
+                                a(href="#upload" rel="help") 17
                     td.table-striped__data
                         include gulp_tasks/_build.pug
                 tr.table-striped__row
@@ -161,11 +162,11 @@ article(id="GulpTasks" class="article")
                             code.param__name build:server
                             br.br-g-6
                             code.param__opt-arg nr: 
-                                a(ng-href="#pug" rel="help") 6
+                                a(href="#pug" rel="help") 6
                                 | , 
-                                a(ng-href="#images" rel="help") 15
+                                a(href="#images" rel="help") 15
                                 | , 
-                                a(ng-href="#upload" rel="help") 17
+                                a(href="#upload" rel="help") 17
                     td.table-striped__data
                         include gulp_tasks/_buildServer.pug
                 tr.table-striped__row
@@ -174,7 +175,7 @@ article(id="GulpTasks" class="article")
                             code.param__name gulp / default
                             br.br-g-7
                             code.param__opt-arg nr: 
-                                a(ng-href="#pug" rel="help") 6
+                                a(href="#pug" rel="help") 6
                     td.table-striped__data
                         include gulp_tasks/_default.pug
         p.article__paragraph #{data.articles.gulpTasks.paragraph[4][0]} 

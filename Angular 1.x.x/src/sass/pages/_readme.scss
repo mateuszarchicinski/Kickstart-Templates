@@ -24,6 +24,16 @@ $readme__info__border-left: 0.25em solid $color__sunset-orange !default;
         width: 100%;
         padding: 30px 20px 40px;
     }
+    &__title {
+        &:hover {
+            .readme__anchor {
+                @include opacity(0.8);
+            }
+        }
+    }
+    &__anchor {
+        @extend %Pr-Ca__anchor;
+    }
     &__info {
         @extend %paragraphs;
         padding: $readme__info__padding;

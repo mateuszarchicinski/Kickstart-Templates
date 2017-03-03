@@ -3,7 +3,8 @@
 
 article(id="NPMModules" class="article")
     header.article__header
-        h3.article__title.tertiary-heading= data.articles.npmModules.headline
+        h3.article__title.tertiary-heading #{data.articles.npmModules.headline}
+            a(href="#NPMModules" rel="help" class="article__anchor anchor")
     .article__body
         p.article__paragraph #{data.articles.npmModules.paragraph[0][0]}
             strong package.json

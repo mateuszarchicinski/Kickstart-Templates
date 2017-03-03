@@ -3,7 +3,8 @@
 
 article(id="Configuration" class="article")
     header.article__header
-        h3.article__title.tertiary-heading= data.articles.configuration.headline
+        h3.article__title.tertiary-heading #{data.articles.configuration.headline}
+            a(href="#Configuration" rel="help" class="article__anchor anchor")
     .article__body
         p.article__paragraph #{data.articles.configuration.paragraph[0][0]} 
             strong project.config.js

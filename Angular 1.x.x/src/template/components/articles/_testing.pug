@@ -3,7 +3,8 @@
 
 article(id="Testing" class="article")
     header.article__header
-        h3.article__title.tertiary-heading= data.articles.testing.headline
+        h3.article__title.tertiary-heading #{data.articles.testing.headline}
+            a(href="#Testing" rel="help" class="article__anchor anchor")
     .article__body
         p.article__paragraph #{data.articles.testing.paragraph[0][0]} 
             code.code__line gulp js:test

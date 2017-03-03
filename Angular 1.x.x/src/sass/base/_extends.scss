@@ -22,3 +22,17 @@ $paragraphs__text-align: justify !default;
     transform: scale(0.8);
     margin: -3px 3px 0 0;
 }
+
+
+// %Pr-Ca__anchor
+$Pr-Ca__anchor__transition: opacity 0.1s ease !default;
+$Pr-Ca__anchor__margin-left: #{(3 / 16)}em !default;
+
+
+// Pages: readme | Components: articles
+%Pr-Ca__anchor {
+    vertical-align: sub;
+    @include opacity(0);
+    transition: $Pr-Ca__anchor__transition;
+    margin-left: $Pr-Ca__anchor__margin-left;
+}

@@ -4,7 +4,8 @@
 //Default View
 section(id="Readme" class="readme")
     header.readme__header
-        h2.readme__title.secondary-heading= data.section.headline
+        h2.readme__title.secondary-heading #{data.section.headline}
+            a(href="#Readme" rel="help" class="readme__anchor anchor")
         p.readme__info #{data.section.info[0][0]} 
             a(href="https://nodejs.org/en/" target="_blank" rel="help") NodeJS
             | , 

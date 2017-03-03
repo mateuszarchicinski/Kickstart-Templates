@@ -12,6 +12,16 @@ $article__list-points__li__margin: 0.8em 0 !default;
 
 .article {
     padding-top: 1px;
+    &__title {
+        &:hover {
+            .article__anchor {
+                @include opacity(0.8);
+            }
+        }
+    }
+    &__anchor {
+        @extend %Pr-Ca__anchor;
+    }
     &__paragraph {
         @extend %paragraphs;
     }

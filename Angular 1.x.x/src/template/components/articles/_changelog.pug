@@ -3,7 +3,8 @@
 
 article(id="Changelog" class="article")
     header.article__header
-        h3.article__title.tertiary-heading= data.articles.changelog.headline
+        h3.article__title.tertiary-heading #{data.articles.changelog.headline}
+            a(href="#Changelog" rel="help" class="article__anchor anchor")
     .article__body
         p.article__paragraph #{data.articles.changelog.paragraph[0][0]} 
             a(href="https://github.com/" target="_blank" rel="help") Github

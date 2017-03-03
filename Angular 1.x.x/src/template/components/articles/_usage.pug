@@ -3,7 +3,8 @@
 
 article(id="Usage" class="article")
     header.article__header
-        h3.article__title.tertiary-heading= data.articles.usage.headline
+        h3.article__title.tertiary-heading #{data.articles.usage.headline}
+            a(href="#Usage" rel="help" class="article__anchor anchor")
     .article__body
         p.article__paragraph #{data.articles.usage.paragraph[0][0]} 
             strong #{data.articles.usage.paragraph[0][1]}
@@ -42,5 +43,5 @@ article(id="Usage" class="article")
         p.article__paragraph #{data.articles.usage.paragraph[6][0]} 
             strong gulpfile.js
             | #{data.articles.usage.paragraph[6][1]} 
-            a(ng-href="#GulpTasks" rel="help") #{data.articles.usage.paragraph[6][2]}
+            a(href="#GulpTasks" rel="help") #{data.articles.usage.paragraph[6][2]}
             | .
