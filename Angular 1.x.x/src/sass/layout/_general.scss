@@ -1,5 +1,5 @@
 //~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~* GENERAL *~~~~~~//
+//~~~~~~* GENERAL *~~~~~~//+
 //~~~~~~~~~~~~~~~~~~~~~~~//
 
 
@@ -8,6 +8,7 @@ $box-sizing: border-box !default;
 $html__line-height: 1.2 !default;
 // body
 $body__font-size: 1em !default;
+$body__color: $primary-text-color !default;
 
 
 *,
@@ -22,6 +23,7 @@ html {
 
 body {
     font-size: $body__font-size;
+    color: $body__color;
 }
 
 .clearfix {

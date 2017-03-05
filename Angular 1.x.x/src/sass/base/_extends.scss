@@ -1,5 +1,5 @@
 //~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~* EXTENDS *~~~~~~//
+//~~~~~~* EXTENDS *~~~~~~//+
 //~~~~~~~~~~~~~~~~~~~~~~~//
 
 
@@ -12,15 +12,6 @@ $paragraphs__text-align: justify !default;
 %paragraphs {
     line-height: $paragraphs__line-height;
     // text-align: $paragraphs__text-align;
-}
-
-
-// Icons: directories & files
-%project-structure__icons {
-    display: inline-block;
-    float: left;
-    transform: scale(0.8);
-    margin: -3px 3px 0 0;
 }
 
 

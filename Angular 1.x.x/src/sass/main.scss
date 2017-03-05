@@ -1,5 +1,5 @@
 //~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~* MAIN *~~~~~~//
+//~~~~~~* MAIN *~~~~~~//+
 //~~~~~~~~~~~~~~~~~~~~//
 
 
@@ -13,6 +13,10 @@
 
     // *--------- FUNCTIONS ---------*
     @import 'helpers/functions';
+
+
+    // *--------- COLORS ---------*
+    @import 'helpers/colors';
 
 
     // *--------- VARIABLES ---------*
@@ -64,8 +68,12 @@
     @import 'components/projectStructure';
 
 
+    // *--------- TABLE ---------*
+    @import 'components/table';
+
+
     // *--------- TABLE STRIPED ---------*
-    @import 'components/tableStriped.scss';
+    @import 'components/tableStriped';
 
 
     // *--------- LINKS ---------*

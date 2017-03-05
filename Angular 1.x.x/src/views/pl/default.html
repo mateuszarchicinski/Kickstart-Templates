@@ -39,7 +39,8 @@
           <li>nazwy plików konfiguracyjnych i danych,</li>
           <li>katalogów pracy i produkcji (wymagana również manualna zmiana w pliku <strong>.bowerrc</strong>),</li>
           <li>dostępów FTP,</li>
-          <li>podania kluczy do zewnętrznych API.</li>
+          <li>kluczy do zewnętrznych API,</li>
+          <li>identyfikatora śledzenia <a href="https://www.google.com/analytics/" target="_blank" rel="help">Google Analytics</a>.</li>
         </ul>
         <p class="article__paragraph">Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych z których będziemy korzystać indywidualnie. W pliku <strong>gulpfile.js</strong> odwołujemy się do niego poprzez zmienną <strong>PROJECT_CONFIG</strong>.</p>
       </div>
@@ -51,82 +52,82 @@
       <div class="article__body">
         <p class="article__paragraph">Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach <strong>project.config.js</strong><br class="br__1"/> i <strong>.bowerrc</strong>. Poniżej rekomendowana strukturę projektu. </p>
         <ul class="project-structure">
-          <li><i class="directory__root"></i>Katalog projektu
+          <li><i class="branch__icon directory__root"></i>Katalog projektu
             <ul class="branch">
-              <li class="branch__leaf-top"><i class="directory__close"></i>dist</li>
-              <li class="branch__leaf"><i class="directory__close"></i>node_modules</li>
-              <li class="branch__leaf-bottom"><i class="directory__open"></i>src
+              <li class="branch__leaf-top"><i class="branch__icon directory__close"></i>dist</li>
+              <li class="branch__leaf"><i class="branch__icon directory__close"></i>node_modules</li>
+              <li class="branch__leaf-bottom"><i class="branch__icon directory__open"></i>src
                 <ul class="branch">
-                  <li class="branch__leaf-top"><i class="directory__close"></i>bower_components</li>
-                  <li class="branch__leaf-bottom"><i class="directory__open"></i>css
+                  <li class="branch__leaf-top"><i class="branch__icon directory__close"></i>bower_components</li>
+                  <li class="branch__leaf-bottom"><i class="branch__icon directory__open"></i>css
                     <ul class="branch">
-                      <li class="branch__leaf-top"><i class="directory__open"></i>maps</li>
-                      <li class="branch__leaf-bottom"><i class="file__css"></i>main.css</li>
+                      <li class="branch__leaf-top"><i class="branch__icon directory__open"></i>maps</li>
+                      <li class="branch__leaf-bottom"><i class="branch__icon file__css"></i>main.css</li>
                     </ul>
                   </li>
-                  <li><i class="directory__open"></i>files</li>
-                  <li class="branch__leaf"><i class="directory__open"></i>fonts</li>
-                  <li class="branch__leaf-bottom"><i class="directory__open"></i>img
+                  <li><i class="branch__icon directory__open"></i>files</li>
+                  <li class="branch__leaf"><i class="branch__icon directory__open"></i>fonts</li>
+                  <li class="branch__leaf-bottom"><i class="branch__icon directory__open"></i>img
                     <ul class="branch">
-                      <li class="branch__leaf-top"><i class="directory__open"></i>sprites_sources</li>
-                      <li class="branch__leaf-bottom"><i class="file__img"></i>projectStructure.png</li>
+                      <li class="branch__leaf-top"><i class="branch__icon directory__open"></i>sprites_sources</li>
+                      <li class="branch__leaf-bottom"><i class="branch__icon file__img"></i>sprite.png</li>
                     </ul>
                   </li>
-                  <li><i class="directory__open"></i>js
+                  <li><i class="branch__icon directory__open"></i>js
                     <ul class="branch">
-                      <li class="branch__leaf-top"><i class="directory__open"></i>controllers</li>
-                      <li class="branch__leaf"><i class="directory__open"></i>directives</li>
-                      <li class="branch__leaf"><i class="directory__open"></i>services</li>
-                      <li class="branch__leaf"><i class="file__js"></i>app.config.js</li>
-                      <li class="branch__leaf-bottom"><i class="file__js"></i>app.js</li>
+                      <li class="branch__leaf-top"><i class="branch__icon directory__open"></i>controllers</li>
+                      <li class="branch__leaf"><i class="branch__icon directory__open"></i>directives</li>
+                      <li class="branch__leaf"><i class="branch__icon directory__open"></i>services</li>
+                      <li class="branch__leaf"><i class="branch__icon file__js"></i>app.config.js</li>
+                      <li class="branch__leaf-bottom"><i class="branch__icon file__js"></i>app.js</li>
                     </ul>
                   </li>
-                  <li><i class="directory__open"></i>sass
+                  <li><i class="branch__icon directory__open"></i>sass
                     <ul class="branch">
-                      <li class="branch__leaf-top"><i class="directory__open"></i>base</li>
-                      <li class="branch__leaf"><i class="directory__open"></i>components</li>
-                      <li class="branch__leaf"><i class="directory__open"></i>helpers</li>
-                      <li class="branch__leaf"><i class="directory__open"></i>layout</li>
-                      <li class="branch__leaf"><i class="directory__open"></i>modules</li>
-                      <li class="branch__leaf"><i class="directory__open"></i>pages</li>
-                      <li class="branch__leaf-bottom"><i class="file__sass"></i>main.scss</li>
+                      <li class="branch__leaf-top"><i class="branch__icon directory__open"></i>base</li>
+                      <li class="branch__leaf"><i class="branch__icon directory__open"></i>components</li>
+                      <li class="branch__leaf"><i class="branch__icon directory__open"></i>helpers</li>
+                      <li class="branch__leaf"><i class="branch__icon directory__open"></i>layout</li>
+                      <li class="branch__leaf"><i class="branch__icon directory__open"></i>modules</li>
+                      <li class="branch__leaf"><i class="branch__icon directory__open"></i>pages</li>
+                      <li class="branch__leaf-bottom"><i class="branch__icon file__sass"></i>main.scss</li>
                     </ul>
                   </li>
-                  <li><i class="directory__open"></i>template
+                  <li><i class="branch__icon directory__open"></i>template
                     <ul class="branch">
-                      <li class="branch__leaf-top"><i class="directory__open"></i>components</li>
-                      <li class="branch__leaf"><i class="directory__open"></i>layout</li>
-                      <li class="branch__leaf"><i class="directory__open"></i>views</li>
-                      <li class="branch__leaf-bottom"><i class="file__pug"></i>index.pug</li>
+                      <li class="branch__leaf-top"><i class="branch__icon directory__open"></i>components</li>
+                      <li class="branch__leaf"><i class="branch__icon directory__open"></i>layout</li>
+                      <li class="branch__leaf"><i class="branch__icon directory__open"></i>views</li>
+                      <li class="branch__leaf-bottom"><i class="branch__icon file__pug"></i>index.pug</li>
                     </ul>
                   </li>
-                  <li><i class="directory__open"></i>views
+                  <li><i class="branch__icon directory__open"></i>views
                     <ul class="branch">
-                      <li class="branch__leaf-top"><i class="file__html"></i>default.html</li>
+                      <li class="branch__leaf-top"><i class="branch__icon file__html"></i>default.html</li>
                     </ul>
                   </li>
-                  <li><i class="file__img"></i>apple-touch-icon.png</li>
-                  <li class="branch__leaf"><i class="file__xml"></i>browserconfig.xml</li>
-                  <li class="branch__leaf"><i class="file__xml"></i>crossdomain.xml</li>
-                  <li class="branch__leaf"><i class="file__img"></i>favicon.ico</li>
-                  <li class="branch__leaf"><i class="file__html"></i>index.html</li>
-                  <li class="branch__leaf"><i class="file__img"></i>tile.png</li>
-                  <li class="branch__leaf"><i class="file__img"></i>tile-1200x630px.png</li>
-                  <li class="branch__leaf-bottom"><i class="file__img"></i>tile-wide.png</li>
+                  <li><i class="branch__icon file__img"></i>apple-touch-icon.png</li>
+                  <li class="branch__leaf"><i class="branch__icon file__xml"></i>browserconfig.xml</li>
+                  <li class="branch__leaf"><i class="branch__icon file__xml"></i>crossdomain.xml</li>
+                  <li class="branch__leaf"><i class="branch__icon file__img"></i>favicon.ico</li>
+                  <li class="branch__leaf"><i class="branch__icon file__html"></i>index.html</li>
+                  <li class="branch__leaf"><i class="branch__icon file__img"></i>tile.png</li>
+                  <li class="branch__leaf"><i class="branch__icon file__img"></i>tile-1200x630px.png</li>
+                  <li class="branch__leaf-bottom"><i class="branch__icon file__img"></i>tile-wide.png</li>
                 </ul>
               </li>
-              <li><i class="directory__open"></i>test
+              <li><i class="branch__icon directory__open"></i>test
                 <ul class="branch">
-                  <li class="branch__leaf-top"><i class="directory__open"></i>spec</li>
-                  <li class="branch__leaf-bottom"><i class="file__js"></i>karma.conf.js</li>
+                  <li class="branch__leaf-top"><i class="branch__icon directory__open"></i>spec</li>
+                  <li class="branch__leaf-bottom"><i class="branch__icon file__js"></i>karma.conf.js</li>
                 </ul>
               </li>
-              <li><i class="file__json"></i>.bowerrc</li>
-              <li class="branch__leaf"><i class="file__json"></i>bower.json</li>
-              <li class="branch__leaf"><i class="file__js"></i>gulpfile.js</li>
-              <li class="branch__leaf"><i class="file__json"></i>package.json</li>
-              <li class="branch__leaf"><i class="file__js"></i>project.config.js</li>
-              <li class="branch__leaf-bottom"><i class="file__json"></i>project.data.json</li>
+              <li><i class="branch__icon file__json"></i>.bowerrc</li>
+              <li class="branch__leaf"><i class="branch__icon file__json"></i>bower.json</li>
+              <li class="branch__leaf"><i class="branch__icon file__js"></i>gulpfile.js</li>
+              <li class="branch__leaf"><i class="branch__icon file__json"></i>package.json</li>
+              <li class="branch__leaf"><i class="branch__icon file__js"></i>project.config.js</li>
+              <li class="branch__leaf-bottom"><i class="branch__icon file__json"></i>project.data.json</li>
             </ul>
           </li>
         </ul>

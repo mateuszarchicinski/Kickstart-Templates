@@ -1,5 +1,5 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~* TYPOGRAPHY *~~~~~~//
+//~~~~~~* TYPOGRAPHY *~~~~~~//+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
@@ -11,7 +11,7 @@ $primary-heading__text-transform: uppercase !default;
 // ::after
 $primary-heading__after__width: 150px !default;
 $primary-heading__after__height: 3px !default;
-$primary-heading__after__background: $color__red-orange !default;
+$primary-heading__after__background: $primary-color !default;
 $primary-heading__after__font-size: 0.5em !default;
 $primary-heading__after__border-radius: 20% !default;
 $primary-heading__after__margin: 5px auto 0 !default;
@@ -20,7 +20,7 @@ $secondary-heading__font-size: 1.5em !default;
 $tertiary-heading__font-size: 1.25em !default;
 $headings__font-weight: 400 !default;
 $headings__padding-bottom: 4px !default;
-$headings__border-bottom: 1px solid $color__red-orange !default;
+$headings__border-bottom: 1px solid $primary-color !default;
 $quaternary-heading__font-size: 1.15em !default;
 
 

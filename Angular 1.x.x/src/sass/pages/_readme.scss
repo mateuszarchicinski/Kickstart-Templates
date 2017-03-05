@@ -1,15 +1,15 @@
 //~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~* README *~~~~~~//
+//~~~~~~* README *~~~~~~//+
 //~~~~~~~~~~~~~~~~~~~~~~//
 
 
 $readme__background: $color__white !default;
 $readme__border: 1px solid rgba($color__black, 0.1) !default;
-$readme__box-shadow: 0 3px 6px rgba($color__black, 0.15),
-0 3px 6px rgba($color__black, 0.24) !default;
+$readme__box-shadow: 0 3px 6px rgba($color__black, 0.15), 0 3px 6px rgba($color__black, 0.24) !default;
 // __info
 $readme__info__padding: 0 0 0.125em 1em !default;
-$readme__info__border-left: 0.25em solid $color__sunset-orange !default;
+$readme__info__border-left: 0.25em solid $primary-color-dark !default;
+$readme__info__color: $secondary-text-color !default;
 
 
 .readme {
@@ -27,7 +27,7 @@ $readme__info__border-left: 0.25em solid $color__sunset-orange !default;
     &__title {
         &:hover {
             .readme__anchor {
-                @include opacity(0.8);
+                @include opacity(0.9);
             }
         }
     }
@@ -36,6 +36,7 @@ $readme__info__border-left: 0.25em solid $color__sunset-orange !default;
     }
     &__info {
         @extend %paragraphs;
+        color: $readme__info__color;
         padding: $readme__info__padding;
         border-left: $readme__info__border-left;
     }

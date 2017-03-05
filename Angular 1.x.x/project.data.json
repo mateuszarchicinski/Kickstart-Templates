@@ -75,7 +75,8 @@
                             "nazwy plików konfiguracyjnych i danych,",
                             "katalogów pracy i produkcji (wymagana również manualna zmiana w pliku",
                             "dostępów FTP,",
-                            "podania kluczy do zewnętrznych API."
+                            "kluczy do zewnętrznych API,",
+                            "identyfikatora śledzenia"
                         ],
                         [
                             "Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych z których będziemy korzystać indywidualnie. W pliku",
@@ -686,18 +687,18 @@
             }
         },
         "en": {
-            "lang": "en",
-            "title": "En - Kickstart Projekt - Angular 1.x Szablon",
+            "lang": "pl",
+            "title": "Kickstart Projekt - Angular 1.x Szablon",
             "description": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
             "keywords": "szablon aplikacja webowa zautomatyzowana automatyzacja skonfigurowana konfiguracja środowisko developer developerskie projekt angular ng app google node nodejs npm bower gulp gulpjs karma jasmine material",
             "author": "Mateusz Archiciński",
             "ogTitle": "Kickstart Projekt - Angular 1.x Szablon",
             "ogDescription": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
             "header": {
-                "headline": "EN - Kickstart Projekt"
+                "headline": "Kickstart Projekt"
             },
             "section": {
-                "headline": "En - Angular v1.x Szablon",
+                "headline": "Angular v1.x Szablon",
                 "info": [
                     [
                         "Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak",
@@ -713,7 +714,7 @@
             },
             "articles": {
                 "usage":{
-                    "headline": "EN - Użycie",
+                    "headline": "Użycie",
                     "paragraph": [
                         [
                             "Projekt",
@@ -759,7 +760,8 @@
                             "nazwy plików konfiguracyjnych i danych,",
                             "katalogów pracy i produkcji (wymagana również manualna zmiana w pliku",
                             "dostępów FTP,",
-                            "podania kluczy do zewnętrznych API."
+                            "kluczy do zewnętrznych API,",
+                            "identyfikatora śledzenia"
                         ],
                         [
                             "Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych z których będziemy korzystać indywidualnie. W pliku",

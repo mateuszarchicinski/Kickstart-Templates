@@ -1,5 +1,5 @@
 //~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~* FILES *~~~~~~//
+//~~~~~~* FILES *~~~~~~//+
 //~~~~~~~~~~~~~~~~~~~~~//
 
 
@@ -11,11 +11,11 @@
     &__sass,
     &__pug,
     &__css {
-        @extend %project-structure__icons;
         @include sprite($code-black);
+        display: inline-block;
     }
     &__img {
-        @extend %project-structure__icons;
         @include sprite($image-black);
+        display: inline-block;
     }
 }

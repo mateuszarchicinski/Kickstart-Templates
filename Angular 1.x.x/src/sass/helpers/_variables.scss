@@ -11,39 +11,40 @@
 // *--------- FUNCTIONS ---------*
 
 
+// *--------- COLORS ---------*
+
+
 // *--------- VARIABLES ---------*
 // Lines Heights
-$line-height__1-2: 1.2;
-$line-height__1-3: 1.3;
+$line-height__1-2:     1.2;
+$line-height__1-3:     1.3;
 
 // Fonts
-$font__roboto: Roboto;
+$font__roboto:         Roboto;
 $font__helvetica-neue: "Helvetica Neue";
-$font__sans-serif: sans-serif;
+$font__sans-serif:     sans-serif;
 
 // Fonts Sizes
-$font-size__1: 1em;
+$font-size__1:         1em;
 
 // Fonts Weights
-$font-weight__bolder: 600;
-$font-weight__bold: 500;
-$font-weight__normal: 400;
+$font-weight__bolder:  600;
+$font-weight__bold:    500;
+$font-weight__normal:  400;
 $font-weight__lighter: 300;
 
 // Colors
-$color__black: #000;
-$color__white: #fff;
-$color__red-orange: #f44336;
-$color__sunset-orange: #ef5350;
-$color__amour: #ffebee;
-$color__we-peep: #ffcdd2;
-$color__blue: #0000ee;
-$color__steel-blue: #4078c0;
-$color__navy-blue: #0074d9;
-$color__nero: #212121;
+$primary-color-dark:   $color__persian-red;
+$primary-color:        $color__red-orange;
+$primary-color-light:  $color__we-peep;
+$accent-color:         $color__neon-blue;
+$primary-text-color:   $color__nero;
+$secondary-text-color: $color__grey;
+$divider-color:        $color__silver;
 
 // Breaks Points
-$break-point__1: 749px;
+$break-point__1:       749px;
+$break-point__2:       608px;
 
 
 // *--------- MIXINS ---------*
@@ -62,7 +63,7 @@ $primary-heading__text-transform: uppercase;
 // ::after
 $primary-heading__after__width: #{(150 / 16)}em;
 $primary-heading__after__height: #{(3 / 16)}em;
-$primary-heading__after__background: $color__red-orange;
+$primary-heading__after__background: $primary-color;
 $primary-heading__after__font-size: $primary-heading__font-size / 4;
 $primary-heading__after__border-radius: 20%;
 $primary-heading__after__margin: #{(5 / 16)}em auto 0;
@@ -71,7 +72,7 @@ $secondary-heading__font-size: $primary-heading__font-size - 0.5;
 $tertiary-heading__font-size: $secondary-heading__font-size - 0.25;
 $headings__font-weight: $base__font-weight;
 $headings__padding-bottom: #{(4 / 16)}em;
-$headings__border-bottom: 1px solid $color__red-orange;
+$headings__border-bottom: 1px solid $primary-color;
 $quaternary-heading__font-size: $tertiary-heading__font-size - 0.1;
 /* Text */
 //__normal
@@ -103,7 +104,6 @@ $font-family: $base__font-family;
 // *--------- HTML SYMBOLS / ENTITIES ---------*
 // .arrow-right
 $ar-before__font-size: 1.05em;
-$ar-before__color: $color__navy-blue;
 
 
 // *--------- ARTICLES ---------*
@@ -120,33 +120,31 @@ $code__line-block__background: $color__amour;
 $code__line-block__font-size: 90%;
 $code__line-block__text-align: justify;
 $code__line-block__color: $color__black;
-// __block .part- visible/hidden .invert
-$part-visible-hidden__beark-point: 608px;
 // __keyword & __name & __opt-arg
 $param__keyword-name-opt-arg__color: $color__black;
 // __name & __opt-arg - before & after
 $param__name-opt-arg__font-size: $base__font-size + 0.75;
 // __name - before & after
-$param__name__color: $color__sunset-orange;
+$param__name__color: $primary-color-dark;
 // __opt-arg - before & after
-$param__opt-arg__color: $color__navy-blue;
+$param__opt-arg__color: $accent-color;
 
 
 // *--------- PROJECT STRUCTURE ---------*
-// .project-structure .branch
-$project-structure__branch__border-left: 1px dashed $color__black;
-// .project-structure .branch ::after ::before
-$project-structure__branch-before-after__background: $color__red-orange;
+// .branch
+$branch__border-left: 1px dashed darken($divider-color, 15%);
+// .branch ::after ::before
+$branch-before-after__background: lighten($primary-color-dark, 5%);
 // .branch .leaf-top ::before
-$branch__leaf-top-before__border-top: $project-structure__branch__border-left;
+$branch__leaf-top-before__border-top: $branch__border-left;
 // .branch .leaf-top ::after
-$branch__leaf-top-after__background: $project-structure__branch-before-after__background;
+$branch__leaf-top-after__background: $branch-before-after__background;
 // .branch .leaf-bottom ::before
-$branch__leaf-bottom-before__border-left: $project-structure__branch__border-left;
+$branch__leaf-bottom-before__border-left: $branch__border-left;
 
 
 // *--------- TABLE STRIPED ---------*
-$table-striped__border: 1px solid $color__sunset-orange;
+$table-striped__border: 1px solid $primary-color-dark;
 // __header & __data - :nth-child(even)
 $table-striped__header-data__border-left: $table-striped__border;
 // __header
@@ -175,14 +173,14 @@ $table-striped__data__rotate-content__margin: #{(5 / 16)}em;
 
 // *--------- LINKS ---------*
 $a__text-decoration: none;
-$a__color: $color__navy-blue; // $color__navy-blue - $color__steel-blue - $color__blue
+$a__color: darken($color__navy-blue, 4%);
 $a__transition: 0.25s color ease;
-// a link - visited
+// a :link - :visited
 $a__link-visited__color: $a__color;
-// a hover
-$a__hover__color: $color__red-orange;
-// a active
-$a__active__color: $color__sunset-orange;
+// a :hover
+$a__hover__color: $primary-color;
+// a :active
+$a__active__color: $primary-color-dark;
 
 
 // ---------------------
@@ -196,7 +194,8 @@ $readme__border: 1px solid rgba($color__black, 0.1);
 $readme__box-shadow: 0 3px 6px rgba($color__black, 0.15), 0 3px 6px rgba($color__black, 0.24);
 // __info
 $readme__info__padding: 0 0 0.125em 1em;
-$readme__info__border-left: 0.25em solid $color__sunset-orange;
+$readme__info__border-left: 0.25em solid $primary-color-dark;
+$readme__info__color: $secondary-text-color;
 
 
 // ---------------------
@@ -210,6 +209,7 @@ $box-sizing: border-box;
 $html__line-height: $base__line-height;
 // body
 $body__font-size: $base__font-size;
+$body__color: $primary-text-color;
 
 
 // *--------- MAIN HEADER ---------*

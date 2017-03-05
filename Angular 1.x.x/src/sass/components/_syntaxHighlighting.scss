@@ -1,5 +1,5 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~* SYNAX HIGHLIGHTING *~~~~~~//
+//~~~~~~* SYNAX HIGHLIGHTING *~~~~~~//+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
@@ -8,8 +8,6 @@ $code__line-block__background: $color__amour !default;
 $code__line-block__font-size: 90% !default;
 $code__line-block__text-align: justify !default;
 $code__line-block__color: $color__black !default;
-// __block .part- visible/hidden .invert
-$part-visible-hidden__beark-point: 608px !default;
 
 
 .code {
@@ -33,7 +31,7 @@ $part-visible-hidden__beark-point: 608px !default;
             &-visible {
                 display: inline;
                 &.invert {
-                    @media screen and (max-width: $part-visible-hidden__beark-point) {
+                    @media screen and (max-width: $break-point__2) {
                         display: none;
                     }
                 }
@@ -41,7 +39,7 @@ $part-visible-hidden__beark-point: 608px !default;
             &-hidden {
                 display: none;
                 &.invert {
-                    @media screen and (max-width: $part-visible-hidden__beark-point) {
+                    @media screen and (max-width: $break-point__2) {
                         display: inline;
                     }
                 }
@@ -56,9 +54,9 @@ $param__keyword-name-opt-arg__color: $color__black !default;
 // __name & __opt-arg - before & after
 $param__name-opt-arg__font-size: 1.75em !default;
 // __name - before & after
-$param__name__color: $color__sunset-orange !default;
+$param__name__color: $primary-color-dark !default;
 // __opt-arg - before & after
-$param__opt-arg__color: $color__navy-blue !default;
+$param__opt-arg__color: $accent-color !default;
 
 
 .param {
@@ -74,7 +72,6 @@ $param__opt-arg__color: $color__navy-blue !default;
             content: "[";
             font-size: $param__name-opt-arg__font-size;
         }
-        @include before {}
         @include after {
             content: "]";
         }
@@ -82,7 +79,6 @@ $param__opt-arg__color: $color__navy-blue !default;
             line-height: 24px;
         }
     }
-    &__keyword {}
     &__name {
         @include before-after {
             color: $param__name__color;

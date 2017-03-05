@@ -1,18 +1,18 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~* PROJECT STRUCTURE *~~~~~~//
+//~~~~~~* PROJECT STRUCTURE *~~~~~~//+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
-// .project-structure .branch
-$project-structure__branch__border-left: 1px dashed $color__black !default;
-// .project-structure .branch ::after ::before
-$project-structure__branch-before-after__background: $color__red-orange !default;
+// .branch
+$branch__border-left: 1px dashed darken($divider-color, 15%) !default;
+// .branch ::after ::before
+$branch-before-after__background: lighten($primary-color-dark, 5%) !default;
 // .branch .leaf-top ::before
-$branch__leaf-top-before__border-top: $project-structure__branch__border-left !default;
+$branch__leaf-top-before__border-top: $branch__border-left !default;
 // .branch .leaf-top ::after
-$branch__leaf-top-after__background: $project-structure__branch-before-after__background !default;
+$branch__leaf-top-after__background: $branch-before-after__background !default;
 // .branch .leaf-bottom ::before
-$branch__leaf-bottom-before__border-left: $project-structure__branch__border-left !default;
+$branch__leaf-bottom-before__border-left: $branch__border-left !default;
 
 
 .project-structure {
@@ -30,14 +30,14 @@ $branch__leaf-bottom-before__border-left: $project-structure__branch__border-lef
     }
     .branch {
         position: relative;
-        border-left: $project-structure__branch__border-left;
+        border-left: $branch__border-left;
         padding-left: 25px;
         margin-left: 12px;
         @include before-after {
             content: "";
             width: 7px;
             height: 7px;
-            background: $project-structure__branch-before-after__background;
+            background: $branch-before-after__background;
             position: absolute;
             display: block;
             left: -4px;
@@ -48,6 +48,11 @@ $branch__leaf-bottom-before__border-left: $project-structure__branch__border-lef
         }
         @include after {
             bottom: -7px;
+        }
+        &__icon {
+            float: left;
+            transform: scale(0.8);
+            margin: -3px 3px 0 0;
         }
         &__leaf {
             &,

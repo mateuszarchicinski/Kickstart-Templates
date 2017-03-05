@@ -1,5 +1,5 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~* DIRECTORIES *~~~~~~//
+//~~~~~~* DIRECTORIES *~~~~~~//+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
@@ -7,7 +7,7 @@
     &__root,
     &__close,
     &__open {
-        @extend %project-structure__icons;
+        display: inline-block;
     }
     &__root {
         @include sprite($folder-special-black);

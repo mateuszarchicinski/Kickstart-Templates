@@ -1,5 +1,5 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~* ARTICLES *~~~~~~//
+//~~~~~~* ARTICLES *~~~~~~//+
 //~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
@@ -15,7 +15,7 @@ $article__list-points__li__margin: 0.8em 0 !default;
     &__title {
         &:hover {
             .article__anchor {
-                @include opacity(0.8);
+                @include opacity(0.9);
             }
         }
     }
