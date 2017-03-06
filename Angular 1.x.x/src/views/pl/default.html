@@ -215,23 +215,23 @@
         <h3 class="article__title tertiary-heading">Gulp zadania<a class="article__anchor anchor" href="#GulpTasks" rel="help"></a></h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe <strong>gulp</strong> w połączeniu z <strong>nazwą</strong> i <strong>opcjonalnymi argumentami</strong> zadania do wykonania. </p>
-        <p class="article__paragraph text-medium text-center"><code class="param__keyword">gulp</code> <code class="param__name">nazwa</code> <code class="param__opt-arg">opcjonalne argumenty </code></p>
+        <p class="article__paragraph">Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe <strong>gulp</strong> w połączeniu z <strong>nazwą</strong> i <strong>opcjonalnymi argumentami</strong> zadania do wykonania.</p>
+        <p class="article__paragraph text-medium text-center"><code class="param__keyword">gulp</code> <code class="param__name">nazwa</code> <code class="param__opt-arg">opcjonalne argumenty</code></p>
         <p class="article__paragraph">Przykładowe polecenie będzie wyglądać następująco <code class="code__line">gulp pug --lang pl</code> (nr: <a href="#pug" rel="help">6</a>).</p>
         <p class="article__paragraph">Poniższa tabela zawiera informację dotyczące nazwy, opcjonalnych argumentów i opisu do każdego zdefiniowanego zadania.</p>
-        <table class="table-striped">
-          <thead class="table-striped__thead">
-            <tr class="table-striped__row">
-              <th class="table-striped__header">Nazwa</th>
-              <th class="table-striped__header">Opis</th>
+        <table class="table">
+          <thead class="table__thead">
+            <tr class="table__row">
+              <th class="table__header">Nazwa</th>
+              <th class="table__header">Opis</th>
             </tr>
           </thead>
-          <tbody class="table-striped__body">
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="sassCss">
+          <tbody class="table__body">
+            <tr class="table__row">
+              <td class="table__data" id="sassCss"><span class="table__row-counter"></span>
                 <p class="rotate-content"><code class="param__name">sass:css</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Wykorzystuje plik <strong>main.scss</strong> lub <strong>main.sass</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
@@ -244,11 +244,11 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="sassLint">
+            <tr class="table__row">
+              <td class="table__data" id="sassLint"><span class="table__row-counter"></span>
                 <p class="rotate-content"><code class="param__name">sass:lint</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.scss</strong> lub <strong>.sass</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
@@ -257,11 +257,11 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="jsHint">
+            <tr class="table__row">
+              <td class="table__data" id="jsHint"><span class="table__row-counter"></span>
                 <p class="rotate-content"><code class="param__name">js:hint</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.js</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
@@ -270,21 +270,21 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="jsTest">
+            <tr class="table__row">
+              <td class="table__data" id="jsTest"><span class="table__row-counter"></span>
                 <p class="rotate-content"><code class="param__name">js:test</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Uruchomi testy jednostkowe w środowisku <a href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help">Karma</a>, które konfigurujemy za pomocą pliku <strong>karma.conf.js</strong>. Wymieniony plik umożliwia wybór frameworków testujących i wielu innych rzeczy o których można poczytać <a href="https://karma-runner.github.io/1.0/config/configuration-file.html" target="_blank" rel="help">tutaj</a>.</li>
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="jadePug">
+            <tr class="table__row">
+              <td class="table__data" id="jadePug"><span class="table__row-counter"></span>
                 <p class="rotate-content"><code class="param__name">jade:pug</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.jade</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
@@ -294,11 +294,11 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="pug">
-                <p class="rotate-content"><code class="param__name">pug</code><br class="br-g-1"/><code class="param__opt-arg">--lang pl / en</code></p>
+            <tr class="table__row">
+              <td class="table__data" id="pug"><span class="table__row-counter"></span>
+                <p class="rotate-content"><code class="param__name">pug</code><br class="br__2"/><code class="param__opt-arg">--lang pl / en</code></p>
               </td>
-              <td class="table-striped__data" style="background:#fff;">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej <strong>langValue</strong> na <strong>"pl"</strong> i nadpisuje ją w przypadku podania innej.</li>
                   <li>Wykorzystuje pliki z rozszerzeniem<strong>.pug</strong>.</li>
@@ -312,11 +312,11 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="pugLint">
+            <tr class="table__row">
+              <td class="table__data" id="pugLint"><span class="table__row-counter"></span>
                 <p class="rotate-content"><code class="param__name">pug:lint</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.pug</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
@@ -325,11 +325,11 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="html">
+            <tr class="table__row">
+              <td class="table__data" id="html"><span class="table__row-counter"></span>
                 <p class="rotate-content"><code class="param__name">html</code></p>
               </td>
-              <td class="table-striped__data" style="background:#fff;">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
@@ -341,11 +341,11 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="htmlHint">
+            <tr class="table__row">
+              <td class="table__data" id="htmlHint"><span class="table__row-counter"></span>
                 <p class="rotate-content"><code class="param__name">html:hint</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
@@ -354,11 +354,11 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="htmlMinify">
+            <tr class="table__row">
+              <td class="table__data" id="htmlMinify"><span class="table__row-counter"></span>
                 <p class="rotate-content"><code class="param__name">html:minify</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Wykorzystuje pliki z rozszerzeniem <strong>.html</strong>.</li>
                   <li>Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów (<a href="https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber" target="_blank" rel="help">gulp-plumber</a>).</li>
@@ -367,11 +367,11 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="server">
+            <tr class="table__row">
+              <td class="table__data" id="server"><span class="table__row-counter"></span>
                 <p class="rotate-content"><code class="param__name">server</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>
                     <p class="article__paragraph">Uruchamia lokalnie serwer nasłuchujący na katalog pracy pod adresem <a href="http://localhost:3000/" target="_blank" rel="help">http://localhost:3000/</a> (widoczny w konsoli).</p>
@@ -382,34 +382,33 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="watch">
+            <tr class="table__row">
+              <td class="table__data" id="watch"><span class="table__row-counter"></span>
                 <p class="rotate-content"><code class="param__name">watch</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>
-                    <p class="article__paragraph">W następstwie wprowadzanych zmian w plikach wywołuję odpowiednie zadania:</p>
-                    <p class="article__paragraph text-small"><strong>Pliki</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">Zadania</code><br/><strong>.sass</strong> lub <strong>.scss</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">sass:lint<a href="#sassLint" rel="help"><sup>2</sup></a> i sass:css<a href="#sassCss" rel="help"><sup>1</sup></a></code><br/><strong>.js</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">js:hint<a href="#jsHint" rel="help"><sup>3</sup></a> i browserSync.reload<a href="#server" rel="help"><sup>11</sup></a></code><br/><strong>project.data.json</strong> i <strong>.pug</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">pug:lint<a href="#pugLint" rel="help"><sup>7</sup></a> i pug<a href="#pug" rel="help"><sup>6</sup></a></code><br/><strong>.html</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">html:hint<a href="#htmlHint" rel="help"><sup>9</sup></a> i browserSync.reload<a href="#server" rel="help"><sup>11</sup></a></code></p>
+                    <p class="article__paragraph">W następstwie wprowadzanych zmian w plikach wywołuję odpowiednie zadania:<br/><strong>Pliki</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">Zadania</code><br/><strong>.sass</strong> lub <strong>.scss</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">nr: <a href="#sassLint" rel="help">2</a> i <a href="#sassCss" rel="help">1</a></code><br/><strong>.js</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">nr: <a href="#jsHint" rel="help">3</a> i <a href="#server" rel="help">11</a></code><br/><strong>project.data.json</strong> i <strong>.pug</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">nr: <a href="#pugLint" rel="help">7</a> i <a href="#pug" rel="help"> 6</a></code><br/><strong>.html</strong><span class="arrow-right"></span><code class="param__name param__name-inline-24">nr: <a href="#htmlHint" rel="help">9</a> i <a href="#server" rel="help">11</a></code></p>
                   </li>
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="clean">
+            <tr class="table__row">
+              <td class="table__data" id="clean"><span class="table__row-counter"></span>
                 <p class="rotate-content"><code class="param__name">clean</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Usuwa katalog produkcyjny wraz z całą zawartością. Uruchamiane zawsze na początku tworzenia nowego builda aplikacji (<a href="https://github.com/sindresorhus/del#del--" target="_blank" rel="help">del</a>).</li>
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="copy">
+            <tr class="table__row">
+              <td class="table__data" id="copy"><span class="table__row-counter"></span>
                 <p class="rotate-content"><code class="param__name">copy</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Kopiuje niżej wskazane tzw. pliki statyczne z katalogu pracy do katalogu produkcyjnego:
                     <ul class="article__list article__list-disc">
@@ -424,11 +423,11 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="images">
-                <p class="rotate-content"><code class="param__name">images</code><br class="br-g-2"/><code class="param__opt-arg">--option advanced</code></p>
+            <tr class="table__row">
+              <td class="table__data" id="images"><span class="table__row-counter"></span>
+                <p class="rotate-content"><code class="param__name">images</code><br class="br__2"/><code class="param__opt-arg">--option advanced</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia tym samym rozszerzenia plików do optymalizacji, moduł optymalizujący i argumenty dla wybranego modułu.</li>
                   <li>Zarówno przy opcji standardowej (bez dodatkowych argumentów) i zaawansowanej (z dodatkowymi argumentami) wykorzystane zostaną grafiki <br class="br__1"/>z rozszerzeniem <strong>.jpg</strong> i <strong>.png</strong>. W standardowej opcji dochodzą jeszcze dwa typy <strong>.svg</strong> i <strong>.gif</strong>.</li>
@@ -439,11 +438,11 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="imagesSprite">
-                <p class="rotate-content"><code class="param__name">images:sprite</code><br class="br-g-3"/><code class="param__opt-arg">--name _sprite</code></p>
+            <tr class="table__row">
+              <td class="table__data" id="imagesSprite"><span class="table__row-counter"></span>
+                <p class="rotate-content"><code class="param__name">images:sprite</code><br class="br__2"/><code class="param__opt-arg">--name _sprite</code></p>
               </td>
-              <td class="table-striped__data" style="background:#fff;">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej <strong>spriteCssName</strong> na <strong>"_sprite"</strong> i nadpisuje ją w przypadku podania innej.</li>
                   <li>Wykorzystuje grafiki z rozszerzeniem <strong>.jpg</strong>, <strong>.png</strong> i <strong>.gif</strong>.</li>
@@ -453,11 +452,11 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="upload">
-                <p class="rotate-content"><code class="param__name">upload</code><br class="br-g-4"/><code class="param__opt-arg">--upload</code></p>
+            <tr class="table__row">
+              <td class="table__data" id="upload"><span class="table__row-counter"></span>
+                <p class="rotate-content"><code class="param__name">upload</code><br class="br__2"/><code class="param__opt-arg">--upload</code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Sprawdza czy wszystkie wartości zmiennych dotyczących połączenia FTP zostały zdefiniowane w pliku <strong>project.config.js</strong> i czy przekazano dodatkowy argument do procesu zadania.</li>
                   <li>Wykorzystuje wszystkie pliki z katalogu produkcyjnego.</li>
@@ -466,39 +465,37 @@
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="build">
-                <p class="rotate-content"><code class="param__name">build</code><br class="br-g-5"/><code class="param__opt-arg">nr: <a href="#pug" rel="help">6</a>, <a href="#images" rel="help">15</a>, <a href="#upload" rel="help">17</a></code></p>
+            <tr class="table__row">
+              <td class="table__data" id="build"><span class="table__row-counter"></span>
+                <p class="rotate-content"><code class="param__name">build</code><br class="br__2"/><code class="param__opt-arg">nr: <a href="#pug" rel="help">6</a>, <a href="#images" rel="help">15</a>, <a href="#upload" rel="help">17</a></code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li> 
-                    <p class="article__paragraph">Uruchamia sekwencję wywołujących się kolejno zadań (<a href="https://github.com/OverZealous/run-sequence#run-sequence" target="_blank" rel="help">run-sequence</a>):</p>
-                    <p class="article__paragraph text-small"><code class="param__name param__name-inline-24">clean<a href="#clean" rel="help"><sup>13</sup></a><span class="arrow-right"></span>sass:lint<a href="#sassLint" rel="help"><sup>2</sup></a><span class="arrow-right"></span>sass:css<a href="#sassCss" rel="help"><sup>1</sup></a><span class="arrow-right"></span>js:hint<a href="#jsHint" rel="help"><sup>3</sup></a><span class="arrow-right"></span>pug:lint<a href="#pugLint" rel="help"><sup>7</sup></a><span class="arrow-right"></span>pug<a href="#pug" rel="help"><sup>6</sup></a><span class="arrow-right"></span>html:hint<a href="#htmlHint" rel="help"><sup>9</sup></a><span class="arrow-right"></span>html<a href="#html" rel="help"><sup>8</sup></a><span class="arrow-right"></span>html:minify<a href="#htmlMinify" rel="help"><sup>10</sup></a><span class="arrow-right"></span>copy<a href="#copy" rel="help"><sup>14</sup></a><span class="arrow-right"></span>images<a href="#images" rel="help"><sup>15</sup></a><span class="arrow-right"></span>upload<a href="#upload" rel="help"><sup>17</sup></a></code></p>
+                    <p class="article__paragraph">Uruchamia sekwencję wywołujących się kolejno zadań (<a href="https://github.com/OverZealous/run-sequence#run-sequence" target="_blank" rel="help">run-sequence</a>):<code class="param__name param__name-inline-24">nr: <a href="#clean" rel="help">13</a>, <a href="#sassLint" rel="help">2</a>, <a href="#sassCss" rel="help">1</a>, <a href="#jsHint" rel="help">3</a>, <a href="#pugLint" rel="help">7</a>, <a href="#pug" rel="help">6</a>, <a href="#htmlHint" rel="help">9</a>, <a href="#html" rel="help">8</a>, <a href="#htmlMinify" rel="help">10</a>, <a href="#copy" rel="help">14</a>, <a href="#images" rel="help">15</a>, <a href="#upload" rel="help">17</a></code></p>
                     <p class="article__paragraph">W rezultacie zakończenia tak złożonego procesu zadania zostanie stworzony nowy build aplikacji gotowy do dalszych testów lub przeniesienia na środowisko produkcyjne.</p>
                   </li>
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="buildServer">
-                <p class="rotate-content"><code class="param__name">build:server</code><br class="br-g-6"/><code class="param__opt-arg">nr: <a href="#pug" rel="help">6</a>, <a href="#images" rel="help">15</a>, <a href="#upload" rel="help">17</a></code></p>
+            <tr class="table__row">
+              <td class="table__data" id="buildServer"><span class="table__row-counter"></span>
+                <p class="rotate-content"><code class="param__name">build:server</code><br class="br__2"/><code class="param__opt-arg">nr: <a href="#pug" rel="help">6</a>, <a href="#images" rel="help">15</a>, <a href="#upload" rel="help">17</a></code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li>Wywołuje zadanie <code class="param__name param__name-inline-24">build</code><a href="#build" rel="help"><sup>18</sup></a> po którym tworzy lokalnie serwer nasłuchujący na dopiero co powstały katalog produkcyjny.</li>
                 </ol>
               </td>
             </tr>
-            <tr class="table-striped__row">
-              <td class="table-striped__data" id="default">
-                <p class="rotate-content"><code class="param__name">gulp / default</code><br class="br-g-7"/><code class="param__opt-arg">nr: <a href="#pug" rel="help">6</a></code></p>
+            <tr class="table__row">
+              <td class="table__data" id="default"><span class="table__row-counter"></span>
+                <p class="rotate-content"><code class="param__name">gulp / default</code><br class="br__2"/><code class="param__opt-arg">nr: <a href="#pug" rel="help">6</a></code></p>
               </td>
-              <td class="table-striped__data">
+              <td class="table__data">
                 <ol class="article__list">
                   <li> 
-                    <p class="article__paragraph">Uruchamia sekwencję wywołujących się kolejno zadań (<a href="https://github.com/OverZealous/run-sequence#run-sequence" target="_blank" rel="help">run-sequence</a>):</p>
-                    <p class="article__paragraph text-small"><code class="param__name param__name-inline-24">sass:lint<a href="#sassLint" rel="help"><sup>2</sup></a><span class="arrow-right"></span>sass:css<a href="#sassCss" rel="help"><sup>1</sup></a><span class="arrow-right"></span>js:hint<a href="#jsHint" rel="help"><sup>3</sup></a><span class="arrow-right"></span>pug:lint<a href="#pugLint" rel="help"><sup>7</sup></a><span class="arrow-right"></span>pug<a href="#pug" rel="help"><sup>6</sup></a><span class="arrow-right"></span>html:hint<a href="#htmlHint" rel="help"><sup>9</sup></a><span class="arrow-right"></span>server<a href="#server" rel="help"><sup>11</sup></a><span class="arrow-right"></span>watch<a href="#watch" rel="help"><sup>12</sup></a></code></p>
+                    <p class="article__paragraph">Uruchamia sekwencję wywołujących się kolejno zadań (<a href="https://github.com/OverZealous/run-sequence#run-sequence" target="_blank" rel="help">run-sequence</a>):<code class="param__name param__name-inline-24">nr: <a href="#sassLint" rel="help">2</a>, <a href="#sassCss" rel="help">1</a>, <a href="#jsHint" rel="help">3</a>, <a href="#pugLint" rel="help">7</a>, <a href="#pug" rel="help">6</a>, <a href="#htmlHint" rel="help">9</a>, <a href="#server" rel="help">11</a>, <a href="#watch" rel="help">12</a></code></p>
                     <p class="article__paragraph">W następstwie zakończenia powyższej sekwencji zostanie utworzone  tzw. środowisko pracy udostępniające wiele przydatnych funkcjonalności, które usprawnią <br class="br__1"/>i przyśpieszą proces tworzenia nowej aplikacji.</p>
                   </li>
                 </ol>

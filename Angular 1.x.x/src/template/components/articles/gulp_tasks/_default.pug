@@ -6,39 +6,24 @@ ol.article__list
         p.article__paragraph #{data.articles.gulpTasks.table.rows.build[0][0]}
             a(href="https://github.com/OverZealous/run-sequence#run-sequence" target="_blank" rel="help") run-sequence
             | ):
-        p.article__paragraph.text-small
             code.param__name.param__name-inline-24
-                | sass:lint
-                a(href="#sassLint" rel="help")
-                    sup 2
-                span.arrow-right
-                | sass:css
-                a(href="#sassCss" rel="help")
-                    sup 1
-                span.arrow-right
-                | js:hint
-                a(href="#jsHint" rel="help")
-                    sup 3
-                span.arrow-right
-                | pug:lint
-                a(href="#pugLint" rel="help")
-                    sup 7
-                span.arrow-right
-                | pug
-                a(href="#pug" rel="help")
-                    sup 6
-                span.arrow-right
-                | html:hint
-                a(href="#htmlHint" rel="help")
-                    sup 9
-                span.arrow-right
-                | server
-                a(href="#server" rel="help")
-                    sup 11
-                span.arrow-right
-                | watch
-                a(href="#watch" rel="help")
-                    sup 12
+                | nr: 
+                a(href="#sassLint" rel="help") 2
+                | , 
+                a(href="#sassCss" rel="help") 1
+                | , 
+                a(href="#jsHint" rel="help") 3
+                | , 
+                a(href="#pugLint" rel="help") 7
+                | , 
+                a(href="#pug" rel="help") 6
+                | , 
+                a(href="#htmlHint" rel="help") 9
+                | , 
+                a(href="#server" rel="help") 11
+
+                | , 
+                a(href="#watch" rel="help") 12
         p.article__paragraph #{data.articles.gulpTasks.table.rows.default[0][0]} 
             br.br__1
             | #{data.articles.gulpTasks.table.rows.default[0][1]}

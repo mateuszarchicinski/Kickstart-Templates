@@ -1,5 +1,5 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~//
-//~~~~~~* VARIABLES *~~~~~~//
+//~~~~~~* VARIABLES *~~~~~~//+
 //~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 
@@ -143,32 +143,32 @@ $branch__leaf-top-after__background: $branch-before-after__background;
 $branch__leaf-bottom-before__border-left: $branch__border-left;
 
 
-// *--------- TABLE STRIPED ---------*
-$table-striped__border: 1px solid $primary-color-dark;
-// __header & __data - :nth-child(even)
-$table-striped__header-data__border-left: $table-striped__border;
+// *--------- TABLE ---------*
 // __header
-$table-striped__header__background: $color__amour;
-$table-striped__header__font-weight: $font-weight__bold;
-// __header - :nth-child(odd)
-$table-striped__header__border-top: $table-striped__border;
-$table-striped__header__border-bottom: $table-striped__border;
-// __data - :nth-child(even)
-$table-striped__data__background: $table-striped__header__background;
-$table-striped__data__border-top: $table-striped__border;
-$table-striped__data__border-bottom: $table-striped__border;
-// __data - :first-child
-$table-striped__data__text-align: center;
-// __data - :first-child - ::before
-$table-striped__data__before__background: $color__white;
-$table-striped__data__before__font-size: 11.5px;
-$table-striped__data__before__text-align: $table-striped__data__text-align;
-$table-striped__data__before__color: $color__black;
-$table-striped__data__before__border-right: $table-striped__border;
-$table-striped__data__before__border-bottom: $table-striped__border;
-// __data - .rotate-content
-$table-striped__data__rotate-content__breake-point: 608px;
-$table-striped__data__rotate-content__margin: #{(5 / 16)}em;
+$table__header__background: lighten($primary-color-dark, 5%);
+$table__header__font-weight: $base__font-weight;
+$table__header__color: $color__white;
+$table__header__border: 1px solid $table__header__background;
+$table__header__border-right: 1px solid lighten($divider-color, 5%);
+// __header :last-child
+$table__header-l-c__border-right: $table__header__border;
+// .table
+$table__border-bottom: 2px solid $table__header__background;
+// __row
+$table__row__transition: 0.2s background ease;
+// __row :hover
+$table__row-h__background: lighten($divider-color, 24%);
+// __data
+$table__data__border: 1px solid $divider-color;
+// __data :first-child
+$table__data-f-c__text-align: center;
+// __row-counter
+$table__row-counter__background: $color__white;
+$table__row-counter__font-size: 11.5px;
+$table__row-counter__text-align: $table__data-f-c__text-align;
+$table__row-counter__color: $color__black;
+$table__row-counter__border-right: $table__data__border;
+$table__row-counter__border-bottom: $table__data__border;
 
 
 // *--------- LINKS ---------*
