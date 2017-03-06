@@ -44,21 +44,21 @@ $table__row-counter__border-bottom: $table__data__border !default;
             background: $table__row-h__background;
         }
         &-counter {
-            width: 20px;
-            height: 20px;
-            line-height: 20px;
-            background: $table__row-counter__background;
-            position: absolute;
-            display: inline-table;
-            left: 0;
-            top: 0;
-            font-size: $table__row-counter__font-size;
-            text-align: $table__row-counter__text-align;
-            color: $table__row-counter__color;
-            border-right: $table__row-counter__border-right;
-            border-bottom: $table__row-counter__border-bottom;
             @include before {
                 content: counter(elementsCounter-1) ".";
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                background: $table__row-counter__background;
+                position: absolute;
+                display: inline-table;
+                left: 0;
+                top: 0;
+                font-size: $table__row-counter__font-size;
+                text-align: $table__row-counter__text-align;
+                color: $table__row-counter__color;
+                border-right: $table__row-counter__border-right;
+                border-bottom: $table__row-counter__border-bottom;
             }
         }
     }

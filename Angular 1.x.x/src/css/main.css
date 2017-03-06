@@ -23994,7 +23994,8 @@ md-tooltip {
     transition: 0.2s background ease; }
     .table__row:hover {
       background: #fafafa; }
-    .table__row-counter {
+    .table__row-counter::before {
+      content: counter(elementsCounter-1) ".";
       width: 20px;
       height: 20px;
       line-height: 20px;
@@ -24008,8 +24009,6 @@ md-tooltip {
       color: #000;
       border-right: 1px solid #bdbdbd;
       border-bottom: 1px solid #bdbdbd; }
-      .table__row-counter::before {
-        content: counter(elementsCounter-1) "."; }
   .table__header, .table__data {
     padding: 25px 10px; }
     .table__header:nth-child(n+2) .param__name,
