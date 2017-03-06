@@ -1,5 +1,5 @@
 {
-  "name": "angular_1.x.x",
+  "name": "angular1.x",
   "description": "",
   "main": "gulpfile.js",
   "authors": [
@@ -16,8 +16,10 @@
     "angular-aria": "^1.6.1",
     "angular-messages": "^1.6.1",
     "angular-material": "^1.1.1",
-    "angular-mocks": "^1.6.1",
     "normalize-css": "^5.0.0",
     "animatewithsass": "^3.2.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.6.1"
   }
 }

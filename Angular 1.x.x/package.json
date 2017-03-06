@@ -1,5 +1,5 @@
 {
-  "name": "angular_1.x.x",
+  "name": "angular1.x",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -8,7 +8,8 @@
   },
   "author": "Mateusz Archiciński",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "bower": "^1.8.0",
     "browser-sync": "^2.18.5",
     "del": "^2.2.2",
@@ -43,9 +44,7 @@
     "jshint-stylish": "^2.2.1",
     "run-sequence": "^1.2.2",
     "vinyl-ftp": "^0.5.0",
-    "wiredep": "^4.0.0"
-  },
-  "devDependencies": {
+    "wiredep": "^4.0.0",
     "jasmine": "^2.5.3",
     "karma": "^1.4.0",
     "karma-jasmine": "^1.1.0",
