@@ -38,6 +38,7 @@ module.exports = function (config) {
             // application controllers
             PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/controllers/readmeController.js',
             PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/controllers/notfoundController.js',
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/controllers/translateController.js',
 
             // application directives
 

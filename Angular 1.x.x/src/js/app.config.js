@@ -13,7 +13,10 @@
             return 'views/' + langValue + '/' + nameFile + '.html';
         };
         
-        $stateProvider.state('readme', {
+        $stateProvider.state('main', {
+            url: '/',
+            redirectTo: 'readme'
+        }).state('readme', {
             url: baseUrl + 'readme',
             templateUrl: getTemplateUrl('readme'),
             controller: 'readmeController'
@@ -28,6 +31,17 @@
         $locationProvider.html5Mode(true);
 
     }])
-    .constant('LANGUAGES', ['pl', 'en']);
+    .constant('LANGUAGES', ['pl', 'en'])
+    .run(['$rootScope', '$state', function ($rootScope, $state) {
+        
+        $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams, options) {
+            if (toState.redirectTo) {
+                event.preventDefault();
+                
+                $state.go(toState.redirectTo, toParams);
+            }
+        });
+        
+    }]);
 
 })();
