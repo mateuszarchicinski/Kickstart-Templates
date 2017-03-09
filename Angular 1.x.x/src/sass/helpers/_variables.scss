@@ -43,8 +43,9 @@ $secondary-text-color: $color__grey;
 $divider-color:        $color__silver;
 
 // Breaks Points
-$break-point__1:       749px;
+$break-point__1:       768px;
 $break-point__2:       608px;
+$break-point__3:       368px;
 
 
 // *--------- MIXINS ---------*
@@ -108,10 +109,11 @@ $ar-before__font-size: 1.05em;
 
 // *--------- ARTICLES ---------*
 // .article__list li
-$article__list__li__margin: 1em 0 1.5em;
-$article__list__li-last-child__margin: 1em 0 1em;
-// .article__list-points li
-$article__list-points__li__margin: 0.8em 0;
+$article__list__li__margin: 0.8em 0;
+// .article__list-15
+$article__list-15__li__margin: 1em 0 1.5em;
+// .article__list-15 :last-child
+$article__list-15-l-c__li__margin: 1em 0 1em;
 
 
 // *--------- SYNTAX HIGHLIGHTING ---------*
@@ -189,13 +191,35 @@ $a__active__color: $primary-color-dark;
 
 
 // *--------- README ---------*
-$readme__background: $color__white;
-$readme__border: 1px solid rgba($color__black, 0.1);
-$readme__box-shadow: 0 3px 6px rgba($color__black, 0.15), 0 3px 6px rgba($color__black, 0.24);
 // __info
 $readme__info__padding: 0 0 0.125em 1em;
 $readme__info__border-left: 0.25em solid $primary-color-dark;
 $readme__info__color: $secondary-text-color;
+
+
+// *--------- NOTFOUND ---------*
+// __header
+$notfound-page__header__text-align: center;
+// __info
+$notfound-page__info__color: $secondary-text-color;
+// __button
+$notfound-page__button__font-size: $base__font-size - 0.2;
+$notfound-page__button__font-weight: $font-weight__bold;
+$notfound-page__button__text-transform: uppercase;
+$notfound-page__button__padding: 1em;
+$notfound-page__button__border: 1px solid rgba($color__black, 0.25);
+$notfound-page__button__box-shadow: 0 2.5px 5px 0 rgba($color__black, 0.25);
+$notfound-page__button__transition: 0.25s background ease;
+// __button-primary
+$notfound-page__button-primary__background: lighten($primary-color, 4%);
+$notfound-page__button-primary__color: $color__white;
+$notfound-page__button-primary__border: 1px solid rgba($notfound-page__button-primary__background, 0.25);
+// __button-primary :link & :visited
+$notfound-page__button-primary-l-v__color: $notfound-page__button-primary__color;
+// __button-primary :hover
+$notfound-page__button-primary-hover__background: $primary-color-dark;
+// __button-primary :active
+$notfound-page__button-primary-active__background: $notfound-page__button-primary-hover__background;
 
 
 // ---------------------
@@ -242,6 +266,10 @@ $main-footer__copyright__font-weight: $base__font-weight;
 
 
 // *--------- EXTENDS ---------*
+// %Pr-Pn__page
+$Pr-Pn__page__background: $color__white;
+$Pr-Pn__page__border: 1px solid rgba($color__black, 0.1);
+$Pr-Pn__page__box-shadow: 0 3px 6px rgba($color__black, 0.15), 0 3px 6px rgba($color__black, 0.24);
 // %paragraphs
 $paragraphs__line-height: 1.3;
 $paragraphs__text-align: justify;

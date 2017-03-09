@@ -5,6 +5,7 @@ module.exports = {
         'pl', // First element is default variable
         'en'
     ],
+    BASE_URL: '/', // Adds tag <base href="BASE_URL"> inside <head> only when a variable is not empty
     CONFIG_FILE: 'project.config.js',
     DATA_FILE: 'project.data.json', // Data object which are passing to pug (Dynamic templates)
     DIRECTORY: {

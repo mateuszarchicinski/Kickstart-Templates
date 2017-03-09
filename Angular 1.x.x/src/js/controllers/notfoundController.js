@@ -3,7 +3,7 @@
     'use strict';
 
 
-    app.controller('defaultController', ['$log', function ($log) {
+    app.controller('notfoundController', ['$log', function ($log) {
 
         this.awesomeThings = [
             'AngularJS',
@@ -12,7 +12,7 @@
             'ES6'
         ];
 
-        $log.info('JS running....');
+        $log.info('notfoundController: ', 'JS running....');
 
     }]);
 

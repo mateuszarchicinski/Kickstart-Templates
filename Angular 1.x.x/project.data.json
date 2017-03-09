@@ -12,21 +12,34 @@
             "header": {
                 "headline": "Kickstart Projekt"
             },
-            "section": {
-                "headline": "Angular v1.x Szablon",
-                "info": [
-                    [
-                        "Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak",
-                        "i",
-                        ". W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii"
-                    ],
-                    [
-                        "Przygotowany szablon aplikacji webowej",
-                        "udostępnia w pełni skonfigurowane i zautomatyzowane środowisko pracy za pomocą takich technologii jak",
-                        "i"
+            "section": [
+                {
+                    "headline": "Angular v1.x Szablon",
+                    "info": [
+                        [
+                            "Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak",
+                            "i",
+                            ". W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii"
+                        ],
+                        [
+                            "Przygotowany szablon aplikacji webowej",
+                            "udostępnia w pełni skonfigurowane i zautomatyzowane środowisko pracy za pomocą takich technologii jak",
+                            "i"
+                        ]
                     ]
-                ]
-            },
+                },
+                {
+                    "headline": "Strony nie znaleziono",
+                    "info": [
+                        [
+                            "Przepraszamy, strona o podanym adresie zmieniła swoją lokalizację lub nie istnieje."
+                        ]
+                    ],
+                    "button": [
+                        "Powrót do strony głównej"
+                    ]
+                }
+            ],
             "articles": {
                 "usage":{
                     "headline": "Użycie",
@@ -687,7 +700,7 @@
             }
         },
         "en": {
-            "lang": "pl",
+            "lang": "en",
             "title": "Kickstart Projekt - Angular 1.x Szablon",
             "description": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
             "keywords": "szablon aplikacja webowa zautomatyzowana automatyzacja skonfigurowana konfiguracja środowisko developer developerskie projekt angular ng app google node nodejs npm bower gulp gulpjs karma jasmine material",
@@ -695,26 +708,39 @@
             "ogTitle": "Kickstart Projekt - Angular 1.x Szablon",
             "ogDescription": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
             "header": {
-                "headline": "Kickstart Projekt"
+                "headline": "EN - Kickstart Projekt"
             },
-            "section": {
-                "headline": "Angular v1.x Szablon",
-                "info": [
-                    [
-                        "Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak",
-                        "i",
-                        ". W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii"
-                    ],
-                    [
-                        "Przygotowany szablon aplikacji webowej",
-                        "udostępnia w pełni skonfigurowane i zautomatyzowane środowisko pracy za pomocą takich technologii jak",
-                        "i"
+            "section": [
+                {
+                    "headline": "Angular v1.x Szablon",
+                    "info": [
+                        [
+                            "Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak",
+                            "i",
+                            ". W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii"
+                        ],
+                        [
+                            "Przygotowany szablon aplikacji webowej",
+                            "udostępnia w pełni skonfigurowane i zautomatyzowane środowisko pracy za pomocą takich technologii jak",
+                            "i"
+                        ]
                     ]
-                ]
-            },
+                },
+                {
+                    "headline": "Page not found",
+                    "info": [
+                        [
+                            "Sorry, the page you requested changed its location or does not exist."
+                        ]
+                    ],
+                    "button": [
+                        "Back to main page"
+                    ]
+                }
+            ],
             "articles": {
                 "usage":{
-                    "headline": "Użycie",
+                    "headline": "EN - Użycie",
                     "paragraph": [
                         [
                             "Projekt",

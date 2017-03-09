@@ -4,10 +4,11 @@
 
 
 // .article__list li
-$article__list__li__margin: 1em 0 1.5em !default;
-$article__list__li-last-child__margin: 1em 0 1em !default;
-// .article__list-points li
-$article__list-points__li__margin: 0.8em 0 !default;
+$article__list__li__margin: 0.8em 0 !default;
+// .article__list-15
+$article__list-15__li__margin: 1em 0 1.5em !default;
+// .article__list-15 :last-child
+$article__list-15-l-c__li__margin: 1em 0 1em !default;
 
 
 .article {
@@ -26,6 +27,14 @@ $article__list-points__li__margin: 0.8em 0 !default;
         @extend %paragraphs;
     }
     &__list {
+        padding-left: 17px;
+        li {
+            @extend %paragraphs;
+            margin: $article__list__li__margin;
+        }
+        .code__block {
+            margin-left: -17px;
+        }
         &-decimal {
             list-style: decimal;
         }
@@ -35,23 +44,16 @@ $article__list-points__li__margin: 0.8em 0 !default;
         &-circle {
             list-style: circle;
         }
-        padding-left: 17px;
-        .code__block {
-            margin-left: -17px;
-        }
-        li {
-            @extend %paragraphs;
-            margin: $article__list__li__margin;
-            &:last-child {
-                margin: $article__list__li-last-child__margin;
+        &-15 {
+            li {
+                margin: $article__list-15__li__margin;
+                &:last-child {
+                    margin: $article__list-15-l-c__li__margin;
+                }
             }
         }
         &-points {
             padding-left: 20px;
-            li {
-                @extend %paragraphs;
-                margin: $article__list-points__li__margin;
-            }
         }
         &.no-list-padding {
             list-style: none;

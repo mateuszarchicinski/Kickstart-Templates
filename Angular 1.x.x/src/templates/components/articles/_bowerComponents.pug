@@ -13,12 +13,12 @@ article(id="BowerComponents" class="article")
             |  (
             strong bower.json
             | ):
-        ul.article__list-points
+        ul.article__list.article__list-points
             - for(var i = 0; i < 8; i++)
                 li
                     a(href=data.articles.bowerComponents.list[i].link  target="_blank" rel="help") #{data.articles.bowerComponents.list[i].name}
         p.article__paragraph #{data.articles.bowerComponents.paragraph[1][0]}
-        ul.article__list-points
+        ul.article__list.article__list-points
             - for(var i = 8; i < 10; i++)
                 li
                     a(href=data.articles.bowerComponents.list[i].link  target="_blank" rel="help") #{data.articles.bowerComponents.list[i].name}
