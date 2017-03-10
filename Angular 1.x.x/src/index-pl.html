@@ -61,8 +61,13 @@
     <!--endbuild-->
     <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.</p><![endif]-->
     <main>
-      <!-- -->
-      <div class="languages" ng-controller="translateController"><a ng-click="translate('pl')" ng-href="/pl" rel="help">pl</a><a ng-click="translate('en')" ng-href="/en" rel="help">en</a></div>
+      <!--Language Settings-->
+      <div class="language-settings" ng-controller="translateController">
+        <ul class="language-settings__list">
+          <li><a class="language-settings__link" ng-click="translate('pl')" ng-class="{'language-settings__link-active': language === 'pl'}" href="" rel="help">pl</a></li>
+          <li><a class="language-settings__link" ng-click="translate('en')" ng-class="{'language-settings__link-active': language === 'en'}" href="" rel="help">en</a></li>
+        </ul>
+      </div>
       <!--Main Header-->
       <header class="main-header">
         <h1 class="main-header__title primary-heading text-center">Kickstart Projekt</h1>

@@ -24093,6 +24093,9 @@ a {
       padding: 30px 20px 40px; } }
   .notfound-page__header {
     text-align: center; }
+  .notfound-page__title {
+    display: inline-block;
+    margin-bottom: 0.1875em; }
   .notfound-page__info {
     color: #757575; }
   .notfound-page__button {

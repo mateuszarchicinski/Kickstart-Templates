@@ -5,6 +5,8 @@
 
 // __header
 $notfound-page__header__text-align: center !default;
+// __title
+$notfound-page__title__margin-bottom: #{(3 / 16)}em !default;
 // __info
 $notfound-page__info__color: $secondary-text-color !default;
 // __button
@@ -37,6 +39,10 @@ $notfound-page__button-primary-active__background: $notfound-page__button-primar
     }
     &__header {
         text-align: $notfound-page__header__text-align;
+    }
+    &__title {
+        display: inline-block;
+        margin-bottom: $notfound-page__title__margin-bottom;
     }
     &__info {
         @extend %paragraphs;

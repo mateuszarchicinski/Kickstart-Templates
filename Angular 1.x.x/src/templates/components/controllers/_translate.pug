@@ -1,6 +1,8 @@
 //-
     Translate
 
-div(ng-controller="translateController" class="languages")
-    a(ng-click="translate('pl')" class="" ng-href="/pl" rel="help") pl
-    a(ng-click="translate('en')" class="" ng-href="/en" rel="help") en
+div(ng-controller="translateController" class="language-settings")
+    ul.language-settings__list
+        each lang in languages
+            li
+                a(ng-click="translate('" + lang + "')" ng-class="{'language-settings__link-active': language === '" + lang + "'}" class="language-settings__link" href="" rel="help") #{lang}

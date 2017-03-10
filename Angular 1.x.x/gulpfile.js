@@ -160,6 +160,7 @@ gulp.task('pug', function () {
         
             return {
                 appName: PROJECT_CONFIG.APP_NAME,
+                languages: PROJECT_CONFIG.LANGUAGES,
                 baseUrl: PROJECT_CONFIG.BASE_URL,
                 googleAnalytics: {
                     trackingId: PROJECT_CONFIG.GOOGLE_ANALYTICS.TRACKING_ID

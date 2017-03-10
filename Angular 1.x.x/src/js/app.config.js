@@ -3,11 +3,11 @@
     'use strict';
 
 
-    app.config(['$windowProvider', 'LANGUAGES', '$stateProvider', '$urlRouterProvider', '$locationProvider', function ($windowProvider, LANGUAGES, $stateProvider, $urlRouterProvider, $locationProvider) {
+    app.config(['$windowProvider', 'config', '$stateProvider', '$urlRouterProvider', '$locationProvider', function ($windowProvider, config, $stateProvider, $urlRouterProvider, $locationProvider) {
 
         var value = $windowProvider.$get().location.pathname.split('/')[1],
-            langValue = value ? value : angular.element('html').attr('lang'),
-            baseUrl = langValue ? '/' + langValue + '/' : '/' + LANGUAGES[0] + '/';
+            langValue = config.languages.indexOf(value) === -1 ? config.languages[0] : value,
+            baseUrl = '/' + langValue + '/';
         
         var getTemplateUrl = function (nameFile) {
             return 'views/' + langValue + '/' + nameFile + '.html';
@@ -15,6 +15,9 @@
         
         $stateProvider.state('main', {
             url: '/',
+            redirectTo: 'readme'
+        }).state('language', {
+            url: '/' + langValue,
             redirectTo: 'readme'
         }).state('readme', {
             url: baseUrl + 'readme',
@@ -31,7 +34,10 @@
         $locationProvider.html5Mode(true);
 
     }])
-    .constant('LANGUAGES', ['pl', 'en'])
+    .constant('config', {
+        hostName: 'http://localhost:4000/', // Remember to change variable in different environment
+        languages: ['pl', 'en'] // First element is default variable of language
+    })
     .run(['$rootScope', '$state', function ($rootScope, $state) {
         
         $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams, options) {
