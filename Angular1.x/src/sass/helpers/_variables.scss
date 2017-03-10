@@ -188,6 +188,25 @@ $a__active__color: $primary-color-dark;
 
 
 // ---------------------
+//     MODULES
+// ---------------------
+
+
+// *--------- LANGUAGE SETTINGS ---------*
+// __link
+$l-s-link__font-size: $base__font-size - 0.2;
+$l-s-link__text-transform: uppercase;
+$l-s-link__padding: 0.5em 1em;
+$l-s-link__border: 1px solid $divider-color;
+$l-s-link__transition: all 0.25s ease;
+$l-s-link__color: $secondary-text-color;
+// __link-active
+$l-s-link-active__background-color: lighten($primary-color, 4%);
+$l-s-link-active__box-shadow: 0 1px 1px rgba($color__black, .15), inset 0 0 8px rgba(30, 40, 50, .5);
+$l-s-link-active__color: $color__white;
+
+
+// ---------------------
 //     PAGES
 // ---------------------
 

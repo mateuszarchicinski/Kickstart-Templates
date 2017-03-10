@@ -27,12 +27,43 @@ var PROJECT_CONFIG = require('./project.config');
 
 // FUNCTIONS
 // To get a parameter after comand option
-function getOption(option) {
+function getOption (option) {
     var index = process.argv.indexOf(option);
     
     return index !== -1 ? {
        value: process.argv[index + 1] 
     } : false;
+};
+
+
+// To create the BROWSER SYNC server with middleware which redirects requests to main page
+function createServer (baseDir) {
+    
+    var value = getOption('--lang').value,
+        langValue = !value ? PROJECT_CONFIG.LANGUAGES[0] : value,
+        indexFile = 'index-' + langValue + '.html';
+    
+    if (value && PROJECT_CONFIG.LANGUAGES.indexOf(value) === -1) {
+        return $.util.log($.util.colors.red('Task can not be complited. Remember to set up your LANGUAGES in ' + PROJECT_CONFIG.CONFIG_FILE + ' file.'));
+    }
+    
+    browserSync.init({ // https://www.browsersync.io/docs/options
+        server: {
+            baseDir: baseDir,
+            index: indexFile
+        }
+    }, function (err, bs) {
+        
+        bs.addMiddleware("*", function (req, res) {
+            res.writeHead(301, {
+                'location': '/'
+            });
+            
+            res.end("Redirecting!");
+        });
+        
+    });
+    
 };
 
 
@@ -269,31 +300,8 @@ gulp.task('html:minify', function () {
 gulp.task('server', function () {
 
     $.util.log($.util.colors.red('SERVER TASK RUNNING...'));
-
-    var value = getOption('--lang').value,
-        langValue = !value ? PROJECT_CONFIG.LANGUAGES[0] : value,
-        indexFile = 'index-' + langValue + '.html';
-
-    if (value && PROJECT_CONFIG.LANGUAGES.indexOf(value) === -1) {
-        return $.util.log($.util.colors.red('Task can not be complited. Remember to set up your LANGUAGES in ' + PROJECT_CONFIG.CONFIG_FILE + ' file.'));
-    }
-
-    return browserSync.init({ // https://www.browsersync.io/docs/options
-        server: {
-            baseDir: PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/',
-            index: indexFile
-        }
-    }, function (err, bs) {
-        
-        bs.addMiddleware("*", function (req, res) {
-            res.writeHead(301, {
-                'location': '/'
-            });
-            
-            res.end("Redirecting!");
-        });
-        
-    });
+    
+    createServer(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/');
 
 });
 
@@ -436,31 +444,8 @@ gulp.task('build', function (cb) {
 gulp.task('build:server', ['build'], function () {
 
     $.util.log($.util.colors.red('BUILD SERVER TASK RUNNING...'));
-
-    var value = getOption('--lang').value,
-        langValue = !value ? PROJECT_CONFIG.LANGUAGES[0] : value,
-        indexFile = 'index-' + langValue + '.html';
-
-    if (value && PROJECT_CONFIG.LANGUAGES.indexOf(value) === -1) {
-        return $.util.log($.util.colors.red('Task can not be complited. Remember to set up your LANGUAGES in ' + PROJECT_CONFIG.CONFIG_FILE + ' file.'));
-    }
-
-    browserSync.init({
-        server: {
-            baseDir: PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/',
-            index: indexFile
-        }
-    }, function (err, bs) {
-        
-        bs.addMiddleware("*", function (req, res) {
-            res.writeHead(301, {
-                'location': '/'
-            });
-            
-            res.end("Redirecting!");
-        });
-        
-    });
+    
+    createServer(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/');
 
 });
 

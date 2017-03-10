@@ -20,7 +20,7 @@
                 value = $location.url(),
                 langValue = value.split('/')[1];
             
-            self.language = !langValue ? config.languages[0] : langValue;
+            self.language = config.languages.indexOf(langValue) === -1 ? config.languages[0] : langValue;
             
             self.path = value.substring(langValue.length + 1);
             
