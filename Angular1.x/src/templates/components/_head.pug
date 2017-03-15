@@ -22,9 +22,13 @@ title= data.title
 meta(name="description" content=data.description)
 meta(name="keywords" content=data.keywords)
 meta(name="author" content=data.author)
+if facebookApps.appId
+    meta(property="fb:app_id" content=facebookApps.appId)
+meta(property="og:url" content=host)
+meta(property="og:type" content="website")
 meta(property="og:title" content=data.ogTitle)
 meta(property="og:description" content=data.ogDescription)
-meta(property="og:image" content="tile-1200x630px.png")
+meta(property="og:image" content=host + "tile-1200x630px.png")
 meta(name="robots" content="index, follow, noodp, noydir")
 
 //Icon Sources

@@ -1,14 +1,13 @@
 {
-    "docType": "HTML5",
     "lang": {
         "pl": {
             "lang": "pl",
-            "title": "Kickstart Projekt - Angular 1.x Szablon",
-            "description": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
-            "keywords": "szablon aplikacja webowa zautomatyzowana automatyzacja skonfigurowana konfiguracja środowisko developer developerskie projekt angular ng app google node nodejs npm bower gulp gulpjs karma jasmine material",
+            "title": "Kickstart Projekt - Angular v1.x Szablon",
+            "description": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem v1.x umożliwiającego szybkie rozpoczęcie projektu.",
+            "keywords": "szablon template aplikacja application web automatyzacja automation skonfigurowana configured środowisko environment deweloper developer front front-end projekt project angular material ng app google node nodejs npm bower gulp gulpjs karma jasmine",
             "author": "Mateusz Archiciński",
-            "ogTitle": "Kickstart Projekt - Angular 1.x Szablon",
-            "ogDescription": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
+            "ogTitle": "Kickstart Projekt - Angular v1.x Szablon",
+            "ogDescription": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem v1.x umożliwiającego szybkie rozpoczęcie projektu.",
             "header": {
                 "headline": "Kickstart Projekt"
             },
@@ -17,14 +16,14 @@
                     "headline": "Angular v1.x Szablon",
                     "info": [
                         [
-                            "Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak",
+                            "Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy funkcjonalności. Wykorzystuje do tego takie technologie jak",
                             "i",
                             ". W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii"
                         ],
                         [
-                            "Przygotowany szablon aplikacji webowej",
-                            "udostępnia w pełni skonfigurowane i zautomatyzowane środowisko pracy za pomocą takich technologii jak",
-                            "i"
+                            "Dodatkowym atutem jest bardzo dobra współpraca z moim innym projektem",
+                            "zapewniającym wsparcie i wiele innych funkcjonalności po stronie serwera o których możesz poczytać",
+                            "tutaj"
                         ]
                     ]
                 },
@@ -41,7 +40,7 @@
                 }
             ],
             "articles": {
-                "usage":{
+                "usage": {
                     "headline": "Użycie",
                     "paragraph": [
                         [
@@ -77,19 +76,22 @@
                         ]
                     ]
                 },
-                "configuration":{
+                "configuration": {
                     "headline": "Konfiguracja",
                     "paragraph": [
                         [
                             "Globalne ustawienia są dostępne w pliku",
                             ", który umożliwia zmianę:",
+                            "hosta (wykorzystywanego przy",
                             "nazwy aplikacji,",
-                            "języków,",
-                            "nazwy plików konfiguracyjnych i danych,",
+                            "obsługiwanych języków,",
+                            "wartości atrybutu href w tagu base,",
+                            "nazwy pliku konfiguracyjnego i danych,",
                             "katalogów pracy i produkcji (wymagana również manualna zmiana w pliku",
                             "dostępów FTP,",
                             "kluczy do zewnętrznych API,",
-                            "identyfikatora śledzenia"
+                            "identyfikatora śledzenia",
+                            "identyfikatora aplikacji"
                         ],
                         [
                             "Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych z których będziemy korzystać indywidualnie. W pliku",
@@ -97,7 +99,7 @@
                         ]
                     ]
                 },
-                "projectStructure":{
+                "projectStructure": {
                     "headline": "Struktura projektu",
                     "paragraph": [
                         [
@@ -113,7 +115,7 @@
                         ]
                     ]
                 },
-                "npmModules":{
+                "npmModules": {
                     "headline": "NPM moduły",
                     "paragraph": [
                         [
@@ -286,7 +288,7 @@
                         }
                     ]
                 },
-                "bowerComponents":{
+                "bowerComponents": {
                     "headline": "Bower komponenty",
                     "paragraph": [
                         [
@@ -336,12 +338,12 @@
                             "link": "https://code.angularjs.org/1.6.1/angular-mocks.js"
                         },
                         {
-                            "name": "normalize-css",
-                            "link": "https://necolas.github.io/normalize.css/"
-                        },
-                        {
                             "name": "jquery",
                             "link": "https://jquery.com/"
+                        },
+                        {
+                            "name": "normalize-css",
+                            "link": "https://necolas.github.io/normalize.css/"
                         },
                         {
                             "name": "animatewithsass",
@@ -349,7 +351,7 @@
                         }
                     ]
                 },
-                "gulpTasks":{
+                "gulpTasks": {
                     "headline": "Gulp zadania",
                     "paragraph": [
                         [
@@ -482,6 +484,7 @@
                                 ],
                                 [
                                     "Zapisuje uzyskane kody Html do",
+                                    "lub",
                                     "i plików widoku."
                                 ]
                             ],
@@ -662,7 +665,7 @@
                         }
                     }
                 },
-                "testing":{
+                "testing": {
                     "headline": "Testowanie",
                     "paragraph": [
                         [
@@ -676,7 +679,7 @@
                         ]
                     ]
                 },
-                "changelog":{
+                "changelog": {
                     "headline": "Lista zmian",
                     "paragraph": [
                         [
@@ -701,46 +704,46 @@
         },
         "en": {
             "lang": "en",
-            "title": "Kickstart Projekt - Angular 1.x Szablon",
-            "description": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
-            "keywords": "szablon aplikacja webowa zautomatyzowana automatyzacja skonfigurowana konfiguracja środowisko developer developerskie projekt angular ng app google node nodejs npm bower gulp gulpjs karma jasmine material",
+            "title": "Kickstart Project - Angular v1.x Template",
+            "description": "The web application template created for preparation of automated and configured development environment to work with Angular v1.x allowing rapid project start.",
+            "keywords": "szablon template aplikacja application web automatyzacja automation skonfigurowana configured środowisko environment deweloper developer front front-end projekt project angular material ng app google node nodejs npm bower gulp gulpjs karma jasmine",
             "author": "Mateusz Archiciński",
-            "ogTitle": "Kickstart Projekt - Angular 1.x Szablon",
-            "ogDescription": "Szablon aplikacji webowej stworzony na potrzeby przygotowania zautomatyzowanego i skonfigurowanego środowiska developerskiego do pracy z Angularem 1.x umożliwiającego szybkie rozpoczęcie projektu.",
+            "ogTitle": "Kickstart Project - Angular v1.x Template",
+            "ogDescription": "The web application template created for preparation of automated and configured development environment to work with Angular v1.x allowing rapid project start.",
             "header": {
-                "headline": "EN - Kickstart Projekt"
+                "headline": "Kickstart Project"
             },
             "section": [
                 {
-                    "headline": "Angular v1.x Szablon",
+                    "headline": "Angular v1.x Template",
                     "info": [
                         [
-                            "Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak",
+                            "Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy funkcjonalności. Wykorzystuje do tego takie technologie jak",
                             "i",
                             ". W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii"
                         ],
                         [
-                            "Przygotowany szablon aplikacji webowej",
-                            "udostępnia w pełni skonfigurowane i zautomatyzowane środowisko pracy za pomocą takich technologii jak",
-                            "i"
+                            "Dodatkowym atutem jest bardzo dobra współpraca z moim innym projektem",
+                            "zapewniającym wsparcie i wiele innych funkcjonalności po stronie serwera o których możesz poczytać",
+                            "tutaj"
                         ]
                     ]
                 },
                 {
-                    "headline": "Page not found",
+                    "headline": "Strony nie znaleziono",
                     "info": [
                         [
-                            "Sorry, the page you requested changed its location or does not exist."
+                            "Przepraszamy, strona o podanym adresie zmieniła swoją lokalizację lub nie istnieje."
                         ]
                     ],
                     "button": [
-                        "Back to main page"
+                        "Powrót do strony głównej"
                     ]
                 }
             ],
             "articles": {
-                "usage":{
-                    "headline": "EN - Użycie",
+                "usage": {
+                    "headline": "Użycie",
                     "paragraph": [
                         [
                             "Projekt",
@@ -775,19 +778,22 @@
                         ]
                     ]
                 },
-                "configuration":{
+                "configuration": {
                     "headline": "Konfiguracja",
                     "paragraph": [
                         [
                             "Globalne ustawienia są dostępne w pliku",
                             ", który umożliwia zmianę:",
+                            "hosta (wykorzystywanego przy",
                             "nazwy aplikacji,",
-                            "języków,",
-                            "nazwy plików konfiguracyjnych i danych,",
+                            "obsługiwanych języków,",
+                            "wartości atrybutu href w tagu base,",
+                            "nazwy pliku konfiguracyjnego i danych,",
                             "katalogów pracy i produkcji (wymagana również manualna zmiana w pliku",
                             "dostępów FTP,",
                             "kluczy do zewnętrznych API,",
-                            "identyfikatora śledzenia"
+                            "identyfikatora śledzenia",
+                            "identyfikatora aplikacji"
                         ],
                         [
                             "Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych z których będziemy korzystać indywidualnie. W pliku",
@@ -795,7 +801,7 @@
                         ]
                     ]
                 },
-                "projectStructure":{
+                "projectStructure": {
                     "headline": "Struktura projektu",
                     "paragraph": [
                         [
@@ -811,7 +817,7 @@
                         ]
                     ]
                 },
-                "npmModules":{
+                "npmModules": {
                     "headline": "NPM moduły",
                     "paragraph": [
                         [
@@ -984,7 +990,7 @@
                         }
                     ]
                 },
-                "bowerComponents":{
+                "bowerComponents": {
                     "headline": "Bower komponenty",
                     "paragraph": [
                         [
@@ -1034,12 +1040,12 @@
                             "link": "https://code.angularjs.org/1.6.1/angular-mocks.js"
                         },
                         {
-                            "name": "normalize-css",
-                            "link": "https://necolas.github.io/normalize.css/"
-                        },
-                        {
                             "name": "jquery",
                             "link": "https://jquery.com/"
+                        },
+                        {
+                            "name": "normalize-css",
+                            "link": "https://necolas.github.io/normalize.css/"
                         },
                         {
                             "name": "animatewithsass",
@@ -1047,7 +1053,7 @@
                         }
                     ]
                 },
-                "gulpTasks":{
+                "gulpTasks": {
                     "headline": "Gulp zadania",
                     "paragraph": [
                         [
@@ -1180,6 +1186,7 @@
                                 ],
                                 [
                                     "Zapisuje uzyskane kody Html do",
+                                    "lub",
                                     "i plików widoku."
                                 ]
                             ],
@@ -1360,7 +1367,7 @@
                         }
                     }
                 },
-                "testing":{
+                "testing": {
                     "headline": "Testowanie",
                     "paragraph": [
                         [
@@ -1374,7 +1381,7 @@
                         ]
                     ]
                 },
-                "changelog":{
+                "changelog": {
                     "headline": "Lista zmian",
                     "paragraph": [
                         [

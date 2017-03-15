@@ -48,7 +48,7 @@ article(id="ProjectStructure" class="article")
                                 | fonts
                             li.branch__leaf-bottom
                                 i.branch__icon.directory__open
-                                | img
+                                | images
                                 ul.branch
                                     li.branch__leaf-top
                                         i.branch__icon.directory__open
@@ -102,7 +102,7 @@ article(id="ProjectStructure" class="article")
                                         | main.scss
                             li
                                 i.branch__icon.directory__open
-                                | template
+                                | templates
                                 ul.branch
                                     li.branch__leaf-top
                                         i.branch__icon.directory__open
@@ -113,16 +113,22 @@ article(id="ProjectStructure" class="article")
                                     li.branch__leaf
                                         i.branch__icon.directory__open
                                         | views
+                                    li.branch__leaf
+                                        i.branch__icon.file__pug
+                                        | index-en.pug
                                     li.branch__leaf-bottom
                                         i.branch__icon.file__pug
-                                        | index.pug
+                                        | index-pl.pug
                             li
                                 i.branch__icon.directory__open
                                 | views
                                 ul.branch
                                     li.branch__leaf-top
-                                        i.branch__icon.file__html
-                                        | default.html
+                                        i.branch__icon.directory__open
+                                        | en
+                                    li.branch__leaf-bottom
+                                        i.branch__icon.directory__open
+                                        | pl
                             li
                                 i.branch__icon.file__img
                                 | apple-touch-icon.png
@@ -137,7 +143,10 @@ article(id="ProjectStructure" class="article")
                                 | favicon.ico
                             li.branch__leaf
                                 i.branch__icon.file__html
-                                | index.html
+                                | index-en.html
+                            li.branch__leaf
+                                i.branch__icon.file__html
+                                | index-pl.html
                             li.branch__leaf
                                 i.branch__icon.file__img
                                 | tile.png

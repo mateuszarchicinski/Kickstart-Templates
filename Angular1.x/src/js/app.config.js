@@ -3,10 +3,10 @@
     'use strict';
 
 
-    app.config(['$windowProvider', 'config', '$stateProvider', '$urlRouterProvider', '$locationProvider', function ($windowProvider, config, $stateProvider, $urlRouterProvider, $locationProvider) {
+    app.config(['$windowProvider', 'APP_CONFIG', '$stateProvider', '$urlRouterProvider', '$locationProvider', function ($windowProvider, APP_CONFIG, $stateProvider, $urlRouterProvider, $locationProvider) {
 
         var value = $windowProvider.$get().location.pathname.split('/')[1],
-            langValue = config.languages.indexOf(value) === -1 ? config.languages[0] : value,
+            langValue = APP_CONFIG.languages.indexOf(value) === -1 ? APP_CONFIG.languages[0] : value,
             baseUrl = '/' + langValue + '/';
         
         var getTemplateUrl = function (nameFile) {
@@ -34,8 +34,8 @@
         $locationProvider.html5Mode(true);
 
     }])
-    .constant('config', {
-        hostName: 'http://localhost:4000/', // Remember to change variable in different environment
+    .constant('APP_CONFIG', {
+        host: 'http://localhost:3000/', // Remember to change variable in different environment
         languages: ['pl', 'en'] // First element is default variable of language
     })
     .run(['$rootScope', '$state', function ($rootScope, $state) {

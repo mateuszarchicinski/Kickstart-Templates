@@ -1,6 +1,9 @@
 'use strict';
 
 
+// ANGULAR 1.X - TEMPLATE
+
+
 // NODE MODULES
 var gulp = require('gulp'), // https://gulp.readme.io/docs/getting-started
     $ = require('gulp-load-plugins')({ // https://github.com/jackfranklin/gulp-load-plugins#options
@@ -25,7 +28,28 @@ var gulp = require('gulp'), // https://gulp.readme.io/docs/getting-started
 var PROJECT_CONFIG = require('./project.config');
 
 
-// FUNCTIONS
+// USEFUL FUNCTIONS
+// To display a console log message in three types: info, warning and error
+function alertHandler (args) {
+
+    var types = {
+        info: 'blue',
+        warning: 'yellow',
+        error: 'red'
+    },
+        title = args.title ? args.title : args.type,
+        message = args.message,
+        color = types[args.type],
+        messageTemplate = `
+**~~~~~~~~* ${title.toUpperCase()} LOG - OPEN *~~~~~~~~**
+${message}
+**~~~~~~~~* ${title.toUpperCase()} LOG - CLOSE *~~~~~~~~**`;
+    
+    $.util.log($.util.colors[color](messageTemplate)); // https://github.com/gulpjs/gulp-util#usage
+
+};
+
+
 // To get a parameter after comand option
 function getOption (option) {
     var index = process.argv.indexOf(option);
@@ -38,13 +62,19 @@ function getOption (option) {
 
 // To create the BROWSER SYNC server with middleware which redirects requests to main page
 function createServer (baseDir) {
-    
+
     var value = getOption('--lang').value,
         langValue = !value ? PROJECT_CONFIG.LANGUAGES[0] : value,
         indexFile = 'index-' + langValue + '.html';
     
     if (value && PROJECT_CONFIG.LANGUAGES.indexOf(value) === -1) {
-        return $.util.log($.util.colors.red('Task can not be complited. Remember to set up your LANGUAGES in ' + PROJECT_CONFIG.CONFIG_FILE + ' file.'));
+        
+        return alertHandler({
+            type: 'error',
+            message: `Task can not be complited.
+Remember to set up your LANGUAGES in ${PROJECT_CONFIG.CONFIG_FILE} file.`
+        });
+        
     }
     
     browserSync.init({ // https://www.browsersync.io/docs/options
@@ -63,7 +93,7 @@ function createServer (baseDir) {
         });
         
     });
-    
+
 };
 
 
@@ -71,8 +101,8 @@ function createServer (baseDir) {
 // Compiling SASS to CSS, adding right prefixes to CSS methods - depending on configuration, creating source map, finally injects CSS styles into browser
 gulp.task('sass:css', function () {
 
-    $.util.log($.util.colors.green('SASS TO CSS TASK RUNNING...')); // https://github.com/gulpjs/gulp-util#usage
-
+    $.util.log($.util.colors.green('SASS TO CSS TASK RUNNING...'));
+    
     return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/main.s+(a|c)ss')
         .pipe($.plumber()) // https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber
         .pipe($.sourcemaps.init()) // https://github.com/floridoo/gulp-sourcemaps#init-options
@@ -85,7 +115,9 @@ gulp.task('sass:css', function () {
         }))
         .pipe($.sourcemaps.write('./maps'))
         .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/css/'))
-        .pipe(browserSync.stream({match: '**/*.css'})); // https://www.browsersync.io/docs/gulp
+        .pipe(browserSync.stream({
+            match: '**/*.css'
+        })); // https://www.browsersync.io/docs/gulp
 
 });
 
@@ -94,7 +126,7 @@ gulp.task('sass:css', function () {
 gulp.task('sass:lint', function () {
 
     $.util.log($.util.colors.cyan('SASS LINT TASK RUNNING...'));
-
+    
     return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/**/*.s+(a|c)ss')
         .pipe($.plumber())
         .pipe($.sassLint({
@@ -120,7 +152,7 @@ gulp.task('sass:lint', function () {
 gulp.task('js:hint', function () {
 
     $.util.log($.util.colors.cyan('JS HINT TASK RUNNING...'));
-
+    
     return gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/**/*.js')
         .pipe($.plumber())
         .pipe($.jshint())
@@ -133,7 +165,7 @@ gulp.task('js:hint', function () {
 gulp.task('js:test', function () {
 
     $.util.log($.util.colors.cyan('JS TEST TASK RUNNING...'));
-
+    
     return new karma({
         configFile: __dirname + '/' + PROJECT_CONFIG.DIRECTORY.TEST_DIR + '/karma.conf.js' // https://karma-runner.github.io/1.0/config/configuration-file.html
         }).start();
@@ -143,7 +175,7 @@ gulp.task('js:test', function () {
 
 // Changing extensions of files from .jade to .pug, finally removes all .jade files
 gulp.task('jade:pug', function() {
-    
+
     $.util.log($.util.colors.green('JADE TO PUG TASK RUNNING...'));
     
     gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/templates/**/*.jade', {
@@ -154,10 +186,10 @@ gulp.task('jade:pug', function() {
             extname: '.pug'
         }))
         .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/'))
-        .on('end', function(){
+        .on('end', function () {
             del(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/templates/**/*.jade') // https://github.com/sindresorhus/del#usage
         });
-    
+
 });
 
 
@@ -171,43 +203,63 @@ gulp.task('pug', function () {
         langPath = getOption('build') || getOption('build:server') ? '' : langValue;
     
     if (!value) {
-        $.util.log($.util.colors.green('Default data object configuration [PL] passed to puge task. To change that, add command arguments to this task ---> gulp [TASK NAME = puge / default / build / build:server] --lang [pl / en]. Before that, do not forget a specify translation in ' + PROJECT_CONFIG.DATA_FILE + ' file.'));
+        
+        alertHandler({
+            type: 'info',
+            message: `Default data object configuration [PL] passed to puge task.
+To change that, add command arguments to this task ---> gulp [TASK NAME = puge / default / build / build:server] --lang [pl / en].
+Before that, do not forget a specify translation in ${PROJECT_CONFIG.DATA_FILE} file.`
+        });
+        
     }
     
     if (value && PROJECT_CONFIG.LANGUAGES.indexOf(value) === -1) {
-        return $.util.log($.util.colors.green('Task can not be complited. Remember to set up your LANGUAGES in ' + PROJECT_CONFIG.CONFIG_FILE + ' file.'));
+        
+        return alertHandler({
+            type: 'error',
+            message: `Task can not be complited.
+Remember to set up your LANGUAGES in ${PROJECT_CONFIG.CONFIG_FILE} file.`
+        });
+        
     }
     
-    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/templates/*' + langPath + '.pug', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/templates/views/' + langPath + '**/*.pug'], {
-            base: './' + PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/templates'
-        })
-        .pipe($.plumber())
-        .pipe($.data(function(file) { // https://github.com/colynb/gulp-data#gulp-data
-            var filePathArray = file.path.split('\\'),
-                index = filePathArray.indexOf('views') + 1,
-                lastIndex = filePathArray[filePathArray.length - 1],
-                value = index ? filePathArray[index] : lastIndex.substring(lastIndex.length - 6, lastIndex.length - 4),
-                lang = PROJECT_CONFIG.LANGUAGES.indexOf(value) === -1 ? langValue : value;
+    return gulp.src([
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/templates/*' + langPath + '.pug',
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/templates/views/' + langPath + '**/*.pug'
+    ], {
+        base: PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/templates'
+    })
+    .pipe($.plumber())
+    .pipe($.data(function (file) { // https://github.com/colynb/gulp-data#gulp-data
+        var filePathArray = file.path.split('\\'),
+            index = filePathArray.indexOf('views') + 1,
+            lastIndex = filePathArray[filePathArray.length - 1],
+            value = index ? filePathArray[index] : lastIndex.substring(lastIndex.length - 6, lastIndex.length - 4),
+            lang = PROJECT_CONFIG.LANGUAGES.indexOf(value) === -1 ? langValue : value;
         
-            return {
-                appName: PROJECT_CONFIG.APP_NAME,
-                languages: PROJECT_CONFIG.LANGUAGES,
-                baseUrl: PROJECT_CONFIG.BASE_URL,
-                googleAnalytics: {
-                    trackingId: PROJECT_CONFIG.GOOGLE_ANALYTICS.TRACKING_ID
-                },
-                data: JSON.parse(fs.readFileSync('./' + PROJECT_CONFIG.DATA_FILE, 'utf8')).lang[lang]
-            };
-        }))
-        .pipe($.pug({ // https://pugjs.org/api/getting-started.html
-            pretty: true,
-            compileDebug: true
-        }))
-        .pipe(wiredep({ // https://github.com/taptapship/wiredep#wiredep--
-            exclude: ['animatewithsass', 'angular-mocks', 'bower_components/angular-material/angular-material.css'],
-            ignorePath: '../'
-        }))
-        .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/'));
+        return {
+            host: PROJECT_CONFIG.HOST,
+            appName: PROJECT_CONFIG.APP_NAME,
+            languages: PROJECT_CONFIG.LANGUAGES,
+            baseUrl: PROJECT_CONFIG.BASE_URL,
+            googleAnalytics: {
+                trackingId: PROJECT_CONFIG.GOOGLE_ANALYTICS.TRACKING_ID
+            },
+            facebookApps: {
+                appId: PROJECT_CONFIG.FACEBOOK_APPS.APP_ID
+            },
+            data: JSON.parse(fs.readFileSync('./' + PROJECT_CONFIG.DATA_FILE, 'utf8')).lang[lang]
+        };
+    }))
+    .pipe($.pug({ // https://pugjs.org/api/getting-started.html
+        pretty: true,
+        compileDebug: true
+    }))
+    .pipe(wiredep({ // https://github.com/taptapship/wiredep#wiredep--
+        exclude: ['animatewithsass', 'angular-mocks', 'bower_components/angular-material/angular-material.css'],
+        ignorePath: '../'
+    }))
+    .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/'));
 
 });
 
@@ -238,15 +290,18 @@ gulp.task('pug:lint', function () {
 gulp.task('html', function () {
 
     $.util.log($.util.colors.green('HTML TASK RUNNING...'));
-
-    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/**/*.html'], {
-            base: PROJECT_CONFIG.DIRECTORY.WORK_DIR
-        })
-        .pipe($.plumber())
-        .pipe($.useref()) // https://github.com/jonkemp/gulp-useref#usage
-        .pipe($.if('*.css', $.cleanCss())) // https://github.com/jakubpawlowicz/clean-css#--------
-        .pipe($.if('*.js', $.uglify())) // {preserveComments: 'license'} ~ https://github.com/terinjokes/gulp-uglify#options
-        .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/'));
+    
+    return gulp.src([
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html',
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/**/*.html'
+    ], {
+        base: PROJECT_CONFIG.DIRECTORY.WORK_DIR
+    })
+    .pipe($.plumber())
+    .pipe($.useref()) // https://github.com/jonkemp/gulp-useref#usage
+    .pipe($.if('*.css', $.cleanCss())) // https://github.com/jakubpawlowicz/clean-css#--------
+    .pipe($.if('*.js', $.uglify())) // {preserveComments: 'license'} ~ https://github.com/terinjokes/gulp-uglify#options
+    .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/'));
 
 });
 
@@ -255,23 +310,26 @@ gulp.task('html', function () {
 gulp.task('html:hint', function () {
 
     $.util.log($.util.colors.cyan('HTML HINT TASK RUNNING...'));
-
-    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/**/*.html'])
-        .pipe($.plumber())
-        .pipe($.htmlhint({ // https://github.com/yaniswang/HTMLHint/wiki/Rules
-            'tagname-lowercase': true,
-            'attr-lowercase': true,
-            'attr-value-double-quotes': true,
-            'attr-no-duplication': true,
-            'doctype-first': false, // true
-            'tag-pair': true,
-            'tag-self-close': false,
-            'spec-char-escape': false,
-            'id-unique': true,
-            'src-not-empty': true,
-            'title-require': true
-        }))
-        .pipe($.htmlhint.reporter(htmlhintStylish)); // https://github.com/bezoerb/gulp-htmlhint#reporters
+    
+    return gulp.src([
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html',
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/**/*.html'
+    ])
+    .pipe($.plumber())
+    .pipe($.htmlhint({ // https://github.com/yaniswang/HTMLHint/wiki/Rules
+        'tagname-lowercase': true,
+        'attr-lowercase': true,
+        'attr-value-double-quotes': true,
+        'attr-no-duplication': true,
+        'doctype-first': false, // true
+        'tag-pair': true,
+        'tag-self-close': false,
+        'spec-char-escape': false,
+        'id-unique': true,
+        'src-not-empty': true,
+        'title-require': true
+    }))
+    .pipe($.htmlhint.reporter(htmlhintStylish)); // https://github.com/bezoerb/gulp-htmlhint#reporters
 
 });
 
@@ -280,18 +338,21 @@ gulp.task('html:hint', function () {
 gulp.task('html:minify', function () {
 
     $.util.log($.util.colors.green('HTML MINIFY TASK RUNNING...'));
-
-    return gulp.src([PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/views/**/*.html'], {
-            base: PROJECT_CONFIG.DIRECTORY.DIST_DIR
-        })
-        .pipe($.plumber())
-        .pipe($.htmlmin({ // https://github.com/kangax/html-minifier#options-quick-reference
-            collapseWhitespace: true,
-            minifyCSS: true,
-            minifyJS: true,
-            removeComments: true
-        }))
-        .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/'));
+    
+    return gulp.src([
+        PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/*.html',
+        PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/views/**/*.html'
+    ], {
+        base: PROJECT_CONFIG.DIRECTORY.DIST_DIR
+    })
+    .pipe($.plumber())
+    .pipe($.htmlmin({ // https://github.com/kangax/html-minifier#options-quick-reference
+        collapseWhitespace: true,
+        minifyCSS: true,
+        minifyJS: true,
+        removeComments: true
+    }))
+    .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/'));
 
 });
 
@@ -301,7 +362,7 @@ gulp.task('server', function () {
 
     $.util.log($.util.colors.red('SERVER TASK RUNNING...'));
     
-    createServer(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/');
+    return createServer(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/');
 
 });
 
@@ -311,10 +372,27 @@ gulp.task('watch', function () {
 
     $.util.log($.util.colors.blue('WATCH TASK RUNNING...'));
     
-    gulp.watch(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/**/*.s+(a|c)ss', ['sass:lint', 'sass:css']);
-    gulp.watch(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/**/*.js', ['js:watch']);
-    gulp.watch([PROJECT_CONFIG.DATA_FILE, PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/templates/**/*.pug', 'bower.json'], ['pug:lint', 'pug']);
-    gulp.watch([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/**/*.html'], ['html:watch']);
+    gulp.watch(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/sass/**/*.s+(a|c)ss', [
+        'sass:lint',
+        'sass:css'
+    ]);
+    gulp.watch(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/**/*.js', [
+        'js:watch'
+    ]);
+    gulp.watch([
+        PROJECT_CONFIG.DATA_FILE,
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/templates/**/*.pug',
+        'bower.json'
+    ], [
+        'pug:lint',
+        'pug'
+    ]);
+    gulp.watch([
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.html',
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/views/**/*.html'
+    ], [
+        'html:watch'
+    ]);
 
 });
 
@@ -331,7 +409,7 @@ gulp.task('html:watch', ['html:hint'], browserSync.reload);
 gulp.task('clean', function () {
 
     $.util.log($.util.colors.gray('CLEAN TASK RUNNING...'));
-
+    
     return del(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/');
 
 });
@@ -341,12 +419,21 @@ gulp.task('clean', function () {
 gulp.task('copy', function () {
 
     $.util.log($.util.colors.grey('COPY TASK RUNNING...'));
-
-    return gulp.src([PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/files/**/*', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/fonts/**/*', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/images/**/*', '!' + PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/images/{sprites_sources,sprites_sources/**/*}', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.png', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.xml', PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.ico'], {
-            base: PROJECT_CONFIG.DIRECTORY.WORK_DIR
-        })
-        .pipe($.plumber())
-        .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/'));
+    
+    return gulp.src([
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/files/**/*',
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/fonts/**/*',
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/images/**/*',
+        '!' + PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/images/{sprites_sources,sprites_sources/**/*}',
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.png',
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.xml',
+        PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/*.ico'
+    ],
+    {
+        base: PROJECT_CONFIG.DIRECTORY.WORK_DIR
+    })
+    .pipe($.plumber())
+    .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/'));
 
 });
 
@@ -354,7 +441,7 @@ gulp.task('copy', function () {
 // Optimizes images by using standard modules avaible via NPM or by TinyPNG API, for more info check ---> https://tinypng.com/developers/reference/nodejs
 gulp.task('images', function () {
 
-    $.util.log($.util.colors.magenta('IMAGES TASK RUNNING...'));    
+    $.util.log($.util.colors.magenta('IMAGES TASK RUNNING...'));
     
     var condition = getOption('--option').value === 'advanced', // https://github.com/joshbroton/gulp-tinify#gulp-tinify
         imgExtname = '{jpg,png}',
@@ -364,11 +451,23 @@ gulp.task('images', function () {
     if (!condition) {
         imgExtname = '{jpg,png,svg,gif}';
         args = [imageminGifsicle(), imageminJpegtran(), imageminOptipng(), imageminSvgo()];
-        $.util.log($.util.colors.magenta('Default options passed to images task. To change that, add command arguments to this task ---> gulp [TASK NAME = images / build / build:server] --option [advanced].'));
+        
+        alertHandler({
+            type: 'info',
+            message: `Default options passed to images task.
+To change that, add command arguments to this task ---> gulp [TASK NAME = images / build / build:server] --option [advanced].`
+        });
+        
     }
     
     if (condition && !PROJECT_CONFIG.API_KEYS.TINIFY) {
-        return $.util.log($.util.colors.magenta('Task can not be complited. Remember to set up your TINIFY API KEY in ' + PROJECT_CONFIG.CONFIG_FILE + ' file.'));
+        
+        return alertHandler({
+            type: 'error',
+            message: `Task can not be complited.
+Remember to set up your TINIFY API KEY in ${PROJECT_CONFIG.CONFIG_FILE} file.`
+        });
+        
     }
     
     return gulp.src(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/images/**/*.' + imgExtname, {
@@ -391,7 +490,13 @@ gulp.task('images:sprite', function () {
         spriteImgName = spriteCssName[0] === '_' ? spriteCssName.substring(1) : spriteCssName;
     
     if (!name) {
-        $.util.log($.util.colors.magenta('Default options passed to images:sprite task. To change that, add command arguments to this task ---> gulp [TASK NAME = images:sprite] --name [_FILE_NAME].'));
+        
+        alertHandler({
+            type: 'info',
+            message: `Default options passed to images:sprite task.
+To change that, add command arguments to this task ---> gulp [TASK NAME = images:sprite] --name [_FILE_NAME].`
+        });
+        
     }
     
     gulp.src(PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/images/sprites_sources/**/*.{jpg,png,gif}')
@@ -418,7 +523,14 @@ gulp.task('upload', function () {
     };
     
     if (!ftpConfig.host || !ftpConfig.user || !ftpConfig.password || !PROJECT_CONFIG.FTP_CONFIG.DESTINATION || !getOption('--upload')) {
-        return $.util.log($.util.colors.yellow('Task can not be complited. Rememeber to set up your FTP CONFIG in ' + PROJECT_CONFIG.CONFIG_FILE + ' file. Then add command argument to this task ---> gulp [TASK NAME = upload / build / build:server] --upload.'));
+        
+        return alertHandler({
+            type: 'error',
+            message: `Task can not be complited.
+Rememeber to set up your FTP CONFIG in ${PROJECT_CONFIG.CONFIG_FILE} file.
+Then add command argument to this task ---> gulp [TASK NAME = upload / build / build:server] --upload.`
+        });
+        
     }
     
     var conn = ftp.create(ftpConfig);
@@ -434,7 +546,7 @@ gulp.task('upload', function () {
 gulp.task('build', function (cb) {
 
     $.util.log($.util.colors.red('BUILD TASK RUNNING...'));
-
+    
     runSequence('clean', 'sass:lint', 'sass:css', 'js:hint', 'pug:lint', 'pug', 'html:hint', 'html', 'html:minify', 'copy', 'images', 'upload', cb);
 
 });
@@ -445,7 +557,7 @@ gulp.task('build:server', ['build'], function () {
 
     $.util.log($.util.colors.red('BUILD SERVER TASK RUNNING...'));
     
-    createServer(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/');
+    return createServer(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/');
 
 });
 
@@ -454,7 +566,7 @@ gulp.task('build:server', ['build'], function () {
 gulp.task('default', function (cb) {
 
     $.util.log($.util.colors.red('DEFAULT TASK RUNNING...'));
-
+    
     runSequence('sass:lint', 'sass:css', 'js:hint', 'pug:lint', 'pug', 'html:hint', 'server', 'watch', cb);
 
 });

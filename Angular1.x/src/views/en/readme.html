@@ -2,14 +2,14 @@
 <!--Readme View-->
 <section class="readme" id="Readme">
   <header class="readme__header">
-    <h2 class="readme__title secondary-heading">Angular v1.x Szablon<a class="readme__anchor anchor" href="#Readme" rel="help"></a></h2>
-    <p class="readme__info">Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy. Wykorzystuje do tego takie technologie jak <a href="https://nodejs.org/en/" target="_blank" rel="help">NodeJS</a>, <a href="https://www.npmjs.com/" target="_blank" rel="help">NPM</a>, <a href="https://bower.io/" target="_blank" rel="help">Bower</a>, <a href="http://gulpjs.com/" target="_blank" rel="help">GulpJS</a> i <a href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help">Karma</a>. W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii <a href="https://angularjs.org/" target="_blank" rel="help">Angular v1.x - MVC Framework</a>.</p>
-    <p class="readme__info">Przygotowany szablon aplikacji webowej <a href="https://angularjs.org/" target="_blank" rel="help">Angular v1.x</a> udostępnia w pełni skonfigurowane i zautomatyzowane środowisko pracy za pomocą takich technologii jak <a href="https://nodejs.org/en/" target="_blank" rel="help">NodeJS</a>, <a href="https://www.npmjs.com/" target="_blank" rel="help">NPM</a>, <a href="https://bower.io/" target="_blank" rel="help">Bower</a>, <a href="http://gulpjs.com/" target="_blank" rel="help">GulpJS</a> i <a href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help">Karma</a>.</p>
+    <h2 class="readme__title secondary-heading">Angular v1.x Template<a class="readme__anchor anchor" href="#Readme" rel="help"></a></h2>
+    <p class="readme__info">Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy funkcjonalności. Wykorzystuje do tego takie technologie jak <a href="https://nodejs.org/en/" target="_blank" rel="help">NodeJS</a>, <a href="https://www.npmjs.com/" target="_blank" rel="help">NPM</a>, <a href="https://bower.io/" target="_blank" rel="help">Bower</a>, <a href="http://gulpjs.com/" target="_blank" rel="help">GulpJS</a> i <a href="https://karma-runner.github.io/1.0/index.html" target="_blank" rel="help">Karma</a>. W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii <a href="https://angularjs.org/" target="_blank" rel="help">Angular v1.x - MVC Framework</a>.</p>
+    <p class="readme__info">Dodatkowym atutem jest bardzo dobra współpraca z moim innym projektem <strong>Restful API - NodeJS & ExpressJS</strong> zapewniającym wsparcie i wiele innych funkcjonalności po stronie serwera o których możesz poczytać <a href="https://github.com/mateuszarchicinski/Restful-API--NodeJS-ExpressJS" target="_blank" rel="help">tutaj</a>.</p>
   </header>
   <div class="readme__body">
     <article class="article" id="Usage">
       <header class="article__header">
-        <h3 class="article__title tertiary-heading">EN - Użycie<a class="article__anchor anchor" href="#Usage" rel="help"></a></h3>
+        <h3 class="article__title tertiary-heading">Użycie<a class="article__anchor anchor" href="#Usage" rel="help"></a></h3>
       </header>
       <div class="article__body">
         <p class="article__paragraph">Projekt <strong>Angular 1.x Szablon</strong> jest dostępny wyłącznie na <a href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help">Github</a>. Przykłady instalacji poniżej. Przy dwóch pierwszych wymagany jest system kontroli wersji <a href="https://git-scm.com/" target="_blank" rel="help">Git</a>.</p>
@@ -34,13 +34,16 @@
       <div class="article__body">
         <p class="article__paragraph">Globalne ustawienia są dostępne w pliku <strong>project.config.js</strong>, który umożliwia zmianę: </p>
         <ul class="article__list article__list-points">
+          <li>hosta (wykorzystywanego przy <a href="http://www.webopedia.com/TERM/S/SEO.html" target="_blank" rel="help">SEO</a>),</li>
           <li>nazwy aplikacji,</li>
-          <li>języków,</li>
-          <li>nazwy plików konfiguracyjnych i danych,</li>
+          <li>obsługiwanych języków,</li>
+          <li>wartości atrybutu href w tagu base,</li>
+          <li>nazwy pliku konfiguracyjnego i danych,</li>
           <li>katalogów pracy i produkcji (wymagana również manualna zmiana w pliku <strong>.bowerrc</strong>),</li>
           <li>dostępów FTP,</li>
           <li>kluczy do zewnętrznych API,</li>
-          <li>identyfikatora śledzenia <a href="https://www.google.com/analytics/" target="_blank" rel="help">Google Analytics</a>.</li>
+          <li>identyfikatora śledzenia <a href="https://www.google.com/analytics/" target="_blank" rel="help">Google Analytics</a>,</li>
+          <li>identyfikatora aplikacji <a href="https://developers.facebook.com/docs/apps/register" target="_blank" rel="help">Facebook Developers</a>.</li>
         </ul>
         <p class="article__paragraph">Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych z których będziemy korzystać indywidualnie. W pliku <strong>gulpfile.js</strong> odwołujemy się do niego poprzez zmienną <strong>PROJECT_CONFIG</strong>.</p>
       </div>
@@ -67,7 +70,7 @@
                   </li>
                   <li><i class="branch__icon directory__open"></i>files</li>
                   <li class="branch__leaf"><i class="branch__icon directory__open"></i>fonts</li>
-                  <li class="branch__leaf-bottom"><i class="branch__icon directory__open"></i>img
+                  <li class="branch__leaf-bottom"><i class="branch__icon directory__open"></i>images
                     <ul class="branch">
                       <li class="branch__leaf-top"><i class="branch__icon directory__open"></i>sprites_sources</li>
                       <li class="branch__leaf-bottom"><i class="branch__icon file__img"></i>sprite.png</li>
@@ -93,24 +96,27 @@
                       <li class="branch__leaf-bottom"><i class="branch__icon file__sass"></i>main.scss</li>
                     </ul>
                   </li>
-                  <li><i class="branch__icon directory__open"></i>template
+                  <li><i class="branch__icon directory__open"></i>templates
                     <ul class="branch">
                       <li class="branch__leaf-top"><i class="branch__icon directory__open"></i>components</li>
                       <li class="branch__leaf"><i class="branch__icon directory__open"></i>layout</li>
                       <li class="branch__leaf"><i class="branch__icon directory__open"></i>views</li>
-                      <li class="branch__leaf-bottom"><i class="branch__icon file__pug"></i>index.pug</li>
+                      <li class="branch__leaf"><i class="branch__icon file__pug"></i>index-en.pug</li>
+                      <li class="branch__leaf-bottom"><i class="branch__icon file__pug"></i>index-pl.pug</li>
                     </ul>
                   </li>
                   <li><i class="branch__icon directory__open"></i>views
                     <ul class="branch">
-                      <li class="branch__leaf-top"><i class="branch__icon file__html"></i>default.html</li>
+                      <li class="branch__leaf-top"><i class="branch__icon directory__open"></i>en</li>
+                      <li class="branch__leaf-bottom"><i class="branch__icon directory__open"></i>pl</li>
                     </ul>
                   </li>
                   <li><i class="branch__icon file__img"></i>apple-touch-icon.png</li>
                   <li class="branch__leaf"><i class="branch__icon file__xml"></i>browserconfig.xml</li>
                   <li class="branch__leaf"><i class="branch__icon file__xml"></i>crossdomain.xml</li>
                   <li class="branch__leaf"><i class="branch__icon file__img"></i>favicon.ico</li>
-                  <li class="branch__leaf"><i class="branch__icon file__html"></i>index.html</li>
+                  <li class="branch__leaf"><i class="branch__icon file__html"></i>index-en.html</li>
+                  <li class="branch__leaf"><i class="branch__icon file__html"></i>index-pl.html</li>
                   <li class="branch__leaf"><i class="branch__icon file__img"></i>tile.png</li>
                   <li class="branch__leaf"><i class="branch__icon file__img"></i>tile-1200x630px.png</li>
                   <li class="branch__leaf-bottom"><i class="branch__icon file__img"></i>tile-wide.png</li>
@@ -199,11 +205,11 @@
           <li><a href="https://code.angularjs.org/1.6.1/angular-messages.js" target="_blank" rel="help">angular-messages</a></li>
           <li><a href="https://material.angularjs.org/latest/" target="_blank" rel="help">angular-material</a></li>
           <li><a href="https://code.angularjs.org/1.6.1/angular-mocks.js" target="_blank" rel="help">angular-mocks</a></li>
-          <li><a href="https://necolas.github.io/normalize.css/" target="_blank" rel="help">normalize-css</a></li>
         </ul>
         <p class="article__paragraph">Dodatkowe paczki z których można korzystać opcjonalnie:</p>
         <ul class="article__list article__list-points">
           <li><a href="https://jquery.com/" target="_blank" rel="help">jquery</a></li>
+          <li><a href="https://necolas.github.io/normalize.css/" target="_blank" rel="help">normalize-css</a></li>
           <li><a href="https://github.com/geoffgraham/animate.scss" target="_blank" rel="help">animatewithsass</a></li>
         </ul>
         <p class="article__paragraph">Wszystkie powyższe komponenty instalujemy komendą <code class="code__line">bower install</code>.</p>
@@ -308,7 +314,7 @@
                   <li>Wstrzykuje tagi <strong>Link</strong> i <strong>Script</strong> z ścieżkami źródłowymi do zainstalowanych bibliotek Css lub Js. Pomiędzy poniższe komentarze w kodzie Html (<a href="https://github.com/taptapship/wiredep#wiredep--" target="_blank" rel="help">wiredep</a>):
                     <pre class="code__block"><code class="code__line">&lt;!--bower:css--></code><br/><code class="code__line">// &lt;link href=""></code><br/><code class="code__line">&lt;!--endbower--></code><br/><br/><code class="code__line">&lt;!--bower:js--></code><br/><code class="code__line">// &lt;script src=""></code><br/><code class="code__line">&lt;!--endbower--></code></pre>
                   </li>
-                  <li>Zapisuje uzyskane kody Html do <strong>index.html</strong> i plików widoku.</li>
+                  <li>Zapisuje uzyskane kody Html do <strong>index-en.html</strong> lub <strong>index-pl.html</strong> i plików widoku.</li>
                 </ol>
               </td>
             </tr>
@@ -519,7 +525,7 @@
         <h3 class="article__title tertiary-heading">Lista zmian<a class="article__anchor anchor" href="#Changelog" rel="help"></a></h3>
       </header>
       <div class="article__body">
-        <p class="article__paragraph">Ostatnie zmiany można zobaczyć na <a href="https://github.com/" target="_blank" rel="help">Github</a> stronie <a href="https://github.com/mateuszarchicinski/Angular1.x-Template/releases" target="_blank">publikacji szablonu</a>.</p>
+        <p class="article__paragraph">Ostatnie zmiany można zobaczyć na <a href="https://github.com/mateuszarchicinski/Angular1.x-Template" target="_blank" rel="help">Github</a> stronie <a href="https://github.com/mateuszarchicinski/Angular1.x-Template/releases" target="_blank">publikacji szablonu</a>.</p>
       </div>
     </article>
     <article class="article" id="License">

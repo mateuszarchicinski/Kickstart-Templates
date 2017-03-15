@@ -3,7 +3,7 @@
     'use strict';
 
 
-    app.controller('translateController', ['$scope', '$location', '$window', 'config', '$log', function ($scope, $location, $window, config, $log) {
+    app.controller('translateController', ['$scope', '$location', '$window', 'APP_CONFIG', '$log', function ($scope, $location, $window, APP_CONFIG, $log) {
         
         this.awesomeThings = [
             'AngularJS',
@@ -20,7 +20,7 @@
                 value = $location.url(),
                 langValue = value.split('/')[1];
             
-            self.language = config.languages.indexOf(langValue) === -1 ? config.languages[0] : langValue;
+            self.language = APP_CONFIG.languages.indexOf(langValue) === -1 ? APP_CONFIG.languages[0] : langValue;
             
             self.path = value.substring(langValue.length + 1);
             
@@ -31,7 +31,7 @@
         $scope.language = getUrlParams().language;
         
         $scope.translate = function (langCode) {            
-            $window.location.href = config.hostName + langCode + getUrlParams().path;
+            $window.location.href = APP_CONFIG.host + langCode + getUrlParams().path;
         };
         
     }]);
