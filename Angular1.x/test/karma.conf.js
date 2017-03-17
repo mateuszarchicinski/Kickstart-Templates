@@ -44,7 +44,7 @@ module.exports = function (config) {
 
 
             // application services
-
+            PROJECT_CONFIG.DIRECTORY.WORK_DIR + '/js/services/urlParamsProvider.js',
 
             // application tests
             PROJECT_CONFIG.DIRECTORY.TEST_DIR + '/spec/**/*.js'

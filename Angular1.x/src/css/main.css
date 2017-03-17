@@ -24068,6 +24068,9 @@ a {
   .br__3 {
     display: none; } }
 
+html[lang="en"] .br__1 {
+  display: none; }
+
 .language-settings__list {
   display: -webkit-flex;
   display: -ms-flexbox;

@@ -280,7 +280,7 @@ gulp.task('pug:lint', function () {
             requireSpaceAfterCodeOperator: true,
             requireSpecificAttributes: [{img: ['alt']}],
             validateAttributeQuoteMarks: '\"',
-            validateDivTags: true
+            validateDivTags: true,
         }));
 
 });

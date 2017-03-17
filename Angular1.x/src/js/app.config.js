@@ -3,15 +3,17 @@
     'use strict';
 
 
-    app.config(['$windowProvider', 'APP_CONFIG', '$stateProvider', '$urlRouterProvider', '$locationProvider', function ($windowProvider, APP_CONFIG, $stateProvider, $urlRouterProvider, $locationProvider) {
+    app.config(['urlParamsProvider', 'APP_CONFIG', '$stateProvider', '$urlRouterProvider', '$locationProvider', function (urlParamsProvider, APP_CONFIG, $stateProvider, $urlRouterProvider, $locationProvider) {
 
-        var value = $windowProvider.$get().location.pathname.split('/')[1],
-            langValue = APP_CONFIG.languages.indexOf(value) === -1 ? APP_CONFIG.languages[0] : value,
+        urlParamsProvider.languages = APP_CONFIG.languages;
+        
+        var langValue = urlParamsProvider.$get().currentLanguage(),
             baseUrl = '/' + langValue + '/';
         
         var getTemplateUrl = function (nameFile) {
             return 'views/' + langValue + '/' + nameFile + '.html';
         };
+        
         
         $stateProvider.state('main', {
             url: '/',

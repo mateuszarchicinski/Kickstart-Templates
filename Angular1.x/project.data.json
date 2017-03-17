@@ -22,7 +22,7 @@
                         ],
                         [
                             "Dodatkowym atutem jest bardzo dobra współpraca z moim innym projektem",
-                            "zapewniającym wsparcie i wiele innych funkcjonalności po stronie serwera o których możesz poczytać",
+                            "zapewniającym wsparcie i wiele innych funkcjonalności po stronie serwera, o których możesz poczytać",
                             "tutaj"
                         ]
                     ]
@@ -62,7 +62,7 @@
                             "W konsoli wywołaj polecenie sklonowania całego repozytorium, które tym samym utworzy nowy katalog:"
                         ],
                         [
-                            "Manualnie pobierz najnowszą stabilną wersje z strony",
+                            "Manualnie pobierz najnowszą stabilną wersje ze strony",
                             "publikacji szablonu"
                         ],
                         [
@@ -94,7 +94,7 @@
                             "identyfikatora aplikacji"
                         ],
                         [
-                            "Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych z których będziemy korzystać indywidualnie. W pliku",
+                            "Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych, z których będziemy korzystać indywidualnie. W pliku",
                             "odwołujemy się do niego poprzez zmienną"
                         ]
                     ]
@@ -103,7 +103,7 @@
                     "headline": "Struktura projektu",
                     "paragraph": [
                         [
-                            "Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach",
+                            "Modyfikując strukturę pamiętaj, aby zmiany również wprowadzić w plikach",
                             "i",
                             ". Poniżej rekomendowana strukturę projektu."
                         ],
@@ -119,7 +119,7 @@
                     "headline": "NPM moduły",
                     "paragraph": [
                         [
-                            "Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności środowiska na których opiera się szablon ("
+                            "Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności środowiska, na których opiera się szablon ("
                         ],
                         [
                             "Wszystkie powyższe moduły instalujemy komendą"
@@ -296,15 +296,15 @@
                             "i"
                         ],
                         [
-                            "Dodatkowe paczki z których można korzystać opcjonalnie:"
+                            "Dodatkowe paczki, z których można korzystać opcjonalnie:"
                         ],
                         [
                             "Wszystkie powyższe komponenty instalujemy komendą"
                         ],
                         [
-                            "Instalacja dodatkowych bibliotek Css lub Js za pośrednictwem",
+                            "Instalacja dodatkowych bibliotek CSS lub JS za pośrednictwem",
                             "spowoduje automatyczne dodanie ścieżki do nowego komponentu w głównym pliku",
-                            ". Konfiguracja tej funkcjonalności znajdują się w pliku",
+                            ". Konfiguracja tej funkcjonalności znajduje się w pliku",
                             "w module"
                         ]
                     ],
@@ -355,7 +355,7 @@
                     "headline": "Gulp zadania",
                     "paragraph": [
                         [
-                            "Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe",
+                            "Zadania uruchamiamy z poziomu konsoli, będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe",
                             "w połączeniu z",
                             "nazwą",
                             "i",
@@ -389,25 +389,25 @@
                                     "lub"
                                 ],
                                 [
-                                    "Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów ("
+                                    "Raportuje o napotkanych błędach w strumieniu, nie przerywając wykonywania kolejnych pipe'ów ("
                                 ],
                                 [
-                                    "Inicjuje utworzenie Source Map na podstawie głównego pliku Sass ("
+                                    "Inicjuje utworzenie Source Map na podstawie głównego pliku SASS ("
                                 ],
                                 [
-                                    "Kompiluje synchronicznie kod Sass na kod Css o stylu wyjściowym"
+                                    "Kompiluje synchronicznie kod SASS na kod CSS o stylu wyjściowym"
                                 ],
                                 [
-                                    "Dodaje właściwe przedrostki z metodami do kodu Css. Uwzględniając przy tym wsparcia dla wskazanych przeglądarek w obiekcie konfiguracyjnym ("
+                                    "Dodaje właściwe przedrostki z metodami do kodu CSS. Uwzględniając przy tym wsparcia dla wskazanych przeglądarek w obiekcie konfiguracyjnym ("
                                 ],
                                 [
                                     "Zapisuje Source Map do pliku"
                                 ],
                                 [
-                                    "Zapisuje uzyskany kod Css do pliku"
+                                    "Zapisuje uzyskany kod CSS do pliku"
                                 ],
                                 [
-                                    "Wstrzykuje nowy kod Css do strony podglądowej ("
+                                    "Wstrzykuje nowy kod CSS do strony podglądowej ("
                                 ]
                             ],
                             "sassLint": [
@@ -416,12 +416,12 @@
                                     "i"
                                 ],
                                 [
-                                    "Sprawdza kod Sass pod kątem wybranych reguł",
+                                    "Sprawdza kod SASS pod kątem wybranych reguł",
                                     "w obiekcie konfiguracyjnym ("
                                 ],
                                 [
                                     "Wyświetla odpowiednio sformatowane komunikaty",
-                                    "o wykrytych niezgodnościach w kodzie Sass ("
+                                    "o wykrytych niezgodnościach w kodzie SASS ("
                                 ]
                             ],
                             "jsHint": [
@@ -429,18 +429,18 @@
                                     "Wykorzystuje pliki z rozszerzeniem"
                                 ],
                                 [
-                                    "Sprawdza kod Js pod kątem błędów i optymalizacji ("
+                                    "Sprawdza kod JS pod kątem błędów i optymalizacji ("
                                 ],
                                 [
                                     "Wyświetla odpowiednio sformatowane komunikaty",
-                                    "o wykrytych błędach i możliwej optymalizacji w kodzie Js ("
+                                    "o wykrytych błędach i możliwej optymalizacji w kodzie JS ("
                                 ]
                             ],
                             "jsTest": [
                                 [
-                                    "Uruchomi testy jednostkowe w środowisku",
+                                    "Uruchamia testy jednostkowe w środowisku",
                                     ", które konfigurujemy za pomocą pliku",
-                                    ". Wymieniony plik umożliwia wybór frameworków testujących i wielu innych rzeczy o których można poczytać",
+                                    ". Wymieniony plik umożliwia wybór frameworków testujących i wielu innych rzeczy, o których można poczytać",
                                     "tutaj"
                                 ]
                             ],
@@ -457,12 +457,12 @@
                                     "w analogicznych lokalizacjach do plików"
                                 ],
                                 [
-                                    "Usuwa nie potrzebne pliki z rozszerzeniem"
+                                    "Usuwa niepotrzebne pliki z rozszerzeniem"
                                 ]
                             ],
                             "pug": [
                                 [
-                                    "Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej",
+                                    "Sprawdza, czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej",
                                     "na",
                                     "i nadpisuje ją w przypadku podania innej."
                                 ],
@@ -470,20 +470,20 @@
                                     "Wykorzystuje pliki z rozszerzeniem"
                                 ],
                                 [
-                                    "Przygotowuje obiekt danych przekazując go wewnątrz strumienia do gulp-pug ("
+                                    "Przygotowuje obiekt danych, przekazując go wewnątrz strumienia do gulp-pug ("
                                 ],
                                 [
                                     "Kompiluje pliki",
-                                    "zwracając uzupełniony kod Html",
+                                    ", zwracając uzupełniony kod Html",
                                     "o przekazane informacje w obiekcie danych ("
                                 ],
                                 [
                                     "Wstrzykuje tagi",
                                     "i",
-                                    "z ścieżkami źródłowymi do zainstalowanych bibliotek Css lub Js. Pomiędzy poniższe komentarze w kodzie Html ("
+                                    "ze ścieżkami źródłowymi do zainstalowanych bibliotek CSS lub JS. Pomiędzy poniższe komentarze w kodzie HTML ("
                                 ],
                                 [
-                                    "Zapisuje uzyskane kody Html do",
+                                    "Zapisuje uzyskane kody HTML do",
                                     "lub",
                                     "i plików widoku."
                                 ]
@@ -493,11 +493,11 @@
                                     "Wykorzystuje pliki z rozszerzeniem"
                                 ],
                                 [
-                                    "Sprawdza kod Pug pod kątem wybranych reguł w obiekcie konfiguracyjnym ("
+                                    "Sprawdza kod PUG pod kątem wybranych reguł w obiekcie konfiguracyjnym ("
                                 ],
                                 [
                                     "Wyświetla odpowiednio sformatowane komunikaty",
-                                    "o wykrytych niezgodnościach w kodzie Pug."
+                                    "o wykrytych niezgodnościach w kodzie PUG."
                                 ]
                             ],
                             "html": [
@@ -505,12 +505,12 @@
                                     "Wykorzystuje pliki z rozszerzeniem"
                                 ],
                                 [
-                                    "Filtruje kod Html pod kątem wstawionych komentarzy:",
+                                    "Filtruje kod HTML pod kątem wstawionych komentarzy:",
                                     "Zastępując je pojedynczymi tagami",
                                     "i",
                                     "odnoszącymi się do plików źródłowych",
                                     "i",
-                                    "powstałymi w skutek połączenia wszystkich załączonych bibliotek Css lub Js znajdujących się pomiędzy tymi komentarzami ("
+                                    "powstałymi w skutek połączenia wszystkich załączonych bibliotek CSS lub JS znajdujących się pomiędzy tymi komentarzami ("
                                 ],
                                 [
                                     "Sprawdza typ przetwarzanych plików w strumieniu. Wywołując odpowiednie metody minifikujące dla plików",
@@ -518,7 +518,7 @@
                                     "i"
                                 ],
                                 [
-                                    "Zapisuje uzyskane kody Css i Js do plików w katalogu produkcyjnym."
+                                    "Zapisuje uzyskane kody CSS i JS do plików w katalogu produkcyjnym."
                                 ]
                             ],
                             "htmlHint": [
@@ -526,11 +526,11 @@
                                     "Wykorzystuje pliki z rozszerzeniem"
                                 ],
                                 [
-                                    "Sprawdza poprawność wygenerowanego kodu Html według reguł wskazanych w obiekcie konfiguracyjnym ("
+                                    "Sprawdza poprawność wygenerowanego kodu HTML według reguł wskazanych w obiekcie konfiguracyjnym ("
                                 ],
                                 [
                                     "Wyświetla odpowiednio sformatowane komunikaty",
-                                    "o wykrytych niezgodnościach w kodzie Html ("
+                                    "o wykrytych niezgodnościach w kodzie HTML ("
                                 ]
                             ],
                             "htmlMinify": [
@@ -538,10 +538,10 @@
                                     "Wykorzystuje pliki z rozszerzeniem"
                                 ],
                                 [
-                                    "Minifikuje kod Html zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym ("
+                                    "Minifikuje kod HTML zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym ("
                                 ],
                                 [
-                                    "Zapisuje uzyskane kody Html w tych samych lokalizacjach plików źródłowych na których rozpoczęto wykonywanie zadania (nadpisywanie)."
+                                    "Zapisuje uzyskane kody HTML w tych samych lokalizacjach plików źródłowych, na których rozpoczęto wykonywanie zadania (nadpisywanie)."
                                 ]
                             ],
                             "server": [
@@ -551,14 +551,15 @@
                                         "(widoczny w konsoli)."
                                     ],
                                     [
-                                        "Udostępniając tym samym metody pomocnicze, które umożliwiają odświeżenie przeglądarki np. w momencie wprowadzenia zmiany w dowolnym pliku lub dynamiczne wstrzyknięcie styli Css bez przeładowania strony podglądowej."
+                                        "Udostępniając tym samym metody pomocnicze, które umożliwiają odświeżenie przeglądarki np. w momencie wprowadzenia zmiany w dowolnym pliku lub dynamiczne wstrzyknięcie styli CSS bez przeładowania strony podglądowej."
                                     ],
                                     [
                                         "Zapewnia również podgląd aplikacji z każdego urządzenia podłączonego do sieci lokalnej pod adresem zewnętrznym (",
                                         "- widoczny w konsoli)."
                                     ],
                                     [
-                                        "Więcej informacji na temat konfiguracji i możliwości moduł Browser Sync"
+                                        "Więcej informacji na temat konfiguracji i możliwości moduł Browser Sync",
+                                        "tutaj"
                                     ]
                                 ]
                             ],
@@ -583,7 +584,7 @@
                             ],
                             "images": [
                                 [
-                                    "Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia tym samym rozszerzenia plików do optymalizacji, moduł optymalizujący i argumenty dla wybranego modułu."
+                                    "Sprawdza, czy przekazano dodatkowe argumenty do procesu zadania. Ustawia tym samym rozszerzenia plików do optymalizacji, moduł optymalizujący i argumenty dla wybranego modułu."
                                 ],
                                 [
                                     "Zarówno przy opcji standardowej (bez dodatkowych argumentów) i zaawansowanej (z dodatkowymi argumentami) wykorzystane zostaną grafiki",
@@ -600,12 +601,12 @@
                                     "wykorzystującego"
                                 ],
                                 [
-                                    "Zapisuje zoptymalizowane grafiki w tych samych lokalizacjach grafik źródłowych na których rozpoczęto wykonywanie zadania (nadpisywanie)."
+                                    "Zapisuje zoptymalizowane grafiki w tych samych lokalizacjach grafik źródłowych, na których rozpoczęto wykonywanie zadania (nadpisywanie)."
                                 ]
                             ],
                             "imagesSprite": [
                                 [
-                                    "Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej",
+                                    "Sprawdza, czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej",
                                     "na",
                                     "i nadpisuje ją w przypadku podania innej."
                                 ],
@@ -630,14 +631,14 @@
                             ],
                             "upload": [
                                 [
-                                    "Sprawdza czy wszystkie wartości zmiennych dotyczących połączenia FTP zostały zdefiniowane w pliku",
+                                    "Sprawdza, czy wszystkie wartości zmiennych dotyczących połączenia FTP zostały zdefiniowane w pliku",
                                     "i czy przekazano dodatkowy argument do procesu zadania."
                                 ],
                                 [
                                     "Wykorzystuje wszystkie pliki z katalogu produkcyjnego."
                                 ],
                                 [
-                                    "Przesyła pliki na serwer FTP przekazując lokalizację zapisu poprzez zmienną"
+                                    "Przesyła pliki na serwer FTP, przekazując lokalizację zapisu poprzez zmienną"
                                 ]
                             ],
                             "build": [
@@ -653,7 +654,7 @@
                             "buildServer": [
                                 [
                                     "Wywołuje zadanie",
-                                    "po którym tworzy lokalnie serwer nasłuchujący na dopiero co powstały katalog produkcyjny."
+                                    ", po którym tworzy lokalnie serwer nasłuchujący na dopiero co powstały katalog produkcyjny."
                                 ]
                             ],
                             "default": [
@@ -670,7 +671,7 @@
                     "paragraph": [
                         [
                             "Uruchamia się za pomocą zadania",
-                            "Do obsługi testów jednostkowych, nasłuchu zamian w plikach źródłowych i raportowania bledów zostało przygotowane środowisko",
+                            "Do obsługi testów jednostkowych, nasłuchu zamian w plikach źródłowych i raportowania błędów zostało przygotowane środowisko",
                             "Standardowa konfiguracja wykorzystuje framework",
                             ", symulator",
                             "i reporter",
@@ -705,7 +706,7 @@
         "en": {
             "lang": "en",
             "title": "Kickstart Project - Angular v1.x Template",
-            "description": "The web application template created for preparation of automated and configured development environment to work with Angular v1.x allowing rapid project start.",
+            "description": "The web application template was created for preparation of automated and configured development environment to work with Angular v1.x allowing rapid project start.",
             "keywords": "szablon template aplikacja application web automatyzacja automation skonfigurowana configured środowisko environment deweloper developer front front-end projekt project angular material ng app google node nodejs npm bower gulp gulpjs karma jasmine",
             "author": "Mateusz Archiciński",
             "ogTitle": "Kickstart Project - Angular v1.x Template",
@@ -718,113 +719,113 @@
                     "headline": "Angular v1.x Template",
                     "info": [
                         [
-                            "Szablon udostępnia skonfigurowane i zautomatyzowane środowisko pracy z możliwością dalszej rozbudowy funkcjonalności. Wykorzystuje do tego takie technologie jak",
-                            "i",
-                            ". W podstawowej konfiguracji jest przygotowany do rozwoju aplikacji webowej po stronie klienta w technologii"
+                            "The template provides configured and automated work environment with the possibility of further development functionality. It uses technologies such as",
+                            "and",
+                            ". The basic configuration is prepared for the development of Web application client-side in technology"
                         ],
                         [
-                            "Dodatkowym atutem jest bardzo dobra współpraca z moim innym projektem",
-                            "zapewniającym wsparcie i wiele innych funkcjonalności po stronie serwera o których możesz poczytać",
-                            "tutaj"
+                            "An additional advantage is a very good cooperation with my other project",
+                            "which providing support and more functionality on the server-side about that you can read",
+                            "here"
                         ]
                     ]
                 },
                 {
-                    "headline": "Strony nie znaleziono",
+                    "headline": "Page not found",
                     "info": [
                         [
-                            "Przepraszamy, strona o podanym adresie zmieniła swoją lokalizację lub nie istnieje."
+                            "Sorry, the page you requested changed its location or does not exist."
                         ]
                     ],
                     "button": [
-                        "Powrót do strony głównej"
+                        "Back to main page"
                     ]
                 }
             ],
             "articles": {
                 "usage": {
-                    "headline": "Użycie",
+                    "headline": "Usage",
                     "paragraph": [
                         [
-                            "Projekt",
-                            "Angular 1.x Szablon",
-                            "jest dostępny wyłącznie na",
-                            ". Przykłady instalacji poniżej. Przy dwóch pierwszych wymagany jest system kontroli wersji"
+                            "Project",
+                            "Angular 1.x Template",
+                            "is available only via",
+                            ". Installation examples below. With first two required is version control system"
                         ],
                         [
-                            "Za pomocą konsoli utwórz nowy katalog i przejdź do niego:",
-                            "katalog-projektu"
+                            "Using console create a new directory and go into him:",
+                            "project-directory"
                         ],
                         [
-                            "W nowym katalogu zainicjuj środowisko komendą",
-                            "i następnie wywołaj:",
-                            "repozytorium"
+                            "In a new directory initialize environment by using command",
+                            "and then call:",
+                            "repository"
                         ],
                         [
-                            "W konsoli wywołaj polecenie sklonowania całego repozytorium, które tym samym utworzy nowy katalog:"
+                            "In the console, use a command to clone entire repository, which thereby creates a new directory:"
                         ],
                         [
-                            "Manualnie pobierz najnowszą stabilną wersje z strony",
-                            "publikacji szablonu"
+                            "Manually download the latest stable version from the",
+                            "Releases Page"
                         ],
                         [
-                            "Po wykonaniu dowolnej instalacji. Przejdź do katalogu projektu i wywołaj polecenia",
-                            "i"
+                            "After completing any installation. Go to your project and call command",
+                            "and"
                         ],
                         [
-                            "W tym momencie można zacząć korzystać z wszystkich zdefiniowanych zadań w",
-                            ". Tabela zadań dostępna",
-                            "tutaj"
+                            "At this point, you can start using all defined tasks from",
+                            ". Table with all tasks",
+                            "here"
                         ]
                     ]
                 },
                 "configuration": {
-                    "headline": "Konfiguracja",
+                    "headline": "Configuration",
                     "paragraph": [
                         [
-                            "Globalne ustawienia są dostępne w pliku",
-                            ", który umożliwia zmianę:",
-                            "hosta (wykorzystywanego przy",
-                            "nazwy aplikacji,",
-                            "obsługiwanych języków,",
-                            "wartości atrybutu href w tagu base,",
-                            "nazwy pliku konfiguracyjnego i danych,",
-                            "katalogów pracy i produkcji (wymagana również manualna zmiana w pliku",
-                            "dostępów FTP,",
-                            "kluczy do zewnętrznych API,",
-                            "identyfikatora śledzenia",
-                            "identyfikatora aplikacji"
+                            "Global settings are available in file",
+                            ", which allows you to change:",
+                            "host (used for",
+                            "application name,",
+                            "supported languages,",
+                            "value of href attribute in tag base,",
+                            "name of configuration file and data,",
+                            "directory work and production (also requires manual update file",
+                            "accesses FTP,",
+                            "keys to external APIs,",
+                            "tracking ID",
+                            "application ID"
                         ],
                         [
-                            "Dodatkowo może posłużyć nam do przechowywania różnego rodzaju  zmiennych z których będziemy korzystać indywidualnie. W pliku",
-                            "odwołujemy się do niego poprzez zmienną"
+                            "Additionally, it can help us to store all sorts of variables which we will use individually. In file",
+                            "we refer to it by variable"
                         ]
                     ]
                 },
                 "projectStructure": {
-                    "headline": "Struktura projektu",
+                    "headline": "Project Structure",
                     "paragraph": [
                         [
-                            "Modyfikując strukturę, pamiętaj aby zmiany również wprowadzić w plikach",
-                            "i",
-                            ". Poniżej rekomendowana strukturę projektu."
+                            "Modifying structure, remember to also make changes in files",
+                            "and",
+                            ". The following recommended project structure."
                         ],
                         [
-                            "Katalog projektu"
+                            "Project directory"
                         ],
                         [
-                            "W przypadku błędu dowolnej funkcjonalności najlepiej powrócić do rekomendowanej struktury lub próbować zlokalizować przyczynę bezpośrednio w pliku"
+                            "In case error of any functionality back to recommended project structure or manually try to find a bug in file"
                         ]
                     ]
                 },
                 "npmModules": {
-                    "headline": "NPM moduły",
+                    "headline": "NPM Modules",
                     "paragraph": [
                         [
-                            "Lista modułów wymaganych do prawidłowego działania wszystkich funkcjonalności środowiska na których opiera się szablon ("
+                            "List of modules required for proper work all functionality of environment ("
                         ],
                         [
-                            "Wszystkie powyższe moduły instalujemy komendą"
+                            "All of these modules are installed via command"
                         ]
                     ],
                     "list": [
@@ -991,23 +992,23 @@
                     ]
                 },
                 "bowerComponents": {
-                    "headline": "Bower komponenty",
+                    "headline": "Bower Components",
                     "paragraph": [
                         [
-                            "Następujące komponenty są elementami niezbędnymi do właściwego funkcjonowania szablonu wykorzystującego technologie",
-                            "i"
+                            "The following components are necessary for a proper functioning template which using technology",
+                            "and"
                         ],
                         [
-                            "Dodatkowe paczki z których można korzystać opcjonalnie:"
+                            "Additional packages that you can use optionally:"
                         ],
                         [
-                            "Wszystkie powyższe komponenty instalujemy komendą"
+                            "All of these components are installed via command"
                         ],
                         [
-                            "Instalacja dodatkowych bibliotek Css lub Js za pośrednictwem",
-                            "spowoduje automatyczne dodanie ścieżki do nowego komponentu w głównym pliku",
-                            ". Konfiguracja tej funkcjonalności znajdują się w pliku",
-                            "w module"
+                            "Installation additional libraries CSS or JS through",
+                            "will automatically add a path to a new component in main file",
+                            ". The configuration of this functionality can be found in file",
+                            "module"
                         ]
                     ],
                     "list": [
@@ -1054,348 +1055,349 @@
                     ]
                 },
                 "gulpTasks": {
-                    "headline": "Gulp zadania",
+                    "headline": "Gulp tasks",
                     "paragraph": [
                         [
-                            "Zadania uruchamiamy z poziomu konsoli będąc jednocześnie w głównym katalogu projektu wpisując słowo kluczowe",
-                            "w połączeniu z",
-                            "nazwą",
-                            "i",
-                            "opcjonalnymi argumentami",
-                            "zadania do wykonania."
+                            "Tasks are run from the console, being at the same time in project directory by typing keyword",
+                            "in combination with",
+                            "name",
+                            "and",
+                            "optional arguments",
+                            "task to do."
                         ],
                         [
-                            "nazwa",
-                            "opcjonalne argumenty"
+                            "name",
+                            "optional arguments"
                         ],
                         [
-                            "Przykładowe polecenie będzie wyglądać następująco",
+                            "Example command looks like this",
                             "(nr:"
                         ],
                         [
-                            "Poniższa tabela zawiera informację dotyczące nazwy, opcjonalnych argumentów i opisu do każdego zdefiniowanego zadania."
+                            "The following table contains information concerning name, optional arguments, and description for each defined task."
                         ],
                         [
-                            "Więcej informacji i kod źródłowy do sprawdzenia w pliku"
+                            "More info and source code to review in file"
                         ]
                     ],
                     "table": {
                         "headers": [
-                            "Nazwa",
-                            "Opis"
+                            "Name",
+                            "Description"
                         ],
                         "rows": {
                             "sassCss": [
                                 [
-                                    "Wykorzystuje plik",
-                                    "lub"
+                                    "Uses file",
+                                    "or"
                                 ],
                                 [
-                                    "Raportuje o napotkanych błędach w strumieniu nie przerywając wykonywania kolejnych pipe'ów ("
+                                    "Reports about encountered errors in a stream without interrupting execution further pipes ("
                                 ],
                                 [
-                                    "Inicjuje utworzenie Source Map na podstawie głównego pliku Sass ("
+                                    "Initiates creation of Source Map based on main file SASS ("
                                 ],
                                 [
-                                    "Kompiluje synchronicznie kod Sass na kod Css o stylu wyjściowym"
+                                    "Compiles synchronously SASS code to CSS code with output style"
                                 ],
                                 [
-                                    "Dodaje właściwe przedrostki z metodami do kodu Css. Uwzględniając przy tym wsparcia dla wskazanych przeglądarek w obiekcie konfiguracyjnym ("
+                                    "Adds appropriate methods with prefixes to CSS code. Taking into account support for specific browsers with configuration object ("
                                 ],
                                 [
-                                    "Zapisuje Source Map do pliku"
+                                    "Saves Source Map to file"
                                 ],
                                 [
-                                    "Zapisuje uzyskany kod Css do pliku"
+                                    "Saves resulting CSS code to file"
                                 ],
                                 [
-                                    "Wstrzykuje nowy kod Css do strony podglądowej ("
+                                    "Injects new CSS code to overview page ("
                                 ]
                             ],
                             "sassLint": [
                                 [
-                                    "Wykorzystuje pliki z rozszerzeniem",
-                                    "i"
+                                    "Uses files with extension",
+                                    "and"
                                 ],
                                 [
-                                    "Sprawdza kod Sass pod kątem wybranych reguł",
-                                    "w obiekcie konfiguracyjnym ("
+                                    "Validates SASS code under selected rules",
+                                    "in configuration object ("
                                 ],
                                 [
-                                    "Wyświetla odpowiednio sformatowane komunikaty",
-                                    "o wykrytych niezgodnościach w kodzie Sass ("
+                                    "Displays formatted messages",
+                                    "about detected inconsistencies in SASS code ("
                                 ]
                             ],
                             "jsHint": [
                                 [
-                                    "Wykorzystuje pliki z rozszerzeniem"
+                                    "Uses files with extension"
                                 ],
                                 [
-                                    "Sprawdza kod Js pod kątem błędów i optymalizacji ("
+                                    "Validates JS code and optimisation possibilities ("
                                 ],
                                 [
-                                    "Wyświetla odpowiednio sformatowane komunikaty",
-                                    "o wykrytych błędach i możliwej optymalizacji w kodzie Js ("
+                                    "Displays formatted messages",
+                                    "about detected errors and optimisation possibilities in JS code ("
                                 ]
                             ],
                             "jsTest": [
                                 [
-                                    "Uruchomi testy jednostkowe w środowisku",
-                                    ", które konfigurujemy za pomocą pliku",
-                                    ". Wymieniony plik umożliwia wybór frameworków testujących i wielu innych rzeczy o których można poczytać",
-                                    "tutaj"
+                                    "Runs unit tests in environment",
+                                    "which is configurable via file",
+                                    ". That file allows choosing test framework and much more things about that you can read",
+                                    "here"
                                 ]
                             ],
                             "jadePug": [
                                 [
-                                    "Wykorzystuje pliki z rozszerzeniem"
+                                    "Uses files with extension"
                                 ],
                                 [
-                                    "Zamienia rozszerzenie plików",
-                                    "na"
+                                    "Converts file extension",
+                                    "to"
                                 ],
                                 [
-                                    "Zapisuje pliki z nowym rozszerzeniem",
-                                    "w analogicznych lokalizacjach do plików"
+                                    "Saves files with a new extension",
+                                    "in similar locations to files"
                                 ],
                                 [
-                                    "Usuwa nie potrzebne pliki z rozszerzeniem"
+                                    "Removes not necessary files with extension"
                                 ]
                             ],
                             "pug": [
                                 [
-                                    "Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej",
-                                    "na",
-                                    "i nadpisuje ją w przypadku podania innej."
+                                    "Checks if passed additional arguments to process task. Sets the initial value of variable",
+                                    "to",
+                                    "and overwrites it in a case when otherwise noted."
                                 ],
                                 [
-                                    "Wykorzystuje pliki z rozszerzeniem"
+                                    "Uses files with extension"
                                 ],
                                 [
-                                    "Przygotowuje obiekt danych przekazując go wewnątrz strumienia do gulp-pug ("
+                                    "Prepares a data object to pass it inside stream to gulp-pug ("
                                 ],
                                 [
-                                    "Kompiluje pliki",
-                                    "zwracając uzupełniony kod Html",
-                                    "o przekazane informacje w obiekcie danych ("
+                                    "Compiles files",
+                                    "returning completed HTML code",
+                                    "with filled information from a data object ("
                                 ],
                                 [
-                                    "Wstrzykuje tagi",
-                                    "i",
-                                    "z ścieżkami źródłowymi do zainstalowanych bibliotek Css lub Js. Pomiędzy poniższe komentarze w kodzie Html ("
+                                    "Injects tags",
+                                    "and",
+                                    "with paths to source installed libraries CSS or JS. Between these comments in HTML code ("
                                 ],
                                 [
-                                    "Zapisuje uzyskane kody Html do",
-                                    "lub",
-                                    "i plików widoku."
+                                    "Saves resulting HTML code in",
+                                    "or",
+                                    "and view files."
                                 ]
                             ],
                             "pugLint": [
                                 [
-                                    "Wykorzystuje pliki z rozszerzeniem"
+                                    "Uses files with extension"
                                 ],
                                 [
-                                    "Sprawdza kod Pug pod kątem wybranych reguł w obiekcie konfiguracyjnym ("
+                                    "Validates PUG code under selected rules in configuration object ("
                                 ],
                                 [
-                                    "Wyświetla odpowiednio sformatowane komunikaty",
-                                    "o wykrytych niezgodnościach w kodzie Pug."
+                                    "Displays formatted messages",
+                                    "about detected inconsistencies in PUG code."
                                 ]
                             ],
                             "html": [
                                 [
-                                    "Wykorzystuje pliki z rozszerzeniem"
+                                    "Uses files with extension"
                                 ],
                                 [
-                                    "Filtruje kod Html pod kątem wstawionych komentarzy:",
-                                    "Zastępując je pojedynczymi tagami",
-                                    "i",
-                                    "odnoszącymi się do plików źródłowych",
-                                    "i",
-                                    "powstałymi w skutek połączenia wszystkich załączonych bibliotek Css lub Js znajdujących się pomiędzy tymi komentarzami ("
+                                    "Filters HTML code for inserted comments:",
+                                    "Replacing them with individual tags",
+                                    "and",
+                                    "relating to source files",
+                                    "and",
+                                    "arising as result of combination of all attached libraries, CSS or JS located between that comments ("
                                 ],
                                 [
-                                    "Sprawdza typ przetwarzanych plików w strumieniu. Wywołując odpowiednie metody minifikujące dla plików",
-                                    "z rozszerzeniem",
-                                    "i"
+                                    "Checks type of files being processed in the stream. By calling appropriate minify methods for files",
+                                    "with extension",
+                                    "and"
                                 ],
                                 [
-                                    "Zapisuje uzyskane kody Css i Js do plików w katalogu produkcyjnym."
+                                    "Saves resulting CSS and JS code to files in production directory."
                                 ]
                             ],
                             "htmlHint": [
                                 [
-                                    "Wykorzystuje pliki z rozszerzeniem"
+                                    "Uses files with extension"
                                 ],
                                 [
-                                    "Sprawdza poprawność wygenerowanego kodu Html według reguł wskazanych w obiekcie konfiguracyjnym ("
+                                    "Validates HTML code under selected rules in configuration object  ("
                                 ],
                                 [
-                                    "Wyświetla odpowiednio sformatowane komunikaty",
-                                    "o wykrytych niezgodnościach w kodzie Html ("
+                                    "Displays formatted messages",
+                                    "about detected inconsistencies in HTML code ("
                                 ]
                             ],
                             "htmlMinify": [
                                 [
-                                    "Wykorzystuje pliki z rozszerzeniem"
+                                    "Uses files with extension"
                                 ],
                                 [
-                                    "Minifikuje kod Html zgodnie z ustawieniami przekazanymi w obiekcie konfiguracyjnym ("
+                                    "Minify HTML code according to settings passed in configuration object ("
                                 ],
                                 [
-                                    "Zapisuje uzyskane kody Html w tych samych lokalizacjach plików źródłowych na których rozpoczęto wykonywanie zadania (nadpisywanie)."
+                                    "Saves resulting HTML code in the same source file locations on which task was started (overwriting)"
                                 ]
                             ],
                             "server": [
                                 [
                                     [
-                                        "Uruchamia lokalnie serwer nasłuchujący na katalog pracy pod adresem",
-                                        "(widoczny w konsoli)."
+                                        "Runs locally listening server on work directory at address",
+                                        "(visible in console)."
                                     ],
                                     [
-                                        "Udostępniając tym samym metody pomocnicze, które umożliwiają odświeżenie przeglądarki np. w momencie wprowadzenia zmiany w dowolnym pliku lub dynamiczne wstrzyknięcie styli Css bez przeładowania strony podglądowej."
+                                        "Providing accessory methods allow you to refresh your browser eg. when you make changes to any file or dynamic injection of CSS styles without reloading the preview page."
                                     ],
                                     [
-                                        "Zapewnia również podgląd aplikacji z każdego urządzenia podłączonego do sieci lokalnej pod adresem zewnętrznym (",
-                                        "- widoczny w konsoli)."
+                                        "It also provides application preview from any device connected to local area network at external address (",
+                                        "- visible in console)."
                                     ],
                                     [
-                                        "Więcej informacji na temat konfiguracji i możliwości moduł Browser Sync"
+                                        "More information about configuration and capabilities of Browser Sync module",
+                                        "here"
                                     ]
                                 ]
                             ],
                             "watch": [
                                 [
-                                    "W następstwie wprowadzanych zmian w plikach wywołuję odpowiednie zadania:",
-                                    "Pliki",
-                                    "Zadania",
-                                    "lub",
-                                    "i"
+                                    "In consequence to files changed it runs appropriate tasks:",
+                                    "Files",
+                                    "Tasks",
+                                    "or",
+                                    "and"
                                 ]
                             ],
                             "clean": [
                                 [
-                                    "Usuwa katalog produkcyjny wraz z całą zawartością. Uruchamiane zawsze na początku tworzenia nowego builda aplikacji ("
+                                    "Removes production directory with all content. Always runs at the beginning of creating a new application build ("
                                 ]
                             ],
                             "copy": [
                                 [
-                                    "Kopiuje niżej wskazane tzw. pliki statyczne z katalogu pracy do katalogu produkcyjnego:"
+                                    "Copies so called Static files from work directory to production directory:"
                                 ]
                             ],
                             "images": [
                                 [
-                                    "Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia tym samym rozszerzenia plików do optymalizacji, moduł optymalizujący i argumenty dla wybranego modułu."
+                                    "Checks if passed additional arguments to process task. Sets file extensions for optimisation, optimisation module and arguments for selected module."
                                 ],
                                 [
-                                    "Zarówno przy opcji standardowej (bez dodatkowych argumentów) i zaawansowanej (z dodatkowymi argumentami) wykorzystane zostaną grafiki",
-                                    "z rozszerzeniem",
-                                    "i",
-                                    ". W standardowej opcji dochodzą jeszcze dwa typy",
-                                    "i"
+                                    "Both standard (without additional arguments) and advanced option (with additional arguments) will use images",
+                                    "with extension",
+                                    "and",
+                                    ". In standard option is two more types",
+                                    "and"
                                 ],
                                 [
-                                    "Standardowa optymalizacja grafik odbywa się za pomocą modułu"
+                                    "Standard images optimisation is done via module"
                                 ],
                                 [
-                                    "Zaawansowana optymalizacja grafik odbywa sie za pomocą modułu",
-                                    "wykorzystującego"
+                                    "Advanced images optimisation is done via module",
+                                    "which uses"
                                 ],
                                 [
-                                    "Zapisuje zoptymalizowane grafiki w tych samych lokalizacjach grafik źródłowych na których rozpoczęto wykonywanie zadania (nadpisywanie)."
+                                    "Saves optimised images in the same source image locations on which task was started (overwriting)."
                                 ]
                             ],
                             "imagesSprite": [
                                 [
-                                    "Sprawdza czy przekazano dodatkowe argumenty do procesu zadania. Ustawia początkową wartość zmiennej",
-                                    "na",
-                                    "i nadpisuje ją w przypadku podania innej."
+                                    "Checks if passed additional arguments to process task. Sets the initial value of variable",
+                                    "to",
+                                    "and overwrites it in a case when otherwise noted."
                                 ],
                                 [
-                                    "Wykorzystuje grafiki z rozszerzeniem",
-                                    "i"
+                                    "Uses images with extension",
+                                    "and"
                                 ],
                                 [
-                                    "Łączy wszystkie grafiki z katalogu",
-                                    "w jedną grafikę złożoną z wielu. Zwracając tym samym automatycznie wygenerowany plik",
-                                    "zawierający gotowe mixiny do użycia, umożliwiające wyświetlenie dowolnej grafiki wcześniej złączonej ("
+                                    "Merge all images from directory",
+                                    "in one image composed of many. Returns automatically generated file",
+                                    "including completed mixins to use, allows displaying any of these images ("
                                 ],
                                 [
-                                    "Sprawdza rozszerzenia przetwarzanych plików",
-                                    "w strumieniu (",
-                                    "). Zapisując odpowiednio pliki",
-                                    "z rozszerzeniem",
-                                    "w katalogu",
-                                    "i",
-                                    "w katalogu"
+                                    "Checks type of files being processed",
+                                    "in stream (",
+                                    "). Saves files",
+                                    "with extension",
+                                    "in directory",
+                                    "and",
+                                    "in directory"
                                 ]
                             ],
                             "upload": [
                                 [
-                                    "Sprawdza czy wszystkie wartości zmiennych dotyczących połączenia FTP zostały zdefiniowane w pliku",
-                                    "i czy przekazano dodatkowy argument do procesu zadania."
+                                    "Checks if all FTP connection variable values are defined in file",
+                                    "and whether passed additional arguments to process task."
                                 ],
                                 [
-                                    "Wykorzystuje wszystkie pliki z katalogu produkcyjnego."
+                                    "Uses all files from production directory."
                                 ],
                                 [
-                                    "Przesyła pliki na serwer FTP przekazując lokalizację zapisu poprzez zmienną"
+                                    "Uploads files to FTP server, passing location through variable"
                                 ]
                             ],
                             "build": [
                                 [
                                     [
-                                        "Uruchamia sekwencję wywołujących się kolejno zadań ("
+                                        "Runs a sequence of gulp tasks in the specified order ("
                                     ],
                                     [
-                                        "W rezultacie zakończenia tak złożonego procesu zadania zostanie stworzony nowy build aplikacji gotowy do dalszych testów lub przeniesienia na środowisko produkcyjne."
+                                        "As a result of completing such a complex task process, you will create a new application build ready for further testing or upload to the production environment."
                                     ]
                                 ]
                             ],
                             "buildServer": [
                                 [
-                                    "Wywołuje zadanie",
-                                    "po którym tworzy lokalnie serwer nasłuchujący na dopiero co powstały katalog produkcyjny."
+                                    "Invokes gulp task",
+                                    "after that, it creates a locally listening server on the newly created production directory."
                                 ]
                             ],
                             "default": [
                                 [
-                                    "W następstwie zakończenia powyższej sekwencji zostanie utworzone  tzw. środowisko pracy udostępniające wiele przydatnych funkcjonalności, które usprawnią",
-                                    "i przyśpieszą proces tworzenia nowej aplikacji."
+                                    "When above sequence is completed. Creates a work environment that provides many useful features. To improve",
+                                    "and accelerate a process of creating a new application."
                                 ]
                             ]
                         }
                     }
                 },
                 "testing": {
-                    "headline": "Testowanie",
+                    "headline": "Testing",
                     "paragraph": [
                         [
-                            "Uruchamia się za pomocą zadania",
-                            "Do obsługi testów jednostkowych, nasłuchu zamian w plikach źródłowych i raportowania bledów zostało przygotowane środowisko",
-                            "Standardowa konfiguracja wykorzystuje framework",
-                            ", symulator",
-                            "i reporter",
-                            "Pliki konfiguracji i testów znajdują się",
-                            "Folder projektu"
+                            "Runs with the task",
+                            "To support unit testing, listening changes in source files and reporting errors has been prepared environment",
+                            "Standard configuration uses the framework",
+                            ", simulator",
+                            "and reporter",
+                            "Files configuration and unit tests you can find",
+                            "Project directory"
                         ]
                     ]
                 },
                 "changelog": {
-                    "headline": "Lista zmian",
+                    "headline": "Changelog",
                     "paragraph": [
                         [
-                            "Ostatnie zmiany można zobaczyć na",
-                            "stronie",
-                            "publikacji szablonu"
+                            "Recent changes can be viewed on",
+                            "on the",
+                            "Releases Page"
                         ]
                     ]
                 },
                 "license": {
-                    "headline": "Licencja",
+                    "headline": "License",
                     "paragraph": [
                         [
-                            "MIT Licencja"
+                            "MIT License"
                         ]
                     ]
                 }
