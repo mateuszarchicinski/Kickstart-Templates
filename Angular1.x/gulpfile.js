@@ -300,7 +300,11 @@ gulp.task('html', function () {
     .pipe($.plumber())
     .pipe($.useref()) // https://github.com/jonkemp/gulp-useref#usage
     .pipe($.if('*.css', $.cleanCss())) // https://github.com/jakubpawlowicz/clean-css#--------
-    .pipe($.if('*.js', $.uglify())) // {preserveComments: 'license'} ~ https://github.com/terinjokes/gulp-uglify#options
+    .pipe($.if('*.js', $.uglify({
+        output: {
+            max_line_len: 50000
+        }
+    }))) // {preserveComments: 'license'} ~ https://github.com/terinjokes/gulp-uglify#options
     .pipe(gulp.dest(PROJECT_CONFIG.DIRECTORY.DIST_DIR + '/'));
 
 });
